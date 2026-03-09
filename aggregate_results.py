@@ -1,14 +1,3 @@
-"""
-Aggregate individual JSON result files into a single CSV for analysis.
-
-Usage:
-    python aggregate_results.py [results_dir] [output_file]
-
-Defaults:
-    results_dir = ./results/
-    output_file = ./results_aggregated.csv
-"""
-
 import os
 import sys
 import json
@@ -59,15 +48,11 @@ def aggregate(results_dir="results", output_file="results_aggregated.csv"):
         print("No trial data found.")
         return
 
-    # Write CSV
     fieldnames = list(rows[0].keys())
     with open(output_file, "w", newline="", encoding="utf-8") as f:
         writer = csv.DictWriter(f, fieldnames=fieldnames)
         writer.writeheader()
         writer.writerows(rows)
-
-    print(f"Aggregated {len(json_files)} files, {len(rows)} trial rows → {output_file}")
-
 
 if __name__ == "__main__":
     rdir = sys.argv[1] if len(sys.argv) > 1 else "results"
