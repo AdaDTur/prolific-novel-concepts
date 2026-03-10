@@ -11,14 +11,19 @@ Results are saved as JSON files in the ./results/ directory.
 import os
 import json
 from datetime import datetime
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_from_directory
 from flask_cors import CORS
 
-app = Flask(__name__)
+app = Flask(__name__, static_folder=".", static_url_path="")
 CORS(app)
 
 RESULTS_DIR = "results"
 os.makedirs(RESULTS_DIR, exist_ok=True)
+
+
+@app.route("/")
+def serve_index():
+    return send_from_directory(".", "index.html")
 
 
 @app.route("/api/submit", methods=["POST"])
@@ -50,4 +55,4 @@ def health():
 
 
 if __name__ == "__main__":
-    app.run(host="0.0.0.0", port=5000, debug=True)
+    app.run(host="0.0.0.0", port=8800, debug=True)

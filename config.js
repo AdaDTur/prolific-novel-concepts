@@ -19,7 +19,7 @@ const CONFIG = {
   // Attention check: which trial index to insert it after (0-indexed)
   ATTENTION_CHECK_AFTER: 10,
 
-  // HuggingFace dataset for image retrieval
-  HF_DATASET: "adadtur/nvrd",
-  HF_API_BASE: "https://datasets-server.huggingface.co",
+  // GitHub Pages base URL for images (no trailing slash)
+  // Update this after creating the GitHub Pages repo
+  IMAGE_BASE_URL: "https://adadtur.github.io/nvrd-sample",
 };

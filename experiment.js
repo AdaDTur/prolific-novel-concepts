@@ -1,8 +1,8 @@
 /**
  * experiment.js — jsPsych timeline for the Visual Concept Study
  *
- * Flow: Preload → Consent → Instructions → 40 Trials (with attention
- * check at midpoint) → Demographics → Completion / redirect to Prolific.
+ * Flow: Preload → Consent → Demographics → Instructions → 40 Trials (with
+ * attention check at midpoint) → Feedback → Completion / redirect to Prolific.
  *
  * Following the jsPsych tutorial at:
  *   https://sebschu.com/web-based-experiments/tutorials/jsPsych/
@@ -12,21 +12,13 @@
   // ---- Load trial data from manifest + assignments ----
   const { trial_objects, group_index } = await loadTrialData();
 
-  // ---- Resolve all image URLs from HuggingFace ----
-  const practiceImageSpecs = [
-    { id: "humpback-whale", split: "known", object: "humpback-whale", perturbation_type: "original", level: 0 },
-    { id: "chair", split: "known", object: "chair", perturbation_type: "original", level: 0 },
-    { id: "golden-retriever", split: "known", object: "golden-retriever", perturbation_type: "original", level: 0 },
-    { id: "corkscrew", split: "known", object: "corkscrew", perturbation_type: "original", level: 0 },
-  ];
-  const extraURLs = await resolveHFImages(trial_objects, practiceImageSpecs);
-
-  const practiceImages = [
-    extraURLs["humpback-whale"],
-    extraURLs["chair"],
-    extraURLs["golden-retriever"],
-    extraURLs["corkscrew"],
-  ];
+  // ---- Practice & attention check image URLs ----
+  const practiceImages = {
+    "humpback-whale": resolveImageURL("known/humpback-whale.png"),
+    "chair": resolveImageURL("known/chair.png"),
+    "golden-retriever": resolveImageURL("known/golden-retriever.png"),
+    "corkscrew": resolveImageURL("known/corkscrew.png"),
+  };
 
   // ---- Prolific params ----
   const prolific = get_prolific_params();
@@ -46,7 +38,7 @@
   // Include practice and attention-check images alongside trial images
   const preload = {
     type: jsPsychPreload,
-    images: get_all_image_paths(trial_objects).concat(practiceImages),
+    images: get_all_image_paths(trial_objects).concat(Object.values(practiceImages)),
     message: "Loading images... please wait.",
   };
   timeline.push(preload);
@@ -90,6 +82,78 @@
     choices: ["I consent to participate"],
   };
   timeline.push(consent);
+
+  // ========== 2b. Demographics survey (moved before instructions) ==========
+  const demographics = {
+    type: jsPsychSurvey,
+    title: "About You",
+    pages: [
+      [
+        {
+          type: "html",
+          prompt:
+            "<p>Please answer a few brief questions before we begin. All fields are optional but help us analyze our results.</p>",
+        },
+        {
+          type: "text",
+          prompt: "Prolific ID (if not auto-filled):",
+          name: "prolific_id",
+          textbox_columns: 30,
+          required: false,
+        },
+        {
+          type: "text",
+          prompt: "Age:",
+          name: "age",
+          textbox_columns: 10,
+          required: false,
+        },
+        {
+          type: "drop-down",
+          prompt: "Gender:",
+          name: "gender",
+          options: [
+            "Female",
+            "Male",
+            "Non-binary",
+            "Other",
+            "Prefer not to say",
+          ],
+          required: false,
+        },
+        {
+          type: "drop-down",
+          prompt: "Native language:",
+          name: "native_language",
+          options: [
+            "English",
+            "French",
+            "Spanish",
+            "Mandarin",
+            "Hindi",
+            "Arabic",
+            "Other",
+          ],
+          required: false,
+        },
+        {
+          type: "drop-down",
+          prompt: "Highest level of education:",
+          name: "education",
+          options: [
+            "High school or equivalent",
+            "Some college",
+            "Bachelor's degree",
+            "Master's degree",
+            "Doctorate",
+            "Other",
+          ],
+          required: false,
+        },
+      ],
+    ],
+  };
+  timeline.push(demographics);
 
   // ========== 3. Instructions ==========
   const instructions = {
@@ -139,8 +203,8 @@
         stimulus:
           '<div class="practice-banner">Practice Trial 1 of 2</div>' +
           build_trial_html(
-            extraURLs["humpback-whale"],
-            extraURLs["humpback-whale"],
+            practiceImages["humpback-whale"],
+            practiceImages["humpback-whale"],
             "blicket"
           ),
         choices: likert_choices,
@@ -188,8 +252,8 @@
         stimulus:
           '<div class="practice-banner">Practice Trial 2 of 2</div>' +
           build_trial_html(
-            extraURLs["humpback-whale"],
-            extraURLs["chair"],
+            practiceImages["humpback-whale"],
+            practiceImages["chair"],
             "wug"
           ),
         choices: likert_choices,
@@ -295,16 +359,16 @@
       {
         type: jsPsychHtmlButtonResponse,
         stimulus: build_trial_html(
-          extraURLs["golden-retriever"],
-          extraURLs["corkscrew"],
+          practiceImages["golden-retriever"],
+          practiceImages["corkscrew"],
           "toma"
         ),
         choices: likert_choices,
         data: {
           is_attention_check: true,
           stimulus_id: "attention_check",
-          base_image: extraURLs["golden-retriever"],
-          perturbed_image: extraURLs["corkscrew"],
+          base_image: practiceImages["golden-retriever"],
+          perturbed_image: practiceImages["corkscrew"],
           novel_word: "toma",
         },
         on_finish: function (data) {
@@ -344,66 +408,12 @@
   };
   timeline.push(trials_block_2);
 
-  // ========== 6. Demographics survey ==========
-  const demographics = {
+  // ========== 6. Feedback survey ==========
+  const feedback_survey = {
     type: jsPsychSurvey,
     title: "Almost Done!",
     pages: [
       [
-        {
-          type: "html",
-          prompt:
-            "<p>Please answer a few brief demographic questions. All fields are optional but help us analyze our results.</p>",
-        },
-        {
-          type: "text",
-          prompt: "Age:",
-          name: "age",
-          textbox_columns: 10,
-          required: false,
-        },
-        {
-          type: "drop-down",
-          prompt: "Gender:",
-          name: "gender",
-          options: [
-            "Female",
-            "Male",
-            "Non-binary",
-            "Other",
-            "Prefer not to say",
-          ],
-          required: false,
-        },
-        {
-          type: "drop-down",
-          prompt: "Native language:",
-          name: "native_language",
-          options: [
-            "English",
-            "French",
-            "Spanish",
-            "Mandarin",
-            "Hindi",
-            "Arabic",
-            "Other",
-          ],
-          required: false,
-        },
-        {
-          type: "drop-down",
-          prompt: "Highest level of education:",
-          name: "education",
-          options: [
-            "High school or equivalent",
-            "Some college",
-            "Bachelor's degree",
-            "Master's degree",
-            "Doctorate",
-            "Other",
-          ],
-          required: false,
-        },
         {
           type: "text",
           prompt: "Any feedback on this study?",
@@ -415,7 +425,7 @@
       ],
     ],
   };
-  timeline.push(demographics);
+  timeline.push(feedback_survey);
 
   // ========== 7. Completion screen ==========
   const completion = {
@@ -460,13 +470,17 @@
       .filter({ is_attention_check: true })
       .values();
 
-    const demo_data = jsPsych.data
+    const survey_data = jsPsych.data
       .get()
       .filter({ trial_type: "survey" })
       .values();
 
+    // First survey is demographics (at start), last is feedback (at end)
+    const demo_response = survey_data.length > 0 ? survey_data[0].response : {};
+    const feedback_response = survey_data.length > 1 ? survey_data[survey_data.length - 1].response : {};
+
     const results = {
-      prolific_pid: prolific.prolific_pid,
+      prolific_pid: prolific.prolific_pid || (demo_response.prolific_id || ""),
       study_id: prolific.study_id,
       session_id: prolific.session_id,
       participant_group: group_index,
@@ -480,8 +494,8 @@
               response_time_ms: attention_data[0].rt,
             }
           : null,
-      demographics:
-        demo_data.length > 0 ? demo_data[demo_data.length - 1].response : {},
+      demographics: demo_response,
+      feedback: feedback_response.feedback || "",
       trials: trial_data.map(function (t) {
         return {
           stimulus_id: t.stimulus_id,

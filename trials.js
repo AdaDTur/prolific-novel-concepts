@@ -3,7 +3,7 @@
  *
  * Loads trial data from manifest.csv and participant_assignments.json,
  * then builds the trial_objects array for the assigned participant group.
- * Images are retrieved from the HuggingFace dataset (CONFIG.HF_DATASET).
+ * Images are served from GitHub Pages (CONFIG.IMAGE_BASE_URL).
  */
 
 /**
@@ -42,135 +42,16 @@ function getParticipantGroup(numGroups) {
 }
 
 /**
- * Build a lookup key for HF image resolution.
+ * Resolve a relative image path from the manifest to a full URL.
+ * Prepends CONFIG.IMAGE_BASE_URL to the path.
  */
-function hfKey(split, object, perturbationType, level) {
-  return `${split}|${object}|${perturbationType}|${level}`;
-}
-
-/**
- * Fetch image URLs from the HuggingFace Datasets Server API.
- * Groups requests by split and fetches all rows for needed objects.
- *
- * @param {Map} specsByKey - Map of hfKey -> { split, object }
- * @returns {Map} hfKey -> { image_url, original_image_url }
- */
-async function fetchHFImageURLs(specsByKey) {
-  const apiBase = CONFIG.HF_API_BASE;
-  const dataset = CONFIG.HF_DATASET;
-  const urlMap = new Map();
-
-  // Group by split -> set of objects
-  const bySplit = {};
-  for (const [, spec] of specsByKey) {
-    if (!bySplit[spec.split]) bySplit[spec.split] = new Set();
-    bySplit[spec.split].add(spec.object);
+function resolveImageURL(relativePath) {
+  if (!relativePath) return "";
+  // If already a full URL, return as-is
+  if (relativePath.startsWith("http://") || relativePath.startsWith("https://")) {
+    return relativePath;
   }
-
-  for (const [split, objectSet] of Object.entries(bySplit)) {
-    const objects = Array.from(objectSet);
-    // Escape single quotes in object names for SQL
-    const objectList = objects.map((o) => "'" + o.replace(/'/g, "''") + "'").join(",");
-    const where = "split='" + split + "' AND object IN (" + objectList + ")";
-
-    let offset = 0;
-    const pageSize = 100;
-
-    while (true) {
-      const url =
-        apiBase +
-        "/filter?dataset=" + encodeURIComponent(dataset) +
-        "&config=default&split=train" +
-        "&where=" + encodeURIComponent(where) +
-        "&offset=" + offset +
-        "&length=" + pageSize;
-
-      const resp = await fetch(url);
-      if (!resp.ok) {
-        console.error("HF API error:", resp.status, await resp.text());
-        break;
-      }
-      const data = await resp.json();
-      if (!data.rows || data.rows.length === 0) break;
-
-      for (const entry of data.rows) {
-        const row = entry.row;
-        const rowKey = hfKey(row.split, row.object, row.perturbation_type, row.level);
-        if (specsByKey.has(rowKey)) {
-          urlMap.set(rowKey, {
-            image_url: (row.image && row.image.src) || "",
-            original_image_url: (row.original_image && row.original_image.src) || "",
-          });
-        }
-      }
-
-      offset += data.rows.length;
-      if (data.rows.length < pageSize) break;
-    }
-  }
-
-  return urlMap;
-}
-
-/**
- * Resolve image URLs from the HuggingFace dataset for trial objects
- * and any extra images (practice / attention check).
- *
- * Mutates trial objects in place (sets base_image and perturbed_image to HF URLs).
- *
- * @param {Array} trialObjects - trial objects from loadTrialData
- * @param {Array} extraImageSpecs - array of { id, split, object, perturbation_type, level }
- * @returns {Object} mapping of extra image id -> resolved HF URL
- */
-async function resolveHFImages(trialObjects, extraImageSpecs) {
-  const specsByKey = new Map();
-
-  // Trial images
-  for (const trial of trialObjects) {
-    // Perturbed image row
-    const pertKey = hfKey(trial.category, trial.stimulus_id, trial.edit_type, trial.level);
-    specsByKey.set(pertKey, { split: trial.category, object: trial.stimulus_id });
-
-    // Base (original) image row
-    const baseKey = hfKey(trial.category, trial.stimulus_id, "original", 0);
-    specsByKey.set(baseKey, { split: trial.category, object: trial.stimulus_id });
-  }
-
-  // Extra images (practice, attention check)
-  for (const spec of extraImageSpecs) {
-    const key = hfKey(spec.split, spec.object, spec.perturbation_type, spec.level);
-    specsByKey.set(key, { split: spec.split, object: spec.object });
-  }
-
-  console.log("Fetching " + specsByKey.size + " images from HuggingFace...");
-  const urlMap = await fetchHFImageURLs(specsByKey);
-  console.log("Resolved " + urlMap.size + " image URLs from HuggingFace.");
-
-  // Apply resolved URLs to trial objects
-  for (const trial of trialObjects) {
-    const pertKey = hfKey(trial.category, trial.stimulus_id, trial.edit_type, trial.level);
-    const baseKey = hfKey(trial.category, trial.stimulus_id, "original", 0);
-
-    const pertURLs = urlMap.get(pertKey);
-    const baseURLs = urlMap.get(baseKey);
-
-    if (pertURLs) {
-      trial.perturbed_image = pertURLs.image_url;
-    }
-    if (baseURLs) {
-      trial.base_image = baseURLs.image_url;
-    }
-  }
-
-  // Build resolved extra image URLs
-  const resolvedExtra = {};
-  for (const spec of extraImageSpecs) {
-    const key = hfKey(spec.split, spec.object, spec.perturbation_type, spec.level);
-    const urls = urlMap.get(key);
-    resolvedExtra[spec.id] = urls ? urls.image_url : "";
-  }
-
-  return resolvedExtra;
+  return CONFIG.IMAGE_BASE_URL + "/" + relativePath;
 }
 
 /**
@@ -199,8 +80,8 @@ async function loadTrialData() {
       category: row.category,
       edit_type: row.perturbation_type,
       level: parseInt(row.level, 10),
-      base_image: row.base_image,
-      perturbed_image: row.perturbed_image,
+      base_image: resolveImageURL(row.base_image),
+      perturbed_image: resolveImageURL(row.perturbed_image),
       novel_word: row.novel_word,
     };
   });
