@@ -18,7 +18,7 @@ NUM_GROUPS = 10
 TRIALS_PER_GROUP = 80
 MIN_REPLICATION = 2
 NONCE_WORDS_FILE = open("/Users/adatur/Mila/learning biases/learning-biases/nonce_words.txt", "r")
-NOVEL_WORDS = list(NONCE_WORDS_FILE.readlines())
+NOVEL_WORDS = [w.strip() for w in NONCE_WORDS_FILE.readlines() if w.strip()]
 SEED = 42
 
 def load_full_manifest(path):
