@@ -1,17 +1,7 @@
-/**
- * Utility functions for the Visual Concept Study.
- */
-
-/**
- * Convert trial_objects into jsPsych timeline_variables format.
- * Each entry gets a `stimulus` (the trial HTML) and a `data` object
- * with trial metadata for logging.
- */
 function create_tv_array(trial_objs) {
   let tv_array = [];
   for (let i = 0; i < trial_objs.length; i++) {
     let obj = {};
-    // Pre-compute the stimulus HTML so we can use jsPsych.timelineVariable()
     obj.stimulus = build_trial_html(
       trial_objs[i].base_image,
       trial_objs[i].perturbed_image,
@@ -31,9 +21,6 @@ function create_tv_array(trial_objs) {
   return tv_array;
 }
 
-/**
- * Fisher-Yates shuffle.
- */
 function shuffle_array(arr) {
   for (let i = arr.length - 1; i > 0; i--) {
     const j = Math.floor(Math.random() * (i + 1));
@@ -42,9 +29,6 @@ function shuffle_array(arr) {
   return arr;
 }
 
-/**
- * Collect all image paths from trial_objects for preloading.
- */
 function get_all_image_paths(trial_objs) {
   let paths = new Set();
   for (let i = 0; i < trial_objs.length; i++) {
@@ -54,9 +38,6 @@ function get_all_image_paths(trial_objs) {
   return Array.from(paths);
 }
 
-/**
- * Build the HTML for a single trial's stimulus display.
- */
 function build_trial_html(base_image, perturbed_image, novel_word) {
   return `
     <div class="trial-container">
@@ -87,9 +68,6 @@ function build_trial_html(base_image, perturbed_image, novel_word) {
   `;
 }
 
-/**
- * Parse Prolific URL parameters.
- */
 function get_prolific_params() {
   const params = new URLSearchParams(window.location.search);
   return {
@@ -99,9 +77,6 @@ function get_prolific_params() {
   };
 }
 
-/**
- * Download data as a JSON file (fallback when no backend is configured).
- */
 function download_json(data, filename) {
   const blob = new Blob([JSON.stringify(data, null, 2)], { type: "application/json" });
   const url = URL.createObjectURL(blob);

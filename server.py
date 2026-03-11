@@ -1,13 +1,3 @@
-"""
-Simple Flask backend for collecting Prolific study results.
-
-Usage:
-    pip install flask flask-cors
-    python server.py
-
-Results are saved as JSON files in the ./results/ directory.
-"""
-
 import os
 import json
 from datetime import datetime
@@ -33,13 +23,11 @@ def submit_results():
         if not data:
             return jsonify({"error": "No data received"}), 400
 
-        # Generate filename from Prolific PID and timestamp
         pid = data.get("prolific_pid", "unknown")
         timestamp = datetime.now().strftime("%Y%m%d_%H%M%S")
         filename = f"{pid}_{timestamp}.json"
         filepath = os.path.join(RESULTS_DIR, filename)
 
-        # Save to file
         with open(filepath, "w") as f:
             json.dump(data, f, indent=2)
 
