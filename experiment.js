@@ -1,7 +1,7 @@
 /**
  * experiment.js — jsPsych timeline for the Visual Concept Study
  *
- * Flow: Preload → Consent → Demographics → Instructions → 40 Trials (with
+ * Flow: Preload → Consent → Instructions → 4 Practice Trials → 40 Trials (with
  * attention check at midpoint) → Feedback → Completion / redirect to Prolific.
  *
  * Following the jsPsych tutorial at:
@@ -18,6 +18,10 @@
     "chair": resolveImageURL("known/chair.png"),
     "golden-retriever": resolveImageURL("known/golden-retriever.png"),
     "corkscrew": resolveImageURL("known/corkscrew.png"),
+    // Grey-area practice: moderate perturbations
+    "humpback-whale-texture": resolveImageURL("known/texture/humpback-whale_5.png"),
+    "bear": resolveImageURL("known/bear.png"),
+    "bear-style": resolveImageURL("known/style/bear_6.png"),
   };
 
   // ---- Prolific params ----
@@ -48,7 +52,7 @@
     type: jsPsychHtmlButtonResponse,
     stimulus: `
       <p>
-        <strong>You are invited to participate in a research study looking at the preferences of humans for constituent movement.
+        <strong>You are invited to participate in a research study looking at human judgments of visual similarity.
         Please read this form carefully and ask any questions you may have before agreeing to take part in the study.</strong>
         <br>
         <br>
@@ -83,77 +87,7 @@
   };
   timeline.push(consent);
 
-  // ========== 2b. Demographics survey (moved before instructions) ==========
-  const demographics = {
-    type: jsPsychSurvey,
-    title: "About You",
-    pages: [
-      [
-        {
-          type: "html",
-          prompt:
-            "<p>Please answer a few brief questions before we begin. All fields are optional but help us analyze our results.</p>",
-        },
-        {
-          type: "text",
-          prompt: "Prolific ID (if not auto-filled):",
-          name: "prolific_id",
-          textbox_columns: 30,
-          required: false,
-        },
-        {
-          type: "text",
-          prompt: "Age:",
-          name: "age",
-          textbox_columns: 10,
-          required: false,
-        },
-        {
-          type: "drop-down",
-          prompt: "Gender:",
-          name: "gender",
-          options: [
-            "Female",
-            "Male",
-            "Non-binary",
-            "Other",
-            "Prefer not to say",
-          ],
-          required: false,
-        },
-        {
-          type: "drop-down",
-          prompt: "Native language:",
-          name: "native_language",
-          options: [
-            "English",
-            "French",
-            "Spanish",
-            "Mandarin",
-            "Hindi",
-            "Arabic",
-            "Other",
-          ],
-          required: false,
-        },
-        {
-          type: "drop-down",
-          prompt: "Highest level of education:",
-          name: "education",
-          options: [
-            "High school or equivalent",
-            "Some college",
-            "Bachelor's degree",
-            "Master's degree",
-            "Doctorate",
-            "Other",
-          ],
-          required: false,
-        },
-      ],
-    ],
-  };
-  timeline.push(demographics);
+  // Demographics removed — Prolific provides demographic data
 
   // ========== 3. Instructions ==========
   const instructions = {
@@ -169,15 +103,17 @@
         (for example, <em>"dax"</em>). This is a new word — it does not have a real meaning.</li>
         <li>Your task is to judge whether the object in the <strong>right image</strong>
         could also be called by the same made-up name.</li>
-        <li>Respond by clicking one of the five buttons from
+        <li>Respond by clicking one of the seven buttons from
         <strong>"Strongly Disagree"</strong> to <strong>"Strongly Agree."</strong></li>
       </ol>
       <div class="note-box">
         <p><strong>A note on the images:</strong></p>
         <p>Some image pairs may look very similar, while others may look quite different.
-        There are no right or wrong answers — we are interested in your honest judgment.</p>
+        There are no right or wrong answers — we are interested in your honest judgment.
+        Many of the image pairs will fall in a grey area, so don't hesitate to use the
+        middle options on the scale when you're unsure.</p>
       </div>
-      <p>Before the study begins, you will complete <strong>2 practice trials</strong>
+      <p>Before the study begins, you will complete <strong>4 practice trials</strong>
       to make sure you understand the task. Then you will complete <strong>40 trials</strong>
       in total.</p>
     </div>
@@ -189,9 +125,11 @@
   // ========== 3b. Practice trials ==========
   const likert_choices = [
     "Strongly Disagree",
+    "Disagree",
     "Somewhat Disagree",
     "Neutral",
     "Somewhat Agree",
+    "Agree",
     "Strongly Agree",
   ];
 
@@ -201,7 +139,7 @@
       {
         type: jsPsychHtmlButtonResponse,
         stimulus:
-          '<div class="practice-banner">Practice Trial 1 of 2</div>' +
+          '<div class="practice-banner">Practice Trial 1 of 4</div>' +
           build_trial_html(
             practiceImages["humpback-whale"],
             practiceImages["humpback-whale"],
@@ -211,7 +149,7 @@
         data: { is_practice: true, practice_id: 1 },
         on_finish: function (data) {
           data.rating = data.response + 1;
-          data.practice_correct = data.rating === 5;
+          data.practice_correct = data.rating === 7;
         },
       },
       {
@@ -250,7 +188,7 @@
       {
         type: jsPsychHtmlButtonResponse,
         stimulus:
-          '<div class="practice-banner">Practice Trial 2 of 2</div>' +
+          '<div class="practice-banner">Practice Trial 2 of 4</div>' +
           build_trial_html(
             practiceImages["humpback-whale"],
             practiceImages["chair"],
@@ -292,6 +230,108 @@
     },
   };
   timeline.push(practice_2);
+
+  // Practice 3: Grey-area — moderate perturbation, middle options encouraged
+  const practice_3 = {
+    timeline: [
+      {
+        type: jsPsychHtmlButtonResponse,
+        stimulus:
+          '<div class="practice-banner">Practice Trial 3 of 4</div>' +
+          build_trial_html(
+            practiceImages["humpback-whale"],
+            practiceImages["humpback-whale-texture"],
+            "fep"
+          ),
+        choices: likert_choices,
+        data: { is_practice: true, practice_id: 3 },
+        on_finish: function (data) {
+          data.rating = data.response + 1;
+          // Accept any of the middle three options (Somewhat Disagree, Neutral, Somewhat Agree)
+          data.practice_correct = data.rating >= 3 && data.rating <= 5;
+        },
+      },
+      {
+        timeline: [
+          {
+            type: jsPsychHtmlButtonResponse,
+            stimulus: `
+            <div class="practice-feedback">
+              <h3>Not quite!</h3>
+              <p>The two images show the <strong>same object with a noticeable change</strong>.
+              It's not exactly the same, but it's not completely different either.</p>
+              <p>For ambiguous cases like this, the middle options —
+              <strong>"Somewhat Disagree," "Neutral,"</strong> or <strong>"Somewhat Agree"</strong>
+              — are perfectly appropriate. Please select one of these.</p>
+            </div>
+          `,
+            choices: ["Try Again"],
+          },
+        ],
+        conditional_function: function () {
+          const last = jsPsych.data.get().last(1).values()[0];
+          return !last.practice_correct;
+        },
+      },
+    ],
+    loop_function: function (data) {
+      const responses = data.filter({ is_practice: true, practice_id: 3 });
+      const last = responses.last(1).values()[0];
+      return !last.practice_correct;
+    },
+  };
+  timeline.push(practice_3);
+
+  // Practice 4: Grey-area — moderate perturbation, middle options encouraged
+  const practice_4 = {
+    timeline: [
+      {
+        type: jsPsychHtmlButtonResponse,
+        stimulus:
+          '<div class="practice-banner">Practice Trial 4 of 4</div>' +
+          build_trial_html(
+            practiceImages["bear"],
+            practiceImages["bear-style"],
+            "zup"
+          ),
+        choices: likert_choices,
+        data: { is_practice: true, practice_id: 4 },
+        on_finish: function (data) {
+          data.rating = data.response + 1;
+          // Accept any of the middle three options (Somewhat Disagree, Neutral, Somewhat Agree)
+          data.practice_correct = data.rating >= 3 && data.rating <= 5;
+        },
+      },
+      {
+        timeline: [
+          {
+            type: jsPsychHtmlButtonResponse,
+            stimulus: `
+            <div class="practice-feedback">
+              <h3>Not quite!</h3>
+              <p>The two images show the <strong>same object with a noticeable change</strong>.
+              It's not exactly the same, but it's not completely different either.</p>
+              <p>For ambiguous cases like this, the middle options —
+              <strong>"Somewhat Disagree," "Neutral,"</strong> or <strong>"Somewhat Agree"</strong>
+              — are perfectly appropriate. Please select one of these.</p>
+            </div>
+          `,
+            choices: ["Try Again"],
+          },
+        ],
+        conditional_function: function () {
+          const last = jsPsych.data.get().last(1).values()[0];
+          return !last.practice_correct;
+        },
+      },
+    ],
+    loop_function: function (data) {
+      const responses = data.filter({ is_practice: true, practice_id: 4 });
+      const last = responses.last(1).values()[0];
+      return !last.practice_correct;
+    },
+  };
+  timeline.push(practice_4);
 
   // Transition from practice to real study
   const practice_done = {
@@ -475,12 +515,11 @@
       .filter({ trial_type: "survey" })
       .values();
 
-    // First survey is demographics (at start), last is feedback (at end)
-    const demo_response = survey_data.length > 0 ? survey_data[0].response : {};
-    const feedback_response = survey_data.length > 1 ? survey_data[survey_data.length - 1].response : {};
+    // Only survey is the feedback at the end (demographics removed)
+    const feedback_response = survey_data.length > 0 ? survey_data[survey_data.length - 1].response : {};
 
     const results = {
-      prolific_pid: prolific.prolific_pid || (demo_response.prolific_id || ""),
+      prolific_pid: prolific.prolific_pid || "",
       study_id: prolific.study_id,
       session_id: prolific.session_id,
       participant_group: group_index,
@@ -494,7 +533,6 @@
               response_time_ms: attention_data[0].rt,
             }
           : null,
-      demographics: demo_response,
       feedback: feedback_response.feedback || "",
       trials: trial_data.map(function (t) {
         return {
