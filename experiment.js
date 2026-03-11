@@ -1,33 +1,18 @@
-/**
- * experiment.js — jsPsych timeline for the Visual Concept Study
- *
- * Flow: Preload → Consent → Instructions → 4 Practice Trials → 80 Trials (with
- * attention check at midpoint) → Feedback → Completion / redirect to Prolific.
- *
- * Following the jsPsych tutorial at:
- *   https://sebschu.com/web-based-experiments/tutorials/jsPsych/
- */
-
 (async function () {
-  // ---- Load trial data from manifest + assignments ----
   const { trial_objects, group_index } = await loadTrialData();
 
-  // ---- Practice & attention check image URLs ----
   const practiceImages = {
     "humpback-whale": resolveImageURL("known/humpback-whale.png"),
     "chair": resolveImageURL("known/chair.png"),
     "golden-retriever": resolveImageURL("known/golden-retriever.png"),
     "corkscrew": resolveImageURL("known/corkscrew.png"),
-    // Grey-area practice: moderate perturbations
     "humpback-whale-texture": resolveImageURL("known/texture/humpback-whale_5.png"),
     "bear": resolveImageURL("known/bear.png"),
     "bear-style": resolveImageURL("known/style/bear_6.png"),
   };
 
-  // ---- Prolific params ----
   const prolific = get_prolific_params();
 
-  // ---- Init jsPsych ----
   const jsPsych = initJsPsych({
     show_progress_bar: true,
     auto_update_progress_bar: false,
@@ -38,8 +23,6 @@
 
   let timeline = [];
 
-  // ========== 1. Preload images ==========
-  // Include practice and attention-check images alongside trial images
   const preload = {
     type: jsPsychPreload,
     images: get_all_image_paths(trial_objects).concat(Object.values(practiceImages)),
@@ -47,7 +30,6 @@
   };
   timeline.push(preload);
 
-  // ========== 2. Consent ==========
   const consent = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -87,9 +69,6 @@
   };
   timeline.push(consent);
 
-  // Demographics removed — Prolific provides demographic data
-
-  // ========== 3. Instructions ==========
   const instructions = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -122,7 +101,6 @@
   };
   timeline.push(instructions);
 
-  // ========== 3b. Practice trials ==========
   const likert_choices = [
     "Strongly Disagree",
     "Disagree",
@@ -133,7 +111,6 @@
     "Strongly Agree",
   ];
 
-  // Practice 1: Identical images — must choose "Strongly Agree"
   const practice_1 = {
     timeline: [
       {
@@ -182,7 +159,6 @@
   };
   timeline.push(practice_1);
 
-  // Practice 2: Entirely unrelated images — must choose "Strongly Disagree"
   const practice_2 = {
     timeline: [
       {
@@ -231,7 +207,6 @@
   };
   timeline.push(practice_2);
 
-  // Practice 3: Grey-area — moderate perturbation, middle options encouraged
   const practice_3 = {
     timeline: [
       {
@@ -247,7 +222,6 @@
         data: { is_practice: true, practice_id: 3 },
         on_finish: function (data) {
           data.rating = data.response + 1;
-          // Accept any of the middle three options (Somewhat Disagree, Neutral, Somewhat Agree)
           data.practice_correct = data.rating >= 3 && data.rating <= 5;
         },
       },
@@ -282,7 +256,6 @@
   };
   timeline.push(practice_3);
 
-  // Practice 4: Grey-area — moderate perturbation, middle options encouraged
   const practice_4 = {
     timeline: [
       {
@@ -298,7 +271,6 @@
         data: { is_practice: true, practice_id: 4 },
         on_finish: function (data) {
           data.rating = data.response + 1;
-          // Accept any of the middle three options (Somewhat Disagree, Neutral, Somewhat Agree)
           data.practice_correct = data.rating >= 3 && data.rating <= 5;
         },
       },
@@ -333,7 +305,6 @@
   };
   timeline.push(practice_4);
 
-  // Transition from practice to real study
   const practice_done = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -349,20 +320,16 @@
   };
   timeline.push(practice_done);
 
-  // ========== 4. Build trial timeline variables ==========
   let tv_array = create_tv_array(trial_objects);
 
-  // Optionally randomize
   if (CONFIG.RANDOMIZE_TRIALS) {
     tv_array = shuffle_array(tv_array);
   }
 
-  // Split trials around the attention check
   const attention_index = CONFIG.ATTENTION_CHECK_AFTER;
   const trials_before = tv_array.slice(0, attention_index);
   const trials_after = tv_array.slice(attention_index);
 
-  // ---- Trial block (first half) ----
   const trials_block_1 = {
     timeline: [
       {
@@ -391,9 +358,6 @@
   };
   timeline.push(trials_block_1);
 
-  // ========== 5. Attention check (at midpoint) ==========
-  // Presented as a normal-looking trial with completely unrelated images.
-  // Attentive participants should strongly disagree. Checked post-hoc.
   const attention_check = {
     timeline: [
       {
@@ -419,7 +383,6 @@
   };
   timeline.push(attention_check);
 
-  // ---- Trial block (second half) ----
   const trials_block_2 = {
     timeline: [
       {
@@ -448,7 +411,6 @@
   };
   timeline.push(trials_block_2);
 
-  // ========== 6. Feedback survey ==========
   const feedback_survey = {
     type: jsPsychSurvey,
     title: "Almost Done!",
@@ -467,7 +429,6 @@
   };
   timeline.push(feedback_survey);
 
-  // ========== 7. Completion screen ==========
   const completion = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -490,9 +451,7 @@
   };
   timeline.push(completion);
 
-  // ========== Data submission ==========
   function submit_results() {
-    // Real trials (exclude practice and attention check)
     const trial_data = jsPsych.data
       .get()
       .filter(function (trial) {
@@ -504,7 +463,6 @@
       })
       .values();
 
-    // Attention check trial (unrelated image pair — check rating post-hoc)
     const attention_data = jsPsych.data
       .get()
       .filter({ is_attention_check: true })
@@ -515,7 +473,6 @@
       .filter({ trial_type: "survey" })
       .values();
 
-    // Only survey is the feedback at the end (demographics removed)
     const feedback_response = survey_data.length > 0 ? survey_data[survey_data.length - 1].response : {};
 
     const results = {
@@ -577,6 +534,5 @@
     }
   }
 
-  // ========== Run ==========
   jsPsych.run(timeline);
 })();
