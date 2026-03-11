@@ -1,7 +1,7 @@
 /**
  * experiment.js — jsPsych timeline for the Visual Concept Study
  *
- * Flow: Preload → Consent → Instructions → 4 Practice Trials → 40 Trials (with
+ * Flow: Preload → Consent → Instructions → 4 Practice Trials → 80 Trials (with
  * attention check at midpoint) → Feedback → Completion / redirect to Prolific.
  *
  * Following the jsPsych tutorial at:
@@ -114,7 +114,7 @@
         middle options on the scale when you're unsure.</p>
       </div>
       <p>Before the study begins, you will complete <strong>4 practice trials</strong>
-      to make sure you understand the task. Then you will complete <strong>40 trials</strong>
+      to make sure you understand the task. Then you will complete <strong>80 trials</strong>
       in total.</p>
     </div>
   `,

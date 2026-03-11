@@ -37,7 +37,7 @@ INCLUDE_EDIT_TYPES = ["color", "shape", "style", "background", "add", "remove"]
 # Which perturbation levels to keep.
 # Instead of all 20, pick well-spaced levels so humans see meaningful jumps.
 # Set to None to keep all available levels.
-INCLUDE_LEVELS = [2, 5, 8, 12, 16, 20]
+INCLUDE_LEVELS = [2, 5, 8, 11, 14, 18, 19]
 
 # How many objects to sample per category (None = keep all).
 # More objects = broader coverage; fewer = cheaper.
@@ -50,8 +50,8 @@ OBJECTS_PER_CATEGORY = {
 }
 
 # Participant groups
-NUM_GROUPS = 3  # Temporarily reduced for pilot sanity check (expand to 8+ later)
-TRIALS_PER_GROUP = 40
+NUM_GROUPS = 10
+TRIALS_PER_GROUP = 80
 
 # Minimum number of participants that must see each trial (for agreement metrics)
 MIN_REPLICATION = 2
@@ -129,6 +129,32 @@ def filter_trials(rows):
                 sampled.append(r)
             objects_selected[cat] = sorted(set(r["object"] for r in by_category[cat]))
             print(f"  {cat}: {len(objects_selected[cat])} objects (all kept)")
+
+    # Step 4: Balance across levels
+    # Cap over-represented levels to match the smallest level's count
+    if INCLUDE_LEVELS is not None:
+        by_level = defaultdict(list)
+        for r in sampled:
+            by_level[r["level"]].append(r)
+        min_count = min(len(v) for v in by_level.values())
+        print(f"  Balancing levels: capping each level to {min_count} trials (min available)")
+        balanced = []
+        for lvl in sorted(by_level.keys(), key=int):
+            trials_at_lvl = by_level[lvl]
+            if len(trials_at_lvl) > min_count:
+                rng.shuffle(trials_at_lvl)
+                trials_at_lvl = trials_at_lvl[:min_count]
+            balanced.extend(trials_at_lvl)
+        sampled = balanced
+        # Update objects_selected to reflect what's actually in the sample
+        objects_selected = {}
+        for r in sampled:
+            cat = r["category"]
+            if cat not in objects_selected:
+                objects_selected[cat] = set()
+            objects_selected[cat].add(r["object"])
+        objects_selected = {cat: sorted(objs) for cat, objs in objects_selected.items()}
+        print(f"  After balancing: {len(sampled)} trials")
 
     return sampled, objects_selected
 
