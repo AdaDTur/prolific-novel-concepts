@@ -1,180 +1,284 @@
+"""
+Build a study manifest of 800 unique image-pair trials, distributed across
+5 categories, 6 perturbation types, and 7 levels.
+
+Each object is assigned specific (pert_type, level) pairs systematically so
+that across the full design, all pert types and levels are evenly represented.
+
+- 10 participant groups × 80 trials each, NO overlap between groups
+- Each group shown to 2 participants (20 participants total)
+- Image paths reference the GitHub Pages host (adadtur.github.io/nvrd-sample)
+
+Run:  python build_manifest.py
+"""
+
 import csv
 import json
 import random
-import argparse
+import subprocess
 from collections import defaultdict
+from pathlib import Path
+from itertools import product
 
+# ---------------------------------------------------------------------------
+# Design parameters
+# ---------------------------------------------------------------------------
 INCLUDE_EDIT_TYPES = ["color", "shape", "style", "background", "add", "remove"]
 INCLUDE_LEVELS = [2, 5, 8, 11, 14, 18, 19]
-OBJECTS_PER_CATEGORY = {
-    "known": 15,
-    "novel": 15,
-    "modified/shape-texture": 10,
-    "modified/shape-shape/animal-obj": 8,
-    "modified/shape-shape/obj-obj": 8,
-}
 
 NUM_GROUPS = 10
 TRIALS_PER_GROUP = 80
-MIN_REPLICATION = 2
-NONCE_WORDS_FILE = open("/Users/adatur/Mila/learning biases/learning-biases/nonce_words.txt", "r")
-NOVEL_WORDS = [w.strip() for w in NONCE_WORDS_FILE.readlines() if w.strip()]
+TOTAL_TRIALS = NUM_GROUPS * TRIALS_PER_GROUP  # 800
+
+NONCE_WORDS_PATH = Path(__file__).resolve().parent.parent / "nonce_words.txt"
+NOVEL_WORDS = [w.strip() for w in open(NONCE_WORDS_PATH) if w.strip()]
+
 SEED = 42
 
-def load_full_manifest(path):
-    rows = []
-    with open(path) as f:
-        reader = csv.DictReader(f)
-        for row in reader:
-            row["level"] = int(row["level"])
-            rows.append(row)
-    return rows
+# Category name -> directory prefix used in GitHub Pages image URLs
+CATEGORIES = {
+    "known":                          "known",
+    "novel":                          "novel",
+    "modified/shape-texture":         "modified-shape-texture",
+    "modified/shape-shape/animal-obj": "modified-animal-obj",
+    "modified/shape-shape/obj-obj":   "modified-obj-obj",
+}
+
+CATEGORY_ORDER = list(CATEGORIES.keys())
+
+# Relative weights (= number of available objects per category)
+CATEGORY_WEIGHTS = {
+    "known": 49,
+    "novel": 50,
+    "modified/shape-texture": 50,
+    "modified/shape-shape/animal-obj": 25,
+    "modified/shape-shape/obj-obj": 25,
+}
+
+GH_REPO = "AdaDTur/nvrd-sample"
 
 
-def filter_trials(rows):
-    rng = random.Random(SEED)
-    filtered = [r for r in rows if r["perturbation_type"] in INCLUDE_EDIT_TYPES]
-    print(f"  After edit-type filter: {len(filtered)} trials (from {len(rows)})")
+# ---------------------------------------------------------------------------
+# Fetch available objects from the GitHub repo
+# ---------------------------------------------------------------------------
+def fetch_objects_from_repo():
+    """Use `gh` CLI to list base images per category from the GitHub repo."""
+    objects_by_cat = {}
+    for cat, dir_prefix in CATEGORIES.items():
+        result = subprocess.run(
+            ["gh", "api", f"repos/{GH_REPO}/contents/{dir_prefix}",
+             "--jq", '[.[] | select(.name | endswith(".png")) | .name]'],
+            capture_output=True, text=True
+        )
+        names = json.loads(result.stdout) if result.stdout.strip() else []
+        objects_by_cat[cat] = sorted(n.replace(".png", "") for n in names)
+        print(f"  {cat}: {len(objects_by_cat[cat])} objects")
+    return objects_by_cat
 
-    if INCLUDE_LEVELS is not None:
-        level_set = set(INCLUDE_LEVELS)
-        filtered = [r for r in filtered if r["level"] in level_set]
-        print(f"  After level filter: {len(filtered)} trials")
 
-    by_category = defaultdict(list)
-    for r in filtered:
-        by_category[r["category"]].append(r)
+# ---------------------------------------------------------------------------
+# Systematically assign (pert_type, level) combos to objects
+# ---------------------------------------------------------------------------
+def generate_trials(objects_by_cat, rng):
+    """
+    For each category, cycle through the 42 possible (pert_type, level) combos
+    and assign them round-robin to objects. This ensures:
+    - Each object gets a distinct set of (pert_type, level) pairs
+    - All 6 pert types and 7 levels are evenly covered
+    - No two trials share the same (category, object, pert_type, level)
+    """
+    n_types = len(INCLUDE_EDIT_TYPES)
+    n_levels = len(INCLUDE_LEVELS)
+    n_cells = n_types * n_levels  # 42
 
-    sampled = []
-    objects_selected = {}
-    for cat, limit in OBJECTS_PER_CATEGORY.items():
-        cat_rows = by_category.get(cat, [])
-        all_objects = sorted(set(r["object"] for r in cat_rows))
-
-        if limit is not None and limit < len(all_objects):
-            obj_counts = defaultdict(int)
-            for r in cat_rows:
-                obj_counts[r["object"]] += 1
-            ranked = sorted(all_objects, key=lambda o: -obj_counts[o])
-            selected = sorted(rng.sample(ranked[:limit + 5] if limit + 5 <= len(ranked) else ranked, min(limit, len(ranked))))
+    # Compute per-category trial counts (proportional to weight, sum to 800)
+    total_weight = sum(CATEGORY_WEIGHTS.values())
+    cat_targets = {}
+    allocated = 0
+    cats = list(CATEGORY_ORDER)
+    for i, cat in enumerate(cats):
+        if i == len(cats) - 1:
+            cat_targets[cat] = TOTAL_TRIALS - allocated
         else:
-            selected = all_objects
+            cat_targets[cat] = round(TOTAL_TRIALS * CATEGORY_WEIGHTS[cat] / total_weight)
+            allocated += cat_targets[cat]
 
-        objects_selected[cat] = selected
-        for r in cat_rows:
-            if r["object"] in set(selected):
-                sampled.append(r)
+    print(f"\n  Per-category targets (sum={sum(cat_targets.values())}):")
+    for cat in CATEGORY_ORDER:
+        n_obj = len(objects_by_cat[cat])
+        trials_per_obj = cat_targets[cat] / n_obj
+        print(f"    {cat}: {cat_targets[cat]} trials across {n_obj} objects "
+              f"(~{trials_per_obj:.1f} trials/object)")
 
-        print(f"  {cat}: {len(selected)} objects (from {len(all_objects)}), {sum(1 for r in cat_rows if r['object'] in set(selected))} trials")
+    # Each object gets exactly `trials_per_obj` trials, each with a DISTINCT
+    # perturbation type and a DISTINCT level. We cycle through types and levels
+    # across objects so the overall distribution stays balanced.
+    #
+    # With ~4 trials/object and 6 types × 7 levels, this is easy to satisfy.
 
-    for cat in by_category:
-        if cat not in OBJECTS_PER_CATEGORY:
-            for r in by_category[cat]:
-                sampled.append(r)
-            objects_selected[cat] = sorted(set(r["object"] for r in by_category[cat]))
-            print(f"  {cat}: {len(objects_selected[cat])} objects (all kept)")
+    n_types = len(INCLUDE_EDIT_TYPES)
+    n_levels = len(INCLUDE_LEVELS)
 
-    if INCLUDE_LEVELS is not None:
-        by_level = defaultdict(list)
-        for r in sampled:
-            by_level[r["level"]].append(r)
-        min_count = min(len(v) for v in by_level.values())
-        print(f"  Balancing levels: capping each level to {min_count} trials (min available)")
-        balanced = []
-        for lvl in sorted(by_level.keys(), key=int):
-            trials_at_lvl = by_level[lvl]
-            if len(trials_at_lvl) > min_count:
-                rng.shuffle(trials_at_lvl)
-                trials_at_lvl = trials_at_lvl[:min_count]
-            balanced.extend(trials_at_lvl)
-        sampled = balanced
-        objects_selected = {}
-        for r in sampled:
-            cat = r["category"]
-            if cat not in objects_selected:
-                objects_selected[cat] = set()
-            objects_selected[cat].add(r["object"])
-        objects_selected = {cat: sorted(objs) for cat, objs in objects_selected.items()}
-        print(f"  After balancing: {len(sampled)} trials")
+    all_trials = []
+    for cat in CATEGORY_ORDER:
+        objects = objects_by_cat[cat][:]
+        rng.shuffle(objects)
+        dir_prefix = CATEGORIES[cat]
+        target = cat_targets[cat]
+        n_obj = len(objects)
 
-    return sampled, objects_selected
+        trials_per_obj_base = target // n_obj
+        remainder = target % n_obj
+
+        # Rotating cursors so consecutive objects get different types/levels
+        type_cursor = 0
+        level_cursor = 0
+
+        # Shuffle the orderings for this category
+        types_order = INCLUDE_EDIT_TYPES[:]
+        levels_order = INCLUDE_LEVELS[:]
+        rng.shuffle(types_order)
+        rng.shuffle(levels_order)
+
+        for oi, obj in enumerate(objects):
+            n_for_this = trials_per_obj_base + (1 if oi < remainder else 0)
+
+            # Pick n_for_this distinct types and n_for_this distinct levels
+            obj_types = []
+            for j in range(n_for_this):
+                obj_types.append(types_order[(type_cursor + j) % n_types])
+            type_cursor += n_for_this
+
+            obj_levels = []
+            for j in range(n_for_this):
+                obj_levels.append(levels_order[(level_cursor + j) % n_levels])
+            level_cursor += n_for_this
+
+            for pt, lev in zip(obj_types, obj_levels):
+                all_trials.append({
+                    "category": cat,
+                    "object": obj,
+                    "perturbation_type": pt,
+                    "level": lev,
+                    "base_image": f"{dir_prefix}/{obj}.png",
+                    "perturbed_image": f"{dir_prefix}/{pt}/{obj}_{lev}.png",
+                })
+
+    # Verify uniqueness (no duplicate (cat, obj, type, level) combos)
+    keys = set()
+    for t in all_trials:
+        key = (t["category"], t["object"], t["perturbation_type"], t["level"])
+        assert key not in keys, f"Duplicate trial: {key}"
+        keys.add(key)
+
+    # Verify distinct types per object
+    by_obj = defaultdict(list)
+    for t in all_trials:
+        by_obj[(t["category"], t["object"])].append(t)
+    for (cat, obj), obj_trials in by_obj.items():
+        types_used = [t["perturbation_type"] for t in obj_trials]
+        assert len(types_used) == len(set(types_used)), \
+            f"Repeated pert type for {cat}/{obj}: {types_used}"
+
+    assert len(all_trials) == TOTAL_TRIALS, f"Expected {TOTAL_TRIALS}, got {len(all_trials)}"
+    return all_trials
 
 
+# ---------------------------------------------------------------------------
+# Assign nonce words (one per unique object)
+# ---------------------------------------------------------------------------
 def assign_novel_words(trials, rng):
+    objects = sorted(set(t["object"] for t in trials))
     words = NOVEL_WORDS[:]
     rng.shuffle(words)
-    for i, trial in enumerate(trials):
-        trial["novel_word"] = words[i % len(words)]
+    obj_to_word = {obj: words[i % len(words)] for i, obj in enumerate(objects)}
+    for t in trials:
+        t["novel_word"] = obj_to_word[t["object"]]
 
 
-def make_group_assignments(num_trials, num_groups, trials_per_group, rng, min_replication=2):
-    if num_trials <= trials_per_group:
-        return [list(range(num_trials)) for _ in range(num_groups)]
+# ---------------------------------------------------------------------------
+# Assign trials to 10 non-overlapping groups of 80
+# ---------------------------------------------------------------------------
+def make_group_assignments(trials, rng):
+    """
+    Partition 800 trials into 10 groups of 80. No overlap.
+    Shuffle before partitioning so each group gets a mix of categories/types/levels.
+    """
+    indices = list(range(len(trials)))
+    rng.shuffle(indices)
 
-    total_slots = num_groups * trials_per_group
-    if total_slots < num_trials * min_replication:
-        print(f"  WARNING: {total_slots} slots < {num_trials} trials × {min_replication} = "
-              f"{num_trials * min_replication}. Cannot guarantee {min_replication}x replication.")
-
-    pool = list(range(num_trials)) * min_replication
-    remaining_slots = total_slots - len(pool)
-    if remaining_slots > 0:
-        pool += rng.choices(range(num_trials), k=remaining_slots)
-    rng.shuffle(pool)
-
-    groups = [[] for _ in range(num_groups)]
-    for i, idx in enumerate(pool):
-        g = i % num_groups
-        groups[g].append(idx)
-
-    for g in groups:
-        while len(g) > trials_per_group:
-            g.pop()
-
-    for g in groups:
-        g.sort()
+    groups = []
+    for g in range(NUM_GROUPS):
+        start = g * TRIALS_PER_GROUP
+        groups.append(sorted(indices[start:start + TRIALS_PER_GROUP]))
 
     return groups
 
 
-def print_summary(trials, objects_selected, groups):
+# ---------------------------------------------------------------------------
+# Summary
+# ---------------------------------------------------------------------------
+def print_summary(trials, groups):
     print("\n" + "=" * 60)
     print("DESIGN SUMMARY")
     print("=" * 60)
 
     print(f"\n  Edit types ({len(INCLUDE_EDIT_TYPES)}): {', '.join(INCLUDE_EDIT_TYPES)}")
-    if INCLUDE_LEVELS:
-        print(f"  Levels ({len(INCLUDE_LEVELS)}): {INCLUDE_LEVELS}")
-    else:
-        print(f"  Levels: all available")
+    print(f"  Levels ({len(INCLUDE_LEVELS)}): {INCLUDE_LEVELS}")
+
+    by_cat = defaultdict(list)
+    for t in trials:
+        by_cat[t["category"]].append(t)
 
     print(f"\n  Category breakdown:")
     total_objects = 0
-    for cat in sorted(objects_selected):
-        n_obj = len(objects_selected[cat])
-        n_trials = sum(1 for t in trials if t["category"] == cat)
-        total_objects += n_obj
-        print(f"    {cat}: {n_obj} objects, {n_trials} trials")
+    for cat in CATEGORY_ORDER:
+        cat_trials = by_cat.get(cat, [])
+        objs = set(t["object"] for t in cat_trials)
+        total_objects += len(objs)
+        print(f"    {cat}: {len(objs)} objects, {len(cat_trials)} trials")
 
     print(f"\n  Total: {total_objects} objects, {len(trials)} trials")
-    print(f"  Groups: {NUM_GROUPS} x {TRIALS_PER_GROUP} trials/participant")
+    print(f"  Groups: {NUM_GROUPS} x {TRIALS_PER_GROUP} (NO overlap between groups)")
 
-    trial_counts = defaultdict(int)
+    # Verify non-overlapping
+    all_assigned = []
     for g in groups:
-        for idx in g:
-            trial_counts[idx] += 1
-    unique_covered = len(trial_counts)
-    min_rep = min(trial_counts.values()) if trial_counts else 0
-    max_rep = max(trial_counts.values()) if trial_counts else 0
-    avg_rep = sum(trial_counts.values()) / len(trial_counts) if trial_counts else 0
-    print(f"  Trial coverage: {unique_covered}/{len(trials)} unique trials seen")
-    print(f"  Replications per trial: min={min_rep}, avg={avg_rep:.1f}, max={max_rep}")
-    print(f"  Min replication target: {MIN_REPLICATION}")
+        all_assigned.extend(g)
+    assert len(all_assigned) == len(set(all_assigned)), "Groups overlap!"
+    assert len(all_assigned) == TOTAL_TRIALS
+    print(f"  Non-overlapping verified ✓")
 
+    # Per-group category distribution
+    print(f"\n  Per-group category distribution:")
+    short = {cat: cat.split("/")[-1][:8] for cat in CATEGORY_ORDER}
+    header = f"    {'Group':>6}" + "".join(f"  {short[c]:>10}" for c in CATEGORY_ORDER) + "  Total"
+    print(header)
+    for gi, g in enumerate(groups):
+        group_by_cat = defaultdict(int)
+        for idx in g:
+            group_by_cat[trials[idx]["category"]] += 1
+        vals = [group_by_cat.get(cat, 0) for cat in CATEGORY_ORDER]
+        row = f"    {gi:>6}" + "".join(f"  {v:>10}" for v in vals) + f"  {sum(vals)}"
+        print(row)
+
+    # Per-group pert-type distribution
+    print(f"\n  Per-group pert-type distribution:")
+    header = f"    {'Group':>6}" + "".join(f"  {pt:>10}" for pt in INCLUDE_EDIT_TYPES) + "  Total"
+    print(header)
+    for gi, g in enumerate(groups):
+        group_by_pt = defaultdict(int)
+        for idx in g:
+            group_by_pt[trials[idx]["perturbation_type"]] += 1
+        vals = [group_by_pt.get(pt, 0) for pt in INCLUDE_EDIT_TYPES]
+        row = f"    {gi:>6}" + "".join(f"  {v:>10}" for v in vals) + f"  {sum(vals)}"
+        print(row)
+
+    # Overall pert type × level distribution
     dist = defaultdict(int)
     for t in trials:
         dist[(t["perturbation_type"], t["level"])] += 1
-    print(f"\n  Edit type x Level distribution:")
+    print(f"\n  Overall Edit type x Level distribution:")
     levels = sorted(set(t["level"] for t in trials))
     header = f"    {'':>12}" + "".join(f"  L{l:<3}" for l in levels) + "  Total"
     print(header)
@@ -183,45 +287,47 @@ def print_summary(trials, objects_selected, groups):
         row = f"    {et:>12}" + "".join(f"  {v:<4}" for v in row_vals) + f"  {sum(row_vals)}"
         print(row)
 
+    # Show a few example object assignments
+    print(f"\n  Example object assignments:")
+    shown = set()
+    for t in trials:
+        obj = t["object"]
+        cat = t["category"]
+        key = (cat, obj)
+        if key not in shown and len(shown) < 8:
+            shown.add(key)
+            obj_trials = [x for x in trials if x["object"] == obj and x["category"] == cat]
+            assignments = [(x["perturbation_type"], x["level"]) for x in obj_trials]
+            print(f"    {cat}/{obj}: {assignments}")
 
+
+# ---------------------------------------------------------------------------
+# Main
+# ---------------------------------------------------------------------------
 def main():
-    full_manifest = "manifest.csv"
-    output_dir = "."
-    write = True
     rng = random.Random(SEED)
+    out_dir = Path(__file__).resolve().parent
 
-    print("Loading full manifest...")
-    rows = load_full_manifest(full_manifest)
-    print(f"  {len(rows)} total trials\n")
+    print("Fetching objects from GitHub repo...")
+    objects_by_cat = fetch_objects_from_repo()
 
-    print("Applying design filters...")
-    trials, objects_selected = filter_trials(rows)
+    print("\nGenerating 800 trials systematically...")
+    trials = generate_trials(objects_by_cat, rng)
 
     rng2 = random.Random(SEED)
     assign_novel_words(trials, rng2)
+
     for i, trial in enumerate(trials):
         trial["trial_id"] = i
 
-    groups = make_group_assignments(len(trials), NUM_GROUPS, TRIALS_PER_GROUP, rng, MIN_REPLICATION)
+    print("\nAssigning to 10 non-overlapping groups...")
+    groups = make_group_assignments(trials, rng)
 
-    print_summary(trials, objects_selected, groups)
+    print_summary(trials, groups)
 
-    if not write:
-        print("\n  [PREVIEW] No files written. Use --write to save.")
-        return
-
-    import shutil
-    from pathlib import Path
-    out_dir = Path(output_dir)
-
+    # Write outputs
     manifest_path = out_dir / "manifest.csv"
     assignments_path = out_dir / "participant_assignments.json"
-
-    if manifest_path.exists():
-        backup = out_dir / "manifest_full_backup.csv"
-        if not backup.exists():
-            shutil.copy2(manifest_path, backup)
-            print(f"\n  Backed up original manifest to {backup}")
 
     fieldnames = ["trial_id", "category", "object", "perturbation_type", "level",
                   "base_image", "perturbed_image", "novel_word"]
@@ -230,7 +336,7 @@ def main():
         writer.writeheader()
         for trial in trials:
             writer.writerow({k: trial[k] for k in fieldnames})
-    print(f"  Wrote {manifest_path} ({len(trials)} trials)")
+    print(f"\n  Wrote {manifest_path} ({len(trials)} trials)")
 
     with open(assignments_path, "w") as f:
         json.dump(groups, f, indent=2)
