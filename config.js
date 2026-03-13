@@ -3,5 +3,5 @@ const CONFIG = {
   RESULTS_ENDPOINT: null,
   RANDOMIZE_TRIALS: true,
   ATTENTION_CHECK_AFTER: 10,
-  IMAGE_BASE_URL: "https://adadtur.github.io/nvrd-sample",
+  IMAGE_BASE_URL: "https://raw.githubusercontent.com/adadtur/nvrd-sample/master",
 };

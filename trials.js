@@ -34,22 +34,21 @@ function resolveImageURL(relativePath) {
 }
 
 async function loadTrialData() {
-  const [manifestText, assignmentsResponse] = await Promise.all([
-    fetch("manifest.csv").then((r) => r.text()),
-    fetch("participant_assignments.json").then((r) => r.json()),
-  ]);
-
+  const manifestText = await fetch("manifest_v2.csv").then((r) => r.text());
   const manifest = parseCSV(manifestText);
-  const assignments = assignmentsResponse;
-  const groupIndex = getParticipantGroup(assignments.length);
-  const trialIndices = assignments[groupIndex];
+
+  const numGroups = 10;
+  const groupIndex = getParticipantGroup(numGroups);
+
+  const groupRows = manifest.filter(function (row) {
+    return parseInt(row.group, 10) === groupIndex;
+  });
 
   console.log(
-    `Participant group: ${groupIndex}, trials: ${trialIndices.length}`
+    `Participant group: ${groupIndex}, trials: ${groupRows.length}`
   );
 
-  const trialObjects = trialIndices.map(function (idx) {
-    const row = manifest[idx];
+  const trialObjects = groupRows.map(function (row) {
     return {
       stimulus_id: row.object,
       category: row.category,
