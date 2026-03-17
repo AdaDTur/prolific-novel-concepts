@@ -25,9 +25,8 @@
     show_progress_bar: true,
     auto_update_progress_bar: false,
     on_finish: function () {
-      // Replace jsPsych's display with a #thanks div that proliferate
-      // uses to show upload status and redirect to the completion URL
-      document.body.innerHTML = '<div id="thanks"><p>Submitting data... please wait.</p></div>';
+      // Show the #thanks div so proliferate can update it with upload status
+      document.getElementById("thanks").style.display = "";
       submit_results();
     },
   });
