@@ -11,6 +11,15 @@
     "bear-style": resolveImageURL("known/style/bear_6.png"),
   };
 
+  // Five unique attention checks — each pairs two completely unrelated objects
+  const attention_checks_def = [
+    { base: "golden-retriever", perturbed: "corkscrew", word: "toma" },
+    { base: "humpback-whale",   perturbed: "chair",     word: "blick" },
+    { base: "bear",             perturbed: "corkscrew",  word: "pon" },
+    { base: "chair",            perturbed: "golden-retriever", word: "neb" },
+    { base: "corkscrew",        perturbed: "bear",       word: "rav" },
+  ];
+
   const prolific = get_prolific_params();
 
   const jsPsych = initJsPsych({
@@ -326,90 +335,77 @@
     tv_array = shuffle_array(tv_array);
   }
 
-  const attention_index = CONFIG.ATTENTION_CHECK_AFTER;
-  const trials_before = tv_array.slice(0, attention_index);
-  const trials_after = tv_array.slice(attention_index);
+  // Split 80 trials into 6 blocks with 5 attention checks between them
+  const numChecks = CONFIG.NUM_ATTENTION_CHECKS;
+  const blockSize = Math.floor(tv_array.length / (numChecks + 1));
+  const remainder = tv_array.length % (numChecks + 1);
 
-  const trials_block_1 = {
-    timeline: [
-      {
-        type: jsPsychHtmlButtonResponse,
-        stimulus: jsPsych.timelineVariable("stimulus"),
-        choices: likert_choices,
-        data: jsPsych.timelineVariable("data"),
-        on_finish: function (data) {
-          data.rating = data.response + 1;
-          const total = trial_objects.length;
-          const completed_trials = jsPsych.data
-            .get()
-            .filter(function (trial) {
-              return (
-              trial.rating !== undefined &&
-              !trial.is_practice &&
-              !trial.is_attention_check
-            );
-            })
-            .count();
-          jsPsych.setProgressBar(completed_trials / total);
-        },
-      },
-    ],
-    timeline_variables: trials_before,
-  };
-  timeline.push(trials_block_1);
+  let offset = 0;
+  for (let b = 0; b <= numChecks; b++) {
+    // Distribute remainder across the first blocks
+    const thisBlockSize = blockSize + (b < remainder ? 1 : 0);
+    const blockTrials = tv_array.slice(offset, offset + thisBlockSize);
+    offset += thisBlockSize;
 
-  const attention_check = {
-    timeline: [
-      {
-        type: jsPsychHtmlButtonResponse,
-        stimulus: build_trial_html(
-          practiceImages["golden-retriever"],
-          practiceImages["corkscrew"],
-          "toma"
-        ),
-        choices: likert_choices,
-        data: {
-          is_attention_check: true,
-          stimulus_id: "attention_check",
-          base_image: practiceImages["golden-retriever"],
-          perturbed_image: practiceImages["corkscrew"],
-          novel_word: "toma",
-        },
-        on_finish: function (data) {
-          data.rating = data.response + 1;
-        },
-      },
-    ],
-  };
-  timeline.push(attention_check);
+    // Push trial block
+    if (blockTrials.length > 0) {
+      timeline.push({
+        timeline: [
+          {
+            type: jsPsychHtmlButtonResponse,
+            stimulus: jsPsych.timelineVariable("stimulus"),
+            choices: likert_choices,
+            data: jsPsych.timelineVariable("data"),
+            on_finish: function (data) {
+              data.rating = data.response + 1;
+              const total = trial_objects.length;
+              const completed_trials = jsPsych.data
+                .get()
+                .filter(function (trial) {
+                  return (
+                    trial.rating !== undefined &&
+                    !trial.is_practice &&
+                    !trial.is_attention_check
+                  );
+                })
+                .count();
+              jsPsych.setProgressBar(completed_trials / total);
+            },
+          },
+        ],
+        timeline_variables: blockTrials,
+      });
+    }
 
-  const trials_block_2 = {
-    timeline: [
-      {
-        type: jsPsychHtmlButtonResponse,
-        stimulus: jsPsych.timelineVariable("stimulus"),
-        choices: likert_choices,
-        data: jsPsych.timelineVariable("data"),
-        on_finish: function (data) {
-          data.rating = data.response + 1;
-          const total = trial_objects.length;
-          const completed_trials = jsPsych.data
-            .get()
-            .filter(function (trial) {
-              return (
-              trial.rating !== undefined &&
-              !trial.is_practice &&
-              !trial.is_attention_check
-            );
-            })
-            .count();
-          jsPsych.setProgressBar(completed_trials / total);
-        },
-      },
-    ],
-    timeline_variables: trials_after,
-  };
-  timeline.push(trials_block_2);
+    // Push attention check after every block except the last
+    if (b < numChecks) {
+      const ac = attention_checks_def[b];
+      timeline.push({
+        timeline: [
+          {
+            type: jsPsychHtmlButtonResponse,
+            stimulus: build_trial_html(
+              practiceImages[ac.base],
+              practiceImages[ac.perturbed],
+              ac.word
+            ),
+            choices: likert_choices,
+            data: {
+              is_attention_check: true,
+              attention_check_index: b + 1,
+              stimulus_id: "attention_check_" + (b + 1),
+              base_image: practiceImages[ac.base],
+              perturbed_image: practiceImages[ac.perturbed],
+              novel_word: ac.word,
+            },
+            on_finish: function (data) {
+              data.rating = data.response + 1;
+            },
+          },
+        ],
+      });
+    }
+  }
 
   const feedback_survey = {
     type: jsPsychSurvey,
@@ -466,7 +462,10 @@
     const attention_data = jsPsych.data
       .get()
       .filter({ is_attention_check: true })
-      .values();
+      .values()
+      .sort(function (a, b) {
+        return (a.attention_check_index || 0) - (b.attention_check_index || 0);
+      });
 
     const survey_data = jsPsych.data
       .get()
@@ -483,13 +482,14 @@
       study_start_time: new Date(jsPsych.getStartTime()).toISOString(),
       study_end_time: new Date().toISOString(),
       total_duration_ms: jsPsych.getTotalTime(),
-      attention_check:
-        attention_data.length > 0
-          ? {
-              rating: attention_data[0].rating,
-              response_time_ms: attention_data[0].rt,
-            }
-          : null,
+      attention_checks: attention_data.map(function (ac) {
+        return {
+          index: ac.attention_check_index,
+          stimulus_id: ac.stimulus_id,
+          rating: ac.rating,
+          response_time_ms: ac.rt,
+        };
+      }),
       feedback: feedback_response.feedback || "",
       trials: trial_data.map(function (t) {
         return {
