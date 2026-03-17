@@ -34,7 +34,11 @@ function resolveImageURL(relativePath) {
 }
 
 async function loadTrialData() {
-  const manifestText = await fetch("manifest_v2.csv").then((r) => r.text());
+  const resp = await fetch("manifest_v2.csv");
+  if (!resp.ok) {
+    throw new Error(`Failed to load manifest_v2.csv: ${resp.status} ${resp.statusText}`);
+  }
+  const manifestText = await resp.text();
   const manifest = parseCSV(manifestText);
 
   const numGroups = 10;
