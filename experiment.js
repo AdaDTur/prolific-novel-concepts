@@ -6,7 +6,6 @@
     "chair": resolveImageURL("known/chair.png"),
     "golden-retriever": resolveImageURL("known/golden-retriever.png"),
     "corkscrew": resolveImageURL("known/corkscrew.png"),
-    "humpback-whale-texture": resolveImageURL("known/texture/humpback-whale_5.png"),
     "bear": resolveImageURL("known/bear.png"),
     "bear-style": resolveImageURL("known/style/bear_6.png"),
   };
@@ -101,7 +100,7 @@
         Many of the image pairs will fall in a grey area, so don't hesitate to use the
         middle options on the scale when you're unsure.</p>
       </div>
-      <p>Before the study begins, you will complete <strong>4 practice trials</strong>
+      <p>Before the study begins, you will complete <strong>3 practice trials</strong>
       to make sure you understand the task. Then you will complete <strong>80 trials</strong>
       in total.</p>
     </div>
@@ -125,7 +124,7 @@
       {
         type: jsPsychHtmlButtonResponse,
         stimulus:
-          '<div class="practice-banner">Practice Trial 1 of 4</div>' +
+          '<div class="practice-banner">Practice Trial 1 of 3</div>' +
           build_trial_html(
             practiceImages["humpback-whale"],
             practiceImages["humpback-whale"],
@@ -173,7 +172,7 @@
       {
         type: jsPsychHtmlButtonResponse,
         stimulus:
-          '<div class="practice-banner">Practice Trial 2 of 4</div>' +
+          '<div class="practice-banner">Practice Trial 2 of 3</div>' +
           build_trial_html(
             practiceImages["humpback-whale"],
             practiceImages["chair"],
@@ -221,11 +220,11 @@
       {
         type: jsPsychHtmlButtonResponse,
         stimulus:
-          '<div class="practice-banner">Practice Trial 3 of 4</div>' +
+          '<div class="practice-banner">Practice Trial 3 of 3</div>' +
           build_trial_html(
-            practiceImages["humpback-whale"],
-            practiceImages["humpback-whale-texture"],
-            "fep"
+            practiceImages["bear"],
+            practiceImages["bear-style"],
+            "zup"
           ),
         choices: likert_choices,
         data: { is_practice: true, practice_id: 3 },
@@ -264,55 +263,6 @@
     },
   };
   timeline.push(practice_3);
-
-  const practice_4 = {
-    timeline: [
-      {
-        type: jsPsychHtmlButtonResponse,
-        stimulus:
-          '<div class="practice-banner">Practice Trial 4 of 4</div>' +
-          build_trial_html(
-            practiceImages["bear"],
-            practiceImages["bear-style"],
-            "zup"
-          ),
-        choices: likert_choices,
-        data: { is_practice: true, practice_id: 4 },
-        on_finish: function (data) {
-          data.rating = data.response + 1;
-          data.practice_correct = data.rating >= 3 && data.rating <= 5;
-        },
-      },
-      {
-        timeline: [
-          {
-            type: jsPsychHtmlButtonResponse,
-            stimulus: `
-            <div class="practice-feedback">
-              <h3>Not quite!</h3>
-              <p>The two images show the <strong>same object with a noticeable change</strong>.
-              It's not exactly the same, but it's not completely different either.</p>
-              <p>For ambiguous cases like this, the middle options —
-              <strong>"Somewhat Disagree," "Neutral,"</strong> or <strong>"Somewhat Agree"</strong>
-              — are perfectly appropriate. Please select one of these.</p>
-            </div>
-          `,
-            choices: ["Try Again"],
-          },
-        ],
-        conditional_function: function () {
-          const last = jsPsych.data.get().last(1).values()[0];
-          return !last.practice_correct;
-        },
-      },
-    ],
-    loop_function: function (data) {
-      const responses = data.filter({ is_practice: true, practice_id: 4 });
-      const last = responses.last(1).values()[0];
-      return !last.practice_correct;
-    },
-  };
-  timeline.push(practice_4);
 
   const practice_done = {
     type: jsPsychHtmlButtonResponse,
