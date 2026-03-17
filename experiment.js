@@ -25,6 +25,8 @@
     show_progress_bar: true,
     auto_update_progress_bar: false,
     on_finish: function () {
+      // Show the #thanks div so proliferate can update it with upload status
+      document.getElementById("thanks").style.display = "";
       submit_results();
     },
   });
@@ -374,23 +376,6 @@
     ],
   };
   timeline.push(feedback_survey);
-
-  const completion = {
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `
-    <div class="completion-container">
-      <div class="completion-icon">&#10003;</div>
-      <h2>Thank You!</h2>
-      <p>Your responses have been recorded successfully.</p>
-      <p class="muted">Click below to return to Prolific and complete the study.</p>
-    </div>
-  `,
-    choices: ["Return to Prolific"],
-    on_finish: function () {
-      // Proliferate handles the redirect to Prolific completion URL
-    },
-  };
-  timeline.push(completion);
 
   function submit_results() {
     const trial_data = jsPsych.data
