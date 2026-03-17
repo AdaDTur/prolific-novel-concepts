@@ -387,12 +387,7 @@
   `,
     choices: ["Return to Prolific"],
     on_finish: function () {
-      if (
-        CONFIG.PROLIFIC_COMPLETION_URL &&
-        !CONFIG.PROLIFIC_COMPLETION_URL.includes("YOUR_COMPLETION_CODE")
-      ) {
-        window.location.href = CONFIG.PROLIFIC_COMPLETION_URL;
-      }
+      // Proliferate handles the redirect to Prolific completion URL
     },
   };
   timeline.push(completion);
@@ -456,32 +451,7 @@
       }),
     };
 
-    if (CONFIG.RESULTS_ENDPOINT) {
-      fetch(CONFIG.RESULTS_ENDPOINT, {
-        method: "POST",
-        headers: { "Content-Type": "application/json" },
-        body: JSON.stringify(results),
-      }).catch(function (err) {
-        console.error("Save failed, downloading locally:", err);
-        download_json(
-          results,
-          "results_" +
-            (prolific.prolific_pid || "local") +
-            "_" +
-            Date.now() +
-            ".json"
-        );
-      });
-    } else {
-      download_json(
-        results,
-        "results_" +
-          (prolific.prolific_pid || "local") +
-          "_" +
-          Date.now() +
-          ".json"
-      );
-    }
+    proliferate.submit(results);
   }
 
   jsPsych.run(timeline);
