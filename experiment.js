@@ -2,21 +2,20 @@
   const { trial_objects, group_index } = await loadTrialData();
 
   const practiceImages = {
-    "humpback-whale": resolveImageURL("known/humpback-whale.png"),
-    "chair": resolveImageURL("known/chair.png"),
-    "golden-retriever": resolveImageURL("known/golden-retriever.png"),
+    "dolphin": resolveImageURL("known/dolphin.png"),
     "corkscrew": resolveImageURL("known/corkscrew.png"),
-    "bear": resolveImageURL("known/bear.png"),
-    "bear-style": resolveImageURL("known/style/bear_6.png"),
+    "golden-retriever": resolveImageURL("known/golden-retriever.png"),
+    "rabbit": resolveImageURL("known/rabbit.png"),
+    "rabbit-style": resolveImageURL("known/style/rabbit_11.png"),
   };
 
   // Five unique attention checks — each pairs two completely unrelated objects
   const attention_checks_def = [
     { base: "golden-retriever", perturbed: "corkscrew", word: "toma" },
-    { base: "humpback-whale",   perturbed: "chair",     word: "blick" },
-    { base: "bear",             perturbed: "corkscrew",  word: "pon" },
-    { base: "chair",            perturbed: "golden-retriever", word: "neb" },
-    { base: "corkscrew",        perturbed: "bear",       word: "rav" },
+    { base: "dolphin",          perturbed: "rabbit",    word: "blick" },
+    { base: "rabbit",           perturbed: "corkscrew", word: "pon" },
+    { base: "corkscrew",        perturbed: "golden-retriever", word: "neb" },
+    { base: "dolphin",          perturbed: "rabbit",    word: "rav" },
   ];
 
   const prolific = get_prolific_params();
@@ -128,8 +127,8 @@
         stimulus:
           '<div class="practice-banner">Practice Trial 1 of 3</div>' +
           build_trial_html(
-            practiceImages["humpback-whale"],
-            practiceImages["humpback-whale"],
+            practiceImages["dolphin"],
+            practiceImages["dolphin"],
             "blicket"
           ),
         choices: likert_choices,
@@ -176,8 +175,8 @@
         stimulus:
           '<div class="practice-banner">Practice Trial 2 of 3</div>' +
           build_trial_html(
-            practiceImages["humpback-whale"],
-            practiceImages["chair"],
+            practiceImages["dolphin"],
+            practiceImages["corkscrew"],
             "wug"
           ),
         choices: likert_choices,
@@ -224,8 +223,8 @@
         stimulus:
           '<div class="practice-banner">Practice Trial 3 of 3</div>' +
           build_trial_html(
-            practiceImages["bear"],
-            practiceImages["bear-style"],
+            practiceImages["rabbit"],
+            practiceImages["rabbit-style"],
             "zup"
           ),
         choices: likert_choices,
