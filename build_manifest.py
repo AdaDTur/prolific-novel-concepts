@@ -1,6 +1,6 @@
 """
 Build a study manifest of 800 unique image-pair trials, distributed across
-5 categories, 6 perturbation types, and 7 levels.
+5 categories, 7 perturbation types, and 7 levels.
 
 Each object is assigned specific (pert_type, level) pairs systematically so
 that across the full design, all pert types and levels are evenly represented.
@@ -23,7 +23,7 @@ from itertools import product
 # ---------------------------------------------------------------------------
 # Design parameters
 # ---------------------------------------------------------------------------
-INCLUDE_EDIT_TYPES = ["color", "shape", "style", "background", "add", "remove"]
+INCLUDE_EDIT_TYPES = ["color", "shape", "style", "background", "add", "remove", "texture"]
 INCLUDE_LEVELS = [2, 5, 8, 11, 14, 18, 19]
 
 NUM_GROUPS = 10
