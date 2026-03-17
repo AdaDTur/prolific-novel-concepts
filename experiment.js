@@ -376,6 +376,22 @@
   };
   timeline.push(feedback_survey);
 
+  const thanks = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div class="practice-done-container">
+        <h2>Thank you!</h2>
+        <p>Submitting your data... please wait.</p>
+        <p>You will be redirected to Prolific automatically.</p>
+      </div>
+    `,
+    choices: [],
+    on_load: function () {
+      submit_results();
+    },
+  };
+  timeline.push(thanks);
+
   function submit_results() {
     const trial_data = jsPsych.data
       .get()
