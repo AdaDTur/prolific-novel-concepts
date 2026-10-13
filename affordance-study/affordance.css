@@ -171,8 +171,8 @@
   text-align: center;
 }
 
-.summary-table td:nth-child(5),
-.summary-table td:nth-child(6) {
+.summary-table td:nth-child(4),
+.summary-table td:nth-child(5) {
   text-align: left;
   max-width: 220px;
   white-space: normal;

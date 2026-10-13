@@ -1,63 +1,120 @@
 {
   "vocabulary": [
-    "grasp",
+    "beat",
+    "boxing",
+    "brush with",
+    "carry",
+    "catch",
     "cut",
-    "scoop",
-    "pound",
-    "support",
-    "screw",
-    "contain",
-    "stick"
+    "cut with",
+    "drag",
+    "drink with",
+    "eat",
+    "hit",
+    "hold",
+    "jump",
+    "kick",
+    "lie on",
+    "lift",
+    "look out",
+    "open",
+    "pack",
+    "peel",
+    "pick up",
+    "pour",
+    "push",
+    "ride",
+    "sip",
+    "sit on",
+    "stick",
+    "stir",
+    "swing",
+    "take photo",
+    "talk on",
+    "text on",
+    "throw",
+    "type on",
+    "wash",
+    "write",
+    "wear",
+    "none"
+  ],
+  "models": [
+    "qwen2-vl-7b",
+    "qwen3-vl-8b",
+    "internvl3-8b",
+    "molmo2-8b"
   ],
   "regions": [
     {
       "part": 1,
       "region_id": "shape_16_region_4",
-      "affordance": "grasp",
-      "mean_confidence": 0.601,
-      "our_fc_label": "hold"
+      "labels": {
+        "qwen2-vl-7b": "hold",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "none"
+      }
     },
     {
       "part": 2,
       "region_id": "shape_16_region_1",
-      "affordance": "support",
-      "mean_confidence": 0.107,
-      "our_fc_label": "none"
+      "labels": {
+        "qwen2-vl-7b": "none",
+        "qwen3-vl-8b": "sit on",
+        "internvl3-8b": "sit on",
+        "molmo2-8b": "eat"
+      }
     },
     {
       "part": 3,
       "region_id": "shape_16_region_2",
-      "affordance": "grasp",
-      "mean_confidence": 0.943,
-      "our_fc_label": "none"
+      "labels": {
+        "qwen2-vl-7b": "none",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "brush with"
+      }
     },
     {
       "part": 4,
       "region_id": "shape_16_region_3",
-      "affordance": "grasp",
-      "mean_confidence": 0.756,
-      "our_fc_label": "hold"
+      "labels": {
+        "qwen2-vl-7b": "hold",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "none"
+      }
     },
     {
       "part": 5,
       "region_id": "shape_16_region_5",
-      "affordance": "pound",
-      "mean_confidence": 0.206,
-      "our_fc_label": "none"
+      "labels": {
+        "qwen2-vl-7b": "none",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "hold",
+        "molmo2-8b": "brush with"
+      }
     },
     {
       "part": 6,
       "region_id": "shape_16_region_6",
-      "affordance": "pound",
-      "mean_confidence": 0.21,
-      "our_fc_label": "hold"
+      "labels": {
+        "qwen2-vl-7b": "hold",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "hit",
+        "molmo2-8b": "brush with"
+      }
     },
     {
       "part": 7,
       "region_id": "shape_16_region_7",
-      "affordance": "pound",
-      "mean_confidence": 0.137,
-      "our_fc_label": "none"
+      "labels": {
+        "qwen2-vl-7b": "none",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "hit",
+        "molmo2-8b": "none"
+      }
     }
   ]
 }

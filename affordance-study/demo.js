@@ -5,10 +5,22 @@
 // on_load pattern), just with a "regions" payload instead of "trials". No consent/practice/attention
 // checks yet -- those still only exist in the main study.
 //
-// example_manifest.json: {vocabulary: [...8 GAT classes...], regions: [one row per region]}. Each
-// region row is {part, region_id, affordance, mean_confidence, our_fc_label}. affordance is GAT's
-// plain argmax majority-vote label for that region (no confidence threshold -- every region,
-// including low-confidence ones, gets a label to rate, since that's exactly the judgment of interest).
+// example_manifest.json: {vocabulary: [...37 AGD20K-style classes...], models: [...4 VLM keys...],
+// regions: [one row per region]}. Each region row is {part, region_id, labels: {model_key: label}} --
+// one forced-choice label per model, all four run through the identical per-part prompt/vocabulary
+// (batch_final_labeling.py's MODELS registry in the main NVRD repo), so they're directly comparable
+// and swappable. GAT is NOT in this rotation -- it uses a different, 8-word vocabulary from an
+// unrelated pixel-level pipeline, so its label can't share a candidate-chip list with the VLMs'
+// 37-word AGD20K vocabulary without a lossy remapping; it stays a separate comparison elsewhere.
+//
+// For EACH region, ONE of the 4 models' labels is picked at random (pick_shown_label() below) and
+// that's the "AI model's pick" the participant sees and rates -- independently per region, not once
+// per participant, so a single submission samples multiple models and every model accumulates
+// roughly even coverage across many participants without needing a between-subjects assignment. The
+// participant is never told which model produced the label shown (same blinding as before); which
+// model was actually shown is recorded in the submitted data (shown_model) for later per-model
+// analysis, but is NOT rendered anywhere in the on-screen UI.
+//
 // The claim rated is comparative, not absolute: whether the model's pick is the BEST explanation
 // among the full candidate list (shown above the images), not just whether it's acceptable at all.
 //
@@ -51,6 +63,17 @@
     return div.innerHTML;
   }
 
+  // Picks one model uniformly at random from whichever models actually have a label for this region
+  // (all 4 should, in practice, but this degrades gracefully if a future object is missing one).
+  const models = manifest.models;
+  function pick_shown_label(labels) {
+    const available = models.filter(function (m) {
+      return labels[m] !== undefined;
+    });
+    const model = available[Math.floor(Math.random() * available.length)];
+    return { model: model, affordance: labels[model] };
+  }
+
   const intro = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -83,6 +106,11 @@
   const timeline = [intro];
 
   regions.forEach(function (row, i) {
+    // Picked ONCE per region, outside the trial objects, so rating_trial/followup/tool_use_trial for
+    // THIS region all show and reference the same chosen model's label -- the shuffle is per-region,
+    // not re-rolled on every trial screen within a region.
+    const shown = pick_shown_label(row.labels);
+
     const rating_trial = {
       type: jsPsychHtmlButtonResponse,
       stimulus:
@@ -91,7 +119,7 @@
           regions_image,
           `images/shape_16_highlight_part${row.part}.png`,
           row.part,
-          row.affordance,
+          shown.affordance,
           n_parts,
           vocabulary
         ) +
@@ -108,9 +136,8 @@
       data: {
         part: row.part,
         region_id: row.region_id,
-        affordance: row.affordance,
-        mean_confidence: row.mean_confidence,
-        our_fc_label: row.our_fc_label,
+        affordance: shown.affordance,
+        shown_model: shown.model,
       },
       on_finish: function (data) {
         data.rating = data.response + 1; // 1 (Strongly Disagree) .. 5 (Strongly Agree)
@@ -130,13 +157,13 @@
                   regions_image,
                   `images/shape_16_highlight_part${row.part}.png`,
                   row.part,
-                  row.affordance,
+                  shown.affordance,
                   n_parts,
                   vocabulary
                 )}
                 <div class="followup-container">
                   <p>You indicated the model's choice &mdash;
-                  <span class="affordance-word">${row.affordance}</span> &mdash; for Part
+                  <span class="affordance-word">${shown.affordance}</span> &mdash; for Part
                   <span class="part-number">${row.part}</span> might not be the best fit.</p>
                   <label for="better-affordance-input" class="reasoning-label">
                     What affordance would be a more fitting label for this part?
@@ -169,7 +196,7 @@
           regions_image,
           `images/shape_16_highlight_part${row.part}.png`,
           row.part,
-          row.affordance,
+          shown.affordance,
           n_parts,
           vocabulary
         ) +
@@ -205,11 +232,14 @@
         followup_by_part[f.part] = f.proposed_affordance;
       });
 
+      // Deliberately NOT shown here: which model produced each label (shown_model is in the
+      // submitted data for our analysis, but revealing it on-screen would un-blind the participant
+      // after the fact, for no benefit to them).
       const table_rows = ratings
         .map(function (t) {
           const proposed = followup_by_part[t.part];
           return (
-            `<tr><td>${t.part}</td><td>${t.affordance}</td><td>${t.mean_confidence}</td>` +
+            `<tr><td>${t.part}</td><td>${t.affordance}</td>` +
             `<td>${likert_choices[t.rating - 1]}</td>` +
             `<td>${escape_html(t.reasoning)}</td>` +
             `<td>${proposed ? escape_html(proposed) : "&mdash;"}</td></tr>`
@@ -220,7 +250,7 @@
         <div class="demo-result">
           <h2>All ${ratings.length} regions rated</h2>
           <table class="summary-table">
-            <thead><tr><th>Part</th><th>GAT label</th><th>GAT conf.</th><th>Rating</th>
+            <thead><tr><th>Part</th><th>Label shown</th><th>Rating</th>
               <th>Reasoning</th><th>Proposed label</th></tr></thead>
             <tbody>${table_rows}</tbody>
           </table>
@@ -278,8 +308,7 @@
           part: t.part,
           region_id: t.region_id,
           affordance: t.affordance,
-          mean_confidence: t.mean_confidence,
-          our_fc_label: t.our_fc_label,
+          shown_model: t.shown_model,
           rating: t.rating,
           response_time_ms: t.rt,
           reasoning: t.reasoning,
