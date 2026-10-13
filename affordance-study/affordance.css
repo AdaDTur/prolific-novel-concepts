@@ -1,0 +1,186 @@
+/* New classes this trial type needs on top of ../experiment.css's trial-container / trial-image-pair /
+   trial-image-box / trial-image-frame / trial-caption / trial-question (all reused unchanged). */
+
+.part-number {
+  font-weight: 700;
+  color: #1a4d8f;
+}
+
+.candidates-block {
+  max-width: 100%;
+  margin: 0 auto 20px;
+  text-align: center;
+}
+
+.candidates-label {
+  font-size: 0.78rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #6b6b6b;
+  margin-bottom: 10px;
+}
+
+.candidates-list {
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: center;
+  gap: 6px;
+  overflow-x: auto;
+  padding: 2px; /* room for the chosen chip's border/shadow without clipping */
+}
+
+.candidate-chip {
+  display: inline-block;
+  flex: 0 0 auto;
+  white-space: nowrap;
+  padding: 6px 10px;
+  border: 2px solid #e0ddd6;
+  border-radius: 20px;
+  background: #ffffff;
+  color: #6b6b6b;
+  font-size: 0.8rem;
+}
+
+.candidate-chip.candidate-chosen {
+  border-color: #8f3d1a;
+  background: #fdeee3;
+  color: #8f3d1a;
+  font-weight: 700;
+}
+
+.affordance-word {
+  font-weight: 700;
+  color: #8f3d1a;
+  font-style: italic;
+}
+
+.demo-banner {
+  font-size: 0.85rem;
+  font-weight: 600;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: #ffffff;
+  background: #8f3d1a;
+  display: inline-block;
+  padding: 6px 16px;
+  border-radius: 20px;
+  margin-bottom: 16px;
+}
+
+.reasoning-block {
+  max-width: 600px;
+  margin: 16px auto 0;
+  text-align: left;
+}
+
+.reasoning-label {
+  display: block;
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  margin-bottom: 6px;
+}
+
+.text-input {
+  width: 100%;
+  box-sizing: border-box;
+  padding: 8px 10px;
+  font-family: inherit;
+  font-size: 0.95rem;
+  border: 2px solid #e0ddd6;
+  border-radius: 8px;
+  resize: vertical;
+}
+
+.text-input:focus {
+  outline: none;
+  border-color: #8f3d1a;
+}
+
+.followup-container {
+  max-width: 600px;
+  margin: 8px auto 0;
+  text-align: left;
+  padding: 10px 0;
+}
+
+.followup-container p {
+  margin-bottom: 16px;
+}
+
+.tool-use-block {
+  max-width: 600px;
+  margin: 16px auto 0;
+  text-align: left;
+}
+
+.state-block {
+  max-width: 600px;
+  margin: 20px auto 0;
+  text-align: left;
+}
+
+.state-label {
+  font-size: 0.85rem;
+  color: #4a4a4a;
+  margin-bottom: 10px;
+}
+
+.state-inputs {
+  display: flex;
+  gap: 16px;
+  flex-wrap: wrap;
+}
+
+.state-input-group {
+  flex: 1 1 240px;
+  min-width: 0;
+}
+
+.demo-result {
+  max-width: 900px;
+  margin: 0 auto;
+  text-align: center;
+  padding: 30px 20px;
+}
+
+.demo-result h2 {
+  font-size: 1.6rem;
+  margin-bottom: 12px;
+  color: #2d5a27;
+}
+
+.demo-result .rating-value {
+  font-size: 2.4rem;
+  font-weight: 700;
+  color: #8f3d1a;
+  margin: 8px 0;
+}
+
+.summary-table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 16px;
+  font-size: 0.9rem;
+}
+
+.summary-table th,
+.summary-table td {
+  padding: 8px 10px;
+  border-bottom: 1px solid #e0ddd6;
+  text-align: center;
+}
+
+.summary-table td:nth-child(5),
+.summary-table td:nth-child(6) {
+  text-align: left;
+  max-width: 220px;
+  white-space: normal;
+}
+
+.summary-table th {
+  color: #6b6b6b;
+  text-transform: uppercase;
+  font-size: 0.72rem;
+  letter-spacing: 0.06em;
+}

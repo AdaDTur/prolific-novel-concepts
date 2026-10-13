@@ -1,0 +1,63 @@
+{
+  "vocabulary": [
+    "grasp",
+    "cut",
+    "scoop",
+    "pound",
+    "support",
+    "screw",
+    "contain",
+    "stick"
+  ],
+  "regions": [
+    {
+      "part": 1,
+      "region_id": "shape_16_region_4",
+      "affordance": "grasp",
+      "mean_confidence": 0.601,
+      "our_fc_label": "hold"
+    },
+    {
+      "part": 2,
+      "region_id": "shape_16_region_1",
+      "affordance": "support",
+      "mean_confidence": 0.107,
+      "our_fc_label": "none"
+    },
+    {
+      "part": 3,
+      "region_id": "shape_16_region_2",
+      "affordance": "grasp",
+      "mean_confidence": 0.943,
+      "our_fc_label": "none"
+    },
+    {
+      "part": 4,
+      "region_id": "shape_16_region_3",
+      "affordance": "grasp",
+      "mean_confidence": 0.756,
+      "our_fc_label": "hold"
+    },
+    {
+      "part": 5,
+      "region_id": "shape_16_region_5",
+      "affordance": "pound",
+      "mean_confidence": 0.206,
+      "our_fc_label": "none"
+    },
+    {
+      "part": 6,
+      "region_id": "shape_16_region_6",
+      "affordance": "pound",
+      "mean_confidence": 0.21,
+      "our_fc_label": "hold"
+    },
+    {
+      "part": 7,
+      "region_id": "shape_16_region_7",
+      "affordance": "pound",
+      "mean_confidence": 0.137,
+      "our_fc_label": "none"
+    }
+  ]
+}
