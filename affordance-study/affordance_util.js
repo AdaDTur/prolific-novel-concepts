@@ -56,6 +56,35 @@ function build_functionality_images_block(regions_image, highlight_image, size_c
   `;
 }
 
+// Shown once per object, after every part has been answered individually: the whole numbered
+// object (no single part highlighted -- there's no "target part" for a whole-object judgment) plus
+// the size-reference chart (size plausibly still matters for a whole-object functionality guess,
+// e.g. "contain" means something very different at hand-scale vs. building-scale).
+function build_overall_images_block(regions_image, size_chart_image, size_chart_scale, n_parts) {
+  return `
+    <div class="trial-image-pair">
+      <div class="trial-image-box">
+        <div class="image-label">All Parts</div>
+        <div class="trial-image-frame">
+          <img src="${regions_image}" alt="Object divided into numbered parts" />
+        </div>
+        <div class="trial-caption">
+          This object has <strong>${n_parts}</strong> numbered parts in total.
+        </div>
+      </div>
+      <div class="trial-image-box">
+        <div class="image-label">Size Reference</div>
+        <div class="trial-image-frame">
+          <img src="${size_chart_image}" alt="Object silhouette next to a human figure for scale" />
+        </div>
+        <div class="trial-caption">
+          One possible real-world size for this object, shown next to an average adult (${size_chart_scale} scale).
+        </div>
+      </div>
+    </div>
+  `;
+}
+
 // Training items use real, familiar objects (chair, ladle, fedora, backpack, wallet) whose
 // real-world size isn't ambiguous the way a fictional novel object's is -- so just the two images,
 // no size-reference chart (and none were generated for these training objects in the first place).
@@ -86,9 +115,12 @@ function build_training_images_block(numbered_image, highlight_image, target_par
 
 // The interactive word-bank picker: click a chip to select/deselect (max 3, enforced by
 // toggle_functionality_chip below), or type something not in the list in the "other" box. Shared
-// by both the main elicitation trial and the training trials, so training is practice on the exact
-// UI participants will use for real.
-function build_functionality_picker_block(candidate_list) {
+// by the main per-part elicitation trial, the whole-object overall-functionality trial, and the
+// training trials, so training is practice on the exact UI participants will use for real.
+// `subject` is just the noun phrase in the instruction text ("this part" for a per-part trial,
+// "this object as a whole" for the end-of-object overall trial) -- same picker/data mechanics either way.
+function build_functionality_picker_block(candidate_list, subject) {
+  subject = subject || "this part";
   const chips = candidate_list
     .map(function (c) {
       return `<span class="candidate-chip" data-value="${c}" onclick="toggle_functionality_chip(this)">${c}</span>`;
@@ -98,10 +130,10 @@ function build_functionality_picker_block(candidate_list) {
   return `
     <div class="functionality-picker">
       <div class="candidates-label">
-        Pick <strong>up to 3</strong> functionalities below that this part could realistically be
+        Pick <strong>up to 3</strong> functionalities below that ${subject} could realistically be
         used for &mdash; click a word to select or deselect it. If something is missing, type it in
         the box instead. <strong>"Decoration," "looks nice," or anything like that does NOT
-        count</strong> &mdash; we're asking what the part could actually be used to DO.
+        count</strong> &mdash; we're asking what it could actually be used to DO.
       </div>
       <div class="candidates-list">${chips}</div>
       <div class="other-functionality-block">

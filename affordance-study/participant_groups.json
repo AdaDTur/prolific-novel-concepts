@@ -1,0 +1,157 @@
+{
+  "objects": [
+    "shape_1",
+    "shape_2",
+    "shape_3",
+    "shape_10",
+    "shape_11",
+    "shape_12",
+    "shape_13",
+    "shape_14",
+    "shape_16",
+    "shape_27"
+  ],
+  "sizes": [
+    "hand",
+    "human",
+    "building"
+  ],
+  "objects_per_group": 5,
+  "annotations_per_cell": 4,
+  "num_groups": 6,
+  "participants_needed": 24,
+  "groups": [
+    [
+      {
+        "object": "shape_16",
+        "size": "human"
+      },
+      {
+        "object": "shape_2",
+        "size": "hand"
+      },
+      {
+        "object": "shape_1",
+        "size": "building"
+      },
+      {
+        "object": "shape_27",
+        "size": "building"
+      },
+      {
+        "object": "shape_12",
+        "size": "hand"
+      }
+    ],
+    [
+      {
+        "object": "shape_16",
+        "size": "hand"
+      },
+      {
+        "object": "shape_2",
+        "size": "human"
+      },
+      {
+        "object": "shape_14",
+        "size": "building"
+      },
+      {
+        "object": "shape_27",
+        "size": "hand"
+      },
+      {
+        "object": "shape_12",
+        "size": "building"
+      }
+    ],
+    [
+      {
+        "object": "shape_10",
+        "size": "building"
+      },
+      {
+        "object": "shape_11",
+        "size": "hand"
+      },
+      {
+        "object": "shape_14",
+        "size": "human"
+      },
+      {
+        "object": "shape_27",
+        "size": "human"
+      },
+      {
+        "object": "shape_3",
+        "size": "hand"
+      }
+    ],
+    [
+      {
+        "object": "shape_10",
+        "size": "hand"
+      },
+      {
+        "object": "shape_11",
+        "size": "human"
+      },
+      {
+        "object": "shape_1",
+        "size": "hand"
+      },
+      {
+        "object": "shape_13",
+        "size": "hand"
+      },
+      {
+        "object": "shape_12",
+        "size": "human"
+      }
+    ],
+    [
+      {
+        "object": "shape_10",
+        "size": "human"
+      },
+      {
+        "object": "shape_11",
+        "size": "building"
+      },
+      {
+        "object": "shape_14",
+        "size": "hand"
+      },
+      {
+        "object": "shape_13",
+        "size": "building"
+      },
+      {
+        "object": "shape_3",
+        "size": "human"
+      }
+    ],
+    [
+      {
+        "object": "shape_16",
+        "size": "building"
+      },
+      {
+        "object": "shape_2",
+        "size": "building"
+      },
+      {
+        "object": "shape_1",
+        "size": "human"
+      },
+      {
+        "object": "shape_13",
+        "size": "human"
+      },
+      {
+        "object": "shape_3",
+        "size": "building"
+      }
+    ]
+  ]
+}
