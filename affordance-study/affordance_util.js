@@ -1,27 +1,34 @@
 // Trial-HTML builders for the affordance-acceptability study, parallel to util.js's build_trial_html()
-// in the main naming study: same two-image-box layout (trial-image-pair / trial-image-box /
-// trial-image-frame classes, reused from ../experiment.css) -- just a different pair of images, a
-// candidate-affordance list above them, and a different (comparative, not absolute) claim being rated.
+// in the main naming study: same image-box layout (trial-image-triple / trial-image-box /
+// trial-image-frame classes -- trial-image-triple is affordance.css's 3-column variant of
+// experiment.css's 2-column trial-image-pair) -- a candidate-affordance list above the images, and a
+// different (comparative, not absolute) claim being rated.
 //
-//   regions_image    -- (a) the object partitioned into regions, each outlined and labelled by number
-//                        (affordance_labeling.numbered_overlay() in the main NVRD repo)
-//   highlight_image  -- (b) the same partition, with target_part at full brightness/outlined in
-//                        magenta and every other region (and the background) dimmed -- same
-//                        DIM_FACTOR + magenta-outline convention affordance_labeling.highlight_region()
-//                        uses, just layered on top of the numbered colors so the numbering stays
-//                        legible for cross-reference back to image (a)
+//   regions_image     -- (a) the object partitioned into regions, each outlined and labelled by number
+//                         (affordance_labeling.numbered_overlay() in the main NVRD repo)
+//   highlight_image   -- (b) the same partition, with target_part at full brightness/outlined in
+//                         magenta and every other region (and the background) dimmed -- same
+//                         DIM_FACTOR + magenta-outline convention affordance_labeling.highlight_region()
+//                         uses, just layered on top of the numbered colors so the numbering stays
+//                         legible for cross-reference back to image (a)
+//   size_chart_image  -- (c) one of generate_size_charts.py's three human-silhouette scale charts for
+//                         THIS object (hand/human/building) -- which one is picked once per session in
+//                         demo.js, not per region, since it's the same object throughout
+//   size_chart_scale  -- which of the three (c) is, just for the alt text / caption wording
 //   target_part       -- the number of the highlighted region (must match its label in both images)
 //   affordance        -- the affordance word the model picked for that region (from GAT / Aff-Grasp)
 //   n_parts           -- total number of numbered regions, for the image (a) caption
 //   candidate_list    -- the full set of affordances the model was choosing among (GAT's AFF_LIST);
-//                        shown above the images with `affordance` visually distinguished as the
-//                        model's pick, so "best explanation... over the other alternatives" has a
-//                        concrete, visible set of alternatives to be read against
+//                         shown above the images with `affordance` visually distinguished as the
+//                         model's pick, so "best explanation... over the other alternatives" has a
+//                         concrete, visible set of alternatives to be read against
 
-// The candidates list + both images, with no question/claim beneath it -- shared by the main rating
-// trial and the "propose a better affordance" follow-up, so the follow-up still has the full visual
-// context (the participant shouldn't have to recall the images/candidates from memory to answer it).
-function build_affordance_stimulus_block(regions_image, highlight_image, target_part, affordance, n_parts, candidate_list) {
+// The candidates list + all three images, with no question/claim beneath it -- shared by the main
+// rating trial and the "propose a better affordance" follow-up, so the follow-up still has the full
+// visual context (the participant shouldn't have to recall the images/candidates from memory).
+function build_affordance_stimulus_block(
+  regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, affordance, n_parts, candidate_list
+) {
   const chips = candidate_list
     .map(function (c) {
       const chosen = c === affordance;
@@ -34,7 +41,7 @@ function build_affordance_stimulus_block(regions_image, highlight_image, target_
       <div class="candidates-label">Possible affordances the AI model chose among for this object:</div>
       <div class="candidates-list">${chips}</div>
     </div>
-    <div class="trial-image-pair">
+    <div class="trial-image-triple">
       <div class="trial-image-box">
         <div class="image-label">All Parts</div>
         <div class="trial-image-frame">
@@ -55,15 +62,28 @@ function build_affordance_stimulus_block(regions_image, highlight_image, target_
           Part <span class="part-number">${target_part}</span> is used for.
         </div>
       </div>
+      <div class="trial-image-box">
+        <div class="image-label">Size Reference</div>
+        <div class="trial-image-frame size-chart-frame">
+          <img src="${size_chart_image}" alt="Object silhouette next to a human figure for scale" />
+        </div>
+        <div class="trial-caption">
+          One possible real-world size for this object, shown next to an average adult (${size_chart_scale} scale).
+        </div>
+      </div>
     </div>
   `;
 }
 
 // Full rating-trial stimulus: the shared block above, plus the comparative claim being rated.
-function build_affordance_trial_html(regions_image, highlight_image, target_part, affordance, n_parts, candidate_list) {
+function build_affordance_trial_html(
+  regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, affordance, n_parts, candidate_list
+) {
   return `
     <div class="trial-container">
-      ${build_affordance_stimulus_block(regions_image, highlight_image, target_part, affordance, n_parts, candidate_list)}
+      ${build_affordance_stimulus_block(
+        regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, affordance, n_parts, candidate_list
+      )}
       <div class="trial-question">
         The model's choice &mdash; <span class="affordance-word">${affordance}</span> &mdash; is the
         <strong>best</strong> explanation for Part <span class="part-number">${target_part}</span>'s

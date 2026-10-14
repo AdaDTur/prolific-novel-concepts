@@ -1,6 +1,29 @@
 /* New classes this trial type needs on top of ../experiment.css's trial-container / trial-image-pair /
    trial-image-box / trial-image-frame / trial-caption / trial-question (all reused unchanged). */
 
+/* Three image boxes (regions / highlight / size-chart) instead of experiment.css's hardcoded
+   2-column .trial-image-pair -- same box/frame/caption classes, just a 3-column grid. */
+.trial-image-triple {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+  margin-bottom: 24px;
+}
+
+@media (max-width: 860px) {
+  .trial-image-triple {
+    grid-template-columns: 1fr;
+    gap: 16px;
+  }
+}
+
+/* generate_size_charts.py's canvases are landscape (1200x800 / 1400x1000, ~3:2), not square like
+   the region/highlight renders -- overriding just this frame's aspect-ratio keeps the chart from
+   being letterboxed inside a square box. */
+.size-chart-frame {
+  aspect-ratio: 3 / 2;
+}
+
 .part-number {
   font-weight: 700;
   color: #1a4d8f;

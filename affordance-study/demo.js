@@ -36,6 +36,17 @@
 //      use scenario (what would this part interact with, and where), plus the before/after states of
 //      that same imagined task as two short structured fields -- see build_tool_use_block() in
 //      affordance_util.js for why structured beats one free-text narrative here.
+//
+// Every screen also shows a size-reference chart (generate_size_charts.py in the main NVRD repo):
+// the object's silhouette, extracted from its own render via classical CV (not AI-drawn), next to a
+// fixed-height human figure, at ONE of three hypothetical real-world sizes (hand/chair-table/two-
+// story-building). Knowing the object's assumed scale matters for judging part affordances (a
+// "handle" reads very differently on a hand-sized object vs. a building-sized one), but the novel
+// shapes have no canonical real-world size -- so which of the three charts is shown is picked
+// uniformly at random ONCE per session (pick_size_chart_scale(), below), not re-rolled per region,
+// since it's the same object throughout this single-object demo. Which scale was shown is recorded
+// in the submitted data (size_chart_scale, session-level) so scale-sensitivity of judgments across
+// many participants/sessions can be analyzed later.
 (async function () {
   const manifest = await fetch("example_manifest.json").then((r) => r.json());
   const vocabulary = manifest.vocabulary;
@@ -43,6 +54,10 @@
   const n_parts = regions.length;
   const object_name = "shape_16";
   const regions_image = "images/shape_16_numbered.png";
+
+  const SIZE_CHART_SCALES = ["hand", "human", "building"];
+  const size_chart_scale = SIZE_CHART_SCALES[Math.floor(Math.random() * SIZE_CHART_SCALES.length)];
+  const size_chart_image = `images/${object_name}_${size_chart_scale}.png`;
 
   const prolific = get_prolific_params();
 
@@ -81,7 +96,9 @@
         <h2>Instructions (demo)</h2>
         <p>You will see an object divided into numbered parts. For each part, an AI model has picked
         <strong>one</strong> affordance &mdash; from the list shown above the images &mdash; that it
-        thinks best explains what that part is used for.</p>
+        thinks best explains what that part is used for. A third image shows one possible real-world
+        size for the object, next to an average adult, since that affects what a part is plausibly
+        used for.</p>
         <div class="note-box">
           <p><strong>Many of the listed affordances might reasonably apply</strong> to a given part
           &mdash; a handle, for instance, could plausibly be gripped, pulled, or pushed. We are not
@@ -118,6 +135,8 @@
         build_affordance_trial_html(
           regions_image,
           `images/shape_16_highlight_part${row.part}.png`,
+          size_chart_image,
+          size_chart_scale,
           row.part,
           shown.affordance,
           n_parts,
@@ -156,6 +175,8 @@
                 ${build_affordance_stimulus_block(
                   regions_image,
                   `images/shape_16_highlight_part${row.part}.png`,
+                  size_chart_image,
+                  size_chart_scale,
                   row.part,
                   shown.affordance,
                   n_parts,
@@ -195,6 +216,8 @@
         build_affordance_stimulus_block(
           regions_image,
           `images/shape_16_highlight_part${row.part}.png`,
+          size_chart_image,
+          size_chart_scale,
           row.part,
           shown.affordance,
           n_parts,
@@ -327,6 +350,7 @@
       session_id: prolific.session_id,
       object: object_name,
       regions_image: regions_image,
+      size_chart_scale: size_chart_scale,
       study_start_time: new Date(jsPsych.getStartTime()).toISOString(),
       study_end_time: new Date().toISOString(),
       total_duration_ms: jsPsych.getTotalTime(),
