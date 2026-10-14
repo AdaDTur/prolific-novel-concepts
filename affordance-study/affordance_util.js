@@ -1,46 +1,29 @@
-// Trial-HTML builders for the affordance-acceptability study, parallel to util.js's build_trial_html()
-// in the main naming study: same image-box layout (trial-image-triple / trial-image-box /
-// trial-image-frame classes -- trial-image-triple is affordance.css's 3-column variant of
-// experiment.css's 2-column trial-image-pair) -- a candidate-affordance list above the images, and a
-// different (comparative, not absolute) claim being rated.
+// Trial-HTML builders for the affordance-study (internally "functionality" throughout the UI --
+// most participants won't know the word "affordance", so every user-facing label, instruction and
+// data field here says "functionality"/"functionalities" instead).
+//
+// This is the OPEN-ELICITATION version of the study: participants are never shown any model's
+// guess for a part. Instead they pick their own answer(s) from a provided word bank (up to 3,
+// click to toggle) or type one in if the bank doesn't have what they want. Each of the 4 VLMs'
+// labels for a region are still recorded in the submitted data (model_labels, from the manifest's
+// per-region `labels`), just never rendered -- they're there purely for offline comparison against
+// what humans actually said, not to bias what humans say.
 //
 //   regions_image     -- (a) the object partitioned into regions, each outlined and labelled by number
-//                         (affordance_labeling.numbered_overlay() in the main NVRD repo)
 //   highlight_image   -- (b) the same partition, with target_part at full brightness/outlined in
-//                         magenta and every other region (and the background) dimmed -- same
-//                         DIM_FACTOR + magenta-outline convention affordance_labeling.highlight_region()
-//                         uses, just layered on top of the numbered colors so the numbering stays
-//                         legible for cross-reference back to image (a)
+//                        magenta and every other region (and the background) dimmed
 //   size_chart_image  -- (c) one of generate_size_charts.py's three human-silhouette scale charts for
-//                         THIS object (hand/human/building) -- which one is picked once per session in
-//                         demo.js, not per region, since it's the same object throughout
-//   size_chart_scale  -- which of the three (c) is, just for the alt text / caption wording
+//                        this object (hand/human/building) -- which one is picked once per session in
+//                        demo.js, not per region
+//   size_chart_scale  -- which of the three (c) is, for the caption wording
 //   target_part       -- the number of the highlighted region (must match its label in both images)
-//   affordance        -- the affordance word the model picked for that region (from GAT / Aff-Grasp)
 //   n_parts           -- total number of numbered regions, for the image (a) caption
-//   candidate_list    -- the full set of affordances the model was choosing among (GAT's AFF_LIST);
-//                         shown above the images with `affordance` visually distinguished as the
-//                         model's pick, so "best explanation... over the other alternatives" has a
-//                         concrete, visible set of alternatives to be read against
+//   candidate_list    -- the functionality word bank to offer as clickable chips (manifest.vocabulary)
 
-// The candidates list + all three images, with no question/claim beneath it -- shared by the main
-// rating trial and the "propose a better affordance" follow-up, so the follow-up still has the full
-// visual context (the participant shouldn't have to recall the images/candidates from memory).
-function build_affordance_stimulus_block(
-  regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, affordance, n_parts, candidate_list
-) {
-  const chips = candidate_list
-    .map(function (c) {
-      const chosen = c === affordance;
-      return `<span class="candidate-chip${chosen ? " candidate-chosen" : ""}">${c}</span>`;
-    })
-    .join("");
-
+// The three images, with no picker/question beneath -- shared by every trial type (main elicitation
+// trial, training trials) that needs this same visual context.
+function build_functionality_images_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts) {
   return `
-    <div class="candidates-block">
-      <div class="candidates-label">Possible affordances the AI model chose among for this object:</div>
-      <div class="candidates-list">${chips}</div>
-    </div>
     <div class="trial-image-triple">
       <div class="trial-image-box">
         <div class="image-label">All Parts</div>
@@ -57,9 +40,7 @@ function build_affordance_stimulus_block(
           <img src="${highlight_image}" alt="One part highlighted, the rest dimmed" />
         </div>
         <div class="trial-caption">
-          Of the affordances listed above, the AI model picked
-          <span class="affordance-word">${affordance}</span> as the one that best explains what
-          Part <span class="part-number">${target_part}</span> is used for.
+          This is Part <span class="part-number">${target_part}</span>.
         </div>
       </div>
       <div class="trial-image-box">
@@ -75,30 +56,110 @@ function build_affordance_stimulus_block(
   `;
 }
 
-// Full rating-trial stimulus: the shared block above, plus the comparative claim being rated.
-function build_affordance_trial_html(
-  regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, affordance, n_parts, candidate_list
-) {
+// Training items use real, familiar objects (chair, ladle, fedora, backpack, wallet) whose
+// real-world size isn't ambiguous the way a fictional novel object's is -- so just the two images,
+// no size-reference chart (and none were generated for these training objects in the first place).
+function build_training_images_block(numbered_image, highlight_image, target_part, n_parts) {
   return `
-    <div class="trial-container">
-      ${build_affordance_stimulus_block(
-        regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, affordance, n_parts, candidate_list
-      )}
-      <div class="trial-question">
-        The model's choice &mdash; <span class="affordance-word">${affordance}</span> &mdash; is the
-        <strong>best</strong> explanation for Part <span class="part-number">${target_part}</span>'s
-        function, compared to the other affordances listed above.
+    <div class="trial-image-pair">
+      <div class="trial-image-box">
+        <div class="image-label">All Parts</div>
+        <div class="trial-image-frame">
+          <img src="${numbered_image}" alt="Object divided into numbered parts" />
+        </div>
+        <div class="trial-caption">
+          This object has been divided into <strong>${n_parts}</strong> numbered parts.
+        </div>
+      </div>
+      <div class="trial-image-box">
+        <div class="image-label">Highlighted Part</div>
+        <div class="trial-image-frame">
+          <img src="${highlight_image}" alt="One part highlighted, the rest dimmed" />
+        </div>
+        <div class="trial-caption">
+          This is Part <span class="part-number">${target_part}</span>.
+        </div>
       </div>
     </div>
   `;
 }
 
-// The "imagine using it" probe shown after every region's rating (regardless of agreement/disagreement
-// with the AI's label): (1) a free-text tool-use scenario -- what would this part interact with, and
-// where/in what setting -- grounding the affordance judgment in a concrete imagined use rather than an
-// abstract label; (2) the before/after states of that same imagined task, as two short structured
-// fields (not one free-text narrative) since a fill-in-the-blank precondition/postcondition pair is
-// easier for a participant to answer concretely and easier to analyze than parsing free narrative.
+// The interactive word-bank picker: click a chip to select/deselect (max 3, enforced by
+// toggle_functionality_chip below), or type something not in the list in the "other" box. Shared
+// by both the main elicitation trial and the training trials, so training is practice on the exact
+// UI participants will use for real.
+function build_functionality_picker_block(candidate_list) {
+  const chips = candidate_list
+    .map(function (c) {
+      return `<span class="candidate-chip" data-value="${c}" onclick="toggle_functionality_chip(this)">${c}</span>`;
+    })
+    .join("");
+
+  return `
+    <div class="functionality-picker">
+      <div class="candidates-label">
+        Pick <strong>up to 3</strong> functionalities below that this part could realistically be
+        used for &mdash; click a word to select or deselect it. If something is missing, type it in
+        the box instead. <strong>"Decoration," "looks nice," or anything like that does NOT
+        count</strong> &mdash; we're asking what the part could actually be used to DO.
+      </div>
+      <div class="candidates-list">${chips}</div>
+      <div class="other-functionality-block">
+        <label for="other-functionality-input" class="reasoning-label">
+          Other functionality not listed above (optional):
+        </label>
+        <input type="text" id="other-functionality-input" class="text-input"
+          placeholder="e.g. prop open a door" />
+      </div>
+    </div>
+  `;
+}
+
+// Click handler for candidate-chip toggling, referenced by the inline onclick= in the chips built
+// above (plain global function, not a module export -- same pattern every other builder here uses,
+// since this page has no bundler). Enforces the "up to 3" cap by simply ignoring a 4th selection
+// attempt rather than bothering with a popup/alert.
+function toggle_functionality_chip(el) {
+  const container = el.closest(".candidates-list");
+  const selectedCount = container.querySelectorAll(".candidate-chip.selected").length;
+  if (el.classList.contains("selected")) {
+    el.classList.remove("selected");
+  } else if (selectedCount < 3) {
+    el.classList.add("selected");
+  }
+}
+
+// Reads back whatever the participant picked: selected chips' data-value, plus the free-text
+// "other" box if non-empty. Called from on_finish for both training and main elicitation trials.
+function get_selected_functionalities() {
+  const chips = document.querySelectorAll(".candidate-chip.selected");
+  const selected = Array.prototype.map.call(chips, function (c) {
+    return c.dataset.value;
+  });
+  const otherBox = document.querySelector("#other-functionality-input");
+  const other = otherBox ? otherBox.value.trim() : "";
+  if (other) {
+    selected.push(other);
+  }
+  return selected;
+}
+
+// Full elicitation-trial stimulus: images + picker, for the main study trials.
+function build_functionality_trial_html(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts, candidate_list) {
+  return `
+    <div class="trial-container">
+      ${build_functionality_images_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts)}
+      ${build_functionality_picker_block(candidate_list)}
+    </div>
+  `;
+}
+
+// The "imagine using it" probe shown after every elicitation trial: (1) a free-text tool-use
+// scenario -- what would this part interact with, and where/in what setting -- grounding the
+// functionality judgment in a concrete imagined use rather than an abstract label; (2) the
+// before/after states of that same imagined task, as two short structured fields (not one
+// free-text narrative) since a fill-in-the-blank precondition/postcondition pair is easier for a
+// participant to answer concretely and easier to analyze than parsing free narrative.
 function build_tool_use_block() {
   return `
     <div class="tool-use-block">
