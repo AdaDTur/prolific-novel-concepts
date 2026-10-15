@@ -132,30 +132,30 @@
     stimulus: `
       <div class="instructions-container">
         <h2>Instructions (demo)</h2>
-        <p>You will see a series of objects, each divided into numbered parts. For each part, your
-        job is to say what it could realistically be used to <strong>DO</strong> &mdash; its
-        <strong>functionality</strong> &mdash; not just what it looks like or what it's made of.</p>
+        <p>You'll see a series of objects, each split into numbered parts. For each part, just tell
+        us what it could realistically be used to <strong>DO</strong>, that's its
+        <strong>functionality</strong>, not just what it looks like or what it's made of.</p>
         <div class="note-box">
-          <p><strong>"Decoration," "looks nice," "it's pretty," or anything like that does NOT
-          count.</strong> We're asking what a part could physically be used for, the way a handle
-          can be gripped or a blade can cut &mdash; not how it looks.</p>
+          <p><strong>"Decoration," "looks nice," "it's pretty," or anything like that doesn't
+          count.</strong> We want what a part could physically be used for, like how a handle can be
+          gripped or a blade can cut, not how it looks.</p>
         </div>
         <p>For each part:</p>
         <ol>
-          <li>Look at the images: the whole object with its parts numbered, the one part you're
-          judging highlighted, and a size reference showing how big the object might be.</li>
-          <li>Pick <strong>up to 3</strong> functionalities from the provided list by clicking them,
-          or type your own if the list is missing something.</li>
-          <li>Then briefly imagine actually using that part as a tool: what would you use it to
-          interact with, and in what setting.</li>
+          <li>Look at the images. You'll see the whole object with its parts numbered, the one part
+          you're judging highlighted, and a size reference showing how big the object might be.</li>
+          <li>Pick <strong>up to 3</strong> functionalities from the list by clicking them, or type
+          your own if the list is missing something.</li>
+          <li>Then briefly imagine actually using that part as a tool. What would you use it to
+          interact with, and in what setting?</li>
         </ol>
         <p>Once you've gone through every part of an object, you'll answer <strong>one final
-        question</strong> about that object as a whole: stepping back from the individual parts,
-        what would you say its overall functionality is? Then you'll move on to the next object, and
-        repeat the same steps.</p>
-        <p>First, you'll see <strong>two worked examples</strong> showing what a good answer looks
+        question</strong> about the object as a whole. Step back from the individual parts and tell
+        us what you'd say its overall functionality is. Then you'll move on to the next object and do
+        the same thing again.</p>
+        <p>First you'll see <strong>two worked examples</strong> showing what a good answer looks
         like, then do <strong>5 short training rounds</strong> on everyday objects (a chair, a ladle,
-        etc.) to get used to how this works, before moving on to the real task.</p>
+        etc.) to get the hang of it before moving on to the real task.</p>
       </div>
     `,
     choices: ["Begin Training"],
@@ -181,9 +181,9 @@
       n_parts: 5,
       chosen: ["wear"],
       explanation:
-        "This wing of the bow-tie is fabric you'd put on around your neck, so <strong>\"wear\"</strong> " +
-        "is the clear functionality here &mdash; a single, obvious answer is completely fine to give. " +
-        "Notice the answer is about what the part DOES, not how it looks.",
+        "This wing of the bow-tie is fabric you'd put around your neck, so <strong>\"wear\"</strong> " +
+        "is the obvious functionality here. A single clear answer like this is totally fine. Just " +
+        "remember it's about what the part DOES, not how it looks.",
     },
     {
       object: "corkscrew",
@@ -194,15 +194,15 @@
       chosen: ["hold", "push", "lift"],
       explanation:
         "This wing-shaped lever is what you'd <strong>hold</strong> onto and <strong>push</strong> " +
-        "down to <strong>lift</strong> the cork out &mdash; when more than one functionality genuinely " +
-        "applies, pick up to 3 that fit, like here.",
+        "down to <strong>lift</strong> the cork out. When more than one functionality genuinely " +
+        "applies, go ahead and pick up to 3 that fit, like here.",
     },
   ];
   const example_trials = ILLUSTRATIVE_EXAMPLES.map(function (item, i) {
     return {
       type: jsPsychHtmlButtonResponse,
       stimulus:
-        `<div class="demo-banner">Example &mdash; ${i + 1} of ${ILLUSTRATIVE_EXAMPLES.length}</div>` +
+        `<div class="demo-banner">Example ${i + 1} of ${ILLUSTRATIVE_EXAMPLES.length}</div>` +
         `<div class="trial-container">` +
         build_training_images_block(item.numbered_image, item.highlight_image, item.part, item.n_parts) +
         build_example_answer_block(manifests[assignment[0].object].vocabulary, item.chosen, item.explanation) +
@@ -218,7 +218,7 @@
     return {
       type: jsPsychHtmlButtonResponse,
       stimulus:
-        `<div class="demo-banner">Training &mdash; ${i + 1} of ${TRAINING_ITEMS.length}</div>` +
+        `<div class="demo-banner">Training ${i + 1} of ${TRAINING_ITEMS.length}</div>` +
         `<div class="trial-container">` +
         build_training_images_block(item.numbered_image, item.highlight_image, item.part, item.n_parts) +
         build_functionality_picker_block(manifests[assignment[0].object].vocabulary) +
@@ -276,7 +276,7 @@
       const functionality_trial = {
         type: jsPsychHtmlButtonResponse,
         stimulus:
-          `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length} &mdash; region ${i + 1} of ${n_parts}</div>` +
+          `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${i + 1} of ${n_parts}</div>` +
           build_functionality_trial_html(
             regions_image,
             `images/${object_name}_highlight_part${row.part}.png`,
@@ -329,7 +329,7 @@
     const overall_trial = {
       type: jsPsychHtmlButtonResponse,
       stimulus:
-        `<div class="demo-banner">Overall functionality &mdash; object ${obj_index + 1} of ${assignment.length}</div>` +
+        `<div class="demo-banner">Overall functionality for object ${obj_index + 1} of ${assignment.length}</div>` +
         `<div class="trial-container">` +
         `<p class="trial-caption" style="max-width:700px;margin:0 auto 20px;">` +
         `Now that you've looked at every part individually, step back and consider the object as a whole.` +

@@ -131,7 +131,7 @@ function build_example_answer_block(candidate_list, chosen, explanation) {
   return `
     <div class="functionality-picker">
       <div class="candidates-label">
-        <strong>Example answer</strong> &mdash; the highlighted word(s) below are what a good answer
+        <strong>Example answer.</strong> The highlighted word(s) below show what a good answer
         looks like for this part.
       </div>
       <div class="candidates-list">${chips}</div>
@@ -160,9 +160,9 @@ function build_functionality_picker_block(candidate_list, subject) {
     <div class="functionality-picker">
       <div class="candidates-label">
         Pick <strong>up to 3</strong> functionalities below that ${subject} could realistically be
-        used for &mdash; click a word to select or deselect it. If something is missing, type it in
-        the box instead. <strong>"Decoration," "looks nice," or anything like that does NOT
-        count</strong> &mdash; we're asking what it could actually be used to DO.
+        used for. Click a word to select or deselect it, or type your own in the box if something's
+        missing. Just keep in mind <strong>"decoration," "looks nice," and stuff like that doesn't
+        count</strong>, we want what it could actually be used to DO.
       </div>
       <div class="candidates-list">${chips}</div>
       <div class="other-functionality-block">
