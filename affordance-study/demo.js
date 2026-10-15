@@ -127,6 +127,28 @@
     });
   }
 
+  const research_info = {
+    type: jsPsychHtmlButtonResponse,
+    stimulus: `
+      <div class="instructions-container">
+        <h2>About this study</h2>
+        <p>This is a research study out of the University of Illinois Urbana-Champaign (UIUC), run
+        by Ada Tur (adadt2@illinois.edu) and supervised by Professor Heng Ji. We're looking at how
+        AI vision-language models learn what novel, made-up objects could be used for, and comparing
+        that to how humans figure out the same thing just by looking. Your answers help us see where
+        these models line up with human judgment and where they don't.</p>
+        <p>Your participation is voluntary and you can stop at any point without any penalty. We
+        don't collect your name or any other personally identifying info, your Prolific ID is only
+        used to verify participation and process payment, and your responses are kept anonymous and
+        used for research purposes only (they may show up, anonymized, in academic papers or
+        datasets we publish).</p>
+        <p>Questions, concerns, or just want to know more? Reach out anytime at
+        adadt2@illinois.edu.</p>
+      </div>
+    `,
+    choices: ["Continue"],
+  };
+
   const intro = {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
@@ -161,7 +183,7 @@
     choices: ["Begin Training"],
   };
 
-  const timeline = [intro];
+  const timeline = [research_info, intro];
 
   // ---- Two worked examples, shown once before training: a read-only version of the exact picker
   // UI participants will use, with the correct answer already marked, plus a short explanation --
