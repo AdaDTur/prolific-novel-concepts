@@ -166,33 +166,36 @@
   // ---- Two worked examples, shown once before training: a read-only version of the exact picker
   // UI participants will use, with the correct answer already marked, plus a short explanation --
   // so the first time someone has to actually choose an answer themselves (training, right after
-  // this), they've already seen what a good one looks like. One example has a single obvious
-  // answer (fedora/wear), the other has several valid answers (backpack/carry,contain,hold) to
-  // illustrate that picking more than one is fine when more than one genuinely applies.
+  // this), they've already seen what a good one looks like. Deliberately DIFFERENT objects from
+  // TRAINING_ITEMS below (bow-tie/corkscrew vs. chair/ladle/fedora/backpack/wallet) so the examples
+  // don't just hand participants the answer to an item they're about to be quizzed on. One example
+  // has a single obvious answer (bow-tie/wear), the other has several valid answers (corkscrew's
+  // wing lever/hold,push,lift) to illustrate that picking more than one is fine when more than one
+  // genuinely applies.
   const ILLUSTRATIVE_EXAMPLES = [
     {
-      object: "fedora",
-      numbered_image: "images/fedora_numbered.png",
-      highlight_image: "images/fedora_highlight_part1.png",
+      object: "bow-tie",
+      numbered_image: "images/bow-tie_numbered.png",
+      highlight_image: "images/bow-tie_highlight_part1.png",
       part: 1,
-      n_parts: 6,
+      n_parts: 5,
       chosen: ["wear"],
       explanation:
-        "The brim and crown of a hat are what you'd put on your head, so <strong>\"wear\"</strong> " +
+        "This wing of the bow-tie is fabric you'd put on around your neck, so <strong>\"wear\"</strong> " +
         "is the clear functionality here &mdash; a single, obvious answer is completely fine to give. " +
         "Notice the answer is about what the part DOES, not how it looks.",
     },
     {
-      object: "backpack",
-      numbered_image: "images/backpack_numbered.png",
-      highlight_image: "images/backpack_highlight_part1.png",
+      object: "corkscrew",
+      numbered_image: "images/corkscrew_numbered.png",
+      highlight_image: "images/corkscrew_highlight_part1.png",
       part: 1,
-      n_parts: 11,
-      chosen: ["carry", "contain", "hold"],
+      n_parts: 19,
+      chosen: ["hold", "push", "lift"],
       explanation:
-        "This part could reasonably be used to <strong>carry</strong>, <strong>contain</strong>, or " +
-        "<strong>hold</strong> things &mdash; when more than one functionality genuinely applies, pick " +
-        "up to 3 that fit, like here.",
+        "This wing-shaped lever is what you'd <strong>hold</strong> onto and <strong>push</strong> " +
+        "down to <strong>lift</strong> the cork out &mdash; when more than one functionality genuinely " +
+        "applies, pick up to 3 that fit, like here.",
     },
   ];
   const example_trials = ILLUSTRATIVE_EXAMPLES.map(function (item, i) {
