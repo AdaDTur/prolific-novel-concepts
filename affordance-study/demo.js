@@ -147,21 +147,68 @@
           <li>Pick <strong>up to 3</strong> functionalities from the provided list by clicking them,
           or type your own if the list is missing something.</li>
           <li>Then briefly imagine actually using that part as a tool: what would you use it to
-          interact with, in what setting, and what the scene looks like right before and right
-          after.</li>
+          interact with, and in what setting.</li>
         </ol>
         <p>Once you've gone through every part of an object, you'll answer <strong>one final
         question</strong> about that object as a whole: stepping back from the individual parts,
         what would you say its overall functionality is? Then you'll move on to the next object, and
         repeat the same steps.</p>
-        <p>First, you'll do <strong>5 short training rounds</strong> on everyday objects (a chair, a
-        ladle, etc.) to get used to how this works, before moving on to the real task.</p>
+        <p>First, you'll see <strong>two worked examples</strong> showing what a good answer looks
+        like, then do <strong>5 short training rounds</strong> on everyday objects (a chair, a ladle,
+        etc.) to get used to how this works, before moving on to the real task.</p>
       </div>
     `,
     choices: ["Begin Training"],
   };
 
   const timeline = [intro];
+
+  // ---- Two worked examples, shown once before training: a read-only version of the exact picker
+  // UI participants will use, with the correct answer already marked, plus a short explanation --
+  // so the first time someone has to actually choose an answer themselves (training, right after
+  // this), they've already seen what a good one looks like. One example has a single obvious
+  // answer (fedora/wear), the other has several valid answers (backpack/carry,contain,hold) to
+  // illustrate that picking more than one is fine when more than one genuinely applies.
+  const ILLUSTRATIVE_EXAMPLES = [
+    {
+      object: "fedora",
+      numbered_image: "images/fedora_numbered.png",
+      highlight_image: "images/fedora_highlight_part1.png",
+      part: 1,
+      n_parts: 6,
+      chosen: ["wear"],
+      explanation:
+        "The brim and crown of a hat are what you'd put on your head, so <strong>\"wear\"</strong> " +
+        "is the clear functionality here &mdash; a single, obvious answer is completely fine to give. " +
+        "Notice the answer is about what the part DOES, not how it looks.",
+    },
+    {
+      object: "backpack",
+      numbered_image: "images/backpack_numbered.png",
+      highlight_image: "images/backpack_highlight_part1.png",
+      part: 1,
+      n_parts: 11,
+      chosen: ["carry", "contain", "hold"],
+      explanation:
+        "This part could reasonably be used to <strong>carry</strong>, <strong>contain</strong>, or " +
+        "<strong>hold</strong> things &mdash; when more than one functionality genuinely applies, pick " +
+        "up to 3 that fit, like here.",
+    },
+  ];
+  const example_trials = ILLUSTRATIVE_EXAMPLES.map(function (item, i) {
+    return {
+      type: jsPsychHtmlButtonResponse,
+      stimulus:
+        `<div class="demo-banner">Example &mdash; ${i + 1} of ${ILLUSTRATIVE_EXAMPLES.length}</div>` +
+        `<div class="trial-container">` +
+        build_training_images_block(item.numbered_image, item.highlight_image, item.part, item.n_parts) +
+        build_example_answer_block(manifests[assignment[0].object].vocabulary, item.chosen, item.explanation) +
+        `</div>`,
+      choices: ["Continue"],
+      data: { is_example: true, example_index: i },
+    };
+  });
+  timeline.push(...example_trials);
 
   // ---- Training phase: 5 trials on known objects, same picker UI as the real task. ----
   const training_trials = TRAINING_ITEMS.map(function (item, i) {
@@ -267,11 +314,7 @@
         data: { object: object_name, part: row.part, is_tool_use: true },
         on_finish: function (data) {
           const interaction_box = document.querySelector("#tool-interaction-input");
-          const before_box = document.querySelector("#before-state-input");
-          const after_box = document.querySelector("#after-state-input");
           data.tool_interaction = interaction_box ? interaction_box.value.trim() : "";
-          data.before_state = before_box ? before_box.value.trim() : "";
-          data.after_state = after_box ? after_box.value.trim() : "";
         },
       };
 
@@ -391,8 +434,6 @@
     tool_uses.forEach(function (t) {
       tool_use_by_key[`${t.object}::${t.part}`] = {
         tool_interaction: t.tool_interaction,
-        before_state: t.before_state,
-        after_state: t.after_state,
         response_time_ms: t.rt,
       };
     });
@@ -421,8 +462,6 @@
             functionalities_selected: t.functionalities_selected,
             response_time_ms: t.rt,
             tool_interaction: tu ? tu.tool_interaction : null,
-            before_state: tu ? tu.before_state : null,
-            after_state: tu ? tu.after_state : null,
             tool_use_response_time_ms: tu ? tu.response_time_ms : null,
           };
         });

@@ -123,29 +123,6 @@
   text-align: left;
 }
 
-.state-block {
-  max-width: 600px;
-  margin: 20px auto 0;
-  text-align: left;
-}
-
-.state-label {
-  font-size: 0.85rem;
-  color: #4a4a4a;
-  margin-bottom: 10px;
-}
-
-.state-inputs {
-  display: flex;
-  gap: 16px;
-  flex-wrap: wrap;
-}
-
-.state-input-group {
-  flex: 1 1 240px;
-  min-width: 0;
-}
-
 .demo-result {
   max-width: 900px;
   margin: 0 auto;

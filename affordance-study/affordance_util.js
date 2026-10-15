@@ -113,6 +113,35 @@ function build_training_images_block(numbered_image, highlight_image, target_par
   `;
 }
 
+// A read-only version of the picker, used by the two illustrative examples shown before training:
+// shows the SAME chip layout the real picker uses (so participants recognize the UI when they
+// reach it themselves), but with the correct answer(s) already marked "selected" and no onclick --
+// nothing to click, just what a good answer looks like -- plus a short explanation of why.
+function build_example_answer_block(candidate_list, chosen, explanation) {
+  const chosenLower = chosen.map(function (c) {
+    return c.toLowerCase();
+  });
+  const chips = candidate_list
+    .map(function (c) {
+      const isChosen = chosenLower.indexOf(c.toLowerCase()) !== -1;
+      return `<span class="candidate-chip${isChosen ? " selected" : ""}">${c}</span>`;
+    })
+    .join("");
+
+  return `
+    <div class="functionality-picker">
+      <div class="candidates-label">
+        <strong>Example answer</strong> &mdash; the highlighted word(s) below are what a good answer
+        looks like for this part.
+      </div>
+      <div class="candidates-list">${chips}</div>
+      <div class="note-box" style="margin-top:16px;text-align:left;">
+        <p>${explanation}</p>
+      </div>
+    </div>
+  `;
+}
+
 // The interactive word-bank picker: click a chip to select/deselect (max 3, enforced by
 // toggle_functionality_chip below), or type something not in the list in the "other" box. Shared
 // by the main per-part elicitation trial, the whole-object overall-functionality trial, and the
@@ -186,12 +215,12 @@ function build_functionality_trial_html(regions_image, highlight_image, size_cha
   `;
 }
 
-// The "imagine using it" probe shown after every elicitation trial: (1) a free-text tool-use
-// scenario -- what would this part interact with, and where/in what setting -- grounding the
-// functionality judgment in a concrete imagined use rather than an abstract label; (2) the
-// before/after states of that same imagined task, as two short structured fields (not one
-// free-text narrative) since a fill-in-the-blank precondition/postcondition pair is easier for a
-// participant to answer concretely and easier to analyze than parsing free narrative.
+// The "imagine using it" probe shown after every elicitation trial: a free-text tool-use scenario
+// -- what would this part interact with, and where/in what setting -- grounding the functionality
+// judgment in a concrete imagined use rather than an abstract label. (Used to also ask for
+// before/after states of that same imagined task as two structured fields; removed -- this single
+// free-text prompt already captures what's needed, and the extra fields added length without
+// adding signal.)
 function build_tool_use_block() {
   return `
     <div class="tool-use-block">
@@ -201,25 +230,6 @@ function build_tool_use_block() {
       </label>
       <textarea id="tool-interaction-input" class="text-input" rows="2"
         placeholder="e.g. prying open a stuck jar lid, in a kitchen"></textarea>
-    </div>
-    <div class="state-block">
-      <div class="state-label">(Optional) Now imagine that task happening:</div>
-      <div class="state-inputs">
-        <div class="state-input-group">
-          <label for="before-state-input" class="reasoning-label">
-            Before: what does the scene look like right before?
-          </label>
-          <input type="text" id="before-state-input" class="text-input"
-            placeholder="e.g. the jar lid is stuck shut" />
-        </div>
-        <div class="state-input-group">
-          <label for="after-state-input" class="reasoning-label">
-            After: what does it look like once the task is done?
-          </label>
-          <input type="text" id="after-state-input" class="text-input"
-            placeholder="e.g. the lid is off, jar is open" />
-        </div>
-      </div>
     </div>
   `;
 }
