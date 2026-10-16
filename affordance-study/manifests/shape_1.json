@@ -40,7 +40,6 @@
     "none"
   ],
   "models": [
-    "qwen2-vl-7b",
     "qwen3-vl-8b",
     "internvl3-8b",
     "molmo2-8b"
@@ -48,19 +47,17 @@
   "regions": [
     {
       "part": 1,
-      "region_id": "shape_1_region_6",
+      "region_id": "shape_1_region_16",
       "labels": {
-        "qwen2-vl-7b": "type on",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "eat",
-        "molmo2-8b": "none"
+        "qwen3-vl-8b": "hold",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "hold"
       }
     },
     {
       "part": 2,
-      "region_id": "shape_1_region_2",
+      "region_id": "shape_1_region_0",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
@@ -68,19 +65,17 @@
     },
     {
       "part": 3,
-      "region_id": "shape_1_region_7",
+      "region_id": "shape_1_region_11",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
+        "internvl3-8b": "eat",
+        "molmo2-8b": "brush with"
       }
     },
     {
       "part": 4,
-      "region_id": "shape_1_region_14",
+      "region_id": "shape_1_region_10",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "carry",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
@@ -88,160 +83,54 @@
     },
     {
       "part": 5,
-      "region_id": "shape_1_region_8",
+      "region_id": "shape_1_region_9",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
-        "molmo2-8b": "none"
+        "molmo2-8b": "brush with"
       }
     },
     {
       "part": 6,
-      "region_id": "shape_1_region_23",
+      "region_id": "shape_1_region_13",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
+        "qwen3-vl-8b": "wear",
+        "internvl3-8b": "hit",
+        "molmo2-8b": "none"
+      }
+    },
+    {
+      "part": 7,
+      "region_id": "shape_1_region_15",
+      "labels": {
+        "qwen3-vl-8b": "hold",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "brush with"
+      }
+    },
+    {
+      "part": 8,
+      "region_id": "shape_1_region_3",
+      "labels": {
+        "qwen3-vl-8b": "hold",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
       }
     },
     {
-      "part": 7,
-      "region_id": "shape_1_region_33",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 8,
-      "region_id": "shape_1_region_17",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
-      }
-    },
-    {
       "part": 9,
-      "region_id": "shape_1_region_27",
+      "region_id": "shape_1_region_1",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "lift",
-        "molmo2-8b": "none"
+        "qwen3-vl-8b": "text on",
+        "internvl3-8b": "hit",
+        "molmo2-8b": "brush with"
       }
     },
     {
       "part": 10,
-      "region_id": "shape_1_region_21",
+      "region_id": "shape_1_region_6",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 11,
-      "region_id": "shape_1_region_20",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 12,
-      "region_id": "shape_1_region_34",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 13,
-      "region_id": "shape_1_region_31",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "pick up",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 14,
-      "region_id": "shape_1_region_32",
-      "labels": {
-        "qwen2-vl-7b": "type on",
-        "qwen3-vl-8b": "sit on",
-        "internvl3-8b": "pick up",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 15,
-      "region_id": "shape_1_region_10",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "carry",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 16,
-      "region_id": "shape_1_region_1",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 17,
-      "region_id": "shape_1_region_9",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "hit",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 18,
-      "region_id": "shape_1_region_26",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 19,
-      "region_id": "shape_1_region_3",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 20,
-      "region_id": "shape_1_region_19",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
+        "qwen3-vl-8b": "text on",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
       }

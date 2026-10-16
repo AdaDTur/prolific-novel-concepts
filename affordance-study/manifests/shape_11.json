@@ -40,7 +40,6 @@
     "none"
   ],
   "models": [
-    "qwen2-vl-7b",
     "qwen3-vl-8b",
     "internvl3-8b",
     "molmo2-8b"
@@ -48,9 +47,8 @@
   "regions": [
     {
       "part": 1,
-      "region_id": "shape_11_region_1",
+      "region_id": "shape_11_region_7",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
@@ -58,79 +56,98 @@
     },
     {
       "part": 2,
-      "region_id": "shape_11_region_8",
+      "region_id": "shape_11_region_13",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
+        "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
       }
     },
     {
       "part": 3,
-      "region_id": "shape_11_region_7",
+      "region_id": "shape_11_region_12",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "sit on",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "hit",
+        "molmo2-8b": "brush with"
       }
     },
     {
       "part": 4,
-      "region_id": "shape_11_region_2",
+      "region_id": "shape_11_region_18",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
+        "internvl3-8b": "pick up",
         "molmo2-8b": "none"
       }
     },
     {
       "part": 5,
-      "region_id": "shape_11_region_5",
+      "region_id": "shape_11_region_11",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "brush with"
-      }
-    },
-    {
-      "part": 6,
-      "region_id": "shape_11_region_4",
-      "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
       }
     },
     {
-      "part": 7,
-      "region_id": "shape_11_region_6",
+      "part": 6,
+      "region_id": "shape_11_region_0",
       "labels": {
-        "qwen2-vl-7b": "none",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "pick up",
+        "molmo2-8b": "none"
+      }
+    },
+    {
+      "part": 7,
+      "region_id": "shape_11_region_2",
+      "labels": {
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "brush with"
+      }
+    },
+    {
+      "part": 8,
+      "region_id": "shape_11_region_15",
+      "labels": {
+        "qwen3-vl-8b": "sit on",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "none"
+      }
+    },
+    {
+      "part": 9,
+      "region_id": "shape_11_region_8",
+      "labels": {
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
       }
     },
     {
-      "part": 8,
-      "region_id": "shape_11_region_3",
+      "part": 10,
+      "region_id": "shape_11_region_14",
       "labels": {
-        "qwen2-vl-7b": "none",
+        "qwen3-vl-8b": "none",
+        "internvl3-8b": "hit",
+        "molmo2-8b": "brush with"
+      }
+    },
+    {
+      "part": 11,
+      "region_id": "shape_11_region_6",
+      "labels": {
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
       }
     },
     {
-      "part": 9,
-      "region_id": "shape_11_region_9",
+      "part": 12,
+      "region_id": "shape_11_region_19",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"

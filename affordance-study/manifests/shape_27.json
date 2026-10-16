@@ -40,7 +40,6 @@
     "none"
   ],
   "models": [
-    "qwen2-vl-7b",
     "qwen3-vl-8b",
     "internvl3-8b",
     "molmo2-8b"
@@ -48,82 +47,65 @@
   "regions": [
     {
       "part": 1,
-      "region_id": "shape_27_region_9",
+      "region_id": "shape_27_region_24",
       "labels": {
-        "qwen2-vl-7b": "hold",
-        "qwen3-vl-8b": "hold",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "hold"
-      }
-    },
-    {
-      "part": 2,
-      "region_id": "shape_27_region_2",
-      "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "beat"
       }
     },
     {
-      "part": 3,
-      "region_id": "shape_27_region_5",
+      "part": 2,
+      "region_id": "shape_27_region_6",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "hold"
       }
     },
     {
-      "part": 4,
-      "region_id": "shape_27_region_4",
+      "part": 3,
+      "region_id": "shape_27_region_8",
       "labels": {
-        "qwen2-vl-7b": "hit",
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
+      }
+    },
+    {
+      "part": 4,
+      "region_id": "shape_27_region_0",
+      "labels": {
+        "qwen3-vl-8b": "hit",
+        "internvl3-8b": "carry",
+        "molmo2-8b": "beat"
       }
     },
     {
       "part": 5,
-      "region_id": "shape_27_region_1",
+      "region_id": "shape_27_region_26",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
-        "molmo2-8b": "brush with"
+        "molmo2-8b": "beat"
       }
     },
     {
       "part": 6,
-      "region_id": "shape_27_region_3",
+      "region_id": "shape_27_region_7",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
+        "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
-        "molmo2-8b": "brush with"
+        "molmo2-8b": "beat"
       }
     },
     {
       "part": 7,
-      "region_id": "shape_27_region_6",
+      "region_id": "shape_27_region_25",
       "labels": {
-        "qwen2-vl-7b": "hit",
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
-        "molmo2-8b": "brush with"
-      }
-    },
-    {
-      "part": 8,
-      "region_id": "shape_27_region_8",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "none"
+        "molmo2-8b": "beat"
       }
     }
   ]

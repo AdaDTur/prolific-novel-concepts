@@ -40,7 +40,6 @@
     "none"
   ],
   "models": [
-    "qwen2-vl-7b",
     "qwen3-vl-8b",
     "internvl3-8b",
     "molmo2-8b"
@@ -50,7 +49,6 @@
       "part": 1,
       "region_id": "shape_14_region_2",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "beat",
         "molmo2-8b": "none"
@@ -60,7 +58,6 @@
       "part": 2,
       "region_id": "shape_14_region_0",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "beat",
         "molmo2-8b": "none"

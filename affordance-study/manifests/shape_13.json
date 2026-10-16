@@ -40,7 +40,6 @@
     "none"
   ],
   "models": [
-    "qwen2-vl-7b",
     "qwen3-vl-8b",
     "internvl3-8b",
     "molmo2-8b"
@@ -48,19 +47,17 @@
   "regions": [
     {
       "part": 1,
-      "region_id": "shape_13_region_1",
+      "region_id": "shape_13_region_8",
       "labels": {
-        "qwen2-vl-7b": "open",
         "qwen3-vl-8b": "none",
-        "internvl3-8b": "beat",
+        "internvl3-8b": "eat",
         "molmo2-8b": "none"
       }
     },
     {
       "part": 2,
-      "region_id": "shape_13_region_2",
+      "region_id": "shape_13_region_10",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "none",
         "molmo2-8b": "none"
@@ -68,39 +65,35 @@
     },
     {
       "part": 3,
-      "region_id": "shape_13_region_8",
+      "region_id": "shape_13_region_12",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "sit on",
+        "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
       }
     },
     {
       "part": 4,
-      "region_id": "shape_13_region_3",
+      "region_id": "shape_13_region_13",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
-        "internvl3-8b": "eat",
-        "molmo2-8b": "beat"
+        "internvl3-8b": "cut",
+        "molmo2-8b": "none"
       }
     },
     {
       "part": 5,
-      "region_id": "shape_13_region_6",
+      "region_id": "shape_13_region_7",
       "labels": {
-        "qwen2-vl-7b": "catch",
         "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "brush with"
+        "internvl3-8b": "eat",
+        "molmo2-8b": "none"
       }
     },
     {
       "part": 6,
-      "region_id": "shape_13_region_7",
+      "region_id": "shape_13_region_4",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"

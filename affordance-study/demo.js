@@ -70,21 +70,24 @@
   // from and the area/visual cross-check done before picking it. `accepted` lists every reasonable
   // synonym a participant might type/pick, not just one exact word -- training should weed out
   // nonsense answers ("decoration", random unrelated words), not penalize reasonable wording choices.
+  // Region ids (and so part numbers/n_parts) were re-picked after switching region generation
+  // from SAM1(vit_b)+SLIC to SAM2 -- see generate_training_images.py in the main NVRD repo for
+  // the exact region_id each maps to and how each was verified.
   const TRAINING_ITEMS = [
     {
       object: "chair",
       numbered_image: "images/chair_numbered.png",
-      highlight_image: "images/chair_highlight_part1.png",
-      part: 1,
-      n_parts: 16,
+      highlight_image: "images/chair_highlight_part2.png",
+      part: 2,
+      n_parts: 7,
       accepted: ["sit on"],
     },
     {
       object: "ladle",
       numbered_image: "images/ladle_numbered.png",
-      highlight_image: "images/ladle_highlight_part3.png",
-      part: 3,
-      n_parts: 4,
+      highlight_image: "images/ladle_highlight_part2.png",
+      part: 2,
+      n_parts: 3,
       accepted: ["scoop", "stir", "contain", "pour"],
     },
     {
@@ -100,7 +103,7 @@
       numbered_image: "images/backpack_numbered.png",
       highlight_image: "images/backpack_highlight_part1.png",
       part: 1,
-      n_parts: 11,
+      n_parts: 12,
       accepted: ["carry", "contain", "hold", "open"],
     },
     {
@@ -108,7 +111,7 @@
       numbered_image: "images/wallet_numbered.png",
       highlight_image: "images/wallet_highlight_part1.png",
       part: 1,
-      n_parts: 1,
+      n_parts: 2,
       accepted: ["open", "contain", "hold", "carry"],
     },
   ];
@@ -188,36 +191,36 @@
   // ---- Two worked examples, shown once before training: a read-only version of the exact picker
   // UI participants will use, with the correct answer already marked, plus a short explanation --
   // so the first time someone has to actually choose an answer themselves (training, right after
-  // this), they've already seen what a good one looks like. Deliberately DIFFERENT objects from
-  // TRAINING_ITEMS below (bow-tie/corkscrew vs. chair/ladle/fedora/backpack/wallet) so the examples
-  // don't just hand participants the answer to an item they're about to be quizzed on. One example
-  // has a single obvious answer (bow-tie/wear), the other has several valid answers (corkscrew's
-  // wing lever/hold,push,lift) to illustrate that picking more than one is fine when more than one
-  // genuinely applies.
+  // this), they've already seen what a good one looks like. Both use coffee-table (not one of
+  // TRAINING_ITEMS below, so the examples don't hand participants the answer to an item they're
+  // about to be quizzed on), two different parts of it -- it's the only one of the unused known
+  // objects whose SAM segmentation actually came out clean; clock and fire-alarm both fragmented
+  // into dozens of tiny regions around their text/numerals and weren't usable. The tabletop has
+  // several valid answers (hold, sit on), the lower shelf has one obvious answer (hold), covering
+  // both cases the same way the earlier bow-tie/corkscrew pair did.
   const ILLUSTRATIVE_EXAMPLES = [
     {
-      object: "bow-tie",
-      numbered_image: "images/bow-tie_numbered.png",
-      highlight_image: "images/bow-tie_highlight_part1.png",
-      part: 1,
-      n_parts: 5,
-      chosen: ["wear"],
+      object: "coffee-table",
+      numbered_image: "images/coffee-table_numbered.png",
+      highlight_image: "images/coffee-table_highlight_part2.png",
+      part: 2,
+      n_parts: 8,
+      chosen: ["hold", "sit on"],
       explanation:
-        "This wing of the bow-tie is fabric you'd put around your neck, so <strong>\"wear\"</strong> " +
-        "is the obvious functionality here. A single clear answer like this is totally fine. Just " +
-        "remember it's about what the part DOES, not how it looks.",
+        "This tabletop could <strong>hold</strong> things you set on it, and people also " +
+        "<strong>sit on</strong> coffee tables sometimes. When more than one functionality " +
+        "genuinely applies, go ahead and pick up to 3 that fit, like here.",
     },
     {
-      object: "corkscrew",
-      numbered_image: "images/corkscrew_numbered.png",
-      highlight_image: "images/corkscrew_highlight_part1.png",
-      part: 1,
-      n_parts: 19,
-      chosen: ["hold", "push", "lift"],
+      object: "coffee-table",
+      numbered_image: "images/coffee-table_numbered.png",
+      highlight_image: "images/coffee-table_highlight_part3.png",
+      part: 3,
+      n_parts: 8,
+      chosen: ["hold"],
       explanation:
-        "This wing-shaped lever is what you'd <strong>hold</strong> onto and <strong>push</strong> " +
-        "down to <strong>lift</strong> the cork out. When more than one functionality genuinely " +
-        "applies, go ahead and pick up to 3 that fit, like here.",
+        "This lower shelf is mainly there to <strong>hold</strong> things like magazines or " +
+        "remotes. A single clear answer like this is totally fine to give.",
     },
   ];
   const example_trials = ILLUSTRATIVE_EXAMPLES.map(function (item, i) {

@@ -40,7 +40,6 @@
     "none"
   ],
   "models": [
-    "qwen2-vl-7b",
     "qwen3-vl-8b",
     "internvl3-8b",
     "molmo2-8b"
@@ -48,71 +47,46 @@
   "regions": [
     {
       "part": 1,
-      "region_id": "shape_16_region_4",
+      "region_id": "shape_16_region_3",
       "labels": {
-        "qwen2-vl-7b": "hold",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "none"
+        "qwen3-vl-8b": "sit on",
+        "internvl3-8b": "sit on",
+        "molmo2-8b": "take photo"
       }
     },
     {
       "part": 2,
-      "region_id": "shape_16_region_1",
+      "region_id": "shape_16_region_5",
       "labels": {
-        "qwen2-vl-7b": "none",
         "qwen3-vl-8b": "sit on",
-        "internvl3-8b": "sit on",
-        "molmo2-8b": "eat"
+        "internvl3-8b": "carry",
+        "molmo2-8b": "none"
       }
     },
     {
       "part": 3,
       "region_id": "shape_16_region_2",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "carry",
-        "molmo2-8b": "brush with"
-      }
-    },
-    {
-      "part": 4,
-      "region_id": "shape_16_region_3",
-      "labels": {
-        "qwen2-vl-7b": "hold",
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
       }
     },
     {
-      "part": 5,
-      "region_id": "shape_16_region_5",
+      "part": 4,
+      "region_id": "shape_16_region_1",
       "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
+        "qwen3-vl-8b": "hold",
         "internvl3-8b": "hold",
-        "molmo2-8b": "brush with"
+        "molmo2-8b": "none"
       }
     },
     {
-      "part": 6,
+      "part": 5,
       "region_id": "shape_16_region_6",
       "labels": {
-        "qwen2-vl-7b": "hold",
         "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
-        "molmo2-8b": "brush with"
-      }
-    },
-    {
-      "part": 7,
-      "region_id": "shape_16_region_7",
-      "labels": {
-        "qwen2-vl-7b": "none",
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "hit",
+        "internvl3-8b": "hold",
         "molmo2-8b": "none"
       }
     }
