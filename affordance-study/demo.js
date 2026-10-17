@@ -136,7 +136,7 @@
       <div class="instructions-container">
         <h2>About this study</h2>
         <p>This is a research study out of the University of Illinois Urbana-Champaign (UIUC), run
-        by Ada Tur (adadt2@illinois.edu) and supervised by Professor Heng Ji. We're looking at how
+        by Ada Tur (adadt2@illinois.edu). We're looking at how
         AI vision-language models learn what novel, made-up objects could be used for, and comparing
         that to how humans figure out the same thing just by looking. Your answers help us see where
         these models line up with human judgment and where they don't.</p>
