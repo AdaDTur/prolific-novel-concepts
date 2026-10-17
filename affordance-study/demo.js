@@ -202,9 +202,9 @@
     {
       object: "coffee-table",
       numbered_image: "images/coffee-table_numbered.png",
-      highlight_image: "images/coffee-table_highlight_part2.png",
-      part: 2,
-      n_parts: 8,
+      highlight_image: "images/coffee-table_highlight_part1.png",
+      part: 1,
+      n_parts: 7,
       chosen: ["hold", "sit on"],
       explanation:
         "This tabletop could <strong>hold</strong> things you set on it, and people also " +
@@ -214,9 +214,9 @@
     {
       object: "coffee-table",
       numbered_image: "images/coffee-table_numbered.png",
-      highlight_image: "images/coffee-table_highlight_part3.png",
-      part: 3,
-      n_parts: 8,
+      highlight_image: "images/coffee-table_highlight_part2.png",
+      part: 2,
+      n_parts: 7,
       chosen: ["hold"],
       explanation:
         "This lower shelf is mainly there to <strong>hold</strong> things like magazines or " +

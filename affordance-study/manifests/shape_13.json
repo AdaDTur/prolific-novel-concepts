@@ -56,15 +56,6 @@
     },
     {
       "part": 2,
-      "region_id": "shape_13_region_10",
-      "labels": {
-        "qwen3-vl-8b": "sit on",
-        "internvl3-8b": "none",
-        "molmo2-8b": "none"
-      }
-    },
-    {
-      "part": 3,
       "region_id": "shape_13_region_12",
       "labels": {
         "qwen3-vl-8b": "none",
@@ -73,7 +64,7 @@
       }
     },
     {
-      "part": 4,
+      "part": 3,
       "region_id": "shape_13_region_13",
       "labels": {
         "qwen3-vl-8b": "none",
@@ -82,7 +73,7 @@
       }
     },
     {
-      "part": 5,
+      "part": 4,
       "region_id": "shape_13_region_7",
       "labels": {
         "qwen3-vl-8b": "none",
@@ -91,7 +82,7 @@
       }
     },
     {
-      "part": 6,
+      "part": 5,
       "region_id": "shape_13_region_4",
       "labels": {
         "qwen3-vl-8b": "none",

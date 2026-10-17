@@ -53,15 +53,6 @@
         "internvl3-8b": "sit on",
         "molmo2-8b": "none"
       }
-    },
-    {
-      "part": 2,
-      "region_id": "shape_21_region_6",
-      "labels": {
-        "qwen3-vl-8b": "none",
-        "internvl3-8b": "sit on",
-        "molmo2-8b": "none"
-      }
     }
   ]
 }
