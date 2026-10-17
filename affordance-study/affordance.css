@@ -160,3 +160,37 @@
   font-size: 0.72rem;
   letter-spacing: 0.06em;
 }
+
+/* Continue button disabled until a required picker trial has at least one selection -- see
+   require_functionality_before_continue() in affordance_util.js. */
+#jspsych-html-button-response-btngroup button:disabled {
+  opacity: 0.45;
+  cursor: not-allowed;
+  background: #f4f3ef;
+  color: #9a9890;
+}
+
+#jspsych-html-button-response-btngroup button:disabled:hover {
+  background: #f4f3ef;
+  border-color: #e0ddd6;
+  color: #9a9890;
+}
+
+.required-hint {
+  margin-top: 10px;
+  font-size: 0.82rem;
+  color: #8f3d1a;
+  text-align: center;
+}
+
+.attention-check-instruction {
+  max-width: 600px;
+  margin: 0 auto 20px;
+  padding: 14px 16px;
+  background: #fdeee3;
+  border: 2px solid #8f3d1a;
+  border-radius: 8px;
+  font-size: 0.95rem;
+  color: #4a4a4a;
+  text-align: left;
+}

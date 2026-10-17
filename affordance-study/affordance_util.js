@@ -205,6 +205,85 @@ function get_selected_functionalities() {
   return selected;
 }
 
+// Disables the Continue button until at least one functionality is selected (a chip or the "other"
+// box), with a small hint explaining why -- called from on_load for every trial where answering is
+// required (training, the per-part trial, the whole-object trial), never for the optional tool-use
+// follow-up or the read-only illustrative examples. #jspsych-html-button-response-btngroup is
+// jsPsych's own container for an html-button-response trial's buttons (see experiment.css), not
+// something this page defines itself.
+function require_functionality_before_continue(jsPsych) {
+  const root = jsPsych.getDisplayElement();
+  const btnGroup = root.querySelector("#jspsych-html-button-response-btngroup");
+  const btn = btnGroup ? btnGroup.querySelector("button") : null;
+  if (!btn) return;
+
+  // Inserted after the whole button-group container, not after the button itself -- the group is
+  // a flex row (see experiment.css), so a sibling of the button would end up squeezed beside it
+  // instead of stacking underneath.
+  const hint = document.createElement("div");
+  hint.className = "required-hint";
+  hint.textContent = "Pick at least one functionality above to continue.";
+  btnGroup.insertAdjacentElement("afterend", hint);
+
+  function check() {
+    const satisfied = get_selected_functionalities().length > 0;
+    btn.disabled = !satisfied;
+    hint.style.display = satisfied ? "none" : "block";
+  }
+
+  root.querySelectorAll(".candidate-chip").forEach(function (chip) {
+    chip.addEventListener("click", check);
+  });
+  const otherBox = root.querySelector("#other-functionality-input");
+  if (otherBox) otherBox.addEventListener("input", check);
+
+  check();
+}
+
+// Attention-check stimulus: the same chip grid as the real picker (so it looks/behaves like every
+// other trial, not an obvious break in the flow), but with an explicit instruction to pick specific
+// words instead of the usual "what could this be used for" framing -- there's no real functionality
+// judgment involved, just a check that the participant is reading. No "other" free-text box, since
+// there's nothing to volunteer here.
+function build_attention_check_block(candidate_list, target_words) {
+  const chips = candidate_list
+    .map(function (c) {
+      return `<span class="candidate-chip" data-value="${c}" onclick="toggle_functionality_chip(this)">${c}</span>`;
+    })
+    .join("");
+
+  return `
+    <div class="attention-check-instruction">
+      This is a quick attention check, not a real question about an object. To show you're still
+      reading carefully, please click <strong>${target_words.join("</strong> and <strong>")}</strong>
+      below (and nothing else), then click Continue.
+    </div>
+    <div class="functionality-picker">
+      <div class="candidates-list">${chips}</div>
+    </div>
+  `;
+}
+
+// Reads back an attention-check trial's selection the same way get_selected_functionalities() does
+// (there's no "other" box here, so just the selected chips) and scores it against the target words
+// -- passed if every target word was selected, extras aside (a participant clicking one honest extra
+// word alongside the two instructed ones shouldn't fail them the way missing an instructed word should).
+function score_attention_check(target_words) {
+  const chips = document.querySelectorAll(".candidate-chip.selected");
+  const selected = Array.prototype.map.call(chips, function (c) {
+    return c.dataset.value.toLowerCase();
+  });
+  const targets_lower = target_words.map(function (w) {
+    return w.toLowerCase();
+  });
+  return {
+    selected: selected,
+    passed: targets_lower.every(function (t) {
+      return selected.indexOf(t) !== -1;
+    }),
+  };
+}
+
 // Full elicitation-trial stimulus: images + picker, for the main study trials.
 function build_functionality_trial_html(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts, candidate_list) {
   return `

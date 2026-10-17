@@ -250,6 +250,9 @@
         `</div>`,
       choices: ["Continue"],
       data: { is_training: true, training_index: i, training_object: item.object },
+      on_load: function () {
+        require_functionality_before_continue(jsPsych);
+      },
       on_finish: function (data) {
         const selected = get_selected_functionalities();
         data.functionalities_selected = selected;
@@ -270,6 +273,37 @@
     choices: ["Begin"],
   };
   timeline.push(training_done);
+
+  // ---- Attention checks: instructed-response items ("click these specific words") interleaved
+  // between objects in the main task below, not a rating/judgment of any real part. Two different
+  // target-word pairs so the two checks in a session don't look identical; drawn from the shared
+  // AGD20K vocabulary every novel object's manifest already uses, so no extra assets are needed.
+  const ATTENTION_CHECK_TARGETS = [
+    ["push", "carry"],
+    ["wear", "hold"],
+  ];
+  function build_attention_check_trial(check_index) {
+    const target_words = ATTENTION_CHECK_TARGETS[check_index % ATTENTION_CHECK_TARGETS.length];
+    const vocabulary = manifests[assignment[0].object].vocabulary;
+    return {
+      type: jsPsychHtmlButtonResponse,
+      stimulus:
+        `<div class="demo-banner">Attention Check</div>` +
+        `<div class="trial-container">` +
+        build_attention_check_block(vocabulary, target_words) +
+        `</div>`,
+      choices: ["Continue"],
+      data: { is_attention_check: true, attention_check_index: check_index, attention_check_targets: target_words },
+      on_load: function () {
+        require_functionality_before_continue(jsPsych);
+      },
+      on_finish: function (data) {
+        const result = score_attention_check(target_words);
+        data.functionalities_selected = result.selected;
+        data.attention_check_passed = result.passed;
+      },
+    };
+  }
 
   // ---- Main task: for each {object, size} in this session's assigned group, one elicitation trial
   // + one "imagine using it" trial per region, then one whole-object question -- before moving on to
@@ -319,6 +353,9 @@
           region_id: row.region_id,
           model_labels: row.labels, // recorded for later comparison, never shown to the participant
         },
+        on_load: function () {
+          require_functionality_before_continue(jsPsych);
+        },
         on_finish: function (data) {
           data.functionalities_selected = get_selected_functionalities();
         },
@@ -364,11 +401,31 @@
         `</div>`,
       choices: ["Continue"],
       data: { object: object_name, size: size_chart_scale, is_overall: true },
+      on_load: function () {
+        require_functionality_before_continue(jsPsych);
+      },
       on_finish: function (data) {
         data.functionalities_selected = get_selected_functionalities();
       },
     };
     timeline.push(overall_trial);
+
+    // ---- Attention checks, interleaved between objects rather than bunched at the start, so they
+    // catch disengagement partway through a session too -- positioned at roughly 1/3 and 2/3
+    // through this participant's assigned objects (computed from assignment.length rather than
+    // hardcoded, so this still makes sense if OBJECTS_PER_GROUP changes later). Guarded so a very
+    // short assignment doesn't insert the same position twice or insert one after the very last
+    // object (which would just tack it onto the end instead of truly interleaving it). ----
+    const attention_check_positions = [
+      Math.floor(assignment.length / 3),
+      Math.floor((2 * assignment.length) / 3),
+    ].filter(function (pos, idx, arr) {
+      return pos > 0 && pos < assignment.length - 1 && arr.indexOf(pos) === idx;
+    });
+    const attention_check_index = attention_check_positions.indexOf(obj_index + 1);
+    if (attention_check_index !== -1) {
+      timeline.push(build_attention_check_trial(attention_check_index));
+    }
   });
 
   const summary = {
@@ -385,7 +442,8 @@
                 t.functionalities_selected !== undefined &&
                 !t.is_training &&
                 !t.is_overall &&
-                !t.is_tool_use
+                !t.is_tool_use &&
+                !t.is_attention_check
               );
             })
             .values();
@@ -457,6 +515,26 @@
     }).length;
     const training_passed = training_correct_count >= TRAINING_PASS_THRESHOLD;
 
+    const attention_check_data = jsPsych.data
+      .get()
+      .filter({ is_attention_check: true })
+      .values()
+      .sort(function (a, b) {
+        return a.attention_check_index - b.attention_check_index;
+      })
+      .map(function (t) {
+        return {
+          index: t.attention_check_index,
+          target_words: t.attention_check_targets,
+          functionalities_selected: t.functionalities_selected,
+          passed: t.attention_check_passed,
+          response_time_ms: t.rt,
+        };
+      });
+    const attention_checks_passed = attention_check_data.filter(function (t) {
+      return t.passed;
+    }).length;
+
     const tool_uses = jsPsych.data.get().filter({ is_tool_use: true }).values();
     const tool_use_by_key = {};
     tool_uses.forEach(function (t) {
@@ -477,7 +555,8 @@
             t.functionalities_selected !== undefined &&
             !t.is_training &&
             !t.is_tool_use &&
-            !t.is_overall
+            !t.is_overall &&
+            !t.is_attention_check
           );
         })
         .values()
@@ -514,6 +593,8 @@
       training: training_data,
       training_correct_count: training_correct_count,
       training_passed: training_passed,
+      attention_checks: attention_check_data,
+      attention_checks_passed: attention_checks_passed,
       study_start_time: new Date(jsPsych.getStartTime()).toISOString(),
       study_end_time: new Date().toISOString(),
       total_duration_ms: jsPsych.getTotalTime(),
