@@ -624,6 +624,13 @@
       total_duration_ms: jsPsych.getTotalTime(),
       objects: objects_data,
     };
+    // Proliferate's CSV export appears to produce one file per top-level key, which means pulling
+    // a full submission back together means re-joining ~14 separate files by participant. Adding
+    // the whole thing as one extra JSON-stringified field gives a single CSV (full_results_json)
+    // with everything for a participant in one cell -- JSON.parse() it and you have the exact same
+    // object this function just built, no re-joining needed. The other top-level fields stay as
+    // they are too, for anyone who'd rather filter/skim via the per-field CSVs instead.
+    results.full_results_json = JSON.stringify(results);
 
     proliferate.submit(results);
   }
