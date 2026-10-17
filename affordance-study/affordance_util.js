@@ -207,10 +207,20 @@ function get_selected_functionalities() {
 
 // Disables the Continue button until at least one functionality is selected (a chip or the "other"
 // box), with a small hint explaining why -- called from on_load for every trial where answering is
-// required (training, the per-part trial, the whole-object trial), never for the optional tool-use
-// follow-up or the read-only illustrative examples. #jspsych-html-button-response-btngroup is
-// jsPsych's own container for an html-button-response trial's buttons (see experiment.css), not
-// something this page defines itself.
+// required (training, the per-part trial, the whole-object trial, the attention checks), never for
+// the optional tool-use follow-up or the read-only illustrative examples.
+// #jspsych-html-button-response-btngroup is jsPsych's own container for an html-button-response
+// trial's buttons (see experiment.css), not something this page defines itself.
+//
+// ALSO writes the live selection straight into the trial's own data object on every interaction,
+// rather than leaving on_finish to re-query these same DOM nodes later -- confirmed from real pilot
+// data that jsPsych appears to tear down/replace a trial's DOM before that trial's on_finish runs,
+// so a fresh document.querySelectorAll(".candidate-chip.selected") call from on_finish came back
+// empty on every single trial, even though the Continue-button gating below had correctly stayed
+// disabled until a real selection was made (i.e. participants WERE answering, on_finish just lost
+// it). Capturing on every interaction, while the DOM is still guaranteed live, sidesteps that
+// timing issue entirely -- on_finish handlers should read data.functionalities_selected (already
+// set by the time they run) instead of calling get_selected_functionalities() themselves.
 function require_functionality_before_continue(jsPsych) {
   const root = jsPsych.getDisplayElement();
   const btnGroup = root.querySelector("#jspsych-html-button-response-btngroup");
@@ -226,9 +236,14 @@ function require_functionality_before_continue(jsPsych) {
   btnGroup.insertAdjacentElement("afterend", hint);
 
   function check() {
-    const satisfied = get_selected_functionalities().length > 0;
+    const selected = get_selected_functionalities();
+    const satisfied = selected.length > 0;
     btn.disabled = !satisfied;
     hint.style.display = satisfied ? "none" : "block";
+    const trial = jsPsych.getCurrentTrial();
+    if (trial && trial.data) {
+      trial.data.functionalities_selected = selected;
+    }
   }
 
   root.querySelectorAll(".candidate-chip").forEach(function (chip) {
@@ -238,6 +253,27 @@ function require_functionality_before_continue(jsPsych) {
   if (otherBox) otherBox.addEventListener("input", check);
 
   check();
+}
+
+// Same live-capture idea as require_functionality_before_continue, for the free-text tool-use
+// box: write its value into the trial's data on every keystroke instead of reading it once from
+// on_finish, where the DOM may already be gone (confirmed from pilot data: tool_interaction came
+// back empty on every single trial, same as functionalities_selected did). This field is optional,
+// so there's no button-disabling here, just the live capture.
+function capture_tool_interaction_live(jsPsych) {
+  const root = jsPsych.getDisplayElement();
+  const box = root.querySelector("#tool-interaction-input");
+  if (!box) return;
+
+  function capture() {
+    const trial = jsPsych.getCurrentTrial();
+    if (trial && trial.data) {
+      trial.data.tool_interaction = box.value.trim();
+    }
+  }
+
+  box.addEventListener("input", capture);
+  capture();
 }
 
 // Attention-check stimulus: the SAME images + chip grid as a real per-part trial (reusing a real
@@ -265,24 +301,21 @@ function build_attention_check_block(regions_image, highlight_image, size_chart_
   `;
 }
 
-// Reads back an attention-check trial's selection the same way get_selected_functionalities() does
-// (there's no "other" box here, so just the selected chips) and scores it against the target words
-// -- passed if every target word was selected, extras aside (a participant clicking one honest extra
-// word alongside the two instructed ones shouldn't fail them the way missing an instructed word should).
-function score_attention_check(target_words) {
-  const chips = document.querySelectorAll(".candidate-chip.selected");
-  const selected = Array.prototype.map.call(chips, function (c) {
-    return c.dataset.value.toLowerCase();
+// Scores an already-captured selection (data.functionalities_selected, set live by
+// require_functionality_before_continue -- NOT re-queried from the DOM here, see that function's
+// comment for why) against an attention check's target words. Passed if every target word was
+// selected, extras aside (a participant clicking one honest extra word alongside the two instructed
+// ones shouldn't fail them the way missing an instructed word should).
+function score_attention_check(selected, target_words) {
+  const selected_lower = selected.map(function (s) {
+    return s.toLowerCase();
   });
   const targets_lower = target_words.map(function (w) {
     return w.toLowerCase();
   });
-  return {
-    selected: selected,
-    passed: targets_lower.every(function (t) {
-      return selected.indexOf(t) !== -1;
-    }),
-  };
+  return targets_lower.every(function (t) {
+    return selected_lower.indexOf(t) !== -1;
+  });
 }
 
 // Full elicitation-trial stimulus: images + picker, for the main study trials.

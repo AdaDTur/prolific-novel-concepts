@@ -254,9 +254,7 @@
         require_functionality_before_continue(jsPsych);
       },
       on_finish: function (data) {
-        const selected = get_selected_functionalities();
-        data.functionalities_selected = selected;
-        data.training_correct = training_item_correct(item, selected);
+        data.training_correct = training_item_correct(item, data.functionalities_selected || []);
       },
     };
   });
@@ -310,9 +308,7 @@
         require_functionality_before_continue(jsPsych);
       },
       on_finish: function (data) {
-        const result = score_attention_check(target_words);
-        data.functionalities_selected = result.selected;
-        data.attention_check_passed = result.passed;
+        data.attention_check_passed = score_attention_check(data.functionalities_selected || [], target_words);
       },
     };
   }
@@ -368,9 +364,6 @@
         on_load: function () {
           require_functionality_before_continue(jsPsych);
         },
-        on_finish: function (data) {
-          data.functionalities_selected = get_selected_functionalities();
-        },
       };
 
       const tool_use_trial = {
@@ -389,9 +382,8 @@
           `</div>`,
         choices: ["Continue"],
         data: { object: object_name, part: row.part, is_tool_use: true },
-        on_finish: function (data) {
-          const interaction_box = document.querySelector("#tool-interaction-input");
-          data.tool_interaction = interaction_box ? interaction_box.value.trim() : "";
+        on_load: function () {
+          capture_tool_interaction_live(jsPsych);
         },
       };
 
@@ -415,9 +407,6 @@
       data: { object: object_name, size: size_chart_scale, is_overall: true },
       on_load: function () {
         require_functionality_before_continue(jsPsych);
-      },
-      on_finish: function (data) {
-        data.functionalities_selected = get_selected_functionalities();
       },
     };
     timeline.push(overall_trial);
