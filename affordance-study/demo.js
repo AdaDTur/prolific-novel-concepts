@@ -282,15 +282,27 @@
     ["push", "carry"],
     ["wear", "hold"],
   ];
-  function build_attention_check_trial(check_index) {
+  // regions_image/size_chart_image/size_chart_scale/vocabulary/n_parts/regions are the SAME object
+  // this check is slotted in after -- reusing one of its real region images (picked at random) so
+  // the check looks like an ordinary per-part trial at a glance, not a visibly different interlude.
+  function build_attention_check_trial(check_index, obj_index, object_name, regions_image, size_chart_image, size_chart_scale, vocabulary, n_parts, regions) {
     const target_words = ATTENTION_CHECK_TARGETS[check_index % ATTENTION_CHECK_TARGETS.length];
-    const vocabulary = manifests[assignment[0].object].vocabulary;
+    const row = regions[Math.floor(Math.random() * regions.length)];
     return {
       type: jsPsychHtmlButtonResponse,
       stimulus:
-        `<div class="demo-banner">Attention Check</div>` +
+        `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${row.part} of ${n_parts}</div>` +
         `<div class="trial-container">` +
-        build_attention_check_block(vocabulary, target_words) +
+        build_attention_check_block(
+          regions_image,
+          `images/${object_name}_highlight_part${row.part}.png`,
+          size_chart_image,
+          size_chart_scale,
+          row.part,
+          n_parts,
+          vocabulary,
+          target_words
+        ) +
         `</div>`,
       choices: ["Continue"],
       data: { is_attention_check: true, attention_check_index: check_index, attention_check_targets: target_words },
@@ -424,7 +436,19 @@
     });
     const attention_check_index = attention_check_positions.indexOf(obj_index + 1);
     if (attention_check_index !== -1) {
-      timeline.push(build_attention_check_trial(attention_check_index));
+      timeline.push(
+        build_attention_check_trial(
+          attention_check_index,
+          obj_index,
+          object_name,
+          regions_image,
+          size_chart_image,
+          size_chart_scale,
+          vocabulary,
+          n_parts,
+          regions
+        )
+      );
     }
   });
 

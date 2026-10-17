@@ -240,12 +240,13 @@ function require_functionality_before_continue(jsPsych) {
   check();
 }
 
-// Attention-check stimulus: the same chip grid as the real picker (so it looks/behaves like every
-// other trial, not an obvious break in the flow), but with an explicit instruction to pick specific
-// words instead of the usual "what could this be used for" framing -- there's no real functionality
-// judgment involved, just a check that the participant is reading. No "other" free-text box, since
-// there's nothing to volunteer here.
-function build_attention_check_block(candidate_list, target_words) {
+// Attention-check stimulus: the SAME images + chip grid as a real per-part trial (reusing a real
+// region from whichever object this check is attached to, see demo.js), so it's structurally
+// indistinguishable from an ordinary trial at a glance -- only the instruction text below the
+// images differs, and even that is styled like the normal picker instructions rather than a
+// callout box, so nothing about the layout tips off that this trial is different. No "other"
+// free-text box, since there's nothing to volunteer here.
+function build_attention_check_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts, candidate_list, target_words) {
   const chips = candidate_list
     .map(function (c) {
       return `<span class="candidate-chip" data-value="${c}" onclick="toggle_functionality_chip(this)">${c}</span>`;
@@ -253,12 +254,12 @@ function build_attention_check_block(candidate_list, target_words) {
     .join("");
 
   return `
-    <div class="attention-check-instruction">
-      This is a quick attention check, not a real question about an object. To show you're still
-      reading carefully, please click <strong>${target_words.join("</strong> and <strong>")}</strong>
-      below (and nothing else), then click Continue.
-    </div>
+    ${build_functionality_images_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts)}
     <div class="functionality-picker">
+      <div class="attention-check-instruction">
+        Quick check: please click <strong>${target_words.join("</strong> and <strong>")}</strong>
+        below (and nothing else), then click Continue.
+      </div>
       <div class="candidates-list">${chips}</div>
     </div>
   `;

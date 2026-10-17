@@ -183,14 +183,15 @@
   text-align: center;
 }
 
+/* Deliberately styled the same as .candidates-label (the normal picker's instruction text), not
+   as a callout -- a bordered/highlighted box would announce "this trial is different" before the
+   participant even reads it, defeating the point of an attention check. */
 .attention-check-instruction {
-  max-width: 600px;
-  margin: 0 auto 20px;
-  padding: 14px 16px;
-  background: #fdeee3;
-  border: 2px solid #8f3d1a;
-  border-radius: 8px;
-  font-size: 0.95rem;
+  max-width: 700px;
+  margin: 16px auto 0;
+  font-size: 0.85rem;
+  font-weight: 400;
   color: #4a4a4a;
   text-align: left;
+  line-height: 1.5;
 }
