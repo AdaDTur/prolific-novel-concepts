@@ -20,6 +20,19 @@
 //   n_parts           -- total number of numbered regions, for the image (a) caption
 //   candidate_list    -- the functionality word bank to offer as clickable chips (manifest.vocabulary)
 
+// "(hand scale)" or "(human scale)" read as describing the ADULT next to the object, not the
+// object itself -- easy to misread given the sentence literally ends on "...average adult (X
+// scale)". Spelling out what each scale actually means for the object sidesteps that entirely.
+const SIZE_SCALE_DESCRIPTIONS = {
+  hand: "about hand-sized, small enough to hold",
+  human: "about furniture-sized, roughly as big as a chair or small table",
+  building: "as big as a small building",
+};
+
+function describe_size_scale(size_chart_scale) {
+  return SIZE_SCALE_DESCRIPTIONS[size_chart_scale] || size_chart_scale;
+}
+
 // The three images, with no picker/question beneath -- shared by every trial type (main elicitation
 // trial, training trials) that needs this same visual context.
 function build_functionality_images_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts) {
@@ -49,7 +62,7 @@ function build_functionality_images_block(regions_image, highlight_image, size_c
           <img src="${size_chart_image}" alt="Object silhouette next to a human figure for scale" />
         </div>
         <div class="trial-caption">
-          One possible real-world size for this object, shown next to an average adult (${size_chart_scale} scale).
+          This shows one possible size for the object (${describe_size_scale(size_chart_scale)}), next to an average adult for comparison.
         </div>
       </div>
     </div>
@@ -78,7 +91,7 @@ function build_overall_images_block(regions_image, size_chart_image, size_chart_
           <img src="${size_chart_image}" alt="Object silhouette next to a human figure for scale" />
         </div>
         <div class="trial-caption">
-          One possible real-world size for this object, shown next to an average adult (${size_chart_scale} scale).
+          This shows one possible size for the object (${describe_size_scale(size_chart_scale)}), next to an average adult for comparison.
         </div>
       </div>
     </div>
@@ -318,12 +331,16 @@ function score_attention_check(selected, target_words) {
   });
 }
 
-// Full elicitation-trial stimulus: images + picker, for the main study trials.
+// Full elicitation-trial stimulus: images + picker + the optional tool-use question, all on one
+// page for the main study trials. Used to be two separate pages (same images shown twice in a
+// row, once for the picker and once for the tool-use question) -- merged into one since that was
+// doubling the click-through count for the main task with no real benefit, just repetition.
 function build_functionality_trial_html(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts, candidate_list) {
   return `
     <div class="trial-container">
       ${build_functionality_images_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts)}
       ${build_functionality_picker_block(candidate_list)}
+      ${build_tool_use_block()}
     </div>
   `;
 }

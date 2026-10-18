@@ -340,6 +340,9 @@
     timeline.push(object_intro);
 
     regions.forEach(function (row, i) {
+      // Picker + tool-use question used to be two separate pages showing the same images twice in
+      // a row -- merged into one page since that was just doubling the click-through count with no
+      // benefit.
       const functionality_trial = {
         type: jsPsychHtmlButtonResponse,
         stimulus:
@@ -363,31 +366,11 @@
         },
         on_load: function () {
           require_functionality_before_continue(jsPsych);
-        },
-      };
-
-      const tool_use_trial = {
-        type: jsPsychHtmlButtonResponse,
-        stimulus:
-          `<div class="trial-container">` +
-          build_functionality_images_block(
-            regions_image,
-            `images/${object_name}_highlight_part${row.part}.png`,
-            size_chart_image,
-            size_chart_scale,
-            row.part,
-            n_parts
-          ) +
-          build_tool_use_block() +
-          `</div>`,
-        choices: ["Continue"],
-        data: { object: object_name, part: row.part, is_tool_use: true },
-        on_load: function () {
           capture_tool_interaction_live(jsPsych);
         },
       };
 
-      timeline.push({ timeline: [functionality_trial, tool_use_trial] });
+      timeline.push(functionality_trial);
     });
 
     // ---- After every part of this object has been answered individually, one final whole-object
@@ -455,7 +438,6 @@
                 t.functionalities_selected !== undefined &&
                 !t.is_training &&
                 !t.is_overall &&
-                !t.is_tool_use &&
                 !t.is_attention_check
               );
             })
@@ -548,15 +530,6 @@
       return t.passed;
     }).length;
 
-    const tool_uses = jsPsych.data.get().filter({ is_tool_use: true }).values();
-    const tool_use_by_key = {};
-    tool_uses.forEach(function (t) {
-      tool_use_by_key[`${t.object}::${t.part}`] = {
-        tool_interaction: t.tool_interaction,
-        response_time_ms: t.rt,
-      };
-    });
-
     const objects_data = assignment.map(function (a) {
       const object_name = a.object;
 
@@ -567,22 +540,19 @@
             t.object === object_name &&
             t.functionalities_selected !== undefined &&
             !t.is_training &&
-            !t.is_tool_use &&
             !t.is_overall &&
             !t.is_attention_check
           );
         })
         .values()
         .map(function (t) {
-          const tu = tool_use_by_key[`${t.object}::${t.part}`];
           return {
             part: t.part,
             region_id: t.region_id,
             model_labels: t.model_labels,
             functionalities_selected: t.functionalities_selected,
             response_time_ms: t.rt,
-            tool_interaction: tu ? tu.tool_interaction : null,
-            tool_use_response_time_ms: tu ? tu.response_time_ms : null,
+            tool_interaction: t.tool_interaction !== undefined ? t.tool_interaction : null,
           };
         });
 
