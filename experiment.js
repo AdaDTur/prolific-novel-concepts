@@ -312,7 +312,7 @@
               const total = trial_objects.length;
               const completed_trials = jsPsych.data
                 .get()
-                .filter(function (trial) {
+                .filterCustom(function (trial) {
                   return (
                     trial.rating !== undefined &&
                     !trial.is_practice &&
@@ -395,7 +395,7 @@
   function submit_results() {
     const trial_data = jsPsych.data
       .get()
-      .filter(function (trial) {
+      .filterCustom(function (trial) {
         return (
           trial.rating !== undefined &&
           !trial.is_practice &&

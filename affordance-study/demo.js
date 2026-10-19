@@ -432,7 +432,7 @@
           const object_name = a.object;
           const answered = jsPsych.data
             .get()
-            .filter(function (t) {
+            .filterCustom(function (t) {
               return (
                 t.object === object_name &&
                 t.functionalities_selected !== undefined &&
@@ -535,7 +535,7 @@
 
       const region_data = jsPsych.data
         .get()
-        .filter(function (t) {
+        .filterCustom(function (t) {
           return (
             t.object === object_name &&
             t.functionalities_selected !== undefined &&
