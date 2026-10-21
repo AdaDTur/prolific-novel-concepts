@@ -163,7 +163,13 @@ function build_example_answer_block(candidate_list, chosen, explanation) {
 // "this object as a whole" for the end-of-object overall trial) -- same picker/data mechanics either way.
 function build_functionality_picker_block(candidate_list, subject) {
   subject = subject || "this part";
+  // Dropping "none" from the clickable word bank -- it was being used as an easy out rather than a
+  // real answer (participants could still type "none" in the free-text box if a part genuinely has
+  // no functionality, but it's no longer one click away).
   const chips = candidate_list
+    .filter(function (c) {
+      return c.trim().toLowerCase() !== "none";
+    })
     .map(function (c) {
       return `<span class="candidate-chip" data-value="${c}" onclick="toggle_functionality_chip(this)">${c}</span>`;
     })
@@ -297,6 +303,9 @@ function capture_tool_interaction_live(jsPsych) {
 // free-text box, since there's nothing to volunteer here.
 function build_attention_check_block(regions_image, highlight_image, size_chart_image, size_chart_scale, target_part, n_parts, candidate_list, target_words) {
   const chips = candidate_list
+    .filter(function (c) {
+      return c.trim().toLowerCase() !== "none";
+    })
     .map(function (c) {
       return `<span class="candidate-chip" data-value="${c}" onclick="toggle_functionality_chip(this)">${c}</span>`;
     })
