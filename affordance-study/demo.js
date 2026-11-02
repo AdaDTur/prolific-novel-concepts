@@ -73,6 +73,12 @@
   // Region ids (and so part numbers/n_parts) were re-picked after switching region generation
   // from SAM1(vit_b)+SLIC to SAM2 -- see generate_training_images.py in the main NVRD repo for
   // the exact region_id each maps to and how each was verified.
+  // Cut from 5 items down to 1 (chair) -- training was taking too long and a lot of participants
+  // were failing it on earlier rounds, so this keeps just the clearest, least ambiguous item
+  // (a single accepted answer, "sit on") rather than something borderline like the old
+  // backpack/wallet items with 4 acceptable synonyms each. The other 4 items (ladle, fedora,
+  // backpack, wallet) are left here, commented out, in case the pass-rate issue turns out to be
+  // about item count rather than item difficulty and they're needed again.
   const TRAINING_ITEMS = [
     {
       object: "chair",
@@ -82,44 +88,43 @@
       n_parts: 7,
       accepted: ["sit on"],
     },
-    {
-      object: "ladle",
-      numbered_image: "images/ladle_numbered.png",
-      highlight_image: "images/ladle_highlight_part2.png",
-      part: 2,
-      n_parts: 3,
-      accepted: ["scoop", "stir", "contain", "pour"],
-    },
-    {
-      object: "fedora",
-      numbered_image: "images/fedora_numbered.png",
-      highlight_image: "images/fedora_highlight_part1.png",
-      part: 1,
-      n_parts: 6,
-      accepted: ["wear"],
-    },
-    {
-      object: "backpack",
-      numbered_image: "images/backpack_numbered.png",
-      highlight_image: "images/backpack_highlight_part1.png",
-      part: 1,
-      n_parts: 12,
-      accepted: ["carry", "contain", "hold", "open"],
-    },
-    {
-      object: "wallet",
-      numbered_image: "images/wallet_numbered.png",
-      highlight_image: "images/wallet_highlight_part1.png",
-      part: 1,
-      n_parts: 2,
-      accepted: ["open", "contain", "hold", "carry"],
-    },
+    // {
+    //   object: "ladle",
+    //   numbered_image: "images/ladle_numbered.png",
+    //   highlight_image: "images/ladle_highlight_part2.png",
+    //   part: 2,
+    //   n_parts: 3,
+    //   accepted: ["scoop", "stir", "contain", "pour"],
+    // },
+    // {
+    //   object: "fedora",
+    //   numbered_image: "images/fedora_numbered.png",
+    //   highlight_image: "images/fedora_highlight_part1.png",
+    //   part: 1,
+    //   n_parts: 6,
+    //   accepted: ["wear"],
+    // },
+    // {
+    //   object: "backpack",
+    //   numbered_image: "images/backpack_numbered.png",
+    //   highlight_image: "images/backpack_highlight_part1.png",
+    //   part: 1,
+    //   n_parts: 12,
+    //   accepted: ["carry", "contain", "hold", "open"],
+    // },
+    // {
+    //   object: "wallet",
+    //   numbered_image: "images/wallet_numbered.png",
+    //   highlight_image: "images/wallet_highlight_part1.png",
+    //   part: 1,
+    //   n_parts: 2,
+    //   accepted: ["open", "contain", "hold", "carry"],
+    // },
   ];
-  // Passed if at least 4 of 5 training items got a correct answer -- documented threshold, not
-  // requiring a perfect 5/5, since a reasonable person can still phrase a correct answer in a way
-  // that happens to miss every accepted synonym once without that meaning they don't understand the
-  // task. Adjust here if a stricter/looser bar is wanted.
-  const TRAINING_PASS_THRESHOLD = 4;
+  // With a single training item there's no "miss one, still pass" room left -- it has to be
+  // answered correctly. TRAINING_ITEMS.length (not a literal 5) so this still makes sense if items
+  // are ever added back above.
+  const TRAINING_PASS_THRESHOLD = TRAINING_ITEMS.length;
 
   function training_item_correct(item, selected) {
     const acceptedLower = item.accepted.map(function (a) {
@@ -179,8 +184,8 @@
         us what you'd say its overall functionality is. Then you'll move on to the next object and do
         the same thing again.</p>
         <p>First you'll see <strong>two worked examples</strong> showing what a good answer looks
-        like, then do <strong>5 short training rounds</strong> on everyday objects (a chair, a ladle,
-        etc.) to get the hang of it before moving on to the real task.</p>
+        like, then do <strong>1 short training round</strong> on an everyday object (a chair) to get
+        the hang of it before moving on to the real task.</p>
       </div>
     `,
     choices: ["Begin Training"],
@@ -238,7 +243,7 @@
   });
   timeline.push(...example_trials);
 
-  // ---- Training phase: 5 trials on known objects, same picker UI as the real task. ----
+  // ---- Training phase: 1 trial on a known object, same picker UI as the real task. ----
   const training_trials = TRAINING_ITEMS.map(function (item, i) {
     return {
       type: jsPsychHtmlButtonResponse,
