@@ -173,11 +173,6 @@ const SHEET_URL =
         <p>You'll see a series of objects, each split into numbered parts. For each part, just tell
         us what it could realistically be used to <strong>DO</strong>, that's its
         <strong>functionality</strong>, not just what it looks like or what it's made of.</p>
-        <div class="note-box">
-          <p><strong>"Decoration," "looks nice," "it's pretty," or anything like that doesn't
-          count.</strong> We want what a part could physically be used for, like how a handle can be
-          gripped or a blade can cut, not how it looks.</p>
-        </div>
         <p>For each part:</p>
         <ol>
           <li>Look at the images. You'll see the whole object with its parts numbered, the one part

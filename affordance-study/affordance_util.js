@@ -174,8 +174,7 @@ function build_functionality_picker_block(candidate_list, subject) {
       <div class="candidates-label">
         Pick <strong>up to 3</strong> functionalities below that ${subject} could realistically be
         used for. Click a word to select or deselect it, or type your own in the box if something's
-        missing. Just keep in mind <strong>"decoration," "looks nice," and stuff like that doesn't
-        count</strong>, we want what it could actually be used to DO.
+        missing.
       </div>
       <div class="candidates-list">${chips}</div>
       <div class="other-functionality-block">
