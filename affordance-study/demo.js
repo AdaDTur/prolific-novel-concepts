@@ -21,6 +21,12 @@
 //     its own `regions` + whole-object answer, instead of a single flat top-level `regions` array.
 //     Everything else (training shape, per-region/tool-use/overall trial shape) is unchanged from
 //     the single-object version.
+// Results go to a Google Sheet (Apps Script web app, one row per participant: received_at,
+// participant, group, results_json) instead of Proliferate, so labmates can take the study from a
+// plain link with no Prolific account. Link format: index.html?GROUP=<0-8>&ID=<name or initials>.
+const SHEET_URL =
+  "https://script.google.com/macros/s/AKfycbywIgg7tMNJVidcxyG25I9tU15H0CYPm_BQvs_DGCQIvBmGtjBsiIClNdRVg9ZNy9W5Rw/exec";
+
 (async function () {
   const groups_data = await fetch("participant_groups.json").then((r) => r.json());
   const group_index = get_participant_group_index(groups_data.num_groups);
@@ -38,6 +44,7 @@
   );
 
   const prolific = get_prolific_params();
+  const participant_id = new URLSearchParams(window.location.search).get("ID") || "";
 
   const jsPsych = initJsPsych({
     on_finish: function () {
@@ -486,8 +493,7 @@
     stimulus: `
       <div class="practice-done-container">
         <h2>Thank you!</h2>
-        <p>Submitting your data... please wait.</p>
-        <p>You will be redirected to Prolific automatically.</p>
+        <p id="save-status">Saving your answers... please keep this tab open.</p>
       </div>
     `,
     choices: [],
@@ -497,7 +503,10 @@
   };
   timeline.push(thanks);
 
+  let submitted = false; // on_finish and the thanks trial can both call submit_results(); send once
   function submit_results() {
+    if (submitted) return;
+    submitted = true;
     const training_data = jsPsych.data
       .get()
       .filter({ is_training: true })
@@ -574,6 +583,7 @@
     });
 
     const results = {
+      participant_id: participant_id,
       prolific_pid: prolific.prolific_pid || "",
       study_id: prolific.study_id,
       session_id: prolific.session_id,
@@ -588,15 +598,32 @@
       total_duration_ms: jsPsych.getTotalTime(),
       objects: objects_data,
     };
-    // Proliferate's CSV export appears to produce one file per top-level key, which means pulling
-    // a full submission back together means re-joining ~14 separate files by participant. Adding
-    // the whole thing as one extra JSON-stringified field gives a single CSV (full_results_json)
-    // with everything for a participant in one cell -- JSON.parse() it and you have the exact same
-    // object this function just built, no re-joining needed. The other top-level fields stay as
-    // they are too, for anyone who'd rather filter/skim via the per-field CSVs instead.
-    results.full_results_json = JSON.stringify(results);
-
-    proliferate.submit(results);
+    // One row per participant in the Google Sheet; its results_json cell is this whole object, so
+    // the full_results_json copy the Proliferate version added (a workaround for Proliferate's
+    // one-CSV-per-key export) is not needed, and leaving it out keeps the cell well under Google
+    // Sheets' 50,000-character limit. mode "no-cors" + text/plain: Apps Script can't answer a CORS
+    // preflight, and the response is opaque, so a resolved fetch means the request was delivered.
+    const status = () => document.getElementById("save-status");
+    fetch(SHEET_URL, {
+      method: "POST",
+      mode: "no-cors",
+      keepalive: true,
+      headers: { "Content-Type": "text/plain" },
+      body: JSON.stringify({ participant: participant_id || "(no ID)", group: group_index, results: results }),
+    })
+      .then(function () {
+        if (status()) status().textContent = "Your answers are saved. You can close this tab.";
+      })
+      .catch(function () {
+        if (status()) {
+          status().textContent =
+            "Saving failed (check your connection), so your answers are shown below. Please copy all of it and send it to the study organizer.";
+          const pre = document.createElement("pre");
+          pre.style.cssText = "white-space:pre-wrap;word-break:break-all;max-height:40vh;overflow:auto;text-align:left;font-size:11px";
+          pre.textContent = JSON.stringify(results);
+          status().after(pre);
+        }
+      });
   }
 
   jsPsych.run(timeline);
