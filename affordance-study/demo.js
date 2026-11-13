@@ -45,6 +45,14 @@ const SHEET_URL =
 
   const prolific = get_prolific_params();
   const participant_id = new URLSearchParams(window.location.search).get("ID") || "";
+  // ?DESC=1 shows each object's physical-properties description (manifest "description": material,
+  // surface, rigidity, edges; never function) as a card above its images. Off by default, so the
+  // same link without DESC is the no-description condition.
+  const SHOW_DESC = new URLSearchParams(window.location.search).get("DESC") === "1";
+  function desc_card(object_name) {
+    const d = SHOW_DESC && manifests[object_name] && manifests[object_name].description;
+    return d ? `<div class="desc-card"><span class="desc-label">About this object</span> ${escape_html(d)}</div>` : "";
+  }
 
   const jsPsych = initJsPsych({
     on_finish: function () {
@@ -295,6 +303,7 @@ const SHEET_URL =
       type: jsPsychHtmlButtonResponse,
       stimulus:
         `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${row.part} of ${n_parts}</div>` +
+        desc_card(object_name) +
         `<div class="trial-container">` +
         build_attention_check_block(
           regions_image,
@@ -338,6 +347,7 @@ const SHEET_URL =
           <h2>Object ${obj_index + 1} of ${assignment.length}</h2>
           <p>Here's a new object. You'll go through each of its parts the same way as before, then
           answer one question about the object as a whole.</p>
+          ${desc_card(object_name)}
         </div>
       `,
       choices: ["Begin"],
@@ -352,6 +362,7 @@ const SHEET_URL =
         type: jsPsychHtmlButtonResponse,
         stimulus:
           `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${i + 1} of ${n_parts}</div>` +
+          desc_card(object_name) +
           build_functionality_trial_html(
             regions_image,
             `images/${object_name}_highlight_part${row.part}.png`,
@@ -384,6 +395,7 @@ const SHEET_URL =
       type: jsPsychHtmlButtonResponse,
       stimulus:
         `<div class="demo-banner">Overall functionality for object ${obj_index + 1} of ${assignment.length}</div>` +
+        desc_card(object_name) +
         `<div class="trial-container">` +
         `<p class="trial-caption" style="max-width:700px;margin:0 auto 20px;">` +
         `Now that you've looked at every part individually, step back and consider the object as a whole.` +
@@ -577,6 +589,7 @@ const SHEET_URL =
 
     const results = {
       participant_id: participant_id,
+      descriptions_shown: SHOW_DESC,
       prolific_pid: prolific.prolific_pid || "",
       study_id: prolific.study_id,
       session_id: prolific.session_id,

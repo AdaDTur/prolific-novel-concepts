@@ -195,3 +195,22 @@
   text-align: left;
   line-height: 1.5;
 }
+
+/* Physical-properties description (shown only with ?DESC=1) */
+.desc-card {
+  max-width: 760px;
+  margin: 0 auto 16px;
+  padding: 10px 14px;
+  border: 1px solid #c9d3dd;
+  border-left: 4px solid #4a7a96;
+  border-radius: 6px;
+  background: #f5f8fb;
+  color: #22303c;
+  font-size: 15px;
+  line-height: 1.45;
+  text-align: left;
+}
+.desc-card .desc-label {
+  font-weight: 600;
+  margin-right: 4px;
+}
