@@ -299,6 +299,10 @@ const SHEET_URL =
   function build_attention_check_trial(check_index, obj_index, object_name, regions_image, size_chart_image, size_chart_scale, vocabulary, n_parts, regions) {
     const target_words = ATTENTION_CHECK_TARGETS[check_index % ATTENTION_CHECK_TARGETS.length];
     const row = regions[Math.floor(Math.random() * regions.length)];
+    // The part's own bank (GPT-5.4 synthia top-10) may not contain the target words, so mix them in.
+    const options = row.bank
+      ? row.bank.concat(target_words.filter(function (w) { return row.bank.indexOf(w) === -1; })).sort()
+      : vocabulary;
     return {
       type: jsPsychHtmlButtonResponse,
       stimulus:
@@ -312,7 +316,7 @@ const SHEET_URL =
           size_chart_scale,
           row.part,
           n_parts,
-          vocabulary,
+          options,
           target_words
         ) +
         `</div>`,
@@ -370,10 +374,11 @@ const SHEET_URL =
             size_chart_scale,
             row.part,
             n_parts,
-            vocabulary
+            row.bank || vocabulary
           ),
         choices: ["Continue"],
         data: {
+          options_shown: row.bank || vocabulary,
           object: object_name,
           size: size_chart_scale,
           part: row.part,
@@ -401,10 +406,10 @@ const SHEET_URL =
         `Now that you've looked at every part individually, step back and consider the object as a whole.` +
         `</p>` +
         build_overall_images_block(regions_image, size_chart_image, size_chart_scale, n_parts) +
-        build_functionality_picker_block(vocabulary, "this object as a whole") +
+        build_functionality_picker_block(manifest.overall_bank || vocabulary, "this object as a whole") +
         `</div>`,
       choices: ["Continue"],
-      data: { object: object_name, size: size_chart_scale, is_overall: true },
+      data: { object: object_name, size: size_chart_scale, is_overall: true, options_shown: manifest.overall_bank || vocabulary },
       on_load: function () {
         require_functionality_before_continue(jsPsych);
       },

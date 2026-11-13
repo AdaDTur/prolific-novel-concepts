@@ -52,7 +52,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "carry",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "place",
+        "stack",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +73,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "block",
+        "close",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "place",
+        "seal",
+        "stack"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +93,19 @@
         "qwen3-vl-8b": "drink with",
         "internvl3-8b": "pour",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "balance",
+        "carry",
+        "collect",
+        "contain",
+        "hold",
+        "place",
+        "prevent falling",
+        "rest",
+        "stack",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +114,17 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "contain",
+        "hold",
+        "none",
+        "place",
+        "stack",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +133,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "place",
+        "stack",
+        "support"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +153,17 @@
         "qwen3-vl-8b": "drink with",
         "internvl3-8b": "carry",
         "molmo2-8b": "carry"
-      }
+      },
+      "bank": [
+        "attach",
+        "balance",
+        "carry",
+        "hold",
+        "lift",
+        "move",
+        "pull",
+        "support"
+      ]
     },
     {
       "part": 7,
@@ -106,8 +172,36 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "carry",
         "molmo2-8b": "carry"
-      }
+      },
+      "bank": [
+        "attach",
+        "carry",
+        "hold",
+        "lift",
+        "none",
+        "pull",
+        "support"
+      ]
     }
   ],
-  "description": "Stacked layers of hard, smooth glazed ceramic, with two rigid curved loops on the sides; rounded edges."
+  "description": "Stacked layers of hard, smooth glazed ceramic, with two rigid curved loops on the sides; rounded edges.",
+  "overall_bank": [
+    "align",
+    "attach",
+    "balance",
+    "carry",
+    "contain",
+    "cover",
+    "hold",
+    "place",
+    "stack",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

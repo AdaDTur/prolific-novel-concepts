@@ -52,7 +52,18 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "beat",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "absorb",
+        "block",
+        "carry",
+        "contain",
+        "cover",
+        "hold",
+        "insulate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +72,17 @@
         "qwen3-vl-8b": "eat",
         "internvl3-8b": "eat",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "absorb",
+        "contain",
+        "cover",
+        "hold",
+        "none",
+        "reinforce",
+        "store_fuel",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,8 +91,39 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "attack",
+        "block",
+        "catch",
+        "cut",
+        "defend",
+        "hold",
+        "none",
+        "penetrate",
+        "push",
+        "wedge"
+      ]
     }
   ],
-  "description": "A firm, rubbery body covered in short, hard points, with a soft, smooth inset framed by a metal rim."
+  "description": "A firm, rubbery body covered in short, hard points, with a soft, smooth inset framed by a metal rim.",
+  "overall_bank": [
+    "absorb",
+    "attack",
+    "block",
+    "contain",
+    "cover",
+    "cut",
+    "defend",
+    "hold",
+    "penetrate",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

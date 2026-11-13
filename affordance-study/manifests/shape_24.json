@@ -52,8 +52,37 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "sit on",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "anchor",
+        "attach",
+        "balance",
+        "carry",
+        "decorate",
+        "display",
+        "hold",
+        "place",
+        "support"
+      ]
     }
   ],
-  "description": "A single solid piece of hard, smooth, matte clay-like material with a hole through it; rigid, with rounded edges."
+  "description": "A single solid piece of hard, smooth, matte clay-like material with a hole through it; rigid, with rounded edges.",
+  "overall_bank": [
+    "anchor",
+    "attach",
+    "balance",
+    "carry",
+    "decorate",
+    "display",
+    "hold",
+    "place",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

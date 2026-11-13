@@ -52,7 +52,18 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "place",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +72,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "stack",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +93,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "anchor",
+        "attach",
+        "balance",
+        "contain",
+        "cover",
+        "hold",
+        "prevent falling",
+        "stack",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +114,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "balance",
+        "contain",
+        "cover",
+        "decorate",
+        "display",
+        "hold",
+        "none",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +134,18 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "attach",
+        "carry",
+        "decorate",
+        "hold",
+        "move",
+        "none",
+        "pull",
+        "support",
+        "swing"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +154,17 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "attach",
+        "balance",
+        "carry",
+        "decorate",
+        "hold",
+        "pull",
+        "support",
+        "swing"
+      ]
     },
     {
       "part": 7,
@@ -106,7 +173,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "pick up",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "balance",
+        "decorate",
+        "kick",
+        "move",
+        "none",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 8,
@@ -115,7 +193,19 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "aim",
+        "anchor",
+        "attack",
+        "block",
+        "bump",
+        "decorate",
+        "defend",
+        "none",
+        "penetrate",
+        "support"
+      ]
     },
     {
       "part": 9,
@@ -124,7 +214,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "aim",
+        "attack",
+        "block",
+        "decorate",
+        "defend",
+        "indicate",
+        "none",
+        "penetrate",
+        "support"
+      ]
     },
     {
       "part": 10,
@@ -133,7 +234,19 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "aim",
+        "attach",
+        "attack",
+        "balance",
+        "cover",
+        "decorate",
+        "defend",
+        "indicate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 11,
@@ -142,7 +255,19 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "block",
+        "cover",
+        "decorate",
+        "defend",
+        "indicate",
+        "none",
+        "reinforce"
+      ]
     },
     {
       "part": 12,
@@ -151,8 +276,39 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "cover",
+        "decorate",
+        "direct",
+        "indicate",
+        "label",
+        "none",
+        "reinforce"
+      ]
     }
   ],
-  "description": "Stacked layers of firm, matte clay-like material with two rigid curved loops; short, stiff points on top."
+  "description": "Stacked layers of firm, matte clay-like material with two rigid curved loops; short, stiff points on top.",
+  "overall_bank": [
+    "attach",
+    "attack",
+    "balance",
+    "contain",
+    "cover",
+    "decorate",
+    "defend",
+    "hold",
+    "indicate",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

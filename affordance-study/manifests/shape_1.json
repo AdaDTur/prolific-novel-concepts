@@ -52,7 +52,18 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "carry",
         "molmo2-8b": "hold"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "insulate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +72,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "carry",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "reinforce",
+        "store_fuel",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +92,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "anchor",
+        "balance",
+        "contain",
+        "cover",
+        "hold",
+        "none",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +112,18 @@
         "qwen3-vl-8b": "carry",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "carry",
+        "decorate",
+        "hold",
+        "lift",
+        "move",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +132,17 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +151,18 @@
         "qwen3-vl-8b": "wear",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "conceal",
+        "contain",
+        "cover",
+        "decorate",
+        "display",
+        "label",
+        "none",
+        "reinforce"
+      ]
     },
     {
       "part": 7,
@@ -106,7 +171,17 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "carry",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "attach",
+        "balance",
+        "carry",
+        "hold",
+        "none",
+        "pull",
+        "push",
+        "support"
+      ]
     },
     {
       "part": 8,
@@ -115,7 +190,17 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "cover",
+        "decorate",
+        "hold",
+        "indicate",
+        "none",
+        "press"
+      ]
     },
     {
       "part": 9,
@@ -124,7 +209,19 @@
         "qwen3-vl-8b": "text on",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "block",
+        "cover",
+        "decorate",
+        "hold",
+        "indicate",
+        "label",
+        "none",
+        "reinforce"
+      ]
     },
     {
       "part": 10,
@@ -133,8 +230,37 @@
         "qwen3-vl-8b": "text on",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "cover",
+        "decorate",
+        "indicate",
+        "none",
+        "seal",
+        "support"
+      ]
     }
   ],
-  "description": "A smooth, rigid body of matte ceramic-like material, enclosed by a thin, hard metal ring; all edges are rounded."
+  "description": "A smooth, rigid body of matte ceramic-like material, enclosed by a thin, hard metal ring; all edges are rounded.",
+  "overall_bank": [
+    "align",
+    "attach",
+    "balance",
+    "contain",
+    "cover",
+    "decorate",
+    "hold",
+    "indicate",
+    "none",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

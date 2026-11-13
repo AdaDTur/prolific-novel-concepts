@@ -52,7 +52,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "cover",
+        "hold",
+        "indicate",
+        "none",
+        "reinforce",
+        "seal",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +72,19 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "lie on",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "block",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "organize",
+        "place",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +93,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "lie on",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "block",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "organize",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +113,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "block",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "indicate",
+        "none",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +134,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "indicate",
+        "none",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +154,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "block",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 7,
@@ -106,8 +174,38 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "sit on",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "close",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "label",
+        "none",
+        "seal"
+      ]
     }
   ],
-  "description": "A rigid metal frame with smooth inset panels of glass-like and soft rubbery material; straight, firm edges."
+  "description": "A rigid metal frame with smooth inset panels of glass-like and soft rubbery material; straight, firm edges.",
+  "overall_bank": [
+    "align",
+    "block",
+    "close",
+    "contain",
+    "cover",
+    "decorate",
+    "hold",
+    "none",
+    "reinforce",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

@@ -52,7 +52,15 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "beat",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "block",
+        "contain",
+        "cover",
+        "hold",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +69,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "collect",
+        "contain",
+        "cover",
+        "display",
+        "fill",
+        "hold",
+        "none",
+        "store_fuel",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +89,17 @@
         "qwen3-vl-8b": "sip",
         "internvl3-8b": "pick up",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "control",
+        "hold",
+        "insert",
+        "move",
+        "plug",
+        "pull"
+      ]
     },
     {
       "part": 4,
@@ -79,8 +108,37 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "cover",
+        "hold",
+        "indicate",
+        "insert",
+        "open",
+        "support"
+      ]
     }
   ],
-  "description": "A soft, rubbery body with a thick raised rim and a bumpy, textured centre; it gives a little when pressed."
+  "description": "A soft, rubbery body with a thick raised rim and a bumpy, textured centre; it gives a little when pressed.",
+  "overall_bank": [
+    "align",
+    "attach",
+    "contain",
+    "cover",
+    "fill",
+    "hold",
+    "insert",
+    "open",
+    "plug",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

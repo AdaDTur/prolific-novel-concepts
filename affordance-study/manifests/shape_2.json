@@ -52,7 +52,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "hold"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "carry",
+        "contain",
+        "control",
+        "cover",
+        "hold",
+        "place",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +72,17 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "carry",
+        "hold",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +91,17 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +110,17 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "attach",
+        "balance",
+        "control",
+        "hold",
+        "none",
+        "pull",
+        "push",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +129,19 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "adjust",
+        "balance",
+        "control",
+        "hold",
+        "lever",
+        "none",
+        "press",
+        "pull",
+        "push",
+        "support"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +150,18 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "anchor",
+        "attach",
+        "balance",
+        "block",
+        "carry",
+        "hold",
+        "none",
+        "place",
+        "support"
+      ]
     },
     {
       "part": 7,
@@ -106,7 +170,18 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "adjust",
+        "align",
+        "attach",
+        "balance",
+        "cover",
+        "decorate",
+        "indicate",
+        "none",
+        "pull"
+      ]
     },
     {
       "part": 8,
@@ -115,8 +190,39 @@
         "qwen3-vl-8b": "hit",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "adjust",
+        "align",
+        "anchor",
+        "attach",
+        "balance",
+        "control",
+        "hold",
+        "indicate",
+        "none",
+        "support"
+      ]
     }
   ],
-  "description": "Made of hard, smooth plastic with a matte finish; the thin rods are stiff and do not bend, and their ends are blunt."
+  "description": "Made of hard, smooth plastic with a matte finish; the thin rods are stiff and do not bend, and their ends are blunt.",
+  "overall_bank": [
+    "adjust",
+    "anchor",
+    "attach",
+    "balance",
+    "control",
+    "hold",
+    "pull",
+    "push",
+    "stand",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

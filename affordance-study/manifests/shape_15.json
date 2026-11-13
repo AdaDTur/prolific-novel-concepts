@@ -52,7 +52,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "balance",
+        "carry",
+        "contain",
+        "cover",
+        "decorate",
+        "display",
+        "hold",
+        "place",
+        "rest",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +73,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "none",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "balance",
+        "conceal",
+        "cover",
+        "decorate",
+        "hold",
+        "indicate",
+        "none",
+        "shade",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +93,19 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "lift",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "contain",
+        "cover",
+        "hold",
+        "place",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +114,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "attack",
+        "block",
+        "bump",
+        "decorate",
+        "defend",
+        "hold",
+        "indicate",
+        "none",
+        "push",
+        "wedge"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +135,17 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "aim",
+        "attack",
+        "block",
+        "cut",
+        "decorate",
+        "defend",
+        "indicate",
+        "wedge"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +154,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "block",
+        "bump",
+        "decorate",
+        "defend",
+        "indicate",
+        "none",
+        "support",
+        "wedge"
+      ]
     },
     {
       "part": 7,
@@ -106,8 +175,39 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "block",
+        "cover",
+        "decorate",
+        "defend",
+        "indicate",
+        "none",
+        "support"
+      ]
     }
   ],
-  "description": "A smooth, firm glazed-ceramic body with a rough, textured top; the thin points are rigid with sharp tips."
+  "description": "A smooth, firm glazed-ceramic body with a rough, textured top; the thin points are rigid with sharp tips.",
+  "overall_bank": [
+    "balance",
+    "block",
+    "cover",
+    "decorate",
+    "defend",
+    "hold",
+    "indicate",
+    "none",
+    "support",
+    "wedge"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

@@ -52,7 +52,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "balance",
+        "carry",
+        "conceal",
+        "contain",
+        "hold",
+        "none",
+        "organize",
+        "place",
+        "rest",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +73,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "carry",
+        "contain",
+        "cover",
+        "hold",
+        "none",
+        "organize",
+        "place",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +93,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "cut",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "balance",
+        "carry",
+        "contain",
+        "cover",
+        "hold",
+        "none",
+        "place",
+        "rest",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +113,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "eat",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "carry",
+        "collect",
+        "contain",
+        "cover",
+        "hold",
+        "insert",
+        "none",
+        "place",
+        "store_fuel",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,8 +134,36 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "engage",
+        "hold",
+        "insert",
+        "lock",
+        "none"
+      ]
     }
   ],
-  "description": "A smooth, hard ceramic shell with two holes through it; the inner surfaces are glossy; all edges are rounded."
+  "description": "A smooth, hard ceramic shell with two holes through it; the inner surfaces are glossy; all edges are rounded.",
+  "overall_bank": [
+    "align",
+    "balance",
+    "carry",
+    "contain",
+    "cover",
+    "hold",
+    "insert",
+    "none",
+    "place",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

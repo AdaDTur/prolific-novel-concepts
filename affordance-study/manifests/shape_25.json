@@ -52,7 +52,18 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "lift",
         "molmo2-8b": "hold"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "place",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +72,17 @@
         "qwen3-vl-8b": "wear",
         "internvl3-8b": "wear",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +91,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "none",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "adjust",
+        "attach",
+        "cover",
+        "decorate",
+        "hold",
+        "lift",
+        "none",
+        "pull",
+        "remove"
+      ]
     },
     {
       "part": 4,
@@ -79,8 +111,38 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "adjust",
+        "aim",
+        "carry",
+        "control",
+        "hold",
+        "lever",
+        "move",
+        "pull",
+        "push"
+      ]
     }
   ],
-  "description": "A rigid body of matte, unglazed clay-like material with a ribbed band around its middle; rounded edges."
+  "description": "A rigid body of matte, unglazed clay-like material with a ribbed band around its middle; rounded edges.",
+  "overall_bank": [
+    "adjust",
+    "align",
+    "attach",
+    "balance",
+    "cover",
+    "hold",
+    "lift",
+    "pull",
+    "stand",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

@@ -52,7 +52,19 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "beat",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "place",
+        "rest",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,8 +73,39 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "beat",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "insert",
+        "none",
+        "place",
+        "rest",
+        "support"
+      ]
     }
   ],
-  "description": "A solid block of smooth, polished stone wrapped around a lighter, slightly textured inner piece with an opening."
+  "description": "A solid block of smooth, polished stone wrapped around a lighter, slightly textured inner piece with an opening.",
+  "overall_bank": [
+    "align",
+    "balance",
+    "contain",
+    "cover",
+    "decorate",
+    "hold",
+    "none",
+    "place",
+    "rest",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

@@ -52,7 +52,16 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hold",
         "molmo2-8b": "eat"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "contain",
+        "cover",
+        "hold",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +70,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "none",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "align",
+        "balance",
+        "block",
+        "cover",
+        "decorate",
+        "indicate",
+        "none",
+        "shade",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +90,19 @@
         "qwen3-vl-8b": "drink with",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "anchor",
+        "attach",
+        "balance",
+        "carry",
+        "cover",
+        "decorate",
+        "hold",
+        "lean",
+        "move",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +111,18 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "kick",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "place",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,7 +131,18 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "place",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 6,
@@ -97,7 +151,17 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 7,
@@ -106,7 +170,18 @@
         "qwen3-vl-8b": "drink with",
         "internvl3-8b": "carry",
         "molmo2-8b": "drink with"
-      }
+      },
+      "bank": [
+        "balance",
+        "block",
+        "cover",
+        "decorate",
+        "display",
+        "hold",
+        "indicate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 8,
@@ -115,7 +190,18 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "eat"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "none",
+        "place",
+        "prevent falling",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 9,
@@ -124,7 +210,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "adjust",
+        "align",
+        "attach",
+        "balance",
+        "block",
+        "decorate",
+        "direct",
+        "indicate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 10,
@@ -133,7 +231,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "cover",
+        "decorate",
+        "display",
+        "hold",
+        "indicate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 11,
@@ -142,7 +252,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "beat",
         "molmo2-8b": "beat"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "cover",
+        "decorate",
+        "hold",
+        "indicate",
+        "none",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 12,
@@ -151,7 +273,19 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "align",
+        "attach",
+        "balance",
+        "block",
+        "cover",
+        "decorate",
+        "defend",
+        "indicate",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 13,
@@ -160,7 +294,15 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hit",
         "molmo2-8b": "brush with"
-      }
+      },
+      "bank": [
+        "adjust",
+        "align",
+        "attach",
+        "hold",
+        "none",
+        "support"
+      ]
     },
     {
       "part": 14,
@@ -169,8 +311,39 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "kick",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "adjust",
+        "align",
+        "attach",
+        "balance",
+        "decorate",
+        "hold",
+        "indicate",
+        "pull",
+        "push",
+        "support"
+      ]
     }
   ],
-  "description": "Made of firm, matte clay-like material with a slightly rough surface; the legs and stubs are rigid with rounded tips."
+  "description": "Made of firm, matte clay-like material with a slightly rough surface; the legs and stubs are rigid with rounded tips.",
+  "overall_bank": [
+    "align",
+    "attach",
+    "balance",
+    "cover",
+    "decorate",
+    "hold",
+    "indicate",
+    "none",
+    "stand",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }

@@ -52,7 +52,19 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "sit on",
         "molmo2-8b": "take photo"
-      }
+      },
+      "bank": [
+        "balance",
+        "block",
+        "contain",
+        "cover",
+        "decorate",
+        "hold",
+        "none",
+        "place",
+        "rest",
+        "support"
+      ]
     },
     {
       "part": 2,
@@ -61,7 +73,19 @@
         "qwen3-vl-8b": "sit on",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "carry",
+        "hold",
+        "place",
+        "prevent falling",
+        "reinforce",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 3,
@@ -70,7 +94,18 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "carry",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "anchor",
+        "balance",
+        "hold",
+        "place",
+        "prevent falling",
+        "reinforce",
+        "rest",
+        "stand",
+        "support"
+      ]
     },
     {
       "part": 4,
@@ -79,7 +114,17 @@
         "qwen3-vl-8b": "hold",
         "internvl3-8b": "hold",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "align",
+        "anchor",
+        "attach",
+        "cover",
+        "hold",
+        "lock",
+        "reinforce",
+        "support"
+      ]
     },
     {
       "part": 5,
@@ -88,8 +133,38 @@
         "qwen3-vl-8b": "none",
         "internvl3-8b": "hold",
         "molmo2-8b": "none"
-      }
+      },
+      "bank": [
+        "adjust",
+        "align",
+        "attach",
+        "hold",
+        "lock",
+        "none",
+        "prevent falling",
+        "reinforce",
+        "support"
+      ]
     }
   ],
-  "description": "Made of hard, smooth, matte plastic; the thin legs and arch are rigid; the top block is solid with rounded corners."
+  "description": "Made of hard, smooth, matte plastic; the thin legs and arch are rigid; the top block is solid with rounded corners.",
+  "overall_bank": [
+    "align",
+    "anchor",
+    "attach",
+    "balance",
+    "hold",
+    "place",
+    "prevent falling",
+    "reinforce",
+    "rest",
+    "support"
+  ],
+  "bank_source": {
+    "model": "openai/gpt-5.4",
+    "vocabulary": "synthia_filtered",
+    "mode": "generation top-10",
+    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
+    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+  }
 }
