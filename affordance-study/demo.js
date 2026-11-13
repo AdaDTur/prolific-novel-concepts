@@ -152,13 +152,6 @@ const SHEET_URL =
         AI vision-language models learn what novel, made-up objects could be used for, and comparing
         that to how humans figure out the same thing just by looking. Your answers help us see where
         these models line up with human judgment and where they don't.</p>
-        <p>Your participation is voluntary and you can stop at any point without any penalty. We
-        don't collect your name or any other personally identifying info, your Prolific ID is only
-        used to verify participation and process payment, and your responses are kept anonymous and
-        used for research purposes only (they may show up, anonymized, in academic papers or
-        datasets we publish).</p>
-        <p>Questions, concerns, or just want to know more? Reach out anytime at
-        adadt2@illinois.edu.</p>
       </div>
     `,
     choices: ["Continue"],
