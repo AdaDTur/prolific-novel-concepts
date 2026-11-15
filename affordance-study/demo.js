@@ -280,55 +280,24 @@ const SHEET_URL =
   };
   timeline.push(training_done);
 
-  // ---- Attention checks: instructed-response items ("click these specific words") interleaved
-  // between objects in the main task below, not a rating/judgment of any real part. Two different
-  // target-word pairs so the two checks in a session don't look identical; drawn from the shared
-  // AGD20K vocabulary every novel object's manifest already uses, so no extra assets are needed.
+  // ---- Main task, as ONE navigable sequence of pages with Back / Next buttons so participants can
+  // revisit and change earlier answers. jsPsych has no built-in "go back a trial", so the whole main
+  // task is a single html-button-response trial in a loop: `pages` (built once, below) holds every
+  // page's HTML and metadata, `cur` is the page on screen, and `answers[i]` holds page i's live answer
+  // (restored into the chips / text boxes whenever the page is shown again). Next stays disabled until
+  // the page is answered, and the run ends on a review page whose Submit button stays disabled while
+  // any question is unanswered, so nobody can submit an incomplete session. Results are read from
+  // `answers` at submit time, not from jsPsych's per-trial data (a page visited 3 times has 3 rows).
+  //
+  // Attention checks: instructed-response items ("click these specific words") interleaved between
+  // objects, using a real region image of the object they follow so they look like an ordinary part
+  // page. The part's bank (GPT-5.4 synthia top-10) may not contain the target words, so they're mixed in.
   const ATTENTION_CHECK_TARGETS = [
     ["push", "carry"],
     ["wear", "hold"],
   ];
-  // regions_image/size_chart_image/size_chart_scale/vocabulary/n_parts/regions are the SAME object
-  // this check is slotted in after -- reusing one of its real region images (picked at random) so
-  // the check looks like an ordinary per-part trial at a glance, not a visibly different interlude.
-  function build_attention_check_trial(check_index, obj_index, object_name, regions_image, size_chart_image, size_chart_scale, vocabulary, n_parts, regions) {
-    const target_words = ATTENTION_CHECK_TARGETS[check_index % ATTENTION_CHECK_TARGETS.length];
-    const row = regions[Math.floor(Math.random() * regions.length)];
-    // The part's own bank (GPT-5.4 synthia top-10) may not contain the target words, so mix them in.
-    const options = row.bank
-      ? row.bank.concat(target_words.filter(function (w) { return row.bank.indexOf(w) === -1; })).sort()
-      : vocabulary;
-    return {
-      type: jsPsychHtmlButtonResponse,
-      stimulus:
-        `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${row.part} of ${n_parts}</div>` +
-        desc_card(object_name) +
-        `<div class="trial-container">` +
-        build_attention_check_block(
-          regions_image,
-          `images/${object_name}_highlight_part${row.part}.png`,
-          size_chart_image,
-          size_chart_scale,
-          row.part,
-          n_parts,
-          options,
-          target_words
-        ) +
-        `</div>`,
-      choices: ["Continue"],
-      data: { is_attention_check: true, attention_check_index: check_index, attention_check_targets: target_words },
-      on_load: function () {
-        require_functionality_before_continue(jsPsych);
-      },
-      on_finish: function (data) {
-        data.attention_check_passed = score_attention_check(data.functionalities_selected || [], target_words);
-      },
-    };
-  }
 
-  // ---- Main task: for each {object, size} in this session's assigned group, one elicitation trial
-  // + one "imagine using it" trial per region, then one whole-object question -- before moving on to
-  // the next object in the group. ----
+  const pages = [];
   assignment.forEach(function (a, obj_index) {
     const object_name = a.object;
     const size_chart_scale = a.size;
@@ -339,27 +308,32 @@ const SHEET_URL =
     const regions_image = `images/${object_name}_numbered.png`;
     const size_chart_image = `images/${object_name}_${size_chart_scale}.png`;
 
-    const object_intro = {
-      type: jsPsychHtmlButtonResponse,
-      stimulus: `
+    pages.push({
+      kind: "intro",
+      object: object_name,
+      html: `
         <div class="instructions-container">
           <h2>Object ${obj_index + 1} of ${assignment.length}</h2>
           <p>Here's a new object. You'll go through each of its parts the same way as before, then
-          answer one question about the object as a whole.</p>
+          answer one question about the object as a whole. You can use <strong>Back</strong> at any
+          point to change an earlier answer.</p>
           ${desc_card(object_name)}
         </div>
       `,
-      choices: ["Begin"],
-    };
-    timeline.push(object_intro);
+    });
 
     regions.forEach(function (row, i) {
-      // Picker + tool-use question used to be two separate pages showing the same images twice in
-      // a row -- merged into one page since that was just doubling the click-through count with no
-      // benefit.
-      const functionality_trial = {
-        type: jsPsychHtmlButtonResponse,
-        stimulus:
+      const options = row.bank || vocabulary;
+      pages.push({
+        kind: "part",
+        required: true,
+        object: object_name,
+        size: size_chart_scale,
+        part: row.part,
+        region_id: row.region_id,
+        model_labels: row.labels, // recorded for later comparison, never shown to the participant
+        options: options,
+        html:
           `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${i + 1} of ${n_parts}</div>` +
           desc_card(object_name) +
           build_functionality_trial_html(
@@ -369,31 +343,19 @@ const SHEET_URL =
             size_chart_scale,
             row.part,
             n_parts,
-            row.bank || vocabulary
+            options
           ),
-        choices: ["Continue"],
-        data: {
-          options_shown: row.bank || vocabulary,
-          object: object_name,
-          size: size_chart_scale,
-          part: row.part,
-          region_id: row.region_id,
-          model_labels: row.labels, // recorded for later comparison, never shown to the participant
-        },
-        on_load: function () {
-          require_functionality_before_continue(jsPsych);
-          capture_tool_interaction_live(jsPsych);
-        },
-      };
-
-      timeline.push(functionality_trial);
+      });
     });
 
-    // ---- After every part of this object has been answered individually, one final whole-object
-    // question, before moving on to the next object in the group. ----
-    const overall_trial = {
-      type: jsPsychHtmlButtonResponse,
-      stimulus:
+    const overall_options = manifest.overall_bank || vocabulary;
+    pages.push({
+      kind: "overall",
+      required: true,
+      object: object_name,
+      size: size_chart_scale,
+      options: overall_options,
+      html:
         `<div class="demo-banner">Overall functionality for object ${obj_index + 1} of ${assignment.length}</div>` +
         desc_card(object_name) +
         `<div class="trial-container">` +
@@ -401,97 +363,179 @@ const SHEET_URL =
         `Now that you've looked at every part individually, step back and consider the object as a whole.` +
         `</p>` +
         build_overall_images_block(regions_image, size_chart_image, size_chart_scale, n_parts) +
-        build_functionality_picker_block(manifest.overall_bank || vocabulary, "this object as a whole") +
+        build_functionality_picker_block(overall_options, "this object as a whole") +
         `</div>`,
-      choices: ["Continue"],
-      data: { object: object_name, size: size_chart_scale, is_overall: true, options_shown: manifest.overall_bank || vocabulary },
-      on_load: function () {
-        require_functionality_before_continue(jsPsych);
-      },
-    };
-    timeline.push(overall_trial);
+    });
 
-    // ---- Attention checks, interleaved between objects rather than bunched at the start, so they
-    // catch disengagement partway through a session too -- positioned at roughly 1/3 and 2/3
-    // through this participant's assigned objects (computed from assignment.length rather than
-    // hardcoded, so this still makes sense if OBJECTS_PER_GROUP changes later). Guarded so a very
-    // short assignment doesn't insert the same position twice or insert one after the very last
-    // object (which would just tack it onto the end instead of truly interleaving it). ----
+    // At roughly 1/3 and 2/3 of the way through (computed from assignment.length), never after the
+    // very last object, never the same position twice.
     const attention_check_positions = [
       Math.floor(assignment.length / 3),
       Math.floor((2 * assignment.length) / 3),
     ].filter(function (pos, idx, arr) {
       return pos > 0 && pos < assignment.length - 1 && arr.indexOf(pos) === idx;
     });
-    const attention_check_index = attention_check_positions.indexOf(obj_index + 1);
-    if (attention_check_index !== -1) {
-      timeline.push(
-        build_attention_check_trial(
-          attention_check_index,
-          obj_index,
-          object_name,
-          regions_image,
-          size_chart_image,
-          size_chart_scale,
-          vocabulary,
-          n_parts,
-          regions
-        )
-      );
+    const check_index = attention_check_positions.indexOf(obj_index + 1);
+    if (check_index !== -1) {
+      const target_words = ATTENTION_CHECK_TARGETS[check_index % ATTENTION_CHECK_TARGETS.length];
+      const row = regions[Math.floor(Math.random() * regions.length)];
+      const options = row.bank
+        ? row.bank.concat(target_words.filter(function (w) { return row.bank.indexOf(w) === -1; })).sort()
+        : vocabulary;
+      pages.push({
+        kind: "attention",
+        required: true,
+        object: object_name,
+        check_index: check_index,
+        target_words: target_words,
+        options: options,
+        html:
+          `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${row.part} of ${n_parts}</div>` +
+          desc_card(object_name) +
+          `<div class="trial-container">` +
+          build_attention_check_block(
+            regions_image,
+            `images/${object_name}_highlight_part${row.part}.png`,
+            size_chart_image,
+            size_chart_scale,
+            row.part,
+            n_parts,
+            options,
+            target_words
+          ) +
+          `</div>`,
+      });
     }
   });
+  pages.push({ kind: "review" });
 
-  const summary = {
+  const answers = pages.map(function () {
+    return { selected: [], tool: "", rt_ms: 0, visits: 0 };
+  });
+  function unanswered_pages() {
+    return pages
+      .map(function (p, i) { return i; })
+      .filter(function (i) { return pages[i].required && answers[i].selected.length === 0; });
+  }
+
+  function build_review_html() {
+    const missing = unanswered_pages();
+    const sections = assignment
+      .map(function (a) {
+        const rows = pages
+          .map(function (p, i) { return { p: p, i: i }; })
+          .filter(function (x) { return x.p.object === a.object && x.p.kind === "part"; })
+          .map(function (x) {
+            const sel = answers[x.i].selected;
+            const list = sel.length ? sel.map(escape_html).join(", ") : `<span style="color:#b00020;">not answered</span>`;
+            return `<tr><td>${x.p.part}</td><td>${list}</td></tr>`;
+          })
+          .join("");
+        const oi = pages.findIndex(function (p) { return p.object === a.object && p.kind === "overall"; });
+        const osel = answers[oi].selected;
+        const olist = osel.length ? osel.map(escape_html).join(", ") : `<span style="color:#b00020;">not answered</span>`;
+        return `
+          <h3>Object ${assignment.indexOf(a) + 1}</h3>
+          <table class="summary-table">
+            <thead><tr><th>Part</th><th>Functionalities you picked</th></tr></thead>
+            <tbody>${rows}</tbody>
+          </table>
+          <p style="margin:12px 0 28px;"><strong>Whole-object functionality:</strong> ${olist}</p>
+        `;
+      })
+      .join("");
+    const note = missing.length
+      ? `<p style="color:#b00020;"><strong>${missing.length} question${missing.length > 1 ? "s are" : " is"} still unanswered.</strong> Use Back to go to ${missing.length > 1 ? "them" : "it"}; you can submit once everything is answered.</p>`
+      : `<p>Everything is answered. Use <strong>Back</strong> if you want to change anything, or <strong>Submit</strong> to finish.</p>`;
+    return `
+      <div class="demo-result">
+        <h2>Review your answers</h2>
+        ${note}
+        ${sections}
+      </div>
+    `;
+  }
+
+  let cur = 0;
+  let shown = 0;
+  const nav_trial = {
     type: jsPsychHtmlButtonResponse,
     stimulus: function () {
-      const sections = assignment
-        .map(function (a) {
-          const object_name = a.object;
-          const answered = jsPsych.data
-            .get()
-            .filterCustom(function (t) {
-              return (
-                t.object === object_name &&
-                t.functionalities_selected !== undefined &&
-                !t.is_training &&
-                !t.is_overall &&
-                !t.is_attention_check
-              );
-            })
-            .values();
-          const overall = jsPsych.data.get().filter({ object: object_name, is_overall: true }).values()[0];
-
-          const table_rows = answered
-            .map(function (t) {
-              const list = (t.functionalities_selected || []).map(escape_html).join(", ") || "&mdash;";
-              return `<tr><td>${t.part}</td><td>${list}</td></tr>`;
-            })
-            .join("");
-          const overall_list = overall
-            ? (overall.functionalities_selected || []).map(escape_html).join(", ") || "&mdash;"
-            : "&mdash;";
-
-          return `
-            <h3>${escape_html(object_name)} <span style="font-weight:400;color:#6b6b6b;">(${answered.length} parts)</span></h3>
-            <table class="summary-table">
-              <thead><tr><th>Part</th><th>Functionalities you picked</th></tr></thead>
-              <tbody>${table_rows}</tbody>
-            </table>
-            <p style="margin:12px 0 28px;"><strong>Whole-object functionality:</strong> ${overall_list}</p>
-          `;
-        })
-        .join("");
-
-      return `
-        <div class="demo-result">
-          <h2>All ${assignment.length} objects answered</h2>
-          ${sections}
-        </div>
-      `;
+      return pages[cur].kind === "review" ? build_review_html() : pages[cur].html;
     },
-    choices: ["Continue"],
+    choices: function () {
+      const forward = pages[cur].kind === "review" ? "Submit" : "Next";
+      return cur > 0 ? ["Back", forward] : [forward];
+    },
+    on_start: function () {
+      shown = cur;
+    },
+    on_load: function () {
+      window.scrollTo(0, 0);
+      const p = pages[shown];
+      const a = answers[shown];
+      const root = jsPsych.getDisplayElement();
+      const btns = root.querySelectorAll("#jspsych-html-button-response-btngroup button");
+      const forward_btn = btns[btns.length - 1];
+      const btn_group = root.querySelector("#jspsych-html-button-response-btngroup");
+
+      if (p.kind === "review") {
+        forward_btn.disabled = unanswered_pages().length > 0;
+        return;
+      }
+
+      // Restore this page's saved answer: chips by value, anything else into the "other" box.
+      const chips = root.querySelectorAll(".candidate-chip");
+      const chip_values = Array.prototype.map.call(chips, function (c) { return c.dataset.value; });
+      chips.forEach(function (c) {
+        if (a.selected.indexOf(c.dataset.value) !== -1) c.classList.add("selected");
+      });
+      const other_box = root.querySelector("#other-functionality-input");
+      if (other_box) {
+        other_box.value = a.selected.filter(function (v) { return chip_values.indexOf(v) === -1; }).join(", ");
+      }
+      const tool_box = root.querySelector("#tool-interaction-input");
+      if (tool_box) {
+        tool_box.value = a.tool;
+        tool_box.addEventListener("input", function () {
+          a.tool = tool_box.value.trim();
+        });
+      }
+
+      if (!p.required) return;
+      const hint = document.createElement("div");
+      hint.className = "required-hint";
+      hint.textContent = "Pick at least one functionality above to continue.";
+      btn_group.insertAdjacentElement("afterend", hint);
+      function check() {
+        a.selected = get_selected_functionalities();
+        const ok = a.selected.length > 0;
+        forward_btn.disabled = !ok; // Back always stays enabled
+        hint.style.display = ok ? "none" : "block";
+      }
+      chips.forEach(function (c) { c.addEventListener("click", check); });
+      if (other_box) other_box.addEventListener("input", check);
+      check();
+    },
+    on_finish: function (data) {
+      const a = answers[shown];
+      a.rt_ms += data.rt;
+      a.visits += 1;
+      data.is_nav = true;
+      data.page_index = shown;
+      data.page_kind = pages[shown].kind;
+      const went_back = shown > 0 && data.response === 0;
+      if (went_back) cur = shown - 1;
+      else if (pages[shown].kind === "review") cur = pages.length; // Submit
+      else cur = shown + 1;
+    },
   };
-  timeline.push(summary);
+  timeline.push({
+    timeline: [nav_trial],
+    loop_function: function () {
+      return cur < pages.length;
+    },
+  });
 
   const thanks = {
     type: jsPsychHtmlButtonResponse,
@@ -529,20 +573,20 @@ const SHEET_URL =
     }).length;
     const training_passed = training_correct_count >= TRAINING_PASS_THRESHOLD;
 
-    const attention_check_data = jsPsych.data
-      .get()
-      .filter({ is_attention_check: true })
-      .values()
-      .sort(function (a, b) {
-        return a.attention_check_index - b.attention_check_index;
-      })
-      .map(function (t) {
+    // Main-task answers come from `answers` (final state of each page after any Back/Next edits);
+    // response_time_ms sums every visit to that page, visits counts them (>1 = revisited/edited).
+    const attention_check_data = pages
+      .map(function (p, i) { return { p: p, a: answers[i] }; })
+      .filter(function (x) { return x.p.kind === "attention"; })
+      .map(function (x) {
         return {
-          index: t.attention_check_index,
-          target_words: t.attention_check_targets,
-          functionalities_selected: t.functionalities_selected,
-          passed: t.attention_check_passed,
-          response_time_ms: t.rt,
+          index: x.p.check_index,
+          object: x.p.object,
+          target_words: x.p.target_words,
+          functionalities_selected: x.a.selected,
+          passed: score_attention_check(x.a.selected, x.p.target_words),
+          response_time_ms: x.a.rt_ms,
+          visits: x.a.visits,
         };
       });
     const attention_checks_passed = attention_check_data.filter(function (t) {
@@ -551,38 +595,30 @@ const SHEET_URL =
 
     const objects_data = assignment.map(function (a) {
       const object_name = a.object;
-
-      const region_data = jsPsych.data
-        .get()
-        .filterCustom(function (t) {
-          return (
-            t.object === object_name &&
-            t.functionalities_selected !== undefined &&
-            !t.is_training &&
-            !t.is_overall &&
-            !t.is_attention_check
-          );
-        })
-        .values()
-        .map(function (t) {
+      const region_data = pages
+        .map(function (p, i) { return { p: p, a: answers[i] }; })
+        .filter(function (x) { return x.p.object === object_name && x.p.kind === "part"; })
+        .map(function (x) {
           return {
-            part: t.part,
-            region_id: t.region_id,
-            model_labels: t.model_labels,
-            functionalities_selected: t.functionalities_selected,
-            response_time_ms: t.rt,
-            tool_interaction: t.tool_interaction !== undefined ? t.tool_interaction : null,
+            part: x.p.part,
+            region_id: x.p.region_id,
+            model_labels: x.p.model_labels,
+            options_shown: x.p.options,
+            functionalities_selected: x.a.selected,
+            response_time_ms: x.a.rt_ms,
+            visits: x.a.visits,
+            tool_interaction: x.a.tool || null,
           };
         });
-
-      const overall_trial_data = jsPsych.data.get().filter({ object: object_name, is_overall: true }).values()[0];
-
+      const oi = pages.findIndex(function (p) { return p.object === object_name && p.kind === "overall"; });
       return {
         object: object_name,
         size_chart_scale: a.size,
         regions_image: `images/${object_name}_numbered.png`,
-        overall_functionalities_selected: overall_trial_data ? overall_trial_data.functionalities_selected : [],
-        overall_response_time_ms: overall_trial_data ? overall_trial_data.rt : null,
+        overall_options_shown: pages[oi].options,
+        overall_functionalities_selected: answers[oi].selected,
+        overall_response_time_ms: answers[oi].rt_ms,
+        overall_visits: answers[oi].visits,
         regions: region_data,
       };
     });
