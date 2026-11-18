@@ -54,15 +54,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "balance",
-        "carry",
-        "conceal",
+        "block",
         "contain",
+        "cover",
         "hold",
         "none",
-        "organize",
-        "place",
-        "rest",
+        "open",
+        "orient",
+        "press",
+        "seal",
         "support"
       ]
     },
@@ -75,14 +75,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "carry",
         "contain",
+        "control",
         "cover",
+        "cut",
+        "direct",
+        "focus",
         "hold",
+        "indicate",
         "none",
-        "organize",
-        "place",
         "support"
       ]
     },
@@ -96,13 +97,14 @@
       },
       "bank": [
         "balance",
-        "carry",
         "contain",
         "cover",
         "hold",
+        "hold_food",
         "none",
         "place",
-        "rest",
+        "seal",
+        "store_fuel",
         "support"
       ]
     },
@@ -115,15 +117,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "carry",
-        "collect",
+        "align",
+        "attach",
+        "block",
         "contain",
         "cover",
+        "engage",
         "hold",
-        "insert",
+        "level",
         "none",
-        "place",
-        "store_fuel",
         "support"
       ]
     },
@@ -136,34 +138,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "attach",
-        "engage",
-        "hold",
-        "insert",
-        "lock",
-        "none"
+        "button",
+        "click",
+        "clip",
+        "cycle",
+        "detect",
+        "display",
+        "illuminate",
+        "none",
+        "press",
+        "see"
       ]
     }
   ],
   "description": "A smooth, hard ceramic shell with two holes through it; the inner surfaces are glossy; all edges are rounded.",
   "overall_bank": [
-    "align",
-    "balance",
-    "carry",
+    "block",
+    "click",
     "contain",
     "cover",
     "hold",
-    "insert",
+    "hold_food",
     "none",
-    "place",
+    "press",
+    "store_fuel",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

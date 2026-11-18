@@ -54,14 +54,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "balance",
-        "block",
         "contain",
         "cover",
-        "decorate",
         "display",
+        "draw",
         "hold",
         "none",
+        "place",
+        "rest",
+        "stand",
         "support"
       ]
     },
@@ -74,15 +75,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "block",
+        "collect",
         "contain",
         "cover",
         "decorate",
-        "hold",
+        "detect",
+        "display",
+        "indicate",
         "insulate",
-        "label",
         "none",
-        "support"
+        "shade"
       ]
     },
     {
@@ -94,14 +96,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "anchor",
         "balance",
+        "float",
         "hold",
+        "hold_food",
+        "move",
         "none",
-        "prevent falling",
-        "rest",
+        "propel",
         "stand",
-        "support"
+        "support",
+        "swim"
       ]
     },
     {
@@ -113,12 +117,14 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "anchor",
         "balance",
+        "block",
+        "contain",
+        "cover",
         "hold",
         "none",
-        "prevent falling",
-        "rest",
+        "plug",
+        "seal",
         "stand",
         "support"
       ]
@@ -132,37 +138,43 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "adjust",
-        "align",
+        "assist_breathing",
         "attach",
+        "control",
+        "dangle",
         "decorate",
+        "float",
         "indicate",
-        "lever",
         "none",
-        "pull",
-        "switch",
-        "trigger"
+        "orient",
+        "support"
       ]
     }
   ],
   "description": "A firm dome with a rough, sandy top and a smooth, glossy band, resting on soft, slightly flexible rubbery points.",
   "overall_bank": [
-    "anchor",
-    "balance",
     "contain",
     "cover",
     "decorate",
     "hold",
+    "move",
     "none",
-    "prevent falling",
+    "orient",
+    "rest",
     "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

@@ -54,11 +54,12 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "balance",
-        "block",
-        "cover",
+        "bump",
+        "carry",
+        "dangle",
         "decorate",
         "display",
+        "float",
         "hold",
         "indicate",
         "none",
@@ -74,14 +75,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "balance",
+        "block",
+        "contain",
         "hold",
-        "move",
-        "prevent falling",
-        "rest",
+        "lean",
+        "none",
+        "seal",
         "stand",
-        "support"
+        "support",
+        "walk"
       ]
     },
     {
@@ -93,16 +96,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "attach",
-        "bend",
-        "carry",
+        "bump",
         "dangle",
         "decorate",
         "hold",
+        "indicate",
+        "move",
         "none",
-        "pull",
-        "support"
+        "play",
+        "stroke"
       ]
     },
     {
@@ -114,13 +117,14 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "attach",
-        "balance",
+        "block",
+        "contain",
+        "cook",
         "hold",
-        "lean",
-        "place",
-        "prevent falling",
+        "hold_food",
+        "move",
+        "none",
         "stand",
         "support"
       ]
@@ -134,14 +138,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
+        "attach",
         "balance",
+        "contain",
+        "cover",
         "hold",
+        "lean",
         "none",
-        "prevent falling",
-        "rest",
         "stand",
-        "support"
+        "support",
+        "walk"
       ]
     },
     {
@@ -153,13 +159,13 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "anchor",
         "attach",
         "balance",
-        "bump",
+        "conceal",
+        "cover",
         "decorate",
-        "defend",
         "hold",
+        "hold_food",
         "indicate",
         "none",
         "support"
@@ -175,14 +181,14 @@
       },
       "bank": [
         "attach",
-        "balance",
-        "block",
         "cover",
         "decorate",
         "extend",
         "hold",
         "indicate",
+        "lift",
         "none",
+        "pull",
         "support"
       ]
     },
@@ -195,15 +201,16 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "attach",
-        "block",
+        "absorb",
+        "channel water",
         "cover",
         "decorate",
+        "drain",
+        "filter",
         "hold",
-        "indicate",
-        "label",
         "none",
-        "reinforce"
+        "peel",
+        "support"
       ]
     },
     {
@@ -215,13 +222,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "block",
+        "apply",
+        "contain",
         "cover",
         "decorate",
         "display",
         "hold",
         "none",
-        "reinforce",
+        "pack",
+        "paint",
         "support"
       ]
     },
@@ -236,9 +245,10 @@
       "bank": [
         "anchor",
         "balance",
+        "contain",
         "hold",
+        "hold_food",
         "none",
-        "place",
         "prevent falling",
         "rest",
         "stand",
@@ -254,14 +264,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "attach",
+        "assist_breathing",
+        "attack",
         "balance",
-        "bump",
         "decorate",
-        "defend",
+        "detect",
+        "display",
+        "hold",
         "indicate",
         "none",
-        "support"
+        "penetrate"
       ]
     },
     {
@@ -273,6 +285,8 @@
         "molmo2-8b": "none"
       },
       "bank": [
+        "attach",
+        "contain",
         "cover",
         "decorate",
         "hold",
@@ -280,7 +294,7 @@
         "label",
         "none",
         "press",
-        "push"
+        "support"
       ]
     },
     {
@@ -292,13 +306,14 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "attach",
-        "block",
+        "contain",
         "cover",
         "decorate",
+        "detect",
+        "display",
         "hold",
         "indicate",
-        "label",
+        "listen",
         "none",
         "support"
       ]
@@ -312,15 +327,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "anchor",
         "attach",
-        "balance",
         "block",
+        "cook",
+        "cover",
         "decorate",
         "hold",
         "none",
-        "reinforce",
+        "pluck",
+        "pull",
         "support"
       ]
     },
@@ -333,22 +348,24 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "cover",
+        "click",
+        "contain",
         "decorate",
-        "hold",
+        "display",
+        "illuminate",
         "indicate",
-        "label",
         "none",
-        "support"
+        "press",
+        "select",
+        "store_fuel"
       ]
     }
   ],
   "description": "Made of firm, matte clay-like material, with a thick, rigid ring passing around the body; the thin stalks are stiff.",
   "overall_bank": [
-    "anchor",
     "attach",
     "balance",
+    "contain",
     "cover",
     "decorate",
     "hold",
@@ -358,10 +375,16 @@
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

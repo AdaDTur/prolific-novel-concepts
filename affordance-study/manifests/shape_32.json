@@ -54,15 +54,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "attach",
-        "cover",
-        "decorate",
+        "click",
+        "focus",
         "hold",
         "indicate",
+        "input",
         "label",
         "none",
-        "place"
+        "press",
+        "see",
+        "support"
       ]
     },
     {
@@ -74,14 +75,16 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "balance",
+        "apply",
+        "bend",
+        "clamp",
         "cover",
         "decorate",
-        "hold",
+        "extend",
         "indicate",
+        "label",
         "none",
-        "reinforce",
-        "support"
+        "print"
       ]
     },
     {
@@ -93,13 +96,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
+        "attach",
         "balance",
         "hold",
+        "hold_food",
         "none",
-        "prevent falling",
         "rest",
+        "sit",
         "stand",
+        "step on",
         "support"
       ]
     },
@@ -114,12 +119,13 @@
       "bank": [
         "anchor",
         "balance",
-        "block",
         "bump",
+        "carry",
         "hold",
         "none",
-        "prevent falling",
-        "rest",
+        "roll",
+        "rotate",
+        "stand",
         "support"
       ]
     },
@@ -132,14 +138,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "balance",
         "hold",
         "lean",
+        "none",
         "place",
-        "prevent falling",
         "rest",
+        "sit",
         "stand",
+        "step on",
         "support"
       ]
     },
@@ -152,14 +159,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "adjust",
-        "align",
-        "anchor",
         "attach",
         "bend",
+        "carry",
+        "contain",
         "hold",
-        "insert",
         "none",
+        "place",
+        "serve",
+        "stand",
         "support"
       ]
     },
@@ -172,14 +180,14 @@
         "molmo2-8b": "beat"
       },
       "bank": [
+        "adjust",
         "button",
         "click",
-        "control",
-        "input",
+        "display",
+        "indicate",
+        "none",
         "press",
-        "push",
-        "select",
-        "start",
+        "swing",
         "switch",
         "trigger"
       ]
@@ -194,14 +202,15 @@
       },
       "bank": [
         "adjust",
-        "align",
-        "anchor",
         "attach",
-        "balance",
+        "click",
+        "engage",
         "hold",
         "none",
-        "reinforce",
-        "support"
+        "press",
+        "rotate",
+        "support",
+        "switch"
       ]
     },
     {
@@ -215,14 +224,14 @@
       "bank": [
         "adjust",
         "attach",
-        "button",
-        "click",
-        "decorate",
+        "control",
+        "direct",
         "hold",
         "indicate",
-        "lock",
         "none",
-        "plug"
+        "press",
+        "ring",
+        "switch"
       ]
     },
     {
@@ -238,12 +247,12 @@
         "button",
         "click",
         "control",
-        "detect",
-        "display",
         "indicate",
-        "label",
+        "none",
         "press",
-        "switch"
+        "select",
+        "switch",
+        "trigger"
       ]
     },
     {
@@ -255,15 +264,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
         "attach",
-        "balance",
-        "cover",
-        "decorate",
+        "clip",
+        "dangle",
         "hold",
-        "indicate",
+        "move",
         "none",
-        "reinforce",
+        "place",
+        "pull",
+        "stand",
         "support"
       ]
     },
@@ -276,14 +285,15 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "adjust",
         "attach",
-        "control",
+        "button",
+        "clamp",
+        "click",
+        "contain",
+        "cover",
         "hold",
+        "hold_food",
         "none",
-        "press",
-        "pull",
-        "push",
         "support"
       ]
     },
@@ -296,15 +306,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "adjust",
+        "button",
+        "click",
         "control",
         "hold",
-        "move",
+        "input",
         "none",
         "press",
-        "pull",
-        "push",
-        "release",
+        "select",
+        "switch",
         "trigger"
       ]
     },
@@ -317,14 +327,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
         "attach",
+        "attack",
         "clamp",
         "cover",
-        "decorate",
+        "hit",
         "hold",
-        "indicate",
+        "hold_food",
         "none",
+        "punch",
         "support"
       ]
     },
@@ -337,37 +348,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "adjust",
-        "button",
+        "attach",
         "click",
-        "control",
+        "contain",
+        "cover",
         "hold",
+        "load",
+        "none",
         "press",
-        "push",
-        "release",
-        "switch",
-        "trigger"
+        "seal",
+        "support"
       ]
     }
   ],
   "description": "Made of firm, matte clay-like material; the arch and legs are rigid, and the small knobs and curls are solid.",
   "overall_bank": [
-    "adjust",
-    "anchor",
     "attach",
-    "balance",
-    "decorate",
+    "button",
+    "click",
     "hold",
     "indicate",
     "none",
     "press",
-    "support"
+    "stand",
+    "support",
+    "switch"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

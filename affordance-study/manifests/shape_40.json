@@ -54,14 +54,15 @@
         "molmo2-8b": "hold"
       },
       "bank": [
-        "anchor",
         "balance",
+        "carry",
         "hold",
+        "lift",
         "none",
-        "place",
-        "prevent falling",
         "rest",
+        "sit",
         "stand",
+        "store_fuel",
         "support"
       ]
     },
@@ -74,16 +75,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
-        "attach",
-        "close",
-        "cover",
+        "bend",
+        "button",
+        "click",
         "decorate",
         "hold",
         "indicate",
-        "label",
+        "move",
         "none",
-        "press"
+        "press",
+        "support"
       ]
     },
     {
@@ -95,15 +96,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
         "attach",
-        "balance",
-        "cover",
+        "bend",
+        "click",
+        "cut",
         "decorate",
-        "display",
         "hold",
         "indicate",
         "none",
+        "press",
         "support"
       ]
     },
@@ -116,15 +117,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "apply",
-        "attach",
-        "cover",
-        "decorate",
-        "display",
+        "button",
+        "click",
+        "empty",
         "hold",
-        "indicate",
+        "input",
         "none",
         "press",
+        "push",
+        "select",
         "support"
       ]
     },
@@ -137,14 +138,14 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
-        "attach",
-        "cover",
-        "decorate",
-        "display",
+        "carry",
+        "click",
+        "contain",
         "hold",
         "indicate",
+        "move",
         "none",
+        "place",
         "press",
         "support"
       ]
@@ -158,14 +159,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "attach",
-        "control",
-        "cover",
-        "decorate",
+        "block",
+        "click",
+        "fold",
         "hold",
-        "indicate",
+        "move",
         "none",
+        "plant",
         "press",
+        "push",
         "support"
       ]
     },
@@ -178,13 +180,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "cover",
+        "click",
+        "contain",
         "decorate",
+        "display",
         "hold",
         "indicate",
         "none",
         "press",
-        "support"
+        "support",
+        "trigger"
       ]
     },
     {
@@ -196,15 +201,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "balance",
+        "attach",
+        "contain",
         "control",
-        "decorate",
         "hold",
-        "indicate",
+        "input",
+        "measure",
         "none",
         "place",
         "press",
-        "push",
         "support"
       ]
     },
@@ -217,14 +222,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "contain",
-        "cover",
-        "decorate",
-        "display",
+        "button",
+        "click",
         "hold",
-        "indicate",
-        "label",
+        "input",
         "none",
+        "place",
+        "press",
+        "rest",
+        "select",
         "support"
       ]
     },
@@ -238,14 +244,15 @@
       },
       "bank": [
         "attach",
+        "click",
+        "control",
         "cover",
         "decorate",
-        "display",
         "hold",
-        "indicate",
-        "label",
+        "hold_food",
         "none",
-        "press"
+        "press",
+        "support"
       ]
     },
     {
@@ -257,36 +264,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "adjust",
-        "control",
+        "block",
+        "cover",
         "decorate",
         "hold",
         "indicate",
+        "input",
         "none",
         "press",
-        "push",
+        "select",
         "support"
       ]
     }
   ],
   "description": "A single solid piece of hard, matte clay-like material with a curled top and a grid of small holes; rigid, with rounded edges.",
   "overall_bank": [
-    "attach",
-    "cover",
+    "click",
+    "contain",
     "decorate",
-    "display",
     "hold",
     "indicate",
-    "label",
+    "input",
     "none",
     "press",
+    "select",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

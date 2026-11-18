@@ -54,14 +54,14 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
         "balance",
         "carry",
         "contain",
-        "cover",
-        "decorate",
         "hold",
+        "hold_food",
+        "none",
         "place",
+        "serve",
         "stack",
         "support"
       ]
@@ -75,12 +75,13 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "block",
         "close",
         "contain",
         "cover",
-        "decorate",
+        "drink",
         "hold",
+        "hold_food",
+        "none",
         "place",
         "seal",
         "stack"
@@ -96,14 +97,14 @@
       },
       "bank": [
         "balance",
-        "carry",
-        "collect",
         "contain",
+        "cover",
+        "drink",
         "hold",
+        "none",
         "place",
-        "prevent falling",
-        "rest",
-        "stack",
+        "pour",
+        "stand",
         "support"
       ]
     },
@@ -116,12 +117,14 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "align",
-        "balance",
         "contain",
+        "cover",
         "hold",
+        "hold_food",
         "none",
         "place",
+        "pour",
+        "serve",
         "stack",
         "support"
       ]
@@ -135,13 +138,14 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "align",
         "balance",
+        "carry",
         "contain",
         "cover",
-        "decorate",
         "hold",
+        "none",
         "place",
+        "prevent falling",
         "stack",
         "support"
       ]
@@ -155,13 +159,15 @@
         "molmo2-8b": "carry"
       },
       "bank": [
-        "attach",
-        "balance",
         "carry",
         "hold",
         "lift",
-        "move",
+        "none",
+        "place",
+        "press",
         "pull",
+        "rest",
+        "serve",
         "support"
       ]
     },
@@ -175,8 +181,11 @@
       },
       "bank": [
         "attach",
+        "balance",
         "carry",
+        "contain",
         "hold",
+        "hold_food",
         "lift",
         "none",
         "pull",
@@ -186,22 +195,28 @@
   ],
   "description": "Stacked layers of hard, smooth glazed ceramic, with two rigid curved loops on the sides; rounded edges.",
   "overall_bank": [
-    "align",
-    "attach",
-    "balance",
     "carry",
     "contain",
     "cover",
     "hold",
+    "lift",
+    "none",
     "place",
+    "serve",
     "stack",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

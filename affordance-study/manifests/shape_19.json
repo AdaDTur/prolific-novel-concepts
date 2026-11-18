@@ -54,13 +54,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "balance",
+        "attach",
         "block",
         "contain",
         "cover",
         "decorate",
         "hold",
-        "rest",
+        "hold_food",
+        "none",
+        "serve",
         "support"
       ]
     },
@@ -73,13 +75,15 @@
         "molmo2-8b": "eat"
       },
       "bank": [
-        "absorb",
-        "anchor",
-        "balance",
-        "block",
+        "carry",
+        "contain",
+        "eat",
         "hold",
-        "prevent falling",
+        "none",
+        "place",
         "rest",
+        "store_fuel",
+        "suck",
         "support"
       ]
     },
@@ -92,15 +96,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "balance",
+        "carry",
+        "contain",
+        "cover",
         "hold",
+        "move",
         "none",
-        "prevent falling",
         "rest",
         "stand",
-        "support",
-        "wedge"
+        "support"
       ]
     },
     {
@@ -112,16 +117,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "anchor",
-        "attack",
-        "balance",
-        "block",
         "bump",
+        "click",
         "decorate",
         "defend",
-        "indicate",
         "none",
-        "support"
+        "penetrate",
+        "pop",
+        "press",
+        "push",
+        "wedge"
       ]
     },
     {
@@ -133,13 +138,14 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "attach",
+        "absorb",
         "balance",
         "block",
+        "contain",
         "cover",
         "decorate",
         "hold",
-        "indicate",
+        "hold_food",
         "none",
         "support"
       ]
@@ -153,16 +159,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "attach",
-        "balance",
-        "block",
-        "bump",
-        "cover",
-        "decorate",
+        "attack",
+        "control",
         "defend",
+        "detect",
+        "hit",
+        "hold_food",
         "indicate",
         "none",
-        "orient"
+        "penetrate",
+        "serve"
       ]
     },
     {
@@ -175,14 +181,14 @@
       },
       "bank": [
         "attach",
-        "balance",
-        "block",
-        "bump",
         "cover",
         "decorate",
-        "defend",
-        "indicate",
+        "deflect",
+        "hold",
         "none",
+        "place",
+        "rest",
+        "sit",
         "support"
       ]
     },
@@ -195,37 +201,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
-        "balance",
         "block",
-        "bump",
         "cover",
         "decorate",
         "defend",
+        "hold",
+        "hold_food",
         "indicate",
         "none",
+        "see",
         "support"
       ]
     }
   ],
   "description": "A firm dome of smooth, leathery material with hard, sharp points on top and a soft, fleshy underside.",
   "overall_bank": [
-    "anchor",
-    "balance",
+    "attack",
     "block",
-    "bump",
+    "contain",
     "cover",
     "decorate",
     "defend",
-    "indicate",
-    "rest",
+    "hold",
+    "none",
+    "place",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

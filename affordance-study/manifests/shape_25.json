@@ -54,14 +54,15 @@
         "molmo2-8b": "hold"
       },
       "bank": [
-        "anchor",
         "balance",
+        "carry",
+        "contain",
         "hold",
         "none",
         "place",
-        "prevent falling",
         "rest",
         "stand",
+        "store_fuel",
         "support"
       ]
     },
@@ -74,13 +75,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "attach",
-        "balance",
+        "bump",
+        "compress",
         "contain",
         "cover",
         "decorate",
         "hold",
+        "none",
+        "paddle",
+        "reduce noise",
         "support"
       ]
     },
@@ -93,15 +96,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "adjust",
-        "attach",
+        "absorb",
+        "balance",
+        "collect",
+        "conceal",
         "cover",
         "decorate",
+        "detach",
         "hold",
-        "lift",
         "none",
-        "pull",
-        "remove"
+        "shade"
       ]
     },
     {
@@ -113,13 +117,14 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "adjust",
-        "aim",
+        "attach",
         "carry",
-        "control",
+        "dispense",
         "hold",
         "lever",
-        "move",
+        "none",
+        "place",
+        "pour",
         "pull",
         "push"
       ]
@@ -127,22 +132,28 @@
   ],
   "description": "A rigid body of matte, unglazed clay-like material with a ribbed band around its middle; rounded edges.",
   "overall_bank": [
-    "adjust",
-    "align",
-    "attach",
+    "absorb",
     "balance",
+    "contain",
     "cover",
     "hold",
-    "lift",
-    "pull",
+    "none",
+    "place",
+    "rest",
     "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

@@ -54,14 +54,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "absorb",
-        "anchor",
-        "collect",
+        "adjust",
+        "balance",
+        "block",
+        "conceal",
         "contain",
         "cover",
+        "display",
         "hold",
         "none",
-        "store_fuel",
         "support"
       ]
     },
@@ -74,15 +75,16 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "anchor",
-        "attach",
-        "balance",
-        "dangle",
-        "decorate",
-        "display",
+        "carry",
+        "click",
+        "contain",
+        "cover",
+        "engage",
         "hold",
-        "indicate",
-        "none"
+        "lift",
+        "none",
+        "press",
+        "trigger"
       ]
     },
     {
@@ -94,16 +96,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "attach",
-        "balance",
+        "block",
+        "conceal",
+        "contain",
+        "cover",
         "dangle",
-        "decorate",
         "hold",
-        "indicate",
         "none",
-        "pull",
-        "support"
+        "orient",
+        "plug"
       ]
     },
     {
@@ -115,11 +117,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "adjust",
-        "align",
-        "anchor",
         "attach",
+        "contain",
+        "detect",
+        "extend",
         "hold",
+        "hold_food",
+        "indicate",
+        "none",
+        "pull",
         "support"
       ]
     },
@@ -132,35 +138,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "anchor",
         "attach",
+        "clip",
+        "conceal",
+        "contain",
+        "cover",
         "hold",
-        "lock",
+        "hold_food",
         "none",
-        "plug",
+        "shade",
         "support"
       ]
     }
   ],
   "description": "A flat, firm clay-like body with curled edges and raised dots, around a smooth, slightly glossy centre; rounded edges.",
   "overall_bank": [
-    "align",
-    "anchor",
     "attach",
-    "balance",
+    "block",
+    "conceal",
     "contain",
-    "dangle",
+    "cover",
+    "display",
     "hold",
-    "indicate",
+    "hold_food",
     "none",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

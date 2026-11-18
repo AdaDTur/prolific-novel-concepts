@@ -55,10 +55,14 @@
       },
       "bank": [
         "block",
+        "circulate",
         "contain",
         "cover",
         "hold",
         "none",
+        "orient",
+        "seal",
+        "store_fuel",
         "support"
       ]
     },
@@ -71,13 +75,14 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "collect",
+        "absorb",
+        "channel water",
         "contain",
         "cover",
-        "display",
-        "fill",
+        "form",
         "hold",
         "none",
+        "pack",
         "store_fuel",
         "support"
       ]
@@ -91,14 +96,16 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "align",
+        "absorb",
         "attach",
-        "control",
+        "contain",
+        "float",
         "hold",
+        "immerse",
         "insert",
-        "move",
+        "none",
         "plug",
-        "pull"
+        "support"
       ]
     },
     {
@@ -110,35 +117,43 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "align",
         "attach",
+        "contain",
         "cover",
-        "hold",
-        "indicate",
-        "insert",
+        "direct",
+        "extend",
+        "hold_food",
+        "none",
         "open",
-        "support"
+        "plug",
+        "vent"
       ]
     }
   ],
   "description": "A soft, rubbery body with a thick raised rim and a bumpy, textured centre; it gives a little when pressed.",
   "overall_bank": [
-    "align",
     "attach",
+    "block",
     "contain",
     "cover",
-    "fill",
     "hold",
-    "insert",
-    "open",
+    "none",
     "plug",
+    "seal",
+    "store_fuel",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

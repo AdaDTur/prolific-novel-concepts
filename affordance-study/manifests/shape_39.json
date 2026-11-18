@@ -57,11 +57,12 @@
         "attach",
         "balance",
         "carry",
-        "control",
+        "close",
         "hold",
-        "move",
+        "open",
         "place",
-        "rest",
+        "press",
+        "stand",
         "support"
       ]
     },
@@ -74,36 +75,43 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "apply",
-        "control",
         "hit",
         "hold",
+        "inflate",
         "move",
         "none",
+        "place",
         "press",
         "push",
-        "trigger"
+        "roll",
+        "slide"
       ]
     }
   ],
   "description": "A single solid piece of hard, matte clay-like material with a square hole through its body; rigid, with rounded edges.",
   "overall_bank": [
-    "apply",
-    "attach",
     "balance",
     "carry",
-    "control",
-    "hit",
     "hold",
+    "move",
+    "none",
+    "place",
     "press",
-    "push",
+    "roll",
+    "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

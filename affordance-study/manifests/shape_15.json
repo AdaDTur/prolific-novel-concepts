@@ -55,14 +55,14 @@
       },
       "bank": [
         "balance",
+        "block",
         "carry",
         "contain",
-        "cover",
-        "decorate",
-        "display",
         "hold",
-        "place",
+        "none",
         "rest",
+        "stand",
+        "store_fuel",
         "support"
       ]
     },
@@ -75,13 +75,14 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "balance",
+        "block",
         "conceal",
+        "contain",
         "cover",
-        "decorate",
+        "fill",
         "hold",
-        "indicate",
-        "none",
+        "hold_food",
+        "inflate",
         "shade",
         "support"
       ]
@@ -97,12 +98,12 @@
       "bank": [
         "anchor",
         "balance",
-        "contain",
-        "cover",
+        "block",
         "hold",
+        "none",
         "place",
-        "prevent falling",
         "rest",
+        "sit",
         "stand",
         "support"
       ]
@@ -117,15 +118,15 @@
       },
       "bank": [
         "attack",
-        "block",
-        "bump",
-        "decorate",
+        "clamp",
         "defend",
+        "deflect",
         "hold",
-        "indicate",
         "none",
+        "penetrate",
         "push",
-        "wedge"
+        "support",
+        "throw"
       ]
     },
     {
@@ -137,14 +138,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "aim",
-        "attack",
+        "attach",
         "block",
-        "cut",
-        "decorate",
+        "cover",
+        "cultivate",
         "defend",
-        "indicate",
-        "wedge"
+        "hold",
+        "none",
+        "penetrate",
+        "seal",
+        "support"
       ]
     },
     {
@@ -156,16 +159,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
+        "attach",
         "balance",
         "block",
-        "bump",
-        "decorate",
-        "defend",
-        "indicate",
+        "cut",
+        "hold",
+        "hold_food",
         "none",
-        "support",
-        "wedge"
+        "penetrate",
+        "serve",
+        "support"
       ]
     },
     {
@@ -177,16 +180,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
+        "adjust",
         "align",
-        "attach",
-        "balance",
         "block",
-        "cover",
+        "bump",
         "decorate",
-        "defend",
+        "hold",
         "indicate",
         "none",
-        "support"
+        "support",
+        "wedge"
       ]
     }
   ],
@@ -194,20 +197,26 @@
   "overall_bank": [
     "balance",
     "block",
+    "contain",
     "cover",
-    "decorate",
     "defend",
     "hold",
-    "indicate",
     "none",
+    "rest",
     "support",
     "wedge"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

@@ -55,14 +55,14 @@
       },
       "bank": [
         "balance",
+        "block",
         "carry",
         "contain",
-        "decorate",
+        "cover",
         "display",
         "hold",
         "none",
-        "place",
-        "stand",
+        "rest",
         "support"
       ]
     },
@@ -77,11 +77,12 @@
       "bank": [
         "anchor",
         "balance",
-        "display",
+        "block",
+        "contain",
         "hold",
-        "place",
-        "prevent falling",
+        "none",
         "rest",
+        "sit",
         "stand",
         "support"
       ]
@@ -95,14 +96,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "attach",
+        "aim",
         "balance",
-        "cover",
+        "control",
         "decorate",
-        "display",
+        "focus",
         "hold",
         "indicate",
         "none",
+        "shade",
         "support"
       ]
     },
@@ -115,16 +117,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "aim",
-        "align",
-        "contain",
-        "cover",
+        "button",
+        "check",
         "decorate",
+        "direct",
         "display",
         "hold",
         "indicate",
-        "label",
-        "none"
+        "none",
+        "press",
+        "rest"
       ]
     },
     {
@@ -136,15 +138,16 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "block",
-        "contain",
+        "attach",
+        "carry",
         "cover",
         "decorate",
-        "display",
         "hold",
         "indicate",
-        "label",
-        "press"
+        "none",
+        "place",
+        "sit",
+        "support"
       ]
     },
     {
@@ -156,37 +159,43 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "aim",
-        "align",
-        "attach",
-        "contain",
+        "control",
         "cover",
         "decorate",
-        "display",
-        "hold",
+        "hold_food",
         "indicate",
-        "none"
+        "none",
+        "press",
+        "serve",
+        "switch",
+        "trigger"
       ]
     }
   ],
   "description": "Made of firm, matte clay-like material with a slightly rough texture; rigid throughout, with rounded edges.",
   "overall_bank": [
-    "aim",
     "balance",
-    "contain",
+    "carry",
     "cover",
     "decorate",
-    "display",
     "hold",
     "indicate",
     "none",
+    "rest",
+    "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

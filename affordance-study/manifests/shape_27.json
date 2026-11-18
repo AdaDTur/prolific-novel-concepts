@@ -56,11 +56,12 @@
       "bank": [
         "anchor",
         "balance",
+        "block",
+        "carry",
         "hold",
         "lean",
-        "place",
+        "none",
         "prevent falling",
-        "rest",
         "stand",
         "support"
       ]
@@ -74,12 +75,13 @@
         "molmo2-8b": "hold"
       },
       "bank": [
-        "anchor",
         "balance",
+        "block",
+        "contain",
+        "cover",
         "hold",
         "none",
-        "place",
-        "prevent falling",
+        "orient",
         "rest",
         "stand",
         "support"
@@ -95,13 +97,14 @@
       },
       "bank": [
         "balance",
-        "block",
-        "carry",
-        "defend",
-        "hold",
-        "indicate",
-        "lean",
+        "direct",
+        "display",
+        "none",
+        "orient",
+        "propel",
+        "pull",
         "push",
+        "steer",
         "support"
       ]
     },
@@ -114,12 +117,13 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "anchor",
-        "balance",
+        "attack",
         "block",
         "bump",
         "defend",
+        "hit",
         "hold",
+        "indicate",
         "none",
         "push",
         "support"
@@ -134,15 +138,15 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "align",
-        "anchor",
-        "attach",
         "balance",
-        "block",
-        "bump",
+        "contain",
         "defend",
+        "focus",
         "hold",
+        "indicate",
+        "label",
         "none",
+        "see",
         "support"
       ]
     },
@@ -155,16 +159,16 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "aim",
-        "anchor",
         "attack",
-        "balance",
-        "block",
-        "decorate",
         "defend",
-        "indicate",
+        "disconnect",
+        "fold",
+        "hit",
+        "hold",
         "none",
-        "penetrate"
+        "penetrate",
+        "place",
+        "support"
       ]
     },
     {
@@ -176,37 +180,43 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "align",
-        "anchor",
         "attach",
+        "attack",
         "balance",
-        "cover",
+        "control",
         "decorate",
-        "defend",
+        "deploy",
         "indicate",
         "none",
-        "orient"
+        "stand",
+        "support"
       ]
     }
   ],
   "description": "Made of firm, matte clay-like material with a bumpy texture; the thin points are stiff with pointed tips.",
   "overall_bank": [
-    "anchor",
+    "attack",
     "balance",
     "block",
-    "bump",
-    "decorate",
     "defend",
     "hold",
     "indicate",
+    "none",
+    "rest",
     "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

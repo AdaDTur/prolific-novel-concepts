@@ -54,14 +54,15 @@
         "molmo2-8b": "hold"
       },
       "bank": [
-        "align",
-        "balance",
+        "carry",
         "contain",
         "cover",
-        "decorate",
         "hold",
-        "insulate",
         "none",
+        "place",
+        "press",
+        "rest",
+        "store_fuel",
         "support"
       ]
     },
@@ -77,10 +78,11 @@
         "carry",
         "contain",
         "cover",
-        "decorate",
+        "fill",
         "hold",
         "none",
-        "reinforce",
+        "place",
+        "serve",
         "store_fuel",
         "support"
       ]
@@ -94,14 +96,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
+        "absorb",
         "align",
-        "anchor",
-        "balance",
+        "clip",
         "contain",
         "cover",
+        "decorate",
         "hold",
         "none",
-        "reinforce",
+        "store_fuel",
         "support"
       ]
     },
@@ -114,15 +117,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
+        "absorb",
         "attach",
         "balance",
         "carry",
-        "decorate",
+        "cover",
         "hold",
-        "lift",
-        "move",
-        "support"
+        "none",
+        "shade",
+        "support",
+        "wear"
       ]
     },
     {
@@ -134,13 +138,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
-        "attach",
-        "balance",
+        "block",
+        "carry",
+        "contain",
         "cover",
         "decorate",
         "hold",
+        "lift",
         "none",
+        "seal",
         "support"
       ]
     },
@@ -153,15 +159,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "conceal",
+        "close",
+        "collect",
         "contain",
         "cover",
         "decorate",
-        "display",
-        "label",
+        "direct",
+        "form",
         "none",
-        "reinforce"
+        "shade",
+        "slide"
       ]
     },
     {
@@ -173,13 +180,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
+        "assist_breathing",
         "attach",
-        "balance",
+        "block",
         "carry",
+        "contain",
+        "cover",
+        "draw",
         "hold",
         "none",
-        "pull",
-        "push",
         "support"
       ]
     },
@@ -192,14 +201,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
-        "attach",
         "cover",
         "decorate",
+        "detect",
+        "display",
+        "focus",
         "hold",
         "indicate",
+        "label",
         "none",
-        "press"
+        "support"
       ]
     },
     {
@@ -211,16 +222,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
         "attach",
-        "block",
-        "cover",
+        "carry",
         "decorate",
         "hold",
+        "hold_food",
         "indicate",
-        "label",
         "none",
-        "reinforce"
+        "place",
+        "plant",
+        "support"
       ]
     },
     {
@@ -232,35 +243,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "attach",
+        "button",
+        "click",
         "cover",
         "decorate",
         "indicate",
+        "input",
         "none",
-        "seal",
-        "support"
+        "press",
+        "select",
+        "trigger"
       ]
     }
   ],
   "description": "A smooth, rigid body of matte ceramic-like material, enclosed by a thin, hard metal ring; all edges are rounded.",
   "overall_bank": [
-    "align",
     "attach",
-    "balance",
+    "block",
+    "carry",
     "contain",
     "cover",
     "decorate",
     "hold",
-    "indicate",
     "none",
+    "press",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

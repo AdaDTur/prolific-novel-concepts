@@ -54,12 +54,15 @@
         "molmo2-8b": "eat"
       },
       "bank": [
-        "anchor",
         "balance",
         "contain",
         "cover",
+        "decorate",
+        "display",
         "hold",
         "none",
+        "shade",
+        "stand",
         "support"
       ]
     },
@@ -72,11 +75,12 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "align",
-        "balance",
-        "block",
+        "contain",
         "cover",
         "decorate",
+        "display",
+        "hold",
+        "hold_food",
         "indicate",
         "none",
         "shade",
@@ -92,15 +96,15 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "anchor",
         "attach",
-        "balance",
         "carry",
-        "cover",
-        "decorate",
+        "channel water",
         "hold",
-        "lean",
-        "move",
+        "none",
+        "place",
+        "pour",
+        "release",
+        "scoop",
         "support"
       ]
     },
@@ -113,15 +117,16 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "anchor",
-        "balance",
+        "carry",
         "hold",
+        "move",
         "none",
         "place",
-        "prevent falling",
         "rest",
         "stand",
-        "support"
+        "step on",
+        "support",
+        "walk"
       ]
     },
     {
@@ -133,15 +138,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "balance",
+        "block",
+        "contain",
+        "descend",
         "hold",
         "none",
         "place",
-        "prevent falling",
-        "rest",
         "stand",
-        "support"
+        "support",
+        "walk"
       ]
     },
     {
@@ -153,12 +159,14 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "balance",
+        "cover",
         "hold",
+        "lean",
         "none",
-        "prevent falling",
+        "place",
         "rest",
+        "sit",
         "stand",
         "support"
       ]
@@ -172,13 +180,14 @@
         "molmo2-8b": "drink with"
       },
       "bank": [
-        "balance",
-        "block",
-        "cover",
+        "absorb",
+        "carry",
+        "channel water",
         "decorate",
-        "display",
+        "dispense",
+        "drain",
         "hold",
-        "indicate",
+        "hold_food",
         "none",
         "support"
       ]
@@ -192,13 +201,14 @@
         "molmo2-8b": "eat"
       },
       "bank": [
-        "anchor",
         "balance",
+        "block",
+        "contain",
         "hold",
         "none",
-        "place",
         "prevent falling",
         "rest",
+        "sit",
         "stand",
         "support"
       ]
@@ -212,15 +222,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "adjust",
-        "align",
         "attach",
         "balance",
-        "block",
+        "click",
+        "contain",
         "decorate",
-        "direct",
-        "indicate",
+        "hold",
         "none",
+        "press",
+        "push",
         "support"
       ]
     },
@@ -233,15 +243,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
-        "attach",
         "balance",
-        "cover",
-        "decorate",
-        "display",
+        "click",
+        "detect",
         "hold",
         "indicate",
+        "label",
         "none",
+        "press",
+        "stand",
         "support"
       ]
     },
@@ -254,15 +264,15 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "align",
         "attach",
-        "balance",
+        "block",
+        "contain",
         "cover",
         "decorate",
         "hold",
         "indicate",
         "none",
-        "reinforce",
+        "press",
         "support"
       ]
     },
@@ -275,15 +285,15 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
         "attach",
-        "balance",
-        "block",
+        "clamp",
         "cover",
         "decorate",
-        "defend",
+        "display",
+        "hold",
         "indicate",
         "none",
+        "place",
         "support"
       ]
     },
@@ -299,6 +309,10 @@
         "adjust",
         "align",
         "attach",
+        "block",
+        "clip",
+        "contain",
+        "cover",
         "hold",
         "none",
         "support"
@@ -313,37 +327,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "adjust",
-        "align",
         "attach",
-        "balance",
-        "decorate",
+        "block",
+        "carry",
+        "contain",
+        "cover",
+        "detect",
         "hold",
         "indicate",
-        "pull",
-        "push",
+        "none",
         "support"
       ]
     }
   ],
   "description": "Made of firm, matte clay-like material with a slightly rough surface; the legs and stubs are rigid with rounded tips.",
   "overall_bank": [
-    "align",
     "attach",
     "balance",
+    "block",
+    "contain",
     "cover",
     "decorate",
     "hold",
-    "indicate",
     "none",
     "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

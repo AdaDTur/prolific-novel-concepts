@@ -54,16 +54,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "balance",
         "block",
         "carry",
         "contain",
         "cover",
-        "decorate",
+        "eat",
         "hold",
-        "place",
-        "rest",
-        "support"
+        "none",
+        "speak",
+        "support",
+        "swim"
       ]
     },
     {
@@ -75,15 +75,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "attach",
-        "balance",
+        "contain",
         "cover",
         "decorate",
+        "direct",
+        "fill",
         "hold",
+        "level",
         "none",
-        "place",
-        "press",
-        "support"
+        "support",
+        "wedge"
       ]
     },
     {
@@ -95,14 +96,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
-        "attach",
-        "balance",
-        "carry",
-        "control",
+        "block",
+        "contain",
+        "cover",
         "hold",
+        "none",
+        "open",
         "place",
         "press",
+        "store_fuel",
         "support"
       ]
     },
@@ -115,14 +117,15 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
-        "attach",
-        "carry",
-        "decorate",
+        "balance",
+        "contain",
+        "cook",
         "hold",
-        "move",
+        "load",
+        "none",
         "press",
-        "pull",
+        "rest",
+        "sit",
         "support"
       ]
     },
@@ -136,10 +139,12 @@
       },
       "bank": [
         "attach",
-        "carry",
-        "dangle",
+        "channel water",
         "decorate",
+        "display",
         "hold",
+        "illuminate",
+        "move",
         "none",
         "pull",
         "support"
@@ -154,13 +159,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
+        "adjust",
         "attach",
+        "block",
         "carry",
-        "dangle",
+        "cover",
         "decorate",
         "hold",
-        "lift",
-        "pull"
+        "level",
+        "none",
+        "support"
       ]
     },
     {
@@ -172,11 +180,12 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "anchor",
         "balance",
+        "block",
+        "contain",
+        "cover",
         "hold",
         "none",
-        "place",
         "prevent falling",
         "rest",
         "stand",
@@ -192,11 +201,12 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
-        "anchor",
         "attach",
+        "block",
         "carry",
-        "decorate",
+        "catch",
+        "contain",
+        "cover",
         "hold",
         "none",
         "pull",
@@ -212,13 +222,14 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "align",
         "attach",
+        "contain",
         "cover",
         "decorate",
         "hold",
         "indicate",
         "none",
+        "place",
         "reinforce",
         "support"
       ]
@@ -232,14 +243,16 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
+        "adjust",
+        "ascend",
         "attach",
-        "decorate",
+        "conceal",
+        "cover",
+        "drink",
         "hold",
-        "lift",
         "none",
         "pull",
-        "support"
+        "shade"
       ]
     },
     {
@@ -251,36 +264,43 @@
         "molmo2-8b": "none"
       },
       "bank": [
-        "align",
-        "attach",
-        "balance",
-        "carry",
-        "control",
+        "channel water",
         "decorate",
+        "display",
         "hold",
-        "pull",
+        "illuminate",
+        "indicate",
+        "none",
+        "press",
+        "store_fuel",
         "support"
       ]
     }
   ],
   "description": "Made of hard, dark, polished stone with faint cracks; the small curls on top are rigid; edges are crisp.",
   "overall_bank": [
-    "anchor",
     "attach",
-    "balance",
-    "carry",
+    "block",
+    "contain",
     "cover",
     "decorate",
     "hold",
     "none",
     "pull",
+    "stand",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }

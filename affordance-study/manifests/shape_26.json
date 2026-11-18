@@ -54,14 +54,15 @@
         "molmo2-8b": "beat"
       },
       "bank": [
-        "absorb",
+        "anchor",
         "block",
-        "carry",
+        "bounce",
         "contain",
         "cover",
         "hold",
-        "insulate",
         "none",
+        "prevent falling",
+        "rest",
         "support"
       ]
     },
@@ -74,14 +75,16 @@
         "molmo2-8b": "brush with"
       },
       "bank": [
-        "absorb",
+        "block",
         "contain",
         "cover",
+        "engage",
+        "hit",
         "hold",
         "none",
-        "reinforce",
         "store_fuel",
-        "support"
+        "support",
+        "swing"
       ]
     },
     {
@@ -94,36 +97,42 @@
       },
       "bank": [
         "attack",
-        "block",
-        "catch",
-        "cut",
-        "defend",
+        "bump",
+        "clamp",
+        "clip",
+        "engage",
+        "float",
+        "hit",
         "hold",
         "none",
-        "penetrate",
-        "push",
-        "wedge"
+        "support"
       ]
     }
   ],
   "description": "A firm, rubbery body covered in short, hard points, with a soft, smooth inset framed by a metal rim.",
   "overall_bank": [
-    "absorb",
-    "attack",
+    "anchor",
     "block",
     "contain",
     "cover",
-    "cut",
-    "defend",
+    "engage",
+    "hit",
     "hold",
-    "penetrate",
+    "none",
+    "rest",
     "support"
   ],
   "bank_source": {
-    "model": "openai/gpt-5.4",
+    "models": [
+      "molmo2-4b",
+      "gemma4-e4b",
+      "qwen3.5-4b",
+      "gpt-5.4"
+    ],
     "vocabulary": "synthia_filtered",
-    "mode": "generation top-10",
-    "part_bank": "GPT-5.4's ranked list, shown alphabetically",
-    "overall_bank": "Borda over the parts' lists, top 10, shown alphabetically"
+    "mode": "generation top-10 (option order shuffled per part), Phi-3.5 excluded",
+    "scoring": "Borda (rank 1 = 10 ... rank 10 = 1) summed over models, top 10, shown alphabetically",
+    "fill": "open models' log-prob top-10s, only when fewer than 10 options scored",
+    "overall_bank": "same scoring over every part's lists"
   }
 }
