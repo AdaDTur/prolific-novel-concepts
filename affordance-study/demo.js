@@ -288,14 +288,6 @@ const SHEET_URL =
   // the page is answered, and the run ends on a review page whose Submit button stays disabled while
   // any question is unanswered, so nobody can submit an incomplete session. Results are read from
   // `answers` at submit time, not from jsPsych's per-trial data (a page visited 3 times has 3 rows).
-  //
-  // Attention checks: instructed-response items ("click these specific words") interleaved between
-  // objects, using a real region image of the object they follow so they look like an ordinary part
-  // page. The part's bank (GPT-5.4 synthia top-10) may not contain the target words, so they're mixed in.
-  const ATTENTION_CHECK_TARGETS = [
-    ["push", "carry"],
-    ["wear", "hold"],
-  ];
 
   const pages = [];
   assignment.forEach(function (a, obj_index) {
@@ -366,46 +358,6 @@ const SHEET_URL =
         build_functionality_picker_block(overall_options, "this object as a whole") +
         `</div>`,
     });
-
-    // At roughly 1/3 and 2/3 of the way through (computed from assignment.length), never after the
-    // very last object, never the same position twice.
-    const attention_check_positions = [
-      Math.floor(assignment.length / 3),
-      Math.floor((2 * assignment.length) / 3),
-    ].filter(function (pos, idx, arr) {
-      return pos > 0 && pos < assignment.length - 1 && arr.indexOf(pos) === idx;
-    });
-    const check_index = attention_check_positions.indexOf(obj_index + 1);
-    if (check_index !== -1) {
-      const target_words = ATTENTION_CHECK_TARGETS[check_index % ATTENTION_CHECK_TARGETS.length];
-      const row = regions[Math.floor(Math.random() * regions.length)];
-      const options = row.bank
-        ? row.bank.concat(target_words.filter(function (w) { return row.bank.indexOf(w) === -1; })).sort()
-        : vocabulary;
-      pages.push({
-        kind: "attention",
-        required: true,
-        object: object_name,
-        check_index: check_index,
-        target_words: target_words,
-        options: options,
-        html:
-          `<div class="demo-banner">Object ${obj_index + 1} of ${assignment.length}, region ${row.part} of ${n_parts}</div>` +
-          desc_card(object_name) +
-          `<div class="trial-container">` +
-          build_attention_check_block(
-            regions_image,
-            `images/${object_name}_highlight_part${row.part}.png`,
-            size_chart_image,
-            size_chart_scale,
-            row.part,
-            n_parts,
-            options,
-            target_words
-          ) +
-          `</div>`,
-      });
-    }
   });
   pages.push({ kind: "review" });
 
@@ -575,24 +527,6 @@ const SHEET_URL =
 
     // Main-task answers come from `answers` (final state of each page after any Back/Next edits);
     // response_time_ms sums every visit to that page, visits counts them (>1 = revisited/edited).
-    const attention_check_data = pages
-      .map(function (p, i) { return { p: p, a: answers[i] }; })
-      .filter(function (x) { return x.p.kind === "attention"; })
-      .map(function (x) {
-        return {
-          index: x.p.check_index,
-          object: x.p.object,
-          target_words: x.p.target_words,
-          functionalities_selected: x.a.selected,
-          passed: score_attention_check(x.a.selected, x.p.target_words),
-          response_time_ms: x.a.rt_ms,
-          visits: x.a.visits,
-        };
-      });
-    const attention_checks_passed = attention_check_data.filter(function (t) {
-      return t.passed;
-    }).length;
-
     const objects_data = assignment.map(function (a) {
       const object_name = a.object;
       const region_data = pages
@@ -633,8 +567,6 @@ const SHEET_URL =
       training: training_data,
       training_correct_count: training_correct_count,
       training_passed: training_passed,
-      attention_checks: attention_check_data,
-      attention_checks_passed: attention_checks_passed,
       study_start_time: new Date(jsPsych.getStartTime()).toISOString(),
       study_end_time: new Date().toISOString(),
       total_duration_ms: jsPsych.getTotalTime(),
