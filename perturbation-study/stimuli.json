@@ -1,0 +1,763 @@
+{
+  "tasks": {
+    "water_plant": "watering a plant",
+    "scoop_stir_soup": "scooping and stirring soup",
+    "support_human_item": "supporting a human or item",
+    "cut_food": "cutting food",
+    "carry_items": "carrying groceries or other items by hand",
+    "dig_soil": "digging a small hole in garden soil",
+    "measure_length": "measuring the length of an object",
+    "comb_hair": "detangling and combing hair",
+    "scratch_back": "scratching an itch in the middle of one's own back",
+    "open_jar_lid": "opening a tightly sealed jar lid",
+    "pick_up_litter": "picking up litter from the ground without bending down",
+    "write_on_paper": "writing on paper",
+    "squeeze_juice": "squeezing juice out of a citrus fruit",
+    "roll_dough": "rolling out dough flat",
+    "filter_particles": "straining solid particles out of a liquid",
+    "scrape_ice": "scraping ice off a car windshield",
+    "crush_garlic": "crushing garlic cloves",
+    "funnel_liquid": "pouring liquid into a narrow-necked bottle without spilling",
+    "hook_keys": "hanging and organizing a set of keys",
+    "prop_up_book": "propping a book open to a page while reading",
+    "insert_screw": "driving a screw into a piece of wood",
+    "peel_vegetable": "peeling the skin off a potato",
+    "grip_pull_door": "gripping and pulling a heavy door open",
+    "squeeze_toothpaste": "squeezing the last toothpaste out of a tube",
+    "sharpen_pencil": "sharpening a pencil",
+    "crack_nuts": "cracking open walnut shells",
+    "dispense_tape": "tearing off a strip of adhesive tape",
+    "hammer_nail": "hammering a nail into a wooden board",
+    "pump_air": "pumping air into a bicycle tire"
+  },
+  "stimuli": [
+    {
+      "file": "images/cut_food__original__0.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/cut_food__deform__1.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/cut_food__deform__2.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/cut_food__deform__3.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/cut_food__deform__4.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/cut_food__deform__5.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/cut_food__add__1.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/cut_food__add__2.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/cut_food__add__3.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/cut_food__add__4.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/cut_food__add__5.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/cut_food__remove__1.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/cut_food__remove__2.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/cut_food__remove__3.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/cut_food__remove__4.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/cut_food__remove__5.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/cut_food__style__1.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/cut_food__style__2.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/cut_food__style__3.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/cut_food__style__4.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/cut_food__style__5.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/cut_food__texture__1.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/cut_food__texture__2.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/cut_food__texture__3.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/cut_food__texture__4.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/cut_food__texture__5.jpg",
+      "object": "cut_food",
+      "task": "cutting food",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/dig_soil__original__0.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/dig_soil__deform__1.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/dig_soil__deform__2.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/dig_soil__deform__3.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/dig_soil__deform__4.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/dig_soil__deform__5.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/dig_soil__add__1.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/dig_soil__add__2.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/dig_soil__add__3.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/dig_soil__add__4.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/dig_soil__add__5.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/dig_soil__remove__1.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/dig_soil__remove__2.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/dig_soil__remove__3.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/dig_soil__remove__4.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/dig_soil__remove__5.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/dig_soil__style__1.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/dig_soil__style__2.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/dig_soil__style__3.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/dig_soil__style__4.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/dig_soil__style__5.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/dig_soil__texture__1.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/dig_soil__texture__2.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/dig_soil__texture__3.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/dig_soil__texture__4.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/dig_soil__texture__5.jpg",
+      "object": "dig_soil",
+      "task": "digging a small hole in garden soil",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/hammer_nail__original__0.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/hammer_nail__deform__1.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/hammer_nail__deform__2.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/hammer_nail__deform__3.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/hammer_nail__deform__4.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/hammer_nail__deform__5.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/hammer_nail__add__1.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/hammer_nail__add__2.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/hammer_nail__add__3.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/hammer_nail__add__4.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/hammer_nail__add__5.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/hammer_nail__remove__1.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/hammer_nail__remove__2.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/hammer_nail__remove__3.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/hammer_nail__remove__4.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/hammer_nail__remove__5.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/hammer_nail__style__1.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/hammer_nail__style__2.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/hammer_nail__style__3.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/hammer_nail__style__4.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/hammer_nail__style__5.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/hammer_nail__texture__1.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/hammer_nail__texture__2.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/hammer_nail__texture__3.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/hammer_nail__texture__4.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/hammer_nail__texture__5.jpg",
+      "object": "hammer_nail",
+      "task": "hammering a nail into a wooden board",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/scoop_stir_soup__original__0.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/scoop_stir_soup__deform__1.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/scoop_stir_soup__deform__2.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/scoop_stir_soup__deform__3.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/scoop_stir_soup__deform__4.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/scoop_stir_soup__deform__5.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/scoop_stir_soup__add__1.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/scoop_stir_soup__add__2.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/scoop_stir_soup__add__3.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/scoop_stir_soup__add__4.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/scoop_stir_soup__add__5.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/scoop_stir_soup__remove__1.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/scoop_stir_soup__remove__2.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/scoop_stir_soup__remove__3.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/scoop_stir_soup__remove__4.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/scoop_stir_soup__remove__5.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/scoop_stir_soup__style__1.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/scoop_stir_soup__style__2.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/scoop_stir_soup__style__3.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/scoop_stir_soup__style__4.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/scoop_stir_soup__style__5.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/scoop_stir_soup__texture__1.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/scoop_stir_soup__texture__2.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/scoop_stir_soup__texture__3.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/scoop_stir_soup__texture__4.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/scoop_stir_soup__texture__5.jpg",
+      "object": "scoop_stir_soup",
+      "task": "scooping and stirring soup",
+      "perturbation": "texture",
+      "level": 5
+    }
+  ]
+}
