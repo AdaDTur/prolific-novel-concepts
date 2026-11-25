@@ -133,3 +133,12 @@ body {
   margin-top: 12px;
   color: #52514e;
 }
+
+/* the part's option list, with the AI's answer highlighted */
+.option-list { max-width: 660px; margin: 0 auto 16px; text-align: left; }
+.opt-label { font-size: 0.75rem; text-transform: uppercase; letter-spacing: 0.04em; color: #6b6b6b; margin-bottom: 6px; }
+.opts { display: flex; flex-wrap: wrap; gap: 6px; }
+.opt { border: 1px solid #c9c8c3; border-radius: 999px; padding: 4px 12px; font-size: 0.9rem; color: #3a3a3a; }
+.opt.picked { border-color: #2a78d6; background: #2a78d6; color: #ffffff; font-weight: 600; }
+.opt.outside { border-style: dashed; }
+.opt-note { width: 100%; font-size: 0.8rem; color: #6b6b6b; margin-top: 4px; }

@@ -43,6 +43,15 @@ function shownLabel(label) {
 
   items.forEach(function (it, i) {
     const reason = it.justification ? `<div class="reason">"${esc(it.justification)}"</div>` : "";
+    // the part's 10-option list from the original study, with the AI's answer highlighted (added if not in it)
+    const opts = (it.options || []).map((o) =>
+      `<span class="opt${o === it.label ? " picked" : ""}">${esc(shownLabel(o))}</span>`).join("");
+    const extra = it.options && it.options.length && !it.label_in_options
+      ? `<span class="opt picked outside">${esc(shownLabel(it.label))}</span>
+         <div class="opt-note">The highlighted answer is the AI's own; it isn't one of these options.</div>` : "";
+    const optionBlock = it.options && it.options.length
+      ? `<div class="option-list"><div class="opt-label">Options for this part (the AI's answer is highlighted)</div>
+           <div class="opts">${opts}${extra}</div></div>` : "";
     timeline.push({
       type: jsPsychHtmlButtonResponse,
       stimulus: `
@@ -58,6 +67,7 @@ function shownLabel(label) {
           <div class="answer">${esc(shownLabel(it.label))}</div>
           ${reason}
         </div>
+        ${optionBlock}
         <div class="rating">
           <p class="question">Do you agree with this answer?</p>
           <div class="choices">${RATINGS.map((r) => `<div class="choice" data-value="${r}">${r}</div>`).join("")}</div>
@@ -67,7 +77,8 @@ function shownLabel(label) {
         </div>`,
       choices: ["Next"],
       data: { object: it.object, part: it.part, region_id: it.region_id, model: it.model, label: it.label,
-              justification: it.justification, position: i + 1, is_item: true },
+              justification: it.justification, options_shown: it.options || [],
+              label_in_options: !!it.label_in_options, position: i + 1, is_item: true },
       on_load: function () {
         // capture answers live into the trial data (the DOM is gone by on_finish) and gate the Next button
         const trial = jsPsych.getCurrentTrial();
@@ -114,7 +125,8 @@ function shownLabel(label) {
     submitted = true;
     const trials = jsPsych.data.get().filter({ is_item: true }).values().map((t) => ({
       position: t.position, object: t.object, part: t.part, region_id: t.region_id, model: t.model, label: t.label,
-      justification: t.justification, rating: t.rating, explanation: t.explanation, rt_ms: t.rt,
+      justification: t.justification, options_shown: t.options_shown, label_in_options: t.label_in_options,
+      rating: t.rating, explanation: t.explanation, rt_ms: t.rt,
     }));
     const results = {
       study: "model_validation",
