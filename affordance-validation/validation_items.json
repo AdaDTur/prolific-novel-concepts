@@ -1,0 +1,1985 @@
+{
+  "models": [
+    "molmo2-4b",
+    "qwen3.5-4b",
+    "gemma4-e4b"
+  ],
+  "vocabulary": "synthia_filtered",
+  "object_sets": [
+    [
+      "shape_30",
+      "shape_33",
+      "shape_31",
+      "shape_11",
+      "shape_1",
+      "shape_3",
+      "shape_15",
+      "shape_27",
+      "shape_10",
+      "shape_16",
+      "shape_17",
+      "shape_25",
+      "shape_18",
+      "shape_39",
+      "shape_24"
+    ],
+    [
+      "shape_32",
+      "shape_20",
+      "shape_29",
+      "shape_40",
+      "shape_19",
+      "shape_2",
+      "shape_12",
+      "shape_22",
+      "shape_23",
+      "shape_13",
+      "shape_28",
+      "shape_26",
+      "shape_14",
+      "shape_38",
+      "shape_21"
+    ]
+  ],
+  "groups": [
+    [
+      {
+        "object": "shape_1",
+        "part": 1,
+        "region_id": "shape_1_region_16",
+        "n_parts": 10,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 1 appears to be a smooth, featureless surface without any protrusions, textures, or interactive elements that would typically provide an affordance for user interaction"
+      },
+      {
+        "object": "shape_1",
+        "part": 2,
+        "region_id": "shape_1_region_0",
+        "n_parts": 10,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part two\u2019s solid brown oval form provides stability by acting as a base for surrounding elements like three green curved segments; its distinct size contrasts smaller components such as eight gray circles while maintaining structural integrity within larger blue sections labeled nine through ten alongside red ring four seven five purple six respectively ensuring balanced assembly without compromising overall design coherence despite"
+      },
+      {
+        "object": "shape_1",
+        "part": 3,
+        "region_id": "shape_1_region_11",
+        "n_parts": 10,
+        "model": "gemma4-e4b",
+        "label": "blend",
+        "justification": "Its curved form suggests it can merge smoothly into adjacent sections rather than being distinctly separate like some of the others"
+      },
+      {
+        "object": "shape_1",
+        "part": 4,
+        "region_id": "shape_1_region_10",
+        "n_parts": 10,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The curved, hollow red section appears to be a decorative or structural element without any visible functional purpose or interaction point, unlike the other numbered parts that seem to have distinct shapes or positions suggesting specific uses"
+      },
+      {
+        "object": "shape_1",
+        "part": 5,
+        "region_id": "shape_1_region_9",
+        "n_parts": 10,
+        "model": "qwen3.5-4b",
+        "label": "decorate",
+        "justification": "Part 5\u2019s smooth, curved surface positioned at the side suggests its role as purely ornamental rather than functional like the central components designed for grip or structural support; unlike others which interact directly through texture or form, it serves primarily aesthetic enhancement without tactile utility"
+      },
+      {
+        "object": "shape_1",
+        "part": 6,
+        "region_id": "shape_1_region_13",
+        "n_parts": 10,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a smooth indentation without any discernible feature suggesting interaction like gripping or pressing compared to the others"
+      },
+      {
+        "object": "shape_1",
+        "part": 7,
+        "region_id": "shape_1_region_15",
+        "n_parts": 10,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 7 appears to be a solid, unadorned metal piece without any visible features or protrusions that could serve as handles, buttons, or other interactive elements, making it functionally distinct from the other numbered parts"
+      },
+      {
+        "object": "shape_1",
+        "part": 8,
+        "region_id": "shape_1_region_3",
+        "n_parts": 10,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 8 appears as a smooth, rounded segment positioned adjacent to others in close proximity without gaps; its form suggests interlocking capability rather than independent movement like rings or protrusions seen elsewhere"
+      },
+      {
+        "object": "shape_1",
+        "part": 9,
+        "region_id": "shape_1_region_1",
+        "n_parts": 10,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small indentation lacks any discernible feature suggesting interaction like gripping or pressing compared to the larger components around it"
+      },
+      {
+        "object": "shape_1",
+        "part": 10,
+        "region_id": "shape_1_region_6",
+        "n_parts": 10,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The object appears to be a simple, flat, unmarked surface without any visible features or protrusions that would suggest an interactive or functional purpose, unlike the other numbered parts which seem to have distinct shapes or textures"
+      },
+      {
+        "object": "shape_10",
+        "part": 1,
+        "region_id": "shape_10_region_13",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 1 forms the smooth central body of the structure without any protrusions like legs or appendages found in adjacent sections such as those at positions three through five; its uniform surface suggests no functional interaction beyond structural support for upper components labeled two"
+      },
+      {
+        "object": "shape_10",
+        "part": 2,
+        "region_id": "shape_10_region_11",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The upper section appears smooth and rounded without any visible features suggesting interaction like gripping or manipulation in contrast to the lower structures which have distinct projections for potential contact points"
+      },
+      {
+        "object": "shape_10",
+        "part": 3,
+        "region_id": "shape_10_region_0",
+        "n_parts": 5,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The third part appears to be a solid, flat surface without any protrusions or features that could potentially serve as a handle or grip, unlike the other parts which have distinct shapes or textures that could be used for interaction"
+      },
+      {
+        "object": "shape_10",
+        "part": 4,
+        "region_id": "shape_10_region_1",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 4 appears as a flat, recessed panel integrated into the lower body structure rather than protruding like legs or appendages; its smooth surface suggests it serves no functional purpose such as support or interaction compared to the spiky projections of adjacent sections"
+      },
+      {
+        "object": "shape_10",
+        "part": 5,
+        "region_id": "shape_10_region_4",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "aim",
+        "justification": "The pointed projection suggests a function for directing force toward a target unlike the broader body sections of the organism-like form"
+      },
+      {
+        "object": "shape_11",
+        "part": 1,
+        "region_id": "shape_11_region_7",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 1 appears to be a solid, unadorned surface without any protrusions, textures, or features that would typically provide an affordance for interaction or manipulation"
+      },
+      {
+        "object": "shape_11",
+        "part": 2,
+        "region_id": "shape_11_region_12",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 2 appears as a flat, diamond-shaped surface without any protrusions or indentations suggesting functional interaction like grasping; unlike surrounding elements such as curled tendrils which imply manipulation capabilities, its smooth geometry indicates no inherent utility for physical engagement"
+      },
+      {
+        "object": "shape_11",
+        "part": 3,
+        "region_id": "shape_11_region_18",
+        "n_parts": 11,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The section appears as a flat-looking triangular area at the base without any discernible features suggesting interaction like gripping or pushing compared to adjacent sections"
+      },
+      {
+        "object": "shape_11",
+        "part": 4,
+        "region_id": "shape_11_region_11",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 4 appears to be a solid, flat surface without any protrusions or features that could potentially be used or interacted with, unlike the other numbered parts which have distinct shapes or textures that suggest specific functions or uses"
+      },
+      {
+        "object": "shape_11",
+        "part": 5,
+        "region_id": "shape_11_region_0",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "decorate",
+        "justification": "Part 5 features a distinct spiral curl at its tip resembling decorative finials found atop architectural spires; unlike most flat surfaces of adjacent sections which serve structural purposes like enclosing volume or providing grip points for climbing hands/feet along edges , such ornamental protrusions enhance aesthetic appeal without contributing directly toward stability"
+      },
+      {
+        "object": "shape_11",
+        "part": 6,
+        "region_id": "shape_11_region_2",
+        "n_parts": 11,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small protrusion appears too delicate in its form compared to the larger sections for any discernible interaction"
+      },
+      {
+        "object": "shape_11",
+        "part": 7,
+        "region_id": "shape_11_region_15",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 7 appears to be a solid, flat surface without any protrusions or features that could potentially serve as an affordance for interaction or manipulation"
+      },
+      {
+        "object": "shape_11",
+        "part": 8,
+        "region_id": "shape_11_region_8",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 8 appears as a smooth, curved appendage without any visible texture or functional surface features like ridges or protrusions found in other sections such as those resembling tentacles; its form suggests purely decorative placement rather than interactive utility compared to more defined structural elements elsewhere"
+      },
+      {
+        "object": "shape_11",
+        "part": 9,
+        "region_id": "shape_11_region_14",
+        "n_parts": 11,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small section appears as an isolated protrusion without clear functional interaction points like those seen in adjacent pieces"
+      },
+      {
+        "object": "shape_11",
+        "part": 10,
+        "region_id": "shape_11_region_6",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 10 appears to be a solid, unbroken surface without any visible features or protrusions that could potentially serve as handles, buttons, or other interactive elements, making it functionally distinct from the other numbered parts"
+      },
+      {
+        "object": "shape_11",
+        "part": 11,
+        "region_id": "shape_11_region_19",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 12\u2019s flat top surface provides a stable base for stacking objects vertically while its smooth texture allows easy sliding of items across horizontal planes without friction resistance compared to irregularly shaped surfaces elsewhere in the structure which may cause uneven distribution when placed upon them due to their varying angles creating potential instability points during alignment processes requiring careful"
+      },
+      {
+        "object": "shape_15",
+        "part": 1,
+        "region_id": "shape_15_region_7",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "Its large, rounded volume suggests its primary function involves holding something within its boundaries"
+      },
+      {
+        "object": "shape_15",
+        "part": 2,
+        "region_id": "shape_15_region_4",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The topmost section appears to be a smooth, flat surface without any protrusions or features that could potentially be used for grasping or manipulating, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_15",
+        "part": 3,
+        "region_id": "shape_15_region_5",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part three appears as a smooth, rounded base without any protrusions or functional features like handles or grips seen in other sections; its form suggests structural support rather than interactive use"
+      },
+      {
+        "object": "shape_15",
+        "part": 4,
+        "region_id": "shape_15_region_3",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The pointed protrusion lacks any discernible feature suggesting interaction like gripping or pushing compared to the more substantial forms of the surrounding elements"
+      },
+      {
+        "object": "shape_15",
+        "part": 5,
+        "region_id": "shape_15_region_8",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 5 appears to be a small, solid protrusion without any visible openings or features that could serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures that suggest potential uses"
+      },
+      {
+        "object": "shape_15",
+        "part": 6,
+        "region_id": "shape_15_region_9",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 6 appears as a small, flat-topped protrusion lacking any discernible functional form like grip points or attachment surfaces seen in larger elements such as those at positions four through seven; its minimal size suggests no practical utility beyond structural decoration rather than interactional purpose"
+      },
+      {
+        "object": "shape_15",
+        "part": 7,
+        "region_id": "shape_15_region_2",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a small point extending outward without any discernible functional connection to the main body of the structure like the others do"
+      },
+      {
+        "object": "shape_16",
+        "part": 1,
+        "region_id": "shape_16_region_3",
+        "n_parts": 5,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The topmost, flat, square-shaped piece appears to be a solid, stationary component without any visible means to interact with or manipulate it, unlike the other parts that have distinct shapes or protrusions"
+      },
+      {
+        "object": "shape_16",
+        "part": 2,
+        "region_id": "shape_16_region_5",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 2 features a long, curved arm extending outward which naturally guides objects into alignment along its arc; unlike the blocky top section designed for stability or support legs meant primarily for standing upright, this elongated form suggests directional guidance rather than static holding functions"
+      },
+      {
+        "object": "shape_16",
+        "part": 3,
+        "region_id": "shape_16_region_2",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "The lower section of the structure has a broad base designed for stability against gravity"
+      },
+      {
+        "object": "shape_16",
+        "part": 4,
+        "region_id": "shape_16_region_1",
+        "n_parts": 5,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The small, round, purple piece appears to be a decorative element without any functional purpose or interaction, unlike the other numbered parts that seem to serve specific roles or have distinct shapes and positions"
+      },
+      {
+        "object": "shape_16",
+        "part": 5,
+        "region_id": "shape_16_region_6",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "adjust",
+        "justification": "Part five\u2019s small size combined with its rounded form suggests functionality as either a knob for fine-tuning settings or serving as a pivot point within the structure; unlike larger components such as three which appear designed primarily for structural support through their elongated shapes"
+      },
+      {
+        "object": "shape_17",
+        "part": 1,
+        "region_id": "shape_17_region_3",
+        "n_parts": 4,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "The central cavity has walls surrounding empty space within its structure, suggesting something can be held inside of it unlike the external protrusions"
+      },
+      {
+        "object": "shape_17",
+        "part": 2,
+        "region_id": "shape_17_region_2",
+        "n_parts": 4,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The central section appears to be a solid, flat surface without any protrusions or openings, making it impossible for anything to enter or exit, unlike the other parts which have openings or protrusions"
+      },
+      {
+        "object": "shape_17",
+        "part": 3,
+        "region_id": "shape_17_region_0",
+        "n_parts": 4,
+        "model": "qwen3.5-4b",
+        "label": "channel water",
+        "justification": "Part 3 features a distinct tubular protrusion extending outward like a pipe mouthpiece designed for fluid flow; unlike the central mass which appears solid or porous, its open-ended cylindrical form suggests function as a conduit rather than storage or containment of liquid within itself"
+      },
+      {
+        "object": "shape_17",
+        "part": 4,
+        "region_id": "shape_17_region_4",
+        "n_parts": 4,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The structure at point four appears as a small protrusion without any discernible opening for interaction like the others do"
+      },
+      {
+        "object": "shape_18",
+        "part": 1,
+        "region_id": "shape_18_region_1",
+        "n_parts": 2,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The first part appears to be a solid, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have curved, hook-like extensions"
+      },
+      {
+        "object": "shape_18",
+        "part": 2,
+        "region_id": "shape_18_region_2",
+        "n_parts": 2,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part two appears as a smooth, featureless core without any protrusions or functional surfaces like those seen in surrounding elements such as tentacles; its uniform oval form suggests structural support rather than interactive capability compared to adjacent components designed for grasping or movement"
+      },
+      {
+        "object": "shape_24",
+        "part": 1,
+        "region_id": "shape_24_region_2",
+        "n_parts": 1,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "The broad base of the structure suggests its function in bearing weight for another element above it"
+      },
+      {
+        "object": "shape_25",
+        "part": 1,
+        "region_id": "shape_25_region_4",
+        "n_parts": 4,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The base appears to be a solid, unadorned surface without any protrusions or features that could serve as handles, grips, or other interactive elements, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_25",
+        "part": 2,
+        "region_id": "shape_25_region_0",
+        "n_parts": 4,
+        "model": "qwen3.5-4b",
+        "label": "decorate",
+        "justification": "Part 2 consists of multiple stacked rings positioned around the central sphere\u2019s midsection; its layered structure suggests decorative function rather than structural support like base 1 or attachment points such as appendages 3 and 4"
+      },
+      {
+        "object": "shape_25",
+        "part": 3,
+        "region_id": "shape_25_region_2",
+        "n_parts": 4,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small protrusion lacks any discernible features suggesting interaction like grasping or pushing in its current form"
+      },
+      {
+        "object": "shape_25",
+        "part": 4,
+        "region_id": "shape_25_region_5",
+        "n_parts": 4,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The protruding element appears to be a simple, solid-colored extension without any visible interactive features or functional components, unlike the other numbered parts which have distinct shapes or textures that suggest potential interactions"
+      },
+      {
+        "object": "shape_27",
+        "part": 1,
+        "region_id": "shape_27_region_24",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part 1\u2019s thick, elongated form positioned at the base suggests stability for gripping or holding onto something firmly; unlike its thinner counterparts designed more like claws or spikes, it appears built primarily as a support point rather than offensive tooling"
+      },
+      {
+        "object": "shape_27",
+        "part": 2,
+        "region_id": "shape_27_region_6",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The section appears as a simple protruding appendage without any discernible features suggesting interaction like grasping or support in its current form compared to others"
+      },
+      {
+        "object": "shape_27",
+        "part": 3,
+        "region_id": "shape_27_region_8",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 3 appears to be a small, solid protrusion without any visible openings or features that could potentially serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures that suggest different affordances"
+      },
+      {
+        "object": "shape_27",
+        "part": 4,
+        "region_id": "shape_27_region_0",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "attack",
+        "justification": "Part 4 has a blunt but solid conical tip positioned at eye level for striking; unlike slender spikes like those in positions five through seven which are designed more as piercing weapons than heavy blows"
+      },
+      {
+        "object": "shape_27",
+        "part": 5,
+        "region_id": "shape_27_region_26",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small protrusion lacks any discernible feature suggesting interaction like gripping or pushing compared to the larger appendages of the form"
+      },
+      {
+        "object": "shape_27",
+        "part": 6,
+        "region_id": "shape_27_region_7",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 6 appears to be a solid, unadorned protrusion without any visible features or attachments that would suggest it serves a specific function or purpose"
+      },
+      {
+        "object": "shape_27",
+        "part": 7,
+        "region_id": "shape_27_region_25",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "attack",
+        "justification": "Part 7 features sharp spikes protruding outward like claws designed for piercing; unlike its smooth counterparts which are likely meant for grasping or balancing, these jagged points suggest offensive capability through stabbing motion rather than holding onto surfaces"
+      },
+      {
+        "object": "shape_3",
+        "part": 1,
+        "region_id": "shape_3_region_5",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "Its large, foundational base suggests stability for holding or connecting other elements together compared to the more varied shapes of the others"
+      },
+      {
+        "object": "shape_3",
+        "part": 2,
+        "region_id": "shape_3_region_0",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 2 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_3",
+        "part": 3,
+        "region_id": "shape_3_region_7",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part three features distinct ridges along its surface which suggest texture for gripping rather than smoothness needed for sliding into place like some of the others; additionally being positioned at top center suggests alignment function over rotation as seen in surrounding components shaped differently around central hub area where they may rotate freely instead requiring precise placement due unique geometry compared"
+      },
+      {
+        "object": "shape_3",
+        "part": 4,
+        "region_id": "shape_3_region_1",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The piece appears as a solid block integrated into the structure without any visible features suggesting interaction like gripping or attachment points seen in others"
+      },
+      {
+        "object": "shape_3",
+        "part": 5,
+        "region_id": "shape_3_region_2",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 5 appears to be a flat, non-interactive surface without any protrusions or features that would allow it to be grasped, pressed, or manipulated, unlike the other numbered parts which have distinct shapes or textures that suggest different affordances"
+      },
+      {
+        "object": "shape_3",
+        "part": 6,
+        "region_id": "shape_3_region_11",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 6 appears as a thin, flat strip lacking any discernible texture or protrusion for grasping; unlike its thicker neighbors like number seven which has some depth suggesting grip potential, six seems designed purely as structural reinforcement without functional interaction points"
+      },
+      {
+        "object": "shape_3",
+        "part": 7,
+        "region_id": "shape_3_region_9",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small protrusion at its end lacks any discernible feature suggesting interaction like gripping or pushing compared to the more substantial components of the structure"
+      },
+      {
+        "object": "shape_3",
+        "part": 8,
+        "region_id": "shape_3_region_6",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 8 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_30",
+        "part": 1,
+        "region_id": "shape_30_region_43",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "assist_breathing",
+        "justification": "Part 1 resembles human lungs due to its branching structure positioned near where air would enter during inhalation; unlike most of these toy-like appendages designed for grasping or holding objects like rings or balls , this form suggests respiratory function rather than manipulation"
+      },
+      {
+        "object": "shape_30",
+        "part": 2,
+        "region_id": "shape_30_region_0",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The lower appendage appears solid and lacks any discernible features suggesting interaction like grasping or pushing compared to some of the more complex structures present elsewhere"
+      },
+      {
+        "object": "shape_30",
+        "part": 3,
+        "region_id": "shape_30_region_33",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The green, blob-like protrusion appears to be a loose, non-attached piece that lacks any functional connection or purpose within the overall structure, unlike the other numbered parts which seem to serve specific roles or be integrated into the main body"
+      },
+      {
+        "object": "shape_30",
+        "part": 4,
+        "region_id": "shape_30_region_16",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part four features a thick, curved appendage positioned at the creature\u2019s base which appears designed for stability rather than movement like its leg counterparts suggest; unlike limbs meant for locomotion such as those seen elsewhere in similar figures here depicted by their joint-like structures suggesting flexibility instead of grounding function required when anchoring something down firmly against"
+      },
+      {
+        "object": "shape_30",
+        "part": 5,
+        "region_id": "shape_30_region_20",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "Its broad base provides a stable point of contact for supporting weight against gravity compared to more dynamic appendages"
+      },
+      {
+        "object": "shape_30",
+        "part": 6,
+        "region_id": "shape_30_region_37",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 6 appears to be a solid, unadorned protrusion without any visible features or attachments that would suggest it serves a specific function or purpose"
+      },
+      {
+        "object": "shape_30",
+        "part": 7,
+        "region_id": "shape_30_region_2",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 7 appears as a small, isolated pink protrusion lacking any discernible functional form like limbs for movement or appendages for interaction; its simple bulbous tip offers no clear mechanical purpose compared to more structured elements elsewhere in the design"
+      },
+      {
+        "object": "shape_30",
+        "part": 8,
+        "region_id": "shape_30_region_15",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "The structure of this component suggests it provides foundational stability for the main body mass above it"
+      },
+      {
+        "object": "shape_30",
+        "part": 9,
+        "region_id": "shape_30_region_45",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 9 appears to be a solid, unadorned surface without any protrusions, textures, or features that would typically provide an affordance for interaction or manipulation"
+      },
+      {
+        "object": "shape_30",
+        "part": 10,
+        "region_id": "shape_30_region_3",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 1 appears as a small, flat disc positioned at the base of the structure where legs meet; unlike surrounding protrusions like horns or limbs which suggest grasping functions such as holding objects in hand , its smooth surface suggests no functional purpose beyond structural support"
+      },
+      {
+        "object": "shape_30",
+        "part": 11,
+        "region_id": "shape_30_region_21",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a small protrusion without any discernible functional feature like grasping points or levers compared to the more complex structures around it"
+      },
+      {
+        "object": "shape_30",
+        "part": 12,
+        "region_id": "shape_30_region_36",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The circular, hollow structure appears to be a simple ring without any protrusions or features that would allow it to interact with or be manipulated by other parts of the object"
+      },
+      {
+        "object": "shape_30",
+        "part": 13,
+        "region_id": "shape_30_region_41",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 12 appears as a smooth, rounded protrusion without any visible texture or functional feature like appendages for grasping; unlike surrounding elements such as limb-like structures labeled elsewhere which suggest interaction potential through form rather than function alone due to its isolated placement among non-functional components in design context suggesting purely decorative role within overall"
+      },
+      {
+        "object": "shape_30",
+        "part": 14,
+        "region_id": "shape_30_region_8",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "circulate",
+        "justification": "Its continuous loop structure suggests movement through a system rather than acting as a discrete appendage like others"
+      },
+      {
+        "object": "shape_30",
+        "part": 15,
+        "region_id": "shape_30_region_23",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The 15th part appears to be a small, solid, non-functional element positioned separately from the main body, lacking any visible interactive features or connections to other parts"
+      },
+      {
+        "object": "shape_31",
+        "part": 1,
+        "region_id": "shape_31_region_47",
+        "n_parts": 12,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 1 appears as a smooth, rounded base without any protrusions or functional features like handles or spikes seen in other sections; its form suggests stability rather than interaction"
+      },
+      {
+        "object": "shape_31",
+        "part": 2,
+        "region_id": "shape_31_region_50",
+        "n_parts": 12,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "Its wide, bowl-like structure suggests its primary function is holding something within its boundaries"
+      },
+      {
+        "object": "shape_31",
+        "part": 3,
+        "region_id": "shape_31_region_46",
+        "n_parts": 12,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 3 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have handles, spikes, or other interactive elements"
+      },
+      {
+        "object": "shape_31",
+        "part": 4,
+        "region_id": "shape_31_region_45",
+        "n_parts": 12,
+        "model": "qwen3.5-4b",
+        "label": "decorate",
+        "justification": "Part 4 consists of small, rounded protrusions scattered across its surface rather than forming structural elements like handles or legs; these shapes suggest they are meant for visual embellishment instead of functional use such as gripping or supporting weight"
+      },
+      {
+        "object": "shape_31",
+        "part": 5,
+        "region_id": "shape_31_region_51",
+        "n_parts": 12,
+        "model": "gemma4-e4b",
+        "label": "carry",
+        "justification": "Its looped handle structure suggests grasping for lifting objects"
+      },
+      {
+        "object": "shape_31",
+        "part": 6,
+        "region_id": "shape_31_region_3",
+        "n_parts": 12,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 6 appears to be a simple, flat, circular element without any protrusions or features that would allow it to serve as a handle or grip, unlike the other numbered parts which have distinct shapes or textures designed for interaction"
+      },
+      {
+        "object": "shape_31",
+        "part": 7,
+        "region_id": "shape_31_region_2",
+        "n_parts": 12,
+        "model": "qwen3.5-4b",
+        "label": "dangle",
+        "justification": "Part 7 extends outward in a long, flexible tube-like form without being anchored at its base like legs are; unlike rigid structural elements such as horns or handles which serve attachment points for grasping or balance, this component appears designed solely to hang freely due to gravity when supported by nothing but connection above \u2014 making \u201cd"
+      },
+      {
+        "object": "shape_31",
+        "part": 8,
+        "region_id": "shape_31_region_31",
+        "n_parts": 12,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The pointed protrusion lacks any discernible feature suggesting interaction like grasping or pushing compared to the rounded forms of adjacent elements"
+      },
+      {
+        "object": "shape_31",
+        "part": 9,
+        "region_id": "shape_31_region_29",
+        "n_parts": 12,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 9 appears to be a small, solid protrusion without any visible openings or features that could serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures designed for interaction"
+      },
+      {
+        "object": "shape_31",
+        "part": 10,
+        "region_id": "shape_31_region_48",
+        "n_parts": 12,
+        "model": "qwen3.5-4b",
+        "label": "aim",
+        "justification": "Part 14\u2019s sharp triangular tip suggests its purpose for aiming projectiles like arrows in battle scenarios due to its pointed design suitable for piercing targets during combat engagements against enemies wielding weapons such as swords or spears while riding horses across fields filled with trees providing cover where they could hide themselves away safely until nightfall came upon them"
+      },
+      {
+        "object": "shape_31",
+        "part": 11,
+        "region_id": "shape_31_region_37",
+        "n_parts": 12,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a small protrusion without any clear functional interface for interaction like grasping or pressing seen in surrounding elements"
+      },
+      {
+        "object": "shape_31",
+        "part": 12,
+        "region_id": "shape_31_region_32",
+        "n_parts": 12,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 12 appears to be a small, solid protrusion without any visible handle or grip, making it impossible to interact with or manipulate like the other numbered parts"
+      },
+      {
+        "object": "shape_33",
+        "part": 1,
+        "region_id": "shape_33_region_16",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 1 has a smooth, flat surface positioned centrally between two legs, suggesting its function as a stable base for balancing upright objects like block 2; unlike jagged spikes at points 4-6 or coiled tendrils near point 9, its uniform geometry supports alignment rather than grasping or striking actions"
+      },
+      {
+        "object": "shape_33",
+        "part": 2,
+        "region_id": "shape_33_region_21",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "Its blocky form suggests stability for attachment compared to the more organic shapes of the rest of the structure"
+      },
+      {
+        "object": "shape_33",
+        "part": 3,
+        "region_id": "shape_33_region_6",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 3 appears to be a simple, flat, and unadorned surface without any protrusions, textures, or features that would typically provide an affordance for interaction or manipulation"
+      },
+      {
+        "object": "shape_33",
+        "part": 4,
+        "region_id": "shape_33_region_7",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "attack",
+        "justification": "Part 4\u2019s sharp, jagged spike-like protrusion suggests aggression or offense capability due to its pointed geometry designed for piercing rather than grasping like limb segments such as those at positions three through five which appear more suited for support or movement functions instead of combat actions indicated by their rounded ends; additionally compared against tail co"
+      },
+      {
+        "object": "shape_33",
+        "part": 5,
+        "region_id": "shape_33_region_20",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "Its broad base provides a stable foundation for holding up the rest of the structure"
+      },
+      {
+        "object": "shape_33",
+        "part": 6,
+        "region_id": "shape_33_region_13",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": ""
+      },
+      {
+        "object": "shape_33",
+        "part": 7,
+        "region_id": "shape_33_region_18",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 7 appears as a small, smooth ring integrated into the larger spiral tail structure rather than being designed for grasping; unlike protruding limbs like number 3 which suggest walking support or hooks such as those at numbers 6-9 suggesting attachment points, its form suggests purely decorative function within the overall design of the"
+      },
+      {
+        "object": "shape_33",
+        "part": 8,
+        "region_id": "shape_33_region_19",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "The coiled structure of the appendage provides a stable base for interaction rather than being used as a grasping tool like some others"
+      },
+      {
+        "object": "shape_33",
+        "part": 9,
+        "region_id": "shape_33_region_3",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The spiral-shaped part 9 appears to be a decorative element without any functional purpose or interaction, unlike the other numbered parts that seem to serve specific roles or have distinct shapes and materials"
+      },
+      {
+        "object": "shape_33",
+        "part": 10,
+        "region_id": "shape_33_region_1",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 13\u2019s flat top surface provides a stable base for stacking objects like block 2 above it; unlike curved surfaces such as those of tail segments 8-9 which are designed for wrapping around items rather than supporting them vertically"
+      },
+      {
+        "object": "shape_33",
+        "part": 11,
+        "region_id": "shape_33_region_0",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "align",
+        "justification": "The small protrusion at its location suggests a point for connection or matching against another feature of similar size"
+      },
+      {
+        "object": "shape_33",
+        "part": 12,
+        "region_id": "shape_33_region_8",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 12 appears to be a solid, featureless block without any protrusions, openings, or interactive elements that would typically provide an affordance for user interaction"
+      },
+      {
+        "object": "shape_33",
+        "part": 13,
+        "region_id": "shape_33_region_14",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 12 appears as a small green dot positioned near where another similar element would fit if stacked vertically against its side; unlike most of these objects which are designed for grasping by their bulkier forms like legs or heads, they lack protrusions suitable for gripping but instead offer flat surfaces ideal for stacking alignment rather than"
+      },
+      {
+        "object": "shape_33",
+        "part": 14,
+        "region_id": "shape_33_region_2",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "align",
+        "justification": "The small protrusion at its location suggests a point for precise connection between two surfaces of similar size"
+      },
+      {
+        "object": "shape_33",
+        "part": 15,
+        "region_id": "shape_33_region_5",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The object appears to be a simple, unadorned piece of wood without any visible features or attachments that would provide an affordance for interaction or use"
+      },
+      {
+        "object": "shape_39",
+        "part": 1,
+        "region_id": "shape_39_region_3",
+        "n_parts": 2,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part 1 features a wide base at its bottom which provides stability for balancing the top circular element; unlike the flat surface of the upper component designed primarily as weight-bearing support rather than stabilization itself"
+      },
+      {
+        "object": "shape_39",
+        "part": 2,
+        "region_id": "shape_39_region_4",
+        "n_parts": 2,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The circular component appears as a detached cap atop the main body without any visible interface for interaction like gripping or insertion shown in relation to its base structure"
+      }
+    ],
+    [
+      {
+        "object": "shape_12",
+        "part": 1,
+        "region_id": "shape_12_region_5",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 1 appears to be a solid, unbroken section without any visible openings or protrusions that could potentially serve as handles, buttons, or other interactive elements, making it functionally distinct from the other numbered parts that likely have specific affordances"
+      },
+      {
+        "object": "shape_12",
+        "part": 2,
+        "region_id": "shape_12_region_1",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part two has no discernible function as its smooth surface lacks any protrusions for gripping; unlike others which have distinct shapes suggesting utility like holding objects or serving decorative purposes due to their varied forms such as ridges or indentations designed for interaction"
+      },
+      {
+        "object": "shape_12",
+        "part": 3,
+        "region_id": "shape_12_region_3",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The curved surface of this section appears smooth without any discernible features for interaction like gripping or pressing compared to its neighbors"
+      },
+      {
+        "object": "shape_12",
+        "part": 4,
+        "region_id": "shape_12_region_0",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 4 appears to be a solid, flat surface without any protrusions or openings, making it impossible for the user to interact with or manipulate it in any way"
+      },
+      {
+        "object": "shape_12",
+        "part": 5,
+        "region_id": "shape_12_region_2",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part five appears as a flat panel integrated into the side structure rather than protruding like buttons or handles; its smooth surface suggests no functional interaction beyond structural support compared to raised elements elsewhere"
+      },
+      {
+        "object": "shape_12",
+        "part": 6,
+        "region_id": "shape_12_region_6",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small protrusion at the corner lacks any discernible feature suggesting interaction like gripping or pressing compared to the larger sections of the object"
+      },
+      {
+        "object": "shape_12",
+        "part": 7,
+        "region_id": "shape_12_region_7",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The topmost section appears to be a flat, open surface without any visible handles, buttons, or other interactive features that would typically provide an affordance for user interaction"
+      },
+      {
+        "object": "shape_13",
+        "part": 1,
+        "region_id": "shape_13_region_8",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 4 appears as a smooth, recessed cavity within the red section of the structure rather than protruding like the surrounding components such as those in orange or green sections which suggest functional surfaces for interaction; its concave nature implies no direct tactile engagement capability compared to more convex elements elsewhere visible here"
+      },
+      {
+        "object": "shape_13",
+        "part": 2,
+        "region_id": "shape_13_region_12",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The central opening lacks any discernible features suggesting interaction like grasping or insertion compared to the surrounding defined areas"
+      },
+      {
+        "object": "shape_13",
+        "part": 3,
+        "region_id": "shape_13_region_13",
+        "n_parts": 5,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The third part appears to be a solid, unbroken section without any openings or protrusions, making it impossible for anything to enter or exit, unlike the other numbered parts which have visible openings or features that allow interaction"
+      },
+      {
+        "object": "shape_13",
+        "part": 4,
+        "region_id": "shape_13_region_7",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part four appears as a hollow cavity within the red section rather than having any protruding surface features for interaction like buttons or handles found in adjacent areas such as three; its concave nature suggests no direct tactile function compared to surrounding elements designed for manipulation through their raised forms"
+      },
+      {
+        "object": "shape_13",
+        "part": 5,
+        "region_id": "shape_13_region_4",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "Its broad base suggests it can bear weight while remaining attached within the structure"
+      },
+      {
+        "object": "shape_14",
+        "part": 1,
+        "region_id": "shape_14_region_2",
+        "n_parts": 2,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The first part appears to be a solid, flat surface without any protrusions or openings, making it impossible for users to interact with or manipulate it in any way"
+      },
+      {
+        "object": "shape_14",
+        "part": 2,
+        "region_id": "shape_14_region_0",
+        "n_parts": 2,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part two has no discernible function as its irregularly shaped surface lacks any obvious features for interaction such as buttons, levers, handles, grips, switches, knobs, dials, displays, screens, speakers, microphones, sensors, cameras, lenses, apertures, ports, sockets, jacks, connectors"
+      },
+      {
+        "object": "shape_19",
+        "part": 1,
+        "region_id": "shape_19_region_12",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "Its concave-like indentation suggests it could hold something within its boundaries unlike the protruding shapes of the surrounding features"
+      },
+      {
+        "object": "shape_19",
+        "part": 2,
+        "region_id": "shape_19_region_2",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The orange, rounded section at the bottom of the object appears to be a solid, smooth surface without any protrusions or features that could potentially be used for interaction or manipulation"
+      },
+      {
+        "object": "shape_19",
+        "part": 3,
+        "region_id": "shape_19_region_1",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part three appears as a smooth green appendage lacking any discernible texture for grasping; unlike its spiky counterparts which offer clear tactile points of interaction through their sharp protrusions"
+      },
+      {
+        "object": "shape_19",
+        "part": 4,
+        "region_id": "shape_19_region_5",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The pointed projection lacks any discernible feature suggesting interaction like gripping or pushing compared to the more rounded forms of adjacent sections"
+      },
+      {
+        "object": "shape_19",
+        "part": 5,
+        "region_id": "shape_19_region_0",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 5 appears to be a small, flat, and non-interactive element that lacks any protruding features or functional components, making it incapable of providing any affordance or interaction for the user"
+      },
+      {
+        "object": "shape_19",
+        "part": 6,
+        "region_id": "shape_19_region_6",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "attack",
+        "justification": "Part 6 features a sharp, pointed tip positioned prominently atop the head like a weaponized spike designed for striking enemies during combat encounters unlike its rounded counterparts which serve defensive functions such as protection against projectiles while maintaining structural integrity under pressure conditions typical in battle scenarios involving physical confrontations between characters within game environments where strategic positioning plays crucial"
+      },
+      {
+        "object": "shape_19",
+        "part": 7,
+        "region_id": "shape_19_region_3",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The pointed protrusion lacks any discernible feature suggesting interaction like gripping or pushing compared to the more substantial body sections of the creature model"
+      },
+      {
+        "object": "shape_19",
+        "part": 8,
+        "region_id": "shape_19_region_8",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 8 appears to be a smooth, flat surface without any protrusions or features that could potentially be used or interacted with, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_2",
+        "part": 1,
+        "region_id": "shape_2_region_21",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part 1 has multiple long limbs extending outward in various directions while remaining connected at its base; unlike most of which are thin rods meant for grasping objects like sticks or pencils, these thicker arms suggest stability rather than manipulation\u2014making them ideal as anchors holding something upright against gravity without needing external support structures such as legs alone"
+      },
+      {
+        "object": "shape_2",
+        "part": 2,
+        "region_id": "shape_2_region_18",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "Its broad base suggests stability for attachment compared to the more pointed projections of the surrounding structures"
+      },
+      {
+        "object": "shape_2",
+        "part": 3,
+        "region_id": "shape_2_region_0",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 3 appears to be a simple, unadorned cylindrical element without any protrusions or features that would suggest it serves a specific function or purpose, unlike the other numbered parts which have distinct shapes or attachments"
+      },
+      {
+        "object": "shape_2",
+        "part": 4,
+        "region_id": "shape_2_region_7",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "attack",
+        "justification": "Part 4 appears as a thick, blunt club-like appendage positioned at eye level for striking; unlike slender spikes meant for piercing or thin tendrils designed for grasping, its robust form suggests delivering forceful blows rather than delicate manipulation"
+      },
+      {
+        "object": "shape_2",
+        "part": 5,
+        "region_id": "shape_2_region_2",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a smooth protrusion without any discernible features suggesting interaction like gripping or pushing compared to some of the spiky elements"
+      },
+      {
+        "object": "shape_2",
+        "part": 6,
+        "region_id": "shape_2_region_15",
+        "n_parts": 8,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 6 appears to be a simple, flat, non-structured element without any protrusions or features that would allow it to interact with or be used for any purpose, unlike the other numbered parts which have distinct shapes or structures that suggest specific functions or uses"
+      },
+      {
+        "object": "shape_2",
+        "part": 7,
+        "region_id": "shape_2_region_16",
+        "n_parts": 8,
+        "model": "qwen3.5-4b",
+        "label": "attack",
+        "justification": "Part 7 appears as a sharp spike protruding directly upward from the main body\u2019s surface, suggesting its primary function involves piercing or striking rather than grasping, balancing, or supporting like the broader limbs seen elsewhere; unlike any of these functional appendages which are more robustly shaped for interaction\u2014such as gripping or stabil"
+      },
+      {
+        "object": "shape_2",
+        "part": 8,
+        "region_id": "shape_2_region_5",
+        "n_parts": 8,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a small protrusion without any discernible functional feature like gripping surface or attachment point compared to the others"
+      },
+      {
+        "object": "shape_20",
+        "part": 1,
+        "region_id": "shape_20_region_26",
+        "n_parts": 14,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 1 appears to be a smooth, featureless surface without any protrusions or openings that could potentially serve as an affordance for interaction or manipulation"
+      },
+      {
+        "object": "shape_20",
+        "part": 2,
+        "region_id": "shape_20_region_25",
+        "n_parts": 14,
+        "model": "qwen3.5-4b",
+        "label": "cover",
+        "justification": "Part 2 has a broad, flat top surface positioned above all others like a cap designed for protection rather than interaction; unlike its leg-like counterparts below which invite grasping by their rounded ends, this uppermost element\u2019s expansive form suggests shielding instead of manipulation"
+      },
+      {
+        "object": "shape_20",
+        "part": 3,
+        "region_id": "shape_20_region_20",
+        "n_parts": 14,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "Its broad base provides a stable foundation for holding up structures above it"
+      },
+      {
+        "object": "shape_20",
+        "part": 4,
+        "region_id": "shape_20_region_10",
+        "n_parts": 14,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 4 appears to be a simple, flat, and unadorned surface without any protrusions or features that would suggest it has an inherent function or purpose, unlike the other numbered parts which have distinct shapes or structures that imply specific uses or interactions"
+      },
+      {
+        "object": "shape_20",
+        "part": 5,
+        "region_id": "shape_20_region_8",
+        "n_parts": 14,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 5 appears as a smooth, rounded protrusion without any visible texture, handle-like structure, or functional indentation suggesting interaction; unlike surrounding elements such as tubes or knobs designed for grasping or pouring, its form suggests purely decorative integration into the base of the overall assembly"
+      },
+      {
+        "object": "shape_20",
+        "part": 6,
+        "region_id": "shape_20_region_5",
+        "n_parts": 14,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a solid base structure without any discernible features suggesting interaction like grasping or manipulation in contrast to some of the more distinct appendages shown elsewhere"
+      },
+      {
+        "object": "shape_20",
+        "part": 7,
+        "region_id": "shape_20_region_21",
+        "n_parts": 14,
+        "model": "molmo2-4b",
+        "label": "assist_breathing",
+        "justification": "The elongated, tube-like structure of part 7, positioned near the head, suggests a respiratory function, likely designed to aid in breathing, unlike the other parts which appear to serve different purposes"
+      },
+      {
+        "object": "shape_20",
+        "part": 8,
+        "region_id": "shape_20_region_4",
+        "n_parts": 14,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 8 appears as a small, flat-topped cylinder tucked between larger limbs without any protruding features like knobs or ridges typically associated with functional interaction points in similar designs; its smooth surface suggests no intended tactile engagement compared to more complexly shaped adjacent elements such as those resembling handles or grips elsewhere"
+      },
+      {
+        "object": "shape_20",
+        "part": 9,
+        "region_id": "shape_20_region_1",
+        "n_parts": 14,
+        "model": "gemma4-e4b",
+        "label": "assist_breathing",
+        "justification": "Its projecting structure suggests a function related to airflow interaction compared to the more bulbous or anchoring shapes of surrounding components"
+      },
+      {
+        "object": "shape_20",
+        "part": 10,
+        "region_id": "shape_20_region_0",
+        "n_parts": 14,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 10 appears to be a small, solid, non-extendable component without any visible openings or protrusions that could serve as a functional element or interface, unlike the other numbered parts which have distinct shapes or features that suggest specific purposes or interactions"
+      },
+      {
+        "object": "shape_20",
+        "part": 11,
+        "region_id": "shape_20_region_6",
+        "n_parts": 14,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 13 has a smooth, rounded top surface designed for placing objects flatly without slipping; unlike the tubular stem of part 7 which guides insertion into holes, its broad face encourages horizontal alignment rather than vertical placement"
+      },
+      {
+        "object": "shape_20",
+        "part": 12,
+        "region_id": "shape_20_region_13",
+        "n_parts": 14,
+        "model": "gemma4-e4b",
+        "label": "assist_breathing",
+        "justification": "The structure appears positioned near openings suggesting interaction for gas exchange compared to surrounding components which seem more structural or supportive"
+      },
+      {
+        "object": "shape_20",
+        "part": 13,
+        "region_id": "shape_20_region_18",
+        "n_parts": 14,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 13 appears to be a small, solid, non-extendable nub without any visible opening or functional feature, unlike the other numbered parts which have distinct shapes or openings"
+      },
+      {
+        "object": "shape_20",
+        "part": 14,
+        "region_id": "shape_20_region_2",
+        "n_parts": 14,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 13 appears as a small protrusion without any discernible functional features like openings for insertion or attachment points; its smooth surface suggests no clear purpose beyond being decorative rather than serving a practical role within the structure\u2019s design compared to more complexly shaped elements such as those resembling tubes or sockets elsewhere in the figure"
+      },
+      {
+        "object": "shape_21",
+        "part": 1,
+        "region_id": "shape_21_region_3",
+        "n_parts": 1,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The complex organic form lacks any discernible features suggesting interaction like gripping points or functional openings for manipulation in its current state"
+      },
+      {
+        "object": "shape_22",
+        "part": 1,
+        "region_id": "shape_22_region_9",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The topmost section appears to be a smooth, flat surface without any protrusions or features that would allow for grasping or manipulation, unlike the other numbered parts which have handles or textured surfaces"
+      },
+      {
+        "object": "shape_22",
+        "part": 2,
+        "region_id": "shape_22_region_2",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "cover",
+        "justification": "Part two has a smooth dome-shaped top surface without any handles like its neighbors do; therefore we can assume it was designed for covering rather than holding onto as well since there are no protrusions which would make gripping easier compared to others around them who have distinct features such as curved edges making their use more functional towards carrying things"
+      },
+      {
+        "object": "shape_22",
+        "part": 3,
+        "region_id": "shape_22_region_5",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "Its wide, bowl-like base suggests its primary function is holding something inside of it"
+      },
+      {
+        "object": "shape_22",
+        "part": 4,
+        "region_id": "shape_22_region_4",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 4 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have handles or raised elements"
+      },
+      {
+        "object": "shape_22",
+        "part": 5,
+        "region_id": "shape_22_region_6",
+        "n_parts": 7,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part five appears as a flat disc without any protruding features like handles or spouts visible in its current orientation; unlike others which show distinct functional shapes such as curved grips for holding or domes suggesting containment of liquid contents within their respective positions relative to adjacent layers forming cohesive units designed around utility rather than standalone interaction points due"
+      },
+      {
+        "object": "shape_22",
+        "part": 6,
+        "region_id": "shape_22_region_0",
+        "n_parts": 7,
+        "model": "gemma4-e4b",
+        "label": "hold",
+        "justification": "The looped structure of the element suggests grasping for carrying purposes unlike the flat surfaces of the stacked components"
+      },
+      {
+        "object": "shape_22",
+        "part": 7,
+        "region_id": "shape_22_region_1",
+        "n_parts": 7,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The seventh part appears to be a solid, unbroken surface without any protrusions or openings, making it impossible for a child to grasp or interact with it in the same way as the other numbered parts"
+      },
+      {
+        "object": "shape_23",
+        "part": 1,
+        "region_id": "shape_23_region_8",
+        "n_parts": 6,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 1 forms the main body of the figure but lacks any protrusions like legs for standing or appendages for grasping; its smooth surface offers no tactile cues suggesting manipulation functions found in distinct limbs such as those at positions two through six"
+      },
+      {
+        "object": "shape_23",
+        "part": 2,
+        "region_id": "shape_23_region_7",
+        "n_parts": 6,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "The broad base provides a stable foundation for supporting weight against gravity unlike any of the upper features"
+      },
+      {
+        "object": "shape_23",
+        "part": 3,
+        "region_id": "shape_23_region_4",
+        "n_parts": 6,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The crown-like structure at the top of the object appears to be a decorative element without any functional purpose or interactive component, unlike the other numbered parts that seem to have distinct shapes or features that could potentially be used or manipulated"
+      },
+      {
+        "object": "shape_23",
+        "part": 4,
+        "region_id": "shape_23_region_0",
+        "n_parts": 6,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 5 appears as a small protrusion at the tip of the creature\u2019s long neck without any visible functional features like eyes, mouthparts, or attachment points for tools; unlike its larger body sections which suggest structural support or sensory input areas through their size and placement near potential interaction zones such as limbs or face regions where"
+      },
+      {
+        "object": "shape_23",
+        "part": 5,
+        "region_id": "shape_23_region_2",
+        "n_parts": 6,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "There are no visible features suggesting interaction for any of the labeled areas in relation to external forces like pushing or grasping"
+      },
+      {
+        "object": "shape_23",
+        "part": 6,
+        "region_id": "shape_23_region_1",
+        "n_parts": 6,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The circular, hollow center of part 6 appears to be an empty space without any visible features or protrusions that could serve as an affordance for interaction or manipulation"
+      },
+      {
+        "object": "shape_26",
+        "part": 1,
+        "region_id": "shape_26_region_61",
+        "n_parts": 3,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part 1\u2019s large, smooth central mass provides stability by acting as a counterweight against the spiky outer shell; unlike its jagged periphery which invites grasping through friction, this solid core resists movement once engaged"
+      },
+      {
+        "object": "shape_26",
+        "part": 2,
+        "region_id": "shape_26_region_60",
+        "n_parts": 3,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "The central mass has smooth boundaries suggesting its function as something held within by the surrounding structure"
+      },
+      {
+        "object": "shape_26",
+        "part": 3,
+        "region_id": "shape_26_region_59",
+        "n_parts": 3,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The third part appears to be a solid, unbroken piece without any openings or protrusions, making it impossible for anything to enter or exit, unlike the other parts which have visible openings or extensions"
+      },
+      {
+        "object": "shape_28",
+        "part": 1,
+        "region_id": "shape_28_region_25",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "contain",
+        "justification": "Part 1\u2019s large central placement within the structure suggests its role as a core component designed for holding space rather than interacting externally like the protruding appendages of the surrounding elements"
+      },
+      {
+        "object": "shape_28",
+        "part": 2,
+        "region_id": "shape_28_region_17",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small circular structure appears as merely an attached label rather than having any discernible functional interaction point like the others do"
+      },
+      {
+        "object": "shape_28",
+        "part": 3,
+        "region_id": "shape_28_region_1",
+        "n_parts": 5,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The green circular object in the bottom right appears to be a solid, flat piece without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_28",
+        "part": 4,
+        "region_id": "shape_28_region_26",
+        "n_parts": 5,
+        "model": "qwen3.5-4b",
+        "label": "attach",
+        "justification": "Part four features a tapered stem design resembling a hook or peg which provides mechanical interlocking capability unlike the smooth surfaces of surrounding components designed for contact rather than connection"
+      },
+      {
+        "object": "shape_28",
+        "part": 5,
+        "region_id": "shape_28_region_3",
+        "n_parts": 5,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small appendage at the bottom lacks any discernible feature suggesting interaction like attachment points for manipulation compared to the others"
+      },
+      {
+        "object": "shape_29",
+        "part": 1,
+        "region_id": "shape_29_region_42",
+        "n_parts": 13,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 1 appears to be a small, solid, flat piece without any protrusions or openings, making it impossible for anything to interact with or be affected by it in any way"
+      },
+      {
+        "object": "shape_29",
+        "part": 2,
+        "region_id": "shape_29_region_43",
+        "n_parts": 13,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 2 appears as a flat surface within the larger orange structure labeled '1', lacking any protrusions, handles, buttons, or distinct functional features like legs or antennae seen in other components such as those at positions 5-9; its smooth integration into the main body suggests no independent interaction capability compared to more"
+      },
+      {
+        "object": "shape_29",
+        "part": 3,
+        "region_id": "shape_29_region_7",
+        "n_parts": 13,
+        "model": "gemma4-e4b",
+        "label": "contain",
+        "justification": "It forms the central cavity within which all other internal components are situated"
+      },
+      {
+        "object": "shape_29",
+        "part": 4,
+        "region_id": "shape_29_region_23",
+        "n_parts": 13,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 4 appears to be a solid, flat surface without any protrusions or openings, unlike the other numbered parts which have various shapes or features that could potentially serve as handles, grips, or other functional elements"
+      },
+      {
+        "object": "shape_29",
+        "part": 5,
+        "region_id": "shape_29_region_0",
+        "n_parts": 13,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 5 appears as a solid, featureless leg-like structure without any visible interactive elements such as buttons, levers, or textured surfaces found in other components like the protruding knobs or antennae; its smooth form suggests purely structural support rather than functional interaction"
+      },
+      {
+        "object": "shape_29",
+        "part": 6,
+        "region_id": "shape_29_region_19",
+        "n_parts": 13,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "Its sturdy base structure suggests stability for attachment compared to more mobile appendages"
+      },
+      {
+        "object": "shape_29",
+        "part": 7,
+        "region_id": "shape_29_region_1",
+        "n_parts": 13,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 7 appears to be a simple, solid-colored cylinder without any protrusions or features that would suggest it has an inherent function or purpose, unlike the other numbered parts which have distinct shapes or attachments"
+      },
+      {
+        "object": "shape_29",
+        "part": 8,
+        "region_id": "shape_29_region_39",
+        "n_parts": 13,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 8 appears as a smooth, spherical protrusion without any visible texture or functional feature like legs for support or appendages for interaction; unlike its counterparts which may suggest utility through form such as feet or antennae-like structures designed for sensory input or movement assistance"
+      },
+      {
+        "object": "shape_29",
+        "part": 9,
+        "region_id": "shape_29_region_2",
+        "n_parts": 13,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "Its low-lying, stable base suggests a function for grounding or support compared to more mobile appendages or external structures"
+      },
+      {
+        "object": "shape_29",
+        "part": 10,
+        "region_id": "shape_29_region_25",
+        "n_parts": 13,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 10 appears to be a small, round, hollow ball without any visible features or protrusions that could serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures that suggest potential uses"
+      },
+      {
+        "object": "shape_29",
+        "part": 11,
+        "region_id": "shape_29_region_45",
+        "n_parts": 13,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 10 appears as a smooth, spherical protrusion without any visible texture or functional feature like legs for support or appendages for interaction; unlike its neighbors which may suggest utility through form variation such as stems or irregular shapes indicating grip points"
+      },
+      {
+        "object": "shape_29",
+        "part": 12,
+        "region_id": "shape_29_region_26",
+        "n_parts": 13,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "It appears as a small sphere attached by a thin projection without any clear functional interface like those seen in other labeled components"
+      },
+      {
+        "object": "shape_29",
+        "part": 13,
+        "region_id": "shape_29_region_44",
+        "n_parts": 13,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The 13th part appears to be a solid, unmarked surface without any visible features or protrusions, unlike the other numbered parts which have distinct shapes or textures"
+      },
+      {
+        "object": "shape_32",
+        "part": 1,
+        "region_id": "shape_32_region_48",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "button",
+        "justification": "Part 1 appears as a flat circular disc embedded into the surface of its housing unit in such a way that suggests pressability rather than protrusion like knobs; unlike most surrounding elements which are either raised handles/levers or decorative bumps, this element\u2019s recessed nature implies interaction through depression instead of rotation or pulling\u2014"
+      },
+      {
+        "object": "shape_32",
+        "part": 2,
+        "region_id": "shape_32_region_61",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The curved structure of this component appears purely structural without any immediately apparent functional interaction points like handles or attachment surfaces seen elsewhere in the model"
+      },
+      {
+        "object": "shape_32",
+        "part": 3,
+        "region_id": "shape_32_region_21",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 3 appears to be a simple, unadorned green element that lacks any distinctive features or protrusions that would suggest it has a specific function or purpose, unlike the other numbered parts which have unique shapes or designs"
+      },
+      {
+        "object": "shape_32",
+        "part": 4,
+        "region_id": "shape_32_region_0",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "anchor",
+        "justification": "Part four features a broad, flat circular base positioned at ground level which provides stability for standing upright while its rounded top allows easy gripping by hands; unlike most of these toy pieces designed primarily as handles or connectors due to their smaller size and lack of functional surfaces like holes or protrusions found elsewhere in similar components within playsets"
+      },
+      {
+        "object": "shape_32",
+        "part": 5,
+        "region_id": "shape_32_region_30",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "The base of the structure provides a stable point for support against gravity compared to all other components which are more mobile in relation to the main body"
+      },
+      {
+        "object": "shape_32",
+        "part": 6,
+        "region_id": "shape_32_region_20",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 6 appears to be a small, solid, rounded element positioned at the bottom of the object, likely serving as a decorative or structural feature rather than a functional component with an inherent affordance"
+      },
+      {
+        "object": "shape_32",
+        "part": 7,
+        "region_id": "shape_32_region_64",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "button",
+        "justification": "Part seven features a distinct circular protrusion rising directly off its surface in a way typical of tactile push mechanisms designed for user interaction rather than structural support like legs or decorative elements such as antennae"
+      },
+      {
+        "object": "shape_32",
+        "part": 8,
+        "region_id": "shape_32_region_31",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "The curved structure of the component provides a stable base for holding up another section of the overall form"
+      },
+      {
+        "object": "shape_32",
+        "part": 9,
+        "region_id": "shape_32_region_50",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The round, ball-like shape of part 9 appears to be a simple, non-functional element without any apparent purpose or interaction with other parts, unlike the more complex and interconnected components of the rest of the object"
+      },
+      {
+        "object": "shape_32",
+        "part": 10,
+        "region_id": "shape_32_region_32",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "button",
+        "justification": "Part 12 appears as small protrusions rather than flat surfaces for pressing; unlike most labeled areas which are smooth contours designed for gripping or sliding, these raised bumps suggest tactile feedback without requiring full surface contact typical of buttons"
+      },
+      {
+        "object": "shape_32",
+        "part": 11,
+        "region_id": "shape_32_region_22",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "support",
+        "justification": "It functions as a vertical leg structure providing stability for the main body of the figure"
+      },
+      {
+        "object": "shape_32",
+        "part": 12,
+        "region_id": "shape_32_region_2",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The small, round, purple ball at the bottom right appears to be a decorative element without any functional purpose or interaction, unlike the other numbered parts that seem to serve specific roles or have distinct shapes and materials"
+      },
+      {
+        "object": "shape_32",
+        "part": 13,
+        "region_id": "shape_32_region_1",
+        "n_parts": 15,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 14 appears as small protruding knobs rather than functional components like buttons or levers; its clustered form suggests decorative detail instead of interactive utility compared to surrounding elements such as circular dials or elongated handles designed for manipulation"
+      },
+      {
+        "object": "shape_32",
+        "part": 14,
+        "region_id": "shape_32_region_6",
+        "n_parts": 15,
+        "model": "gemma4-e4b",
+        "label": "attach",
+        "justification": "The small protrusions around the joint area suggest points where another component could be fastened onto the main structure of the limb segment"
+      },
+      {
+        "object": "shape_32",
+        "part": 15,
+        "region_id": "shape_32_region_7",
+        "n_parts": 15,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The object appears to be a simple, unadorned piece of wood or stone with no visible features or attachments that would provide any functional or interactive affordances"
+      },
+      {
+        "object": "shape_38",
+        "part": 1,
+        "region_id": "shape_38_region_3",
+        "n_parts": 2,
+        "model": "qwen3.5-4b",
+        "label": "none",
+        "justification": "Part 1 appears as a smooth, solid surface without any protrusions, handles, buttons, or distinct functional features like holes for gripping; its form suggests purely decorative value rather than utility compared to potential interactive elements elsewhere in such objects"
+      },
+      {
+        "object": "shape_38",
+        "part": 2,
+        "region_id": "shape_38_region_1",
+        "n_parts": 2,
+        "model": "gemma4-e4b",
+        "label": "anchor",
+        "justification": "The small protrusion at the base suggests a point for securing something else onto its surface"
+      },
+      {
+        "object": "shape_40",
+        "part": 1,
+        "region_id": "shape_40_region_16",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "The first part appears to be a solid, unadorned base without any protrusions or features that would suggest it could be interacted with or manipulated in any way"
+      },
+      {
+        "object": "shape_40",
+        "part": 2,
+        "region_id": "shape_40_region_12",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 2 appears as a small protrusion at the top of its surface area where others are flat; unlike surrounding elements which sit flush against their base surfaces without any raised features designed for alignment purposes like tabs or slots found elsewhere in similar designs across various objects shown here today including those labeled numbers three through eleven plus number two"
+      },
+      {
+        "object": "shape_40",
+        "part": 3,
+        "region_id": "shape_40_region_1",
+        "n_parts": 11,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "Part three appears as a small square embedded in the main body without any discernible interactive features like handles or distinct protrusions seen elsewhere"
+      },
+      {
+        "object": "shape_40",
+        "part": 4,
+        "region_id": "shape_40_region_5",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 4 appears to be a solid, unadorned section of the object without any visible features or protrusions that would suggest it has an interactive or functional purpose, unlike the other numbered parts which have distinct shapes or elements"
+      },
+      {
+        "object": "shape_40",
+        "part": 5,
+        "region_id": "shape_40_region_18",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 5 appears as a flat rectangular surface positioned within the orange body section; its planar geometry suggests functionality for alignment rather than manipulation like buttons or structural support of limbs seen elsewhere in the figure\u2019s design"
+      },
+      {
+        "object": "shape_40",
+        "part": 6,
+        "region_id": "shape_40_region_3",
+        "n_parts": 11,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The central location of its marking within the main body suggests no distinct interactive function compared to surrounding elements"
+      },
+      {
+        "object": "shape_40",
+        "part": 7,
+        "region_id": "shape_40_region_7",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 7 appears to be a solid, unadorned surface without any protrusions, textures, or features that would typically provide a means for interaction or manipulation, unlike the other numbered parts which likely have distinct shapes or elements that allow for engagement"
+      },
+      {
+        "object": "shape_40",
+        "part": 8,
+        "region_id": "shape_40_region_2",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "align",
+        "justification": "Part 8 appears as a small circular element positioned centrally within the orange section of the figure; its round form suggests rotational symmetry suitable for alignment tasks like dialing numbers into place rather than gripping or pressing down due to lack of protrusion features seen elsewhere in similar positions across all elements shown here without explicit functional context provided beyond"
+      },
+      {
+        "object": "shape_40",
+        "part": 9,
+        "region_id": "shape_40_region_8",
+        "n_parts": 11,
+        "model": "gemma4-e4b",
+        "label": "none",
+        "justification": "The small circular feature lacks any discernible features suggesting interaction compared to the surrounding elements"
+      },
+      {
+        "object": "shape_40",
+        "part": 10,
+        "region_id": "shape_40_region_9",
+        "n_parts": 11,
+        "model": "molmo2-4b",
+        "label": "none",
+        "justification": "Part 10 appears to be a solid, unadorned surface without any visible features or protrusions that could serve as handles, grips, or other interactive elements, making it functionally inert compared to the other numbered parts"
+      },
+      {
+        "object": "shape_40",
+        "part": 11,
+        "region_id": "shape_40_region_4",
+        "n_parts": 11,
+        "model": "qwen3.5-4b",
+        "label": "button",
+        "justification": "Part 10 has rounded corners like button buttons do while others are square shaped; its placement in center of orange area suggests interactive function similar to keypad layout found on devices such as phones or calculators where users press circular elements for input purposes rather than sliding them across surfaces which would be more appropriate if they were rectangular sliders"
+      }
+    ]
+  ]
+}
