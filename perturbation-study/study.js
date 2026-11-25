@@ -1,13 +1,14 @@
-// Perturbation-recognition study: every image of every perturbed object (stimuli.json, built by
-// nvrd/affordance-test/code/study_assets/build_perturbation_study.py) shown once, in a random order; for each the
-// participant picks what the object is for from N_OPTIONS tasks (the real one + random others, shuffled per
-// trial) or "I can't tell". No going back: answers are first impressions. One row per participant is saved to
-// the same Google Sheet web app as the affordance study, with results.study = "perturbation_recognition".
-// Link: index.html?ID=<name or initials>
+// Perturbation-threshold study: for each object x perturbation (stimuli.json, built by
+// nvrd/affordance-test/code/study_assets/build_perturbation_study.py), the participant is told the object's
+// function and sees all six versions side by side, numbered 0 (the original) to 5 (the strongest perturbation).
+// They pick the highest-numbered version they would still recognise as a tool for that function, or "None"
+// if not even version 0 is. Trials come in a random order; the six images are always shown 0-5 in order.
+// One row per participant is saved to the shared Google Sheet web app with results.study =
+// "perturbation_recognition" (routed to the "perturbation" tab). Link: index.html?ID=<name or initials>
 const SHEET_URL =
   "https://script.google.com/macros/s/AKfycbywIgg7tMNJVidcxyG25I9tU15H0CYPm_BQvs_DGCQIvBmGtjBsiIClNdRVg9ZNy9W5Rw/exec";
-const N_OPTIONS = 10; // the real task + 9 distractors
-const CANT_TELL = "I can't tell";
+const LEVELS = [0, 1, 2, 3, 4, 5];
+const NONE = "None (not even 0)";
 
 function shuffle(a) {
   const b = a.slice();
@@ -18,15 +19,24 @@ function shuffle(a) {
   return b;
 }
 
-function capitalize(s) {
-  return s.charAt(0).toUpperCase() + s.slice(1);
-}
-
 (async function () {
   const data = await fetch("stimuli.json").then((r) => r.json());
   const participant = new URLSearchParams(window.location.search).get("ID") || "";
-  const allTasks = Object.values(data.tasks);
-  const order = shuffle(data.stimuli);
+
+  // one trial per object x perturbation, with the original as level 0 of every sequence
+  const byObject = {};
+  data.stimuli.forEach(function (s) {
+    (byObject[s.object] = byObject[s.object] || { task: s.task, files: {} }).files[`${s.perturbation}_${s.level}`] = s.file;
+  });
+  const sequences = [];
+  Object.keys(byObject).forEach(function (o) {
+    const ob = byObject[o];
+    ["deform", "add", "remove", "style", "texture"].forEach(function (p) {
+      const files = LEVELS.map((k) => (k === 0 ? ob.files["original_0"] : ob.files[`${p}_${k}`]));
+      if (files.every(Boolean)) sequences.push({ object: o, task: ob.task, perturbation: p, files: files });
+    });
+  });
+  const order = shuffle(sequences);
 
   const jsPsych = initJsPsych({});
   const timeline = [];
@@ -35,40 +45,33 @@ function capitalize(s) {
     type: jsPsychHtmlButtonResponse,
     stimulus: `
       <div class="intro">
-        <h2>What is this object for?</h2>
-        <p>You'll see ${order.length} pictures of objects, one at a time. Some are unusual versions of everyday
-        tools, and some have been changed: bent out of shape, given extra parts, partly erased, drawn in a
-        different style, or covered in a different surface.</p>
-        <p>For each picture, pick what you think the object is <strong>used for</strong>. If you really can't
-        tell, choose <em>${CANT_TELL}</em>.</p>
-        <p>Go with your first impression; there's no going back. It takes about 10 minutes.</p>
+        <h2>How far can an object change and still be recognisable?</h2>
+        <p>You'll see ${order.length} sets of pictures. In each set we tell you what the object is for, and show six
+        versions of it side by side, numbered <strong>0</strong> (the original) to <strong>5</strong>. Each version
+        is changed a bit more than the one before: bent out of shape, given extra parts, partly erased, drawn in a
+        rougher style, or covered in a different surface.</p>
+        <p>Pick the <strong>highest-numbered version you would still recognise as a tool for that purpose</strong>.
+        If you wouldn't recognise even version 0, choose <em>${NONE}</em>.</p>
+        <p>Go with your first impression. It takes about 10 minutes.</p>
       </div>`,
     choices: ["Start"],
   });
 
-  order.forEach(function (s, i) {
-    const distractors = shuffle(allTasks.filter((t) => t !== s.task)).slice(0, N_OPTIONS - 1);
-    const options = shuffle([s.task].concat(distractors));
-    const labels = options.map(capitalize).concat([CANT_TELL]);
+  order.forEach(function (sq, i) {
+    const tiles = sq.files.map((f, k) => `
+      <div class="tile"><div class="tile-num">${k}</div><img src="${f}" alt="version ${k}" /></div>`).join("");
     timeline.push({
       type: jsPsychHtmlButtonResponse,
       stimulus: `
-        <div class="progress">Picture ${i + 1} of ${order.length}</div>
-        <div class="stimulus-frame"><img src="${s.file}" alt="object" /></div>
-        <p class="question">What is this object used for?</p>`,
-      choices: labels,
-      button_html: labels.map((l) =>
-        l === CANT_TELL
-          ? '<span class="cant-tell"><button class="jspsych-btn">%choice%</button></span>'
-          : '<button class="jspsych-btn">%choice%</button>'
-      ),
-      data: { stimulus_file: s.file, object: s.object, task: s.task, perturbation: s.perturbation,
-              level: s.level, options: options, position: i + 1 },
+        <div class="progress">Set ${i + 1} of ${order.length}</div>
+        <p class="task-line">This object is for: <strong>${sq.task}</strong></p>
+        <div class="tiles">${tiles}</div>
+        <p class="question">What is the highest-numbered version you would still recognise as a tool for
+        ${sq.task}?</p>`,
+      choices: LEVELS.map(String).concat([NONE]),
+      data: { object: sq.object, task: sq.task, perturbation: sq.perturbation, position: i + 1, is_item: true },
       on_finish: function (d) {
-        const choice = d.response === options.length ? CANT_TELL : options[d.response];
-        d.choice = choice;
-        d.cant_tell = choice === CANT_TELL;
-        d.correct = choice === s.task;
+        d.last_recognisable = d.response === LEVELS.length ? -1 : LEVELS[d.response];
       },
     });
   });
@@ -88,19 +91,17 @@ function capitalize(s) {
   function submit() {
     if (submitted) return;
     submitted = true;
-    const trials = jsPsych.data.get().filter({}).values()
-      .filter((t) => t.stimulus_file)
-      .map((t) => ({ position: t.position, file: t.stimulus_file, object: t.object, task: t.task,
-                     perturbation: t.perturbation, level: t.level, options: t.options, choice: t.choice,
-                     correct: t.correct, cant_tell: t.cant_tell, rt_ms: t.rt }));
+    const trials = jsPsych.data.get().filter({ is_item: true }).values().map((t) => ({
+      position: t.position, object: t.object, task: t.task, perturbation: t.perturbation,
+      last_recognisable: t.last_recognisable, rt_ms: t.rt,
+    }));
     const results = {
       study: "perturbation_recognition",
+      format: "threshold",  // -1 = not even the original was recognisable
       participant_id: participant,
-      n_options: N_OPTIONS,
       start_time: new Date(jsPsych.getStartTime()).toISOString(),
       end_time: new Date().toISOString(),
       total_duration_ms: jsPsych.getTotalTime(),
-      n_correct: trials.filter((t) => t.correct).length,
       trials: trials,
     };
     const status = () => document.getElementById("save-status");

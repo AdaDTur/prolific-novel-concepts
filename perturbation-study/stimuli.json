@@ -27,10 +27,193 @@
     "sharpen_pencil": "sharpening a pencil",
     "crack_nuts": "cracking open walnut shells",
     "dispense_tape": "tearing off a strip of adhesive tape",
+    "strip_wire": "stripping the insulation off an electrical wire",
     "hammer_nail": "hammering a nail into a wooden board",
     "pump_air": "pumping air into a bicycle tire"
   },
   "stimuli": [
+    {
+      "file": "images/comb_hair__original__0.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/comb_hair__deform__1.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/comb_hair__deform__2.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/comb_hair__deform__3.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/comb_hair__deform__4.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/comb_hair__deform__5.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/comb_hair__add__1.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/comb_hair__add__2.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/comb_hair__add__3.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/comb_hair__add__4.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/comb_hair__add__5.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/comb_hair__remove__1.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/comb_hair__remove__2.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/comb_hair__remove__3.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/comb_hair__remove__4.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/comb_hair__remove__5.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/comb_hair__style__1.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/comb_hair__style__2.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/comb_hair__style__3.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/comb_hair__style__4.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/comb_hair__style__5.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/comb_hair__texture__1.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/comb_hair__texture__2.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/comb_hair__texture__3.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/comb_hair__texture__4.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/comb_hair__texture__5.jpg",
+      "object": "comb_hair",
+      "task": "detangling and combing hair",
+      "perturbation": "texture",
+      "level": 5
+    },
     {
       "file": "images/cut_food__original__0.jpg",
       "object": "cut_food",
@@ -578,6 +761,552 @@
       "level": 5
     },
     {
+      "file": "images/insert_screw__original__0.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/insert_screw__deform__1.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/insert_screw__deform__2.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/insert_screw__deform__3.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/insert_screw__deform__4.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/insert_screw__deform__5.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/insert_screw__add__1.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/insert_screw__add__2.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/insert_screw__add__3.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/insert_screw__add__4.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/insert_screw__add__5.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/insert_screw__remove__1.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/insert_screw__remove__2.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/insert_screw__remove__3.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/insert_screw__remove__4.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/insert_screw__remove__5.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/insert_screw__style__1.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/insert_screw__style__2.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/insert_screw__style__3.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/insert_screw__style__4.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/insert_screw__style__5.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/insert_screw__texture__1.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/insert_screw__texture__2.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/insert_screw__texture__3.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/insert_screw__texture__4.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/insert_screw__texture__5.jpg",
+      "object": "insert_screw",
+      "task": "driving a screw into a piece of wood",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/peel_vegetable__original__0.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/peel_vegetable__deform__1.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/peel_vegetable__deform__2.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/peel_vegetable__deform__3.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/peel_vegetable__deform__4.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/peel_vegetable__deform__5.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/peel_vegetable__add__1.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/peel_vegetable__add__2.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/peel_vegetable__add__3.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/peel_vegetable__add__4.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/peel_vegetable__add__5.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/peel_vegetable__remove__1.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/peel_vegetable__remove__2.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/peel_vegetable__remove__3.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/peel_vegetable__remove__4.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/peel_vegetable__remove__5.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/peel_vegetable__style__1.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/peel_vegetable__style__2.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/peel_vegetable__style__3.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/peel_vegetable__style__4.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/peel_vegetable__style__5.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/peel_vegetable__texture__1.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/peel_vegetable__texture__2.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/peel_vegetable__texture__3.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/peel_vegetable__texture__4.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/peel_vegetable__texture__5.jpg",
+      "object": "peel_vegetable",
+      "task": "peeling the skin off a potato",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/roll_dough__original__0.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/roll_dough__deform__1.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/roll_dough__deform__2.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/roll_dough__deform__3.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/roll_dough__deform__4.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/roll_dough__deform__5.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/roll_dough__add__1.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/roll_dough__add__2.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/roll_dough__add__3.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/roll_dough__add__4.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/roll_dough__add__5.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/roll_dough__remove__1.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/roll_dough__remove__2.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/roll_dough__remove__3.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/roll_dough__remove__4.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/roll_dough__remove__5.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/roll_dough__style__1.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/roll_dough__style__2.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/roll_dough__style__3.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/roll_dough__style__4.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/roll_dough__style__5.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/roll_dough__texture__1.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/roll_dough__texture__2.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/roll_dough__texture__3.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/roll_dough__texture__4.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/roll_dough__texture__5.jpg",
+      "object": "roll_dough",
+      "task": "rolling out dough flat",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
       "file": "images/scoop_stir_soup__original__0.jpg",
       "object": "scoop_stir_soup",
       "task": "scooping and stirring soup",
@@ -756,6 +1485,552 @@
       "file": "images/scoop_stir_soup__texture__5.jpg",
       "object": "scoop_stir_soup",
       "task": "scooping and stirring soup",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/squeeze_juice__original__0.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/squeeze_juice__deform__1.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/squeeze_juice__deform__2.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/squeeze_juice__deform__3.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/squeeze_juice__deform__4.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/squeeze_juice__deform__5.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/squeeze_juice__add__1.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/squeeze_juice__add__2.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/squeeze_juice__add__3.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/squeeze_juice__add__4.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/squeeze_juice__add__5.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/squeeze_juice__remove__1.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/squeeze_juice__remove__2.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/squeeze_juice__remove__3.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/squeeze_juice__remove__4.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/squeeze_juice__remove__5.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/squeeze_juice__style__1.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/squeeze_juice__style__2.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/squeeze_juice__style__3.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/squeeze_juice__style__4.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/squeeze_juice__style__5.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/squeeze_juice__texture__1.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/squeeze_juice__texture__2.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/squeeze_juice__texture__3.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/squeeze_juice__texture__4.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/squeeze_juice__texture__5.jpg",
+      "object": "squeeze_juice",
+      "task": "squeezing juice out of a citrus fruit",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/strip_wire__original__0.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/strip_wire__deform__1.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/strip_wire__deform__2.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/strip_wire__deform__3.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/strip_wire__deform__4.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/strip_wire__deform__5.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/strip_wire__add__1.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/strip_wire__add__2.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/strip_wire__add__3.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/strip_wire__add__4.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/strip_wire__add__5.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/strip_wire__remove__1.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/strip_wire__remove__2.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/strip_wire__remove__3.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/strip_wire__remove__4.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/strip_wire__remove__5.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/strip_wire__style__1.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/strip_wire__style__2.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/strip_wire__style__3.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/strip_wire__style__4.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/strip_wire__style__5.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/strip_wire__texture__1.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/strip_wire__texture__2.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/strip_wire__texture__3.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/strip_wire__texture__4.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/strip_wire__texture__5.jpg",
+      "object": "strip_wire",
+      "task": "stripping the insulation off an electrical wire",
+      "perturbation": "texture",
+      "level": 5
+    },
+    {
+      "file": "images/water_plant__original__0.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "original",
+      "level": 0
+    },
+    {
+      "file": "images/water_plant__deform__1.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "deform",
+      "level": 1
+    },
+    {
+      "file": "images/water_plant__deform__2.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "deform",
+      "level": 2
+    },
+    {
+      "file": "images/water_plant__deform__3.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "deform",
+      "level": 3
+    },
+    {
+      "file": "images/water_plant__deform__4.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "deform",
+      "level": 4
+    },
+    {
+      "file": "images/water_plant__deform__5.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "deform",
+      "level": 5
+    },
+    {
+      "file": "images/water_plant__add__1.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "add",
+      "level": 1
+    },
+    {
+      "file": "images/water_plant__add__2.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "add",
+      "level": 2
+    },
+    {
+      "file": "images/water_plant__add__3.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "add",
+      "level": 3
+    },
+    {
+      "file": "images/water_plant__add__4.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "add",
+      "level": 4
+    },
+    {
+      "file": "images/water_plant__add__5.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "add",
+      "level": 5
+    },
+    {
+      "file": "images/water_plant__remove__1.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "remove",
+      "level": 1
+    },
+    {
+      "file": "images/water_plant__remove__2.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "remove",
+      "level": 2
+    },
+    {
+      "file": "images/water_plant__remove__3.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "remove",
+      "level": 3
+    },
+    {
+      "file": "images/water_plant__remove__4.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "remove",
+      "level": 4
+    },
+    {
+      "file": "images/water_plant__remove__5.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "remove",
+      "level": 5
+    },
+    {
+      "file": "images/water_plant__style__1.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "style",
+      "level": 1
+    },
+    {
+      "file": "images/water_plant__style__2.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "style",
+      "level": 2
+    },
+    {
+      "file": "images/water_plant__style__3.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "style",
+      "level": 3
+    },
+    {
+      "file": "images/water_plant__style__4.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "style",
+      "level": 4
+    },
+    {
+      "file": "images/water_plant__style__5.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "style",
+      "level": 5
+    },
+    {
+      "file": "images/water_plant__texture__1.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "texture",
+      "level": 1
+    },
+    {
+      "file": "images/water_plant__texture__2.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "texture",
+      "level": 2
+    },
+    {
+      "file": "images/water_plant__texture__3.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "texture",
+      "level": 3
+    },
+    {
+      "file": "images/water_plant__texture__4.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
+      "perturbation": "texture",
+      "level": 4
+    },
+    {
+      "file": "images/water_plant__texture__5.jpg",
+      "object": "water_plant",
+      "task": "watering a plant",
       "perturbation": "texture",
       "level": 5
     }
