@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Perturbation Review</title>
+  <link href="review.css" rel="stylesheet" type="text/css" />
+  <script src="review.js" defer></script>
+</head>
+<body>
+  <header>
+    <h1>Perturbation review</h1>
+    <p class="sub">Mark each sequence <b>Good</b> or <b>Needs regeneration</b>, tick the problem levels and add a note.
+      Every change saves to the <code>review</code> tab of the response sheet (latest save per sequence wins).</p>
+    <div class="toolbar">
+      <label>Show
+        <select id="filter">
+          <option value="all">all sequences</option>
+          <option value="flagged">only ones the judge flagged</option>
+          <option value="unreviewed">only ones I haven't reviewed</option>
+          <option value="regen">only ones I marked for regeneration</option>
+        </select>
+      </label>
+      <span id="counts"></span>
+    </div>
+  </header>
+  <main id="list"></main>
+</body>
+</html>

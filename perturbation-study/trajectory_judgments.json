@@ -1,0 +1,1214 @@
+{
+  "comb_hair/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same comb-like object and reddish material while progressively reshaping it, on plain white backgrounds with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Overall deformation increases through the sequence, with increasingly twisted handles, warped comb spines, elongated teeth, and sculptural openings."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version shows clearly visible changes in curvature, twisting, proportions, or openings."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly increases shape deformation of the same object without an overall reversal.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "comb_hair/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the original comb and add parts on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added parts accumulate: brush, mirror, spray bottle, dryer, and overhead hood; none disappears in later versions."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version introduces a clearly visible new part relative to the preceding version."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently shows progressive, cumulative part additions to the same comb.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "comb_hair/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1-5 consistently remove parts of the same comb on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed teeth, handle sections, and upper sections do not reappear in later versions."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly removes additional material, ending with only a small fragment."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows valid, monotonic, and visibly progressive part removal from the original comb.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "comb_hair/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same loop-handled comb with artistic style changes, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The sequence moves from realistic texture through smooth stylization and flat illustration to rough brushwork, without returning to a more realistic depiction of the comb."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the surface treatment, outlines, color design, or brushwork."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly stylizes the same comb, progressing from realism toward rough painted marks.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "comb_hair/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same comb on a plain white background with no text, with changes confined to its surface texture."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The leather texture does not weaken at any step; grain and creasing become increasingly pronounced."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        1
+      ],
+      "reason": "Version 1 is nearly identical to version 0, without a clearly visible texture change. Subsequent steps visibly strengthen the leather texture."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence preserves the object and strengthens the leather texture monotonically, but version 1 is too similar to the original to satisfy visible progression.",
+    "ok": false,
+    "bad_levels": [
+      1
+    ]
+  },
+  "cut_food/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1\u20135 deform the same green-handled, purple perforated blade through bending, twisting, and stretching; all retain a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The overall deformation increases from a curved blade and bent handle to an elongated, looping ribbon-like form, without a clear return toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the blade curvature, handle geometry, twisting, or extent of looping."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively increases shape deformation of the same object while preserving the required background and absence of text.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "cut_food/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the original knife-like object while adding parts, on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added parts accumulate throughout the sequence; none visibly disappears in later versions."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version adds a distinct visible component: a perforated basket, a grater/slicer assembly, a clear container, a peeler, and a hinged dicing press."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows clear, cumulative part additions to the same object at every level.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "cut_food/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulating part removal from the same object on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed portions never reappear; the remaining object becomes smaller at every level."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly removes an additional portion, ending with only a small blade fragment."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively removes parts of the original object, leaving roughly 10% at version 5.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "cut_food/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same curved, perforated knife with increasing artistic stylization, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The sequence moves from realistic rendering through simplified illustration to rough outlines and paint smears, without returning to a more realistic depiction."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the rendering, outlines, color treatment, or brushwork."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly degrades the same object's realistic appearance into increasingly abstract artistic treatments.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "cut_food/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions preserve the same knife, shape, and cutouts while shifting its surface toward rattan, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The rattan texture consistently strengthens as the original purple and teal surfaces disappear."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each successive version visibly increases weave definition, coverage, or warm rattan coloration, though the final changes are smaller."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows a valid, monotonic, and visibly progressive shift of the same object's surface toward rattan.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "dig_soil/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same green-bladed, speckled-handled object while deforming its shape, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Bending, twisting, stretching, and handle reshaping increase across the sequence without a visible return toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version introduces visible changes to the blade, twisted connecting section, or handle geometry."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows valid, progressively stronger shape deformation of the same object at every level.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "dig_soil/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the original green trowel and speckled handle while adding parts, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added parts accumulate: a guard, an upper grip, a perforated side basket, a treaded rear panel, and a rear container; no added part disappears."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version introduces a clearly visible new part."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows clear, cumulative part additions to the same object across all five perturbation levels.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "dig_soil/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulated removal of parts from the same trowel on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed parts do not return; the blade and handle progressively disappear."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly removes additional material, ending with only a small handle fragment."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly removes parts of the same object, leaving roughly 10% or less at version 5.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "dig_soil/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same garden trowel with artistic style changes, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 reintroduces substantial shading, surface detail, and modeled volume after version 4's simple outline sketch, reversing the progression toward minimal paint smears."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version differs visibly from the preceding version."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence maintains object identity and visible changes, but version 5 returns to a more detailed, volumetric painting rather than continuing the simplification.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  },
+  "dig_soil/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same object, shape, and placement on a plain white background without text, while shifting its surface toward mother-of-pearl."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Pearlescent layering and iridescence increase throughout the sequence as the original green and speckled textures diminish."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version shows a visible increase in pearlescent texture, including the subtle initial change and brighter final finish."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly progresses from the original surface to a strong mother-of-pearl texture without changing the object or background.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "hammer_nail/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same hammer undergoing shape deformation, with plain white backgrounds and no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The handle becomes increasingly twisted and looped, while the head and claw become more stretched and reshaped, without returning toward the original form."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the handle curvature, openings, or claw geometry."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows valid, progressively stronger shape deformation of the same hammer.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "hammer_nail/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same hammer and add new parts on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The added light, storage box, clamp, and saw remain present as subsequent parts are added."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each successive version visibly adds a distinct part: a light, storage box, clamp, saw, and articulated magnifying glass."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively adds parts to the same hammer while retaining earlier additions.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "hammer_nail/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulating part removal from the same hammer on a plain white background, with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed portions never return; the handle, claw, striking head, and remaining frame are progressively eliminated."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly removes additional material, leaving only a small fragment at version 5."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively removes parts of the same hammer, leaving approximately 90% or more gone at version 5.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "hammer_nail/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same hammer with artistic style changes, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 restores substantial shading, highlights, and dimensional modeling compared with the simple rough outline in version 4, making the object look more realistically rendered despite its coarse brushwork."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly changes the rendering style from the preceding version."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence preserves the object and changes visibly at every step, but version 5 reverses some of the preceding loss of realism.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  },
+  "hammer_nail/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1-5 retain the same hammer and apply an increasingly lava-like surface texture, with a plain white background and no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The cracked lava texture and glowing seams consistently strengthen without reverting toward the original surface."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly increases texture coverage, seam brightness, or contrast between the glowing cracks and dark crust."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows a valid, monotonic, and visibly progressive shift from the original hammer surface to cracked lava with glowing seams.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "insert_screw/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the wooden-handled screwdriver while deforming its handle and shaft, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The overall deformation increases through progressively twisted shafts and increasingly stretched, looping, and sculptural handles, without a visible return toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the handle geometry and shaft curvature; none are nearly identical."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively deforms the same screwdriver with no clear reversal in deformation strength.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "insert_screw/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same wooden-handled screwdriver and add parts on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The ratchet assembly, side wheel, top crank, lamp, and bit-storage case accumulate without any previously added part disappearing."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly adds a distinct component compared with the preceding version."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows clear, cumulative part additions to the same screwdriver across all five perturbation levels.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "insert_screw/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulated removal from the same screwdriver on a plain white background, with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed parts do not reappear; the remaining object consistently shrinks."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 is nearly identical to version 4, with only slight shortening and thinning of the remaining wooden sliver."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence consistently removes parts, but the final step is too slight to meet the visible-progression requirement.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  },
+  "insert_screw/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same loop-handled screwdriver with increasing artistic abstraction, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The sequence moves from realistic rendering to simplified illustration and rough paint marks; no later version looks more realistic than an earlier one."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes in surface detail, shading, outlines, or brushwork."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly degrades the same object's rendering from realism toward rough paint smears.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "insert_screw/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show the same screwdriver progressively acquiring moss texture, on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Moss coverage and intensity never decrease across the sequence."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 is nearly identical to version 4, with only a slight change in green intensity and moss detail."
+    },
+    "verdict": "FAIL",
+    "summary": "The texture shift is valid and monotonic, but the final step is too subtle to be clearly progressive.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  },
+  "peel_vegetable/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1\u20135 consistently deform the same orange peeler through bending, twisting, and stretching, with plain white backgrounds and no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The deformation remains increasingly pronounced across the sequence, without a clear return toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the handle's twists, contours, openings, or proportions."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows valid, visibly progressive shape deformation of the same object with no clear reversal in severity.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "peel_vegetable/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same orange peeler and add visible components, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added components accumulate: the clear guard, spiked tray, grater, lidded compartment, and outer perforated basket remain present as subsequent parts are added."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version introduces a clearly visible new component."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows progressive, cumulative part additions to the same object while maintaining the required background and presentation.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "peel_vegetable/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulating part removal from the same orange peeler on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed handle sections, blade supports, blade, and body portions never reappear."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly removes additional material, ending with only a small central orange fragment."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively removes parts of the original object without reversals.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "peel_vegetable/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same peeler with art-style changes, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The depiction moves from realistic rendering to simplified illustration, rough outlines, and paint smears without returning to a more realistic representation."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each transition visibly changes surface detail, shading, outline treatment, or brushwork."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively stylizes the same peeler while preserving the required background and absence of text.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "peel_vegetable/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1-5 retain the same peeler, shape, and metal blade while applying a terrazzo surface texture, with a plain white background and no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The terrazzo pattern becomes progressively more prominent as the original orange surface and ridges fade, with no reversal."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes in terrazzo definition, color contrast, or background surface tone."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows a valid, monotonic, and visibly progressive shift from the original orange surface to a pronounced terrazzo texture.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "roll_dough/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions deform the same pink roller-like object through bending, twisting, and reshaping, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The frame and roller become increasingly twisted and distorted, with no clear relaxation toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the frame contours, roller twists, or proportions."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently shows valid, monotonically increasing, visibly progressive shape deformation of the same object.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "roll_dough/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the original roller and handle while adding parts, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added supports, adjustment knob, clear guide, platform, and overhead screw frame remain present in subsequent versions."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly adds new components: supports and a side knob, a clear guide, a platform, an overhead screw frame, and a hinged front extension."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows visible, cumulative part additions to the same object at every level.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "roll_dough/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulated part removal from the same roller object on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The roller, handle, and end fittings are progressively removed without any removed part returning."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly removes additional material, ending with only a small curved end piece."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly removes parts of the same object, leaving roughly 10% at version 5.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "roll_dough/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same roller object with art-style changes, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 restores a filled, shaded, volumetric appearance after version 4's sparse rough outline, making the object look more realistic again."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        1
+      ],
+      "reason": "Version 1 is nearly identical to the original, with only subtle smoothing of surface texture and shading."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence preserves the object and background, but begins with a near-duplicate and ends with a return to more volumetric rendering.",
+    "ok": false,
+    "bad_levels": [
+      1,
+      5
+    ]
+  },
+  "roll_dough/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1-5 apply a galaxy texture to the same object while preserving its shape, plain white background, and absence of text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The galaxy texture becomes consistently stronger, with increasing saturation, contrast, and prominence of stars and nebulae."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version shows a visible increase in the galaxy texture's intensity, including the later stages."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence presents a valid, monotonic, and visibly progressive galaxy texture shift on the same object.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "scoop_stir_soup/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same teal-bowled, purple-handled utensil while deforming its shape, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The bowl becomes increasingly elongated and flared, while the handle becomes more twisted and curled, without a visible return toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the bowl silhouette, handle curvature, or terminal curl."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows valid, progressively stronger shape deformation of the same object throughout versions 1\u20135.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "scoop_stir_soup/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the original object and add visible parts on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added parts accumulate throughout the sequence without disappearing."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly adds a distinct part: a perforated disc, loop handle, pouring vessel, spiral attachment, and supporting base."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows clear, cumulative part additions with a visible change at every level.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "scoop_stir_soup/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulated removal from the same ladle on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The handle and then the bowl are progressively erased; no removed parts reappear."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly removes additional material, ending with only a small bottom sliver."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively removes parts of the original object, leaving roughly 10% or less at version 5.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "scoop_stir_soup/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same distinctive ladle through artistic style changes, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 restores substantial shading and three-dimensional volume, especially in the bowl, making it more realistically modeled than the flat rough sketch in version 4."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version is visibly different from its immediate predecessor."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence preserves the object and changes visibly at every step, but version 5 reverses the loss of realistic volume seen in version 4.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  },
+  "scoop_stir_soup/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1\u20135 retain the same object and progressively apply wood grain texture, with a plain white background and no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Wood grain becomes increasingly prominent across the sequence, without any reversal toward the original surface."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly increases the wood grain coverage, contrast, or prominence, including the final versions."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively shifts the same object's surface toward a stronger wood grain texture.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "squeeze_juice/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same green marbled juicer-like object while deforming its shape, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Overall twisting, stretching, and distortion increase through the sequence without a clear return toward the original shape."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the central cone, handle, bowl, or supporting base."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows valid, progressively stronger shape deformation of the same object.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "squeeze_juice/add": {
+    "valid": {
+      "ok": false,
+      "bad_levels": [
+        3,
+        5
+      ],
+      "reason": "Version 3 replaces the opaque lower bowl with a transparent bowl and open frame; version 5 replaces the green rear pitcher with a transparent, differently shaped handled pitcher. These are replacements/material changes, not solely part additions."
+    },
+    "monotonic": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "The green rear pitcher added in version 1 is replaced rather than retained alongside the new handled pitcher."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Every version differs visibly from its immediate predecessor."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence is visibly progressive on a white, text-free background, but includes component replacements rather than strictly accumulating additions.",
+    "ok": false,
+    "bad_levels": [
+      3,
+      5
+    ]
+  },
+  "squeeze_juice/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulating part removal from the same object on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed parts remain absent, and the remaining object becomes successively smaller."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly removes additional structure, from the central cone through the handle, bowl sections, and remaining rim."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively removes parts of the original object without restoring previously removed structure.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "squeeze_juice/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same citrus juicer with art-style changes, on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The object becomes progressively less realistically rendered, moving from smooth shading to flat illustration and rough painted outlines; the final brush texture does not restore object realism."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the shading, palette, outlines, or brushwork."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently stylizes the same juicer through visibly distinct, increasingly nonrealistic renderings.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "squeeze_juice/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1-5 apply a holographic oil-slick texture to the same object, preserving its shape on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The rainbow iridescence, saturation, and reflective sheen increase throughout the sequence without weakening."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version shows a visible increase in the intensity and contrast of the holographic texture."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively strengthens the holographic oil-slick texture while preserving the object and background.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "strip_wire/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions deform the same tool through bending, twisting, and stretching, while retaining a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Deformation increases throughout the sequence, with increasingly distorted handles, jaws, and yellow lever and no overall relaxation toward the original."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the tool's contours, proportions, and twisting."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively increases shape deformation of the same object.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "strip_wire/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same base tool and add new functional parts, on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added components accumulate throughout the sequence; later additions partly obscure earlier structures but do not visibly remove added parts."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each successive version visibly adds a distinct component: an adjustable bracket, magnifier, utility blade, right-side crimper, and lower-left pliers."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows clear, cumulative part additions to the same object across all five perturbation levels.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "strip_wire/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Versions 1\u20135 show accumulating removal of parts from the same object on a plain white background, with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed parts do not reappear; the remaining object becomes successively smaller."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly removes additional structure: the lever assembly, upper jaw, remaining jaw assembly, right handle segment, and lower handle segment."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and progressively removes parts of the same object without restoring any removed structure.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "strip_wire/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions depict the same object with artistic style changes, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 restores substantial shading, volume, and modeled detail compared with version 4's rough outline sketch, making the object more realistic again despite the paint strokes."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Every consecutive pair shows a visible change in rendering style, detail, or texture."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence consistently changes the same object's art style, but version 5 reverses the progression toward less realistic depiction.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  },
+  "strip_wire/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same object, progressively apply fish-scale texture, and use a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The fish-scale texture never visibly weakens or reverts toward the original surface."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        3,
+        4
+      ],
+      "reason": "Versions 3 and 4 are nearly identical to their respective predecessors, with only subtle changes in texture contrast and saturation."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence maintains a valid, nondecreasing fish-scale texture shift, but versions 3 and 4 lack clearly visible incremental changes.",
+    "ok": false,
+    "bad_levels": [
+      3,
+      4
+    ]
+  },
+  "water_plant/deform": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same watering-can identity and materials while deforming its shape, on plain white backgrounds without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The sequence increasingly departs from the original rounded form through stretching, twisting, ribbon-like reshaping, and curling, without a clear reversal."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version visibly changes the body's silhouette, base, spout, or handle geometry."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence shows visibly progressive, increasingly strong shape deformation of the same object.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "water_plant/add": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same watering-can object and add visible parts on a plain white background without text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Added parts accumulate throughout the sequence: viewing window, solar-panel shower handle, hose reel and nozzle, filter, and liquid dispenser; none disappears."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each consecutive version introduces a clearly visible new component."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently shows progressive, cumulative part additions to the same object.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "water_plant/remove": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions show accumulating part removal from the same object on a plain white background with no text."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Removed parts never reappear, and the remaining object becomes progressively smaller."
+    },
+    "progressive": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "Each version visibly removes additional material: the lower connector, spout, upper body, right end, and lower left end."
+    },
+    "verdict": "PASS",
+    "summary": "The sequence consistently and visibly removes parts of the same object, leaving only a small curved fragment at version 5.",
+    "ok": true,
+    "bad_levels": []
+  },
+  "water_plant/style": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same watering can on a plain white background without text, using increasingly stylized rendering."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The sequence does not return toward realistic depiction; it moves from realistic rendering through illustration to rough painted marks."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        1
+      ],
+      "reason": "Version 1 is nearly identical to version 0, with mainly subtle surface smoothing rather than a clearly distinct stylistic step. Subsequent transitions are visibly stronger."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence preserves the object and consistently increases stylization, but the first transition is too subtle to satisfy visible progression.",
+    "ok": false,
+    "bad_levels": [
+      1
+    ]
+  },
+  "water_plant/texture": {
+    "valid": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "All versions retain the same watering can on a plain white background with no text, while shifting its surface toward fur."
+    },
+    "monotonic": {
+      "ok": true,
+      "bad_levels": [],
+      "reason": "The fur texture never visibly weakens across the sequence."
+    },
+    "progressive": {
+      "ok": false,
+      "bad_levels": [
+        5
+      ],
+      "reason": "Version 5 is nearly identical to version 4, with no clearly visible increase in fur texture."
+    },
+    "verdict": "FAIL",
+    "summary": "The sequence is valid and monotonic, but the final step lacks a clearly visible progression.",
+    "ok": false,
+    "bad_levels": [
+      5
+    ]
+  }
+}
