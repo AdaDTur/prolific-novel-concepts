@@ -41,22 +41,6 @@ function shuffle(a) {
   const jsPsych = initJsPsych({});
   const timeline = [];
 
-  timeline.push({
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `
-      <div class="intro">
-        <h2>How far can an object change and still be recognisable?</h2>
-        <p>You'll see ${order.length} sets of pictures. In each set we tell you what the object is for, and show six
-        versions of it side by side, numbered <strong>0</strong> (the original) to <strong>5</strong>. Each version
-        is changed a bit more than the one before: bent out of shape, given extra parts, partly erased, drawn in a
-        rougher style, or covered in a different surface.</p>
-        <p>Pick the <strong>highest-numbered version you would still recognise as a tool for that purpose</strong>.
-        If you wouldn't recognise even version 0, choose <em>${NONE}</em>.</p>
-        <p>Go with your first impression. It takes about 10 minutes.</p>
-      </div>`,
-    choices: ["Start"],
-  });
-
   order.forEach(function (sq, i) {
     const tiles = sq.files.map((f, k) => `
       <div class="tile"><div class="tile-num">${k}</div><img src="${f}" alt="version ${k}" /></div>`).join("");
