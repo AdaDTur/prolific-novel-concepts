@@ -41,21 +41,6 @@ function shownLabel(label) {
   const jsPsych = initJsPsych({});
   const timeline = [];
 
-  timeline.push({
-    type: jsPsychHtmlButtonResponse,
-    stimulus: `
-      <div class="intro">
-        <h2>Do you agree with the AI?</h2>
-        <p>You'll see ${items.length} parts of new, unfamiliar objects. Each object is split into numbered parts,
-        and one part is highlighted.</p>
-        <p>For each part, an AI model was asked what that part could realistically be used to <strong>do</strong>.
-        You'll see its answer and its reason. Tell us whether you <strong>agree</strong>, feel
-        <strong>neutral</strong>, or <strong>disagree</strong>. You can add a short explanation if you like.</p>
-        <p>There are no right or wrong answers; we want your honest opinion. It takes about 20 to 30 minutes.</p>
-      </div>`,
-    choices: ["Start"],
-  });
-
   items.forEach(function (it, i) {
     const reason = it.justification ? `<div class="reason">"${esc(it.justification)}"</div>` : "";
     timeline.push({
