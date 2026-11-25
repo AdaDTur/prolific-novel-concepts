@@ -1,7 +1,7 @@
 // Model-validation study: a parallel version of the affordance study. Each trial shows one part of a novel object
 // (the same numbered + highlighted images as the original study) and ONE model's answer for what that part could
 // be used for (its single best functionality + one-sentence reason). The participant rates it Agree / Neutral /
-// Disagree and explains why; both are required. Which model gave the answer is recorded but not shown.
+// Disagree (required) and can explain why (optional). Which model gave the answer is recorded but not shown.
 // Items come from validation_items.json (built by nvrd/affordance-test/code/study_assets/build_validation_study.py):
 // GROUP = one object set x one model rotation, so a participant rates every part of their objects once.
 // Results go to the same Google Sheet web app as the other studies, with results.study = "model_validation".
@@ -10,7 +10,6 @@ const SHEET_URL =
   "https://script.google.com/macros/s/AKfycbywIgg7tMNJVidcxyG25I9tU15H0CYPm_BQvs_DGCQIvBmGtjBsiIClNdRVg9ZNy9W5Rw/exec";
 const IMAGES = "../affordance-study/images/";
 const RATINGS = ["Agree", "Neutral", "Disagree"];
-const MIN_EXPLANATION = 5; // characters
 
 function shuffle(a) {
   const b = a.slice();
@@ -51,8 +50,8 @@ function shownLabel(label) {
         and one part is highlighted.</p>
         <p>For each part, an AI model was asked what that part could realistically be used to <strong>do</strong>.
         You'll see its answer and its reason. Tell us whether you <strong>agree</strong>, feel
-        <strong>neutral</strong>, or <strong>disagree</strong>, and briefly explain why.</p>
-        <p>There are no right or wrong answers; we want your honest opinion. It takes about 30 to 40 minutes.</p>
+        <strong>neutral</strong>, or <strong>disagree</strong>. You can add a short explanation if you like.</p>
+        <p>There are no right or wrong answers; we want your honest opinion. It takes about 20 to 30 minutes.</p>
       </div>`,
     choices: ["Start"],
   });
@@ -77,7 +76,7 @@ function shownLabel(label) {
         <div class="rating">
           <p class="question">Do you agree with this answer?</p>
           <div class="choices">${RATINGS.map((r) => `<div class="choice" data-value="${r}">${r}</div>`).join("")}</div>
-          <label for="explanation">Why? (required)</label>
+          <label for="explanation">Why? (optional)</label>
           <textarea id="explanation" placeholder="e.g. the part is flat and sturdy, so it could support something"></textarea>
           <div class="hint" id="hint"></div>
         </div>`,
@@ -94,9 +93,9 @@ function shownLabel(label) {
         trial.data.explanation = "";
         function check() {
           trial.data.explanation = box.value.trim();
-          const ok = trial.data.rating && trial.data.explanation.length >= MIN_EXPLANATION;
+          const ok = !!trial.data.rating;
           btn.disabled = !ok;
-          hint.textContent = ok ? "" : "Choose Agree, Neutral or Disagree and write a short explanation to continue.";
+          hint.textContent = ok ? "" : "Choose Agree, Neutral or Disagree to continue.";
         }
         document.querySelectorAll(".choice").forEach(function (c) {
           c.addEventListener("click", function () {
