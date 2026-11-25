@@ -1,6 +1,6 @@
 {
   "models": [
-    "molmo2-4b",
+    "gemini-3.8-flash",
     "qwen3.5-4b",
     "gemma4-e4b"
   ],
@@ -48,9 +48,9 @@
         "part": 1,
         "region_id": "shape_1_region_16",
         "n_parts": 10,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 1 appears to be a smooth, featureless surface without any protrusions, textures, or interactive elements that would typically provide an affordance for user interaction",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This part forms the large, ergonomically contoured central body of the device, providing an expansive surface designed to fit comfortably in the palm of a hand compared to the smaller exterior rings and buttons",
         "options": [
           "carry",
           "contain",
@@ -114,9 +114,9 @@
         "part": 4,
         "region_id": "shape_1_region_10",
         "n_parts": 10,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The curved, hollow red section appears to be a decorative or structural element without any visible functional purpose or interaction point, unlike the other numbered parts that seem to have distinct shapes or positions suggesting specific uses",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "It forms an outward-curving loop separated from the main body with open clearance, providing an ergonomic handle shape ideal for grasping with fingers",
         "options": [
           "absorb",
           "attach",
@@ -180,9 +180,9 @@
         "part": 7,
         "region_id": "shape_1_region_15",
         "n_parts": 10,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 7 appears to be a solid, unadorned metal piece without any visible features or protrusions that could serve as handles, buttons, or other interactive elements, making it functionally distinct from the other numbered parts",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This part forms an elongated, accessible vertical",
         "options": [
           "assist_breathing",
           "attach",
@@ -246,9 +246,9 @@
         "part": 10,
         "region_id": "shape_1_region_6",
         "n_parts": 10,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The object appears to be a simple, flat, unmarked surface without any visible features or protrusions that would suggest an interactive or functional purpose, unlike the other numbered parts which seem to have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "dispense",
+        "justification": "Part 10 is an open aperture located near the top of the container designed to let contents pour or shake out, unlike the solid structural body and handle components",
         "options": [
           "button",
           "click",
@@ -261,7 +261,7 @@
           "select",
           "trigger"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_10",
@@ -312,9 +312,9 @@
         "part": 3,
         "region_id": "shape_10_region_0",
         "n_parts": 5,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The third part appears to be a solid, flat surface without any protrusions or features that could potentially serve as a handle or grip, unlike the other parts which have distinct shapes or textures that could be used for interaction",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This leg-like protrusion extends downward from the underside to touch the ground surface, helping to bear the object's weight and keep it stable unlike the upper body or non-weight-bearing appendages",
         "options": [
           "balance",
           "float",
@@ -378,9 +378,9 @@
         "part": 1,
         "region_id": "shape_11_region_7",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 1 appears to be a solid, unadorned surface without any protrusions, textures, or features that would typically provide an affordance for interaction or manipulation",
+        "model": "gemini-3.8-flash",
+        "label": "contain",
+        "justification": "Part 1 forms the large, hollow pyramidal main body of the object, providing the central interior volume needed to hold items, unlike the smaller surface segments and external curved protrusions",
         "options": [
           "block",
           "carry",
@@ -444,9 +444,9 @@
         "part": 4,
         "region_id": "shape_11_region_11",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 4 appears to be a solid, flat surface without any protrusions or features that could potentially be used or interacted with, unlike the other numbered parts which have distinct shapes or textures that suggest specific functions or uses",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This section forms a wide, ground-contacting corner at the very base of the structure, providing a stable foundation to hold up the rest of the object",
         "options": [
           "balance",
           "contain",
@@ -510,9 +510,9 @@
         "part": 7,
         "region_id": "shape_11_region_15",
         "n_parts": 11,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "Part 7 appears to be a solid, flat surface without any protrusions or features that could potentially serve as an affordance for interaction or manipulation",
+        "justification": "This segment is merely a flat, flush surface section near the base with no protruding handle, hook, or functional feature to grasp or manipulate",
         "options": [
           "balance",
           "block",
@@ -576,9 +576,9 @@
         "part": 10,
         "region_id": "shape_11_region_6",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 10 appears to be a solid, unbroken surface without any visible features or protrusions that could potentially serve as handles, buttons, or other interactive elements, making it functionally distinct from the other numbered parts",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "Its curved, hook-like shape extends outward from the main body, providing a clear handle-like grip for fingers to wrap around",
         "options": [
           "adjust",
           "ascend",
@@ -642,9 +642,9 @@
         "part": 2,
         "region_id": "shape_15_region_4",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The topmost section appears to be a smooth, flat surface without any protrusions or features that could potentially be used for grasping or manipulating, unlike the other numbered parts which have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "It has a wide, smooth, rounded shape at the top that can be comfortably grasped by a hand without interference from the sharp spikes found along the body",
         "options": [
           "block",
           "conceal",
@@ -657,7 +657,7 @@
           "shade",
           "support"
         ],
-        "label_in_options": false
+        "label_in_options": true
       },
       {
         "object": "shape_15",
@@ -708,9 +708,9 @@
         "part": 5,
         "region_id": "shape_15_region_8",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 5 appears to be a small, solid protrusion without any visible openings or features that could serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures that suggest potential uses",
+        "model": "gemini-3.8-flash",
+        "label": "penetrate",
+        "justification": "This part has a long, narrow, and sharply pointed conical shape that projects outward, making it suitable for piercing into a target",
         "options": [
           "attach",
           "block",
@@ -774,9 +774,9 @@
         "part": 1,
         "region_id": "shape_16_region_3",
         "n_parts": 5,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The topmost, flat, square-shaped piece appears to be a solid, stationary component without any visible means to interact with or manipulate it, unlike the other parts that have distinct shapes or protrusions",
+        "model": "gemini-3.8-flash",
+        "label": "crush",
+        "justification": "This part is a heavy, solid block situated at",
         "options": [
           "balance",
           "block",
@@ -789,7 +789,7 @@
           "stand",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_16",
@@ -840,9 +840,9 @@
         "part": 4,
         "region_id": "shape_16_region_1",
         "n_parts": 5,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The small, round, purple piece appears to be a decorative element without any functional purpose or interaction, unlike the other numbered parts that seem to serve specific roles or have distinct shapes and positions",
+        "model": "gemini-3.8-flash",
+        "label": "rotate",
+        "justification": "This cylindrical pin forms a central hinge axis connecting the lever to the base, specifically designed to allow rotational movement",
         "options": [
           "align",
           "attach",
@@ -906,9 +906,9 @@
         "part": 2,
         "region_id": "shape_17_region_2",
         "n_parts": 4,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "The central section appears to be a solid, flat surface without any protrusions or openings, making it impossible for anything to enter or exit, unlike the other parts which have openings or protrusions",
+        "justification": "This central solid mass is enclosed within the",
         "options": [
           "absorb",
           "channel water",
@@ -972,9 +972,9 @@
         "part": 1,
         "region_id": "shape_18_region_1",
         "n_parts": 2,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The first part appears to be a solid, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have curved, hook-like extensions",
+        "model": "gemini-3.8-flash",
+        "label": "contain",
+        "justification": "The central part forms a broad, recessed basin that can hold and support items, unlike the surrounding outer rim with projecting arms",
         "options": [
           "absorb",
           "apply",
@@ -1038,9 +1038,9 @@
         "part": 1,
         "region_id": "shape_25_region_4",
         "n_parts": 4,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The base appears to be a solid, unadorned surface without any protrusions or features that could serve as handles, grips, or other interactive elements, unlike the other numbered parts which have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This part is located at the very bottom with a broad, flat base that provides stability and directly holds up the rest of the structure",
         "options": [
           "balance",
           "carry",
@@ -1104,9 +1104,9 @@
         "part": 4,
         "region_id": "shape_25_region_5",
         "n_parts": 4,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The protruding element appears to be a simple, solid-colored extension without any visible interactive features or functional components, unlike the other numbered parts which have distinct shapes or textures that suggest potential interactions",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This part is an elongated, handle-like protrusion extending outward from the side, providing an accessible and ergonomic shape that is easily gripped by a hand compared to the supporting base or decorative elements",
         "options": [
           "attach",
           "carry",
@@ -1170,9 +1170,9 @@
         "part": 3,
         "region_id": "shape_27_region_8",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 3 appears to be a small, solid protrusion without any visible openings or features that could potentially serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures that suggest different affordances",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This part is the longest, smooth, projecting rod that provides an unobstructed, hand-sized surface suitable for grasping securely",
         "options": [
           "balance",
           "direct",
@@ -1185,7 +1185,7 @@
           "steer",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_27",
@@ -1236,9 +1236,9 @@
         "part": 6,
         "region_id": "shape_27_region_7",
         "n_parts": 7,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "Part 6 appears to be a solid, unadorned protrusion without any visible features or attachments that would suggest it serves a specific function or purpose",
+        "justification": "This part is too small and awkwardly positioned at the top among sharp spikes to serve as a usable handle or support surface",
         "options": [
           "attack",
           "defend",
@@ -1302,9 +1302,9 @@
         "part": 2,
         "region_id": "shape_3_region_0",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 2 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This central, palm-sized rounded body provides a broad, ergonomic surface that naturally fits into a hand for gripping, unlike the narrow radiating prongs designed for other functions",
         "options": [
           "absorb",
           "balance",
@@ -1368,9 +1368,9 @@
         "part": 5,
         "region_id": "shape_3_region_2",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 5 appears to be a flat, non-interactive surface without any protrusions or features that would allow it to be grasped, pressed, or manipulated, unlike the other numbered parts which have distinct shapes or textures that suggest different affordances",
+        "model": "gemini-3.8-flash",
+        "label": "roll",
+        "justification": "Its smooth, cylindrical shape with",
         "options": [
           "adjust",
           "attach",
@@ -1383,7 +1383,7 @@
           "rotate",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_3",
@@ -1434,9 +1434,9 @@
         "part": 8,
         "region_id": "shape_3_region_6",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 8 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "switch",
+        "justification": "This small, recessed toggle is designed to slide back and forth within a slot to toggle states or power, unlike the large, solid structural body and spokes surrounding it",
         "options": [
           "button",
           "carry",
@@ -1500,9 +1500,9 @@
         "part": 3,
         "region_id": "shape_30_region_33",
         "n_parts": 15,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "The green, blob-like protrusion appears to be a loose, non-attached piece that lacks any functional connection or purpose within the overall structure, unlike the other numbered parts which seem to serve specific roles or be integrated into the main body",
+        "justification": "Its thin,",
         "options": [
           "attach",
           "bump",
@@ -1566,9 +1566,9 @@
         "part": 6,
         "region_id": "shape_30_region_37",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 6 appears to be a solid, unadorned protrusion without any visible features or attachments that would suggest it serves a specific function or purpose",
+        "model": "gemini-3.8-flash",
+        "label": "dangle",
+        "justification": "Its curved, hook-like shape extending outward from the upper section makes it suitable for hanging or suspending the object from a support",
         "options": [
           "attach",
           "balance",
@@ -1581,7 +1581,7 @@
           "none",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_30",
@@ -1632,9 +1632,9 @@
         "part": 9,
         "region_id": "shape_30_region_45",
         "n_parts": 15,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "Part 9 appears to be a solid, unadorned surface without any protrusions, textures, or features that would typically provide an affordance for interaction or manipulation",
+        "justification": "It is a flat, flush surface patch embedded directly onto the main body, lacking any protrusion, opening, or mechanical feature that would allow it to be grasped, pressed, or manipulated",
         "options": [
           "apply",
           "contain",
@@ -1698,9 +1698,9 @@
         "part": 12,
         "region_id": "shape_30_region_36",
         "n_parts": 15,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "The circular, hollow structure appears to be a simple ring without any protrusions or features that would allow it to interact with or be manipulated by other parts of the object",
+        "justification": "It is a flat, flush surface marking embedded entirely on the main body without any protruding, receptive, or movable structure that would afford grasping, support, or manipulation",
         "options": [
           "attach",
           "contain",
@@ -1764,9 +1764,9 @@
         "part": 15,
         "region_id": "shape_30_region_23",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The 15th part appears to be a small, solid, non-functional element positioned separately from the main body, lacking any visible interactive features or connections to other parts",
+        "model": "gemini-3.8-flash",
+        "label": "decorate",
+        "justification": "It is a small, flat circular patch embedded purely as an ornamental detail on the main body's surface, lacking any structural, grasping, or load-bearing function",
         "options": [
           "click",
           "contain",
@@ -1830,9 +1830,9 @@
         "part": 3,
         "region_id": "shape_31_region_46",
         "n_parts": 12,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 3 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have handles, spikes, or other interactive elements",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This broad, horizontally flattened section rests firmly above the base while directly bearing and holding up the weight of the stacked layers above it",
         "options": [
           "balance",
           "block",
@@ -1896,9 +1896,9 @@
         "part": 6,
         "region_id": "shape_31_region_3",
         "n_parts": 12,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 6 appears to be a simple, flat, circular element without any protrusions or features that would allow it to serve as a handle or grip, unlike the other numbered parts which have distinct shapes or textures designed for interaction",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "It forms a curved, looped handle projecting from the side that leaves open space for fingers to wrap securely around it",
         "options": [
           "attach",
           "carry",
@@ -1962,9 +1962,9 @@
         "part": 9,
         "region_id": "shape_31_region_29",
         "n_parts": 12,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 9 appears to be a small, solid protrusion without any visible openings or features that could serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures designed for interaction",
+        "model": "gemini-3.8-flash",
+        "label": "penetrate",
+        "justification": "Its sharp, elongated conical shape tapers to a distinct point at the very top, making it ideal for puncturing or piercing other surfaces",
         "options": [
           "bump",
           "decorate",
@@ -1977,7 +1977,7 @@
           "push",
           "wedge"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_31",
@@ -2028,9 +2028,9 @@
         "part": 12,
         "region_id": "shape_31_region_32",
         "n_parts": 12,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 12 appears to be a small, solid protrusion without any visible handle or grip, making it impossible to interact with or manipulate like the other numbered parts",
+        "model": "gemini-3.8-flash",
+        "label": "penetrate",
+        "justification": "This part features a narrow, sharp-pointed conical tip protruding outward, making it suitable for piercing or puncturing surfaces unlike the rounded bodies and loops",
         "options": [
           "align",
           "attach",
@@ -2043,7 +2043,7 @@
           "indicate",
           "none"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_33",
@@ -2094,9 +2094,9 @@
         "part": 3,
         "region_id": "shape_33_region_6",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 3 appears to be a simple, flat, and unadorned surface without any protrusions, textures, or features that would typically provide an affordance for interaction or manipulation",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "It extends downward to make direct contact with the ground, acting as a sturdy foot that bears weight and stabilizes the structure",
         "options": [
           "balance",
           "cover",
@@ -2160,9 +2160,9 @@
         "part": 6,
         "region_id": "shape_33_region_13",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "",
+        "model": "gemini-3.8-flash",
+        "label": "shock",
+        "justification": "This part is shaped like a jagged lightning bolt, visually symbolizing electricity and a shock affordance unlike any of the other rounded or geometric parts",
         "options": [
           "attack",
           "block",
@@ -2175,7 +2175,7 @@
           "punch",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_33",
@@ -2226,9 +2226,9 @@
         "part": 9,
         "region_id": "shape_33_region_3",
         "n_parts": 15,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "The spiral-shaped part 9 appears to be a decorative element without any functional purpose or interaction, unlike the other numbered parts that seem to serve specific roles or have distinct shapes and materials",
+        "justification": "Part 9 is a small, tightly nested ring embedded around the base of the tail with no exposed surface, clearance, or functional shape to enable grasping, supporting weight, or interaction",
         "options": [
           "apply",
           "attach",
@@ -2292,9 +2292,9 @@
         "part": 12,
         "region_id": "shape_33_region_8",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 12 appears to be a solid, featureless block without any protrusions, openings, or interactive elements that would typically provide an affordance for user interaction",
+        "model": "gemini-3.8-flash",
+        "label": "press",
+        "justification": "It is a small, circular, raised button situated on the main body that is appropriately sized and shaped to be pushed inward with a finger",
         "options": [
           "block",
           "carry",
@@ -2307,7 +2307,7 @@
           "see",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_33",
@@ -2358,9 +2358,9 @@
         "part": 15,
         "region_id": "shape_33_region_5",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The object appears to be a simple, unadorned piece of wood without any visible features or attachments that would provide an affordance for interaction or use",
+        "model": "gemini-3.8-flash",
+        "label": "play",
+        "justification": "This feature is a small circular indentation or hole embedded into the",
         "options": [
           "attach",
           "balance",
@@ -2373,7 +2373,7 @@
           "stand",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_39",
@@ -2426,9 +2426,9 @@
         "part": 1,
         "region_id": "shape_12_region_5",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 1 appears to be a solid, unbroken section without any visible openings or protrusions that could potentially serve as handles, buttons, or other interactive elements, making it functionally distinct from the other numbered parts that likely have specific affordances",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "It serves as the sturdy, wide-based outer framework that rests on the ground and holds the inset pieces in place",
         "options": [
           "attach",
           "block",
@@ -2492,9 +2492,9 @@
         "part": 4,
         "region_id": "shape_12_region_0",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 4 appears to be a solid, flat surface without any protrusions or openings, making it impossible for the user to interact with or manipulate it in any way",
+        "model": "gemini-3.8-flash",
+        "label": "press",
+        "justification": "This section forms an ergonomically contoured, recessed panel on the side of the device that is specifically shaped and positioned for easy",
         "options": [
           "block",
           "contain",
@@ -2507,7 +2507,7 @@
           "pump",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_12",
@@ -2558,9 +2558,9 @@
         "part": 7,
         "region_id": "shape_12_region_7",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The topmost section appears to be a flat, open surface without any visible handles, buttons, or other interactive features that would typically provide an affordance for user interaction",
+        "model": "gemini-3.8-flash",
+        "label": "place",
+        "justification": "It forms a flat, horizontal surface at the very top of the object, providing a stable platform to rest items on unlike the sloped side surfaces",
         "options": [
           "attach",
           "contain",
@@ -2624,9 +2624,9 @@
         "part": 3,
         "region_id": "shape_13_region_13",
         "n_parts": 5,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "The third part appears to be a solid, unbroken section without any openings or protrusions, making it impossible for anything to enter or exit, unlike the other numbered parts which have visible openings or features that allow interaction",
+        "justification": "This area consists of a solid, closed convex surface with no opening, rim, or cavity to grasp or hook onto unlike the through-holes",
         "options": [
           "balance",
           "contain",
@@ -2690,9 +2690,9 @@
         "part": 1,
         "region_id": "shape_14_region_2",
         "n_parts": 2,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The first part appears to be a solid, flat surface without any protrusions or openings, making it impossible for users to interact with or manipulate it in any way",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "It forms the broad, solid outer base and body that stably rests on the surface to hold the entire structure, unlike the hollow interior cavity",
         "options": [
           "attach",
           "carry",
@@ -2756,9 +2756,9 @@
         "part": 2,
         "region_id": "shape_19_region_2",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The orange, rounded section at the bottom of the object appears to be a solid, smooth surface without any protrusions or features that could potentially be used for interaction or manipulation",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This wide, rounded base rests directly on the ground beneath the main body to provide stable contact with the surface",
         "options": [
           "carry",
           "contain",
@@ -2822,9 +2822,9 @@
         "part": 5,
         "region_id": "shape_19_region_0",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 5 appears to be a small, flat, and non-interactive element that lacks any protruding features or functional components, making it incapable of providing any affordance or interaction for the user",
+        "model": "gemini-3.8-flash",
+        "label": "defend",
+        "justification": "Its sharp, pointed horn shape protrudes directly outward from the shell's front to deter frontal impacts and predators, unlike the softer base parts or the spikes angled in other directions",
         "options": [
           "absorb",
           "balance",
@@ -2837,7 +2837,7 @@
           "none",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_19",
@@ -2888,9 +2888,9 @@
         "part": 8,
         "region_id": "shape_19_region_8",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 8 appears to be a smooth, flat surface without any protrusions or features that could potentially be used or interacted with, unlike the other numbered parts which have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "defend",
+        "justification": "This sharp, conical spike projects outward from the upper shell, creating a pointed barrier to deter threats from above and behind, unlike the soft, rounded base parts below",
         "options": [
           "block",
           "cover",
@@ -2954,9 +2954,9 @@
         "part": 3,
         "region_id": "shape_2_region_0",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 3 appears to be a simple, unadorned cylindrical element without any protrusions or features that would suggest it serves a specific function or purpose, unlike the other numbered parts which have distinct shapes or attachments",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "It is positioned at the base extending downward to touch the ground, acting as a sturdy leg that stabilizes and props up the main body",
         "options": [
           "balance",
           "button",
@@ -3020,9 +3020,9 @@
         "part": 6,
         "region_id": "shape_2_region_15",
         "n_parts": 8,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 6 appears to be a simple, flat, non-structured element without any protrusions or features that would allow it to interact with or be used for any purpose, unlike the other numbered parts which have distinct shapes or structures that suggest specific functions or uses",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This smooth, horizontally projecting peg",
         "options": [
           "attach",
           "balance",
@@ -3086,9 +3086,9 @@
         "part": 1,
         "region_id": "shape_20_region_26",
         "n_parts": 14,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 1 appears to be a smooth, featureless surface without any protrusions or openings that could potentially serve as an affordance for interaction or manipulation",
+        "model": "gemini-3.8-flash",
+        "label": "contain",
+        "justification": "Its large, central bulbous body forms an expansive enclosed hollow chamber capable of holding items or substances, unlike the solid protruding limbs and decorative attachments",
         "options": [
           "balance",
           "contain",
@@ -3152,9 +3152,9 @@
         "part": 4,
         "region_id": "shape_20_region_10",
         "n_parts": 14,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 4 appears to be a simple, flat, and unadorned surface without any protrusions or features that would suggest it has an inherent function or purpose, unlike the other numbered parts which have distinct shapes or structures that imply specific uses or interactions",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This part extends downward from the base to contact the ground, functioning as a load-bearing leg to stabilize and hold up the structure unlike the upper protrusions",
         "options": [
           "carry",
           "hold",
@@ -3218,9 +3218,9 @@
         "part": 7,
         "region_id": "shape_20_region_21",
         "n_parts": 14,
-        "model": "molmo2-4b",
-        "label": "assist_breathing",
-        "justification": "The elongated, tube-like structure of part 7, positioned near the head, suggests a respiratory function, likely designed to aid in breathing, unlike the other parts which appear to serve different purposes",
+        "model": "gemini-3.8-flash",
+        "label": "pour",
+        "justification": "It features a hollow, flared opening at the end of an elevated, curved spout, making it the only part shaped to direct and dispense liquids outward",
         "options": [
           "absorb",
           "carry",
@@ -3284,9 +3284,9 @@
         "part": 10,
         "region_id": "shape_20_region_0",
         "n_parts": 14,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "Part 10 appears to be a small, solid, non-extendable component without any visible openings or protrusions that could serve as a functional element or interface, unlike the other numbered parts which have distinct shapes or features that suggest specific purposes or interactions",
+        "justification": "This small, blunt protrusion is positioned tightly against the central body and beneath the upper overhang, lacking the clearance, length, opening, or orientation required to serve as a handle, support, or spout",
         "options": [
           "balance",
           "click",
@@ -3350,9 +3350,9 @@
         "part": 13,
         "region_id": "shape_20_region_18",
         "n_parts": 14,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "Part 13 appears to be a small, solid, non-extendable nub without any visible opening or functional feature, unlike the other numbered parts which have distinct shapes or openings",
+        "justification": "This small, blunt protrusion is too short and awkwardly positioned behind the main spout to be grasped as a handle, lacks an opening to hold anything",
         "options": [
           "adjust",
           "align",
@@ -3416,9 +3416,9 @@
         "part": 1,
         "region_id": "shape_22_region_9",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The topmost section appears to be a smooth, flat surface without any protrusions or features that would allow for grasping or manipulation, unlike the other numbered parts which have handles or textured surfaces",
+        "model": "gemini-3.8-flash",
+        "label": "contain",
+        "justification": "Its hollow, wide basin-like structure positioned along the main body provides an internal volume capable of holding contents, unlike the solid lid or looping handle components",
         "options": [
           "balance",
           "carry",
@@ -3482,9 +3482,9 @@
         "part": 4,
         "region_id": "shape_22_region_4",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 4 appears to be a smooth, flat surface without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have handles or raised elements",
+        "model": "gemini-3.8-flash",
+        "label": "contain",
+        "justification": "This hollow, ring-like section forms part of the main vessel's walls, providing an enclosed interior volume capable of holding substances, unlike the solid lid above or the exterior handles",
         "options": [
           "contain",
           "cover",
@@ -3548,9 +3548,9 @@
         "part": 7,
         "region_id": "shape_22_region_1",
         "n_parts": 7,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The seventh part appears to be a solid, unbroken surface without any protrusions or openings, making it impossible for a child to grasp or interact with it in the same way as the other numbered parts",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "It forms a curved, looped handle projecting from the side of the stacked body, creating an open space designed for fingers to easily grip and carry the object",
         "options": [
           "attach",
           "balance",
@@ -3614,9 +3614,9 @@
         "part": 3,
         "region_id": "shape_23_region_4",
         "n_parts": 6,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The crown-like structure at the top of the object appears to be a decorative element without any functional purpose or interactive component, unlike the other numbered parts that seem to have distinct shapes or features that could potentially be used or manipulated",
+        "model": "gemini-3.8-flash",
+        "label": "decorate",
+        "justification": "Part 3 sits atop the figure like a crown-like crest or headdress, serving an exclusively ornamental visual role unlike the functional body and base structures",
         "options": [
           "aim",
           "balance",
@@ -3680,9 +3680,9 @@
         "part": 6,
         "region_id": "shape_23_region_1",
         "n_parts": 6,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The circular, hollow center of part 6 appears to be an empty space without any visible features or protrusions that could serve as an affordance for interaction or manipulation",
+        "model": "gemini-3.8-flash",
+        "label": "see",
+        "justification": "This part forms the central pupil of a concentric, circular eye-like feature located on the upper head of the creature, directly mimicking an organ for sight",
         "options": [
           "control",
           "cover",
@@ -3695,7 +3695,7 @@
           "switch",
           "trigger"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_26",
@@ -3746,9 +3746,9 @@
         "part": 3,
         "region_id": "shape_26_region_59",
         "n_parts": 3,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The third part appears to be a solid, unbroken piece without any openings or protrusions, making it impossible for anything to enter or exit, unlike the other parts which have visible openings or extensions",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "This part forms an elongated, graspable handle-like protrusion that extends outward, making it suitable to be gripped securely by the hand",
         "options": [
           "attack",
           "bump",
@@ -3812,9 +3812,9 @@
         "part": 3,
         "region_id": "shape_28_region_1",
         "n_parts": 5,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "The green circular object in the bottom right appears to be a solid, flat piece without any protrusions or features that would allow it to be grasped or manipulated, unlike the other numbered parts which have distinct shapes or textures",
+        "justification": "This solid, rounded mass attached to the outer curve lacks any openings, handles, or functional geometry needed to afford interaction",
         "options": [
           "attach",
           "block",
@@ -3878,9 +3878,9 @@
         "part": 1,
         "region_id": "shape_29_region_42",
         "n_parts": 13,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 1 appears to be a small, solid, flat piece without any protrusions or openings, making it impossible for anything to interact with or be affected by it in any way",
+        "model": "gemini-3.8-flash",
+        "label": "slide",
+        "justification": "Its smooth, wide, and downward-sloping curved surface leads directly into the central tunnel opening, providing an ideal path for sliding down into the interior",
         "options": [
           "absorb",
           "click",
@@ -3893,7 +3893,7 @@
           "store_fuel",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_29",
@@ -3944,9 +3944,9 @@
         "part": 4,
         "region_id": "shape_29_region_23",
         "n_parts": 13,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 4 appears to be a solid, flat surface without any protrusions or openings, unlike the other numbered parts which have various shapes or features that could potentially serve as handles, grips, or other functional elements",
+        "model": "gemini-3.8-flash",
+        "label": "lift",
+        "justification": "Its cross-like, handle-shaped structure is centrally mounted on top of the main body, providing a sturdy, ergonomic grip for picking up and carrying the entire object unlike the slender antennae or supporting legs",
         "options": [
           "attach",
           "control",
@@ -3959,7 +3959,7 @@
           "seal",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_29",
@@ -4010,9 +4010,9 @@
         "part": 7,
         "region_id": "shape_29_region_1",
         "n_parts": 13,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 7 appears to be a simple, solid-colored cylinder without any protrusions or features that would suggest it has an inherent function or purpose, unlike the other numbered parts which have distinct shapes or attachments",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "This part is a sturdy, downward-extending leg positioned at the base of the structure that makes contact with the ground to bear and stabilize the object's overall weight, unlike the upper appendages and interior surfaces",
         "options": [
           "balance",
           "hold",
@@ -4076,9 +4076,9 @@
         "part": 10,
         "region_id": "shape_29_region_25",
         "n_parts": 13,
-        "model": "molmo2-4b",
+        "model": "gemini-3.8-flash",
         "label": "none",
-        "justification": "Part 10 appears to be a small, round, hollow ball without any visible features or protrusions that could serve as a handle, grip, or other interactive element, unlike the other numbered parts which have distinct shapes or textures that suggest potential uses",
+        "justification": "This small spherical tip atop",
         "options": [
           "channel water",
           "cook",
@@ -4142,9 +4142,9 @@
         "part": 13,
         "region_id": "shape_29_region_44",
         "n_parts": 13,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The 13th part appears to be a solid, unmarked surface without any visible features or protrusions, unlike the other numbered parts which have distinct shapes or textures",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "Its cylindrical, stem-like shape connecting the body to an elevated spherical feature makes it suitable to wrap a hand around and grip securely, unlike the rounded knobs or load-bearing legs",
         "options": [
           "attach",
           "carry",
@@ -4208,9 +4208,9 @@
         "part": 3,
         "region_id": "shape_32_region_21",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 3 appears to be a simple, unadorned green element that lacks any distinctive features or protrusions that would suggest it has a specific function or purpose, unlike the other numbered parts which have unique shapes or designs",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "It functions as a vertical leg positioned underneath the main body that extends straight down to rest firmly on the ground surface to help bear weight and stabilize the structure",
         "options": [
           "attach",
           "balance",
@@ -4274,9 +4274,9 @@
         "part": 6,
         "region_id": "shape_32_region_20",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 6 appears to be a small, solid, rounded element positioned at the bottom of the object, likely serving as a decorative or structural feature rather than a functional component with an inherent affordance",
+        "model": "gemini-3.8-flash",
+        "label": "hold",
+        "justification": "It forms a curved, open-backed handle or grip bar that fingers can easily wrap around for grasping",
         "options": [
           "attach",
           "bend",
@@ -4340,9 +4340,9 @@
         "part": 9,
         "region_id": "shape_32_region_50",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The round, ball-like shape of part 9 appears to be a simple, non-functional element without any apparent purpose or interaction with other parts, unlike the more complex and interconnected components of the rest of the object",
+        "model": "gemini-3.8-flash",
+        "label": "pull",
+        "justification": "Part 9 forms a spherical knob situated at the end of a protruding stem, making it shaped specifically to be grasped and pulled outward",
         "options": [
           "adjust",
           "attach",
@@ -4355,7 +4355,7 @@
           "ring",
           "switch"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_32",
@@ -4406,9 +4406,9 @@
         "part": 12,
         "region_id": "shape_32_region_2",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The small, round, purple ball at the bottom right appears to be a decorative element without any functional purpose or interaction, unlike the other numbered parts that seem to serve specific roles or have distinct shapes and materials",
+        "model": "gemini-3.8-flash",
+        "label": "decorate",
+        "justification": "It forms one petal of an applied floral motif positioned purely as an ornamental embellishment on the curved arch, serving no structural or mechanical function compared to the surrounding limbs and joints",
         "options": [
           "attach",
           "button",
@@ -4421,7 +4421,7 @@
           "none",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_32",
@@ -4472,9 +4472,9 @@
         "part": 15,
         "region_id": "shape_32_region_7",
         "n_parts": 15,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The object appears to be a simple, unadorned piece of wood or stone with no visible features or attachments that would provide any functional or interactive affordances",
+        "model": "gemini-3.8-flash",
+        "label": "decorate",
+        "justification": "This petal-shaped component forms part of a raised floral motif applied purely as an aesthetic embellishment rather than providing structural support or functional interaction",
         "options": [
           "attach",
           "click",
@@ -4487,7 +4487,7 @@
           "seal",
           "support"
         ],
-        "label_in_options": true
+        "label_in_options": false
       },
       {
         "object": "shape_38",
@@ -4538,9 +4538,9 @@
         "part": 1,
         "region_id": "shape_40_region_16",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "The first part appears to be a solid, unadorned base without any protrusions or features that would suggest it could be interacted with or manipulated in any way",
+        "model": "gemini-3.8-flash",
+        "label": "support",
+        "justification": "The wide, multi-lobed base at the bottom provides a sturdy foundation that rests on the surface to keep the entire object upright and hold the upper section",
         "options": [
           "balance",
           "carry",
@@ -4604,9 +4604,9 @@
         "part": 4,
         "region_id": "shape_40_region_5",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 4 appears to be a solid, unadorned section of the object without any visible features or protrusions that would suggest it has an interactive or functional purpose, unlike the other numbered parts which have distinct shapes or elements",
+        "model": "gemini-3.8-flash",
+        "label": "press",
+        "justification": "This part is a small",
         "options": [
           "button",
           "click",
@@ -4670,9 +4670,9 @@
         "part": 7,
         "region_id": "shape_40_region_7",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 7 appears to be a solid, unadorned surface without any protrusions, textures, or features that would typically provide a means for interaction or manipulation, unlike the other numbered parts which likely have distinct shapes or elements that allow for engagement",
+        "model": "gemini-3.8-flash",
+        "label": "press",
+        "justification": "It is a small, circular push button embedded on the front panel designed to be pushed inward with a fingertip",
         "options": [
           "click",
           "contain",
@@ -4736,9 +4736,9 @@
         "part": 10,
         "region_id": "shape_40_region_9",
         "n_parts": 11,
-        "model": "molmo2-4b",
-        "label": "none",
-        "justification": "Part 10 appears to be a solid, unadorned surface without any visible features or protrusions that could serve as handles, grips, or other interactive elements, making it functionally inert compared to the other numbered parts",
+        "model": "gemini-3.8-flash",
+        "label": "press",
+        "justification": "It is a small, circular raised element set flush into the front panel, clearly shaped like a push-button designed to be depressed with a finger",
         "options": [
           "attach",
           "click",
