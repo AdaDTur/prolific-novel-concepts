@@ -7,6 +7,41 @@
  "bank_size": 30,
  "seed": 20261127,
  "sequences": {
+  "comb_hair/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
   "comb_hair/deform": {
    "gemini-3.8-flash": {
     "correct": [
@@ -147,6 +182,41 @@
     "last_recognised": 5
    }
   },
+  "cut_food/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     true,
+     true
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
   "cut_food/deform": {
    "gemini-3.8-flash": {
     "correct": [
@@ -274,6 +344,41 @@
      true
     ],
     "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "dig_soil/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "last_recognised": 0
    },
    "glm-5v-turbo": {
     "correct": [
@@ -532,6 +637,41 @@
     "last_recognised": 2
    }
   },
+  "hammer_nail/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
   "hammer_nail/texture": {
    "gemini-3.8-flash": {
     "correct": [
@@ -635,6 +775,41 @@
      true
     ],
     "last_recognised": 2
+   }
+  },
+  "insert_screw/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
    }
   },
   "insert_screw/style": {
@@ -1758,11 +1933,7 @@
    }
   }
  },
- "left_out_changed_since_review": [
-  "comb_hair/add",
-  "cut_food/add",
-  "dig_soil/add"
- ],
+ "left_out_changed_since_review": [],
  "trials": [
   {
    "model": "google/gemini-3.8-flash",
@@ -8809,6 +8980,681 @@
    "perturbation": "add",
    "level": 1,
    "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 0,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 1,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 2,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 3,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 4,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 5,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 6,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 7,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 8,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 9,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 10,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 11,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 12,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 13,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 14,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 15,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 16,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 17,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 18,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 19,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 20,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 21,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 22,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 23,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 24,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 0,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 1,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 2,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 3,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 4,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 5,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 6,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 7,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 8,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 9,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 10,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 11,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 12,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 13,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 14,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 15,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 16,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 17,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 18,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 19,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 20,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 21,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 22,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 23,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 24,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 0,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 1,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 2,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 3,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 4,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 5,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 6,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 7,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 8,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 9,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 10,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 11,
+   "object": "hammer_nail",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 12,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 13,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 14,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 15,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 16,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 17,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 18,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 19,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 20,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 21,
+   "object": "insert_screw",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 22,
+   "object": "dig_soil",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 23,
+   "object": "comb_hair",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 24,
+   "object": "cut_food",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "cutting food",
    "correct": true
   }
  ]
