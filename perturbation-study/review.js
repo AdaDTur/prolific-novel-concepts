@@ -1,9 +1,10 @@
 // Personal review page for the perturbation sequences (not linked from the study). For each object x perturbation
-// it shows versions 0-5, the trajectory judge's verdict (trajectory_judgments.json, from
-// nvrd/affordance-test/code/image_generation/judge_trajectories.py), and lets the reviewer mark Good / Needs
+// it shows versions 0-5 and lets the reviewer mark Good / Needs
 // regeneration, tick problem levels and add a note. Every change is saved as one row to the shared Google Sheet
 // web app with results.study = "perturbation_review" (routed to the "review" tab; latest row per sequence wins),
 // and mirrored in localStorage so the page reopens where you left off. Link: review.html?ID=<your initials>
+// It also shows, per accepted sequence, which levels each model recognised (model_recognition.json, from
+// nvrd/affordance-test/code/model_probing/perturbation_recognition.py) and its last recognised level.
 const SHEET_URL =
   "https://script.google.com/macros/s/AKfycbywIgg7tMNJVidcxyG25I9tU15H0CYPm_BQvs_DGCQIvBmGtjBsiIClNdRVg9ZNy9W5Rw/exec";
 const FOLDERS = ["deform", "add", "remove", "style", "texture"];
@@ -21,8 +22,9 @@ function persist(state) {
 (async function () {
   const reviewer = new URLSearchParams(window.location.search).get("ID") || "reviewer";
   const data = await fetch("stimuli.json").then((r) => r.json());
-  let judgments = {};
-  try { judgments = await fetch("trajectory_judgments.json").then((r) => (r.ok ? r.json() : {})); } catch (e) {}
+  // model recognition along each accepted sequence (nvrd/affordance-test/code/model_probing/perturbation_recognition.py)
+  let recog = { sequences: {} };
+  try { recog = await fetch("model_recognition.json").then((r) => (r.ok ? r.json() : recog)); } catch (e) {}
   const state = load();
 
   // object -> {task, files: {"<pert>_<level>": file}}
@@ -49,24 +51,27 @@ function persist(state) {
       const key = `${o}/${p}`;
       const files = [ob.files["original_0"]].concat([1, 2, 3, 4, 5].map((k) => ob.files[`${p}_${k}`]));
       if (!files.every(Boolean)) return;
-      const j = judgments[key] || {};
-      const jBad = j.bad_levels || [];
-      const jText = j.ok === true ? `<span class="pass">judge: PASS</span>`
-        : j.ok === false ? `<span class="fail">judge: FAIL, levels ${jBad.join(", ")}</span>` : "judge: not run";
       const st = state[key] || { verdict: "", bad_levels: [], note: "" };
+      const rs = recog.sequences[key];
+      const recogHtml = rs ? `
+        <div class="recog"><span class="recog-title">Model recognition (task picked from ${recog.bank_size} options;
+          last recognised = highest level with 0..k all correct)</span>
+          ${Object.entries(rs).map(([m, r]) => `
+            <div class="recog-row"><span class="recog-model">${m}</span>
+              ${r.correct.map((c, k) => `<span class="lv ${c ? "ok" : "no"}" title="level ${k}: ${c ? "correct" : "wrong"}">${k}</span>`).join("")}
+              <span class="recog-last">last recognised: <b>${r.last_recognised < 0 ? "none" : r.last_recognised}</b></span></div>`).join("")}
+        </div>` : "";
 
       const card = document.createElement("section");
       card.className = "card";
       card.dataset.key = key;
-      card.dataset.flagged = j.ok === false ? "1" : "0";
       card.innerHTML = `
         <div class="card-head">
           <span class="name">${o} · ${NAMES[p]}</span>
-          <span class="judge">${jText}${j.summary ? ` — ${j.summary}` : ""}</span>
         </div>
         <div class="tiles">${files.map((f, k) => `
-          <div class="tile ${k > 0 && jBad.includes(k) ? "flag" : ""}"><div class="num">${k}</div><img src="${f}" alt="version ${k}" /></div>`).join("")}
-        </div>
+          <div class="tile"><div class="num">${k}</div><img src="${f}" alt="version ${k}" /></div>`).join("")}
+        </div>${recogHtml}
         <div class="controls">
           <div class="verdict">
             <label><input type="radio" name="v-${key}" value="good" /> Good</label>
@@ -135,15 +140,14 @@ function persist(state) {
     const vals = Object.values(state);
     const good = vals.filter((s) => s.verdict === "good").length;
     const regen = vals.filter((s) => s.verdict === "regen").length;
-    const flagged = cards.filter((c) => c.dataset.flagged === "1").length;
     document.getElementById("counts").textContent =
-      `${cards.length} sequences · ${good} good · ${regen} need regeneration · ${cards.length - good - regen} unreviewed · judge flagged ${flagged}`;
+      `${cards.length} sequences · ${good} good · ${regen} need regeneration · ${cards.length - good - regen} unreviewed`;
   }
   function applyFilter() {
     const f = filter.value;
     cards.forEach(function (c) {
       const s = state[c.dataset.key] || {};
-      const show = f === "all" || (f === "flagged" && c.dataset.flagged === "1") ||
+      const show = f === "all" ||
         (f === "unreviewed" && !s.verdict) || (f === "regen" && s.verdict === "regen");
       c.style.display = show ? "" : "none";
     });

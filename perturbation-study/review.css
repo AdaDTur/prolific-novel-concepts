@@ -46,13 +46,9 @@ main { max-width: 1200px; margin: 0 auto; padding: 16px; }
 
 .card-head { display: flex; justify-content: space-between; gap: 12px; align-items: baseline; flex-wrap: wrap; }
 .card-head .name { font-weight: 700; }
-.judge { font-size: 0.85rem; color: var(--muted); }
-.judge .pass { color: var(--good); font-weight: 700; }
-.judge .fail { color: var(--bad); font-weight: 700; }
 
 .tiles { display: grid; grid-template-columns: repeat(6, 1fr); gap: 8px; margin: 10px 0; }
 .tile { background: #fff; border: 1px solid var(--line); border-radius: 6px; padding: 4px; text-align: center; }
-.tile.flag { border-color: var(--bad); box-shadow: 0 0 0 2px #f4c7c3 inset; }
 .tile .num { font-weight: 700; }
 .tile img { width: 100%; aspect-ratio: 1 / 1; object-fit: contain; cursor: zoom-in; }
 
@@ -71,3 +67,13 @@ main { max-width: 1200px; margin: 0 auto; padding: 16px; }
   align-items: center; justify-content: center; z-index: 5; cursor: zoom-out;
 }
 #zoom img { max-width: 92vw; max-height: 92vh; background: #fff; border-radius: 8px; }
+
+/* model recognition per level (model_recognition.json) */
+.recog { margin: 0 0 10px; font-size: 0.85rem; }
+.recog-title { display: block; color: var(--muted); margin-bottom: 4px; }
+.recog-row { display: flex; align-items: center; gap: 4px; margin: 2px 0; flex-wrap: wrap; }
+.recog-model { width: 150px; font-weight: 600; }
+.lv { display: inline-block; width: 22px; text-align: center; border-radius: 4px; padding: 1px 0; font-size: 0.8rem; }
+.lv.ok { background: #e3f1e5; color: var(--good); border: 1px solid #b9dcbe; }
+.lv.no { background: #fbe9e7; color: var(--bad); border: 1px solid #f1c3bd; text-decoration: line-through; }
+.recog-last { margin-left: 10px; }
