@@ -217,6 +217,41 @@
     "last_recognised": 4
    }
   },
+  "cut_food/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     true,
+     true,
+     false,
+     true
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
   "cut_food/texture": {
    "gemini-3.8-flash": {
     "correct": [
@@ -252,6 +287,41 @@
     "last_recognised": 5
    }
   },
+  "dig_soil/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     false,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   }
+  },
   "dig_soil/remove": {
    "gemini-3.8-flash": {
     "correct": [
@@ -285,6 +355,41 @@
      false
     ],
     "last_recognised": 2
+   }
+  },
+  "dig_soil/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
    }
   },
   "dig_soil/texture": {
@@ -602,6 +707,41 @@
     "last_recognised": 5
    }
   },
+  "peel_vegetable/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
   "peel_vegetable/deform": {
    "gemini-3.8-flash": {
     "correct": [
@@ -742,6 +882,41 @@
     "last_recognised": 5
    }
   },
+  "roll_dough/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     true,
+     false,
+     true
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     true
+    ],
+    "last_recognised": 3
+   }
+  },
   "roll_dough/deform": {
    "gemini-3.8-flash": {
     "correct": [
@@ -775,6 +950,76 @@
      false
     ],
     "last_recognised": 0
+   }
+  },
+  "roll_dough/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   }
+  },
+  "roll_dough/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
    }
   },
   "roll_dough/texture": {
@@ -917,6 +1162,41 @@
     "last_recognised": 2
    }
   },
+  "scoop_stir_soup/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   }
+  },
   "scoop_stir_soup/texture": {
    "gemini-3.8-flash": {
     "correct": [
@@ -1020,6 +1300,41 @@
      false
     ],
     "last_recognised": 1
+   }
+  },
+  "squeeze_juice/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "last_recognised": 0
    }
   },
   "squeeze_juice/style": {
@@ -1197,6 +1512,41 @@
     "last_recognised": -1
    }
   },
+  "strip_wire/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     false,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": -1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     false,
+     true,
+     false,
+     true,
+     false,
+     true
+    ],
+    "last_recognised": -1
+   }
+  },
   "strip_wire/texture": {
    "gemini-3.8-flash": {
     "correct": [
@@ -1265,6 +1615,41 @@
      true
     ],
     "last_recognised": 5
+   }
+  },
+  "water_plant/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
    }
   },
   "water_plant/remove": {
@@ -6939,6 +7324,1491 @@
    "perturbation": "add",
    "level": 5,
    "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 0,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 1,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 2,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 3,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 4,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 5,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 6,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 7,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 8,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 9,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "straining solid particles out of a liquid",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 10,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 11,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 12,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 13,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 14,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 15,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 16,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 17,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "straining solid particles out of a liquid",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 18,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 19,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 20,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 21,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 22,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 23,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 24,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 25,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 26,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 27,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 28,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 29,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 30,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 31,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 32,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 33,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 34,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 35,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 36,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 37,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "propping a book open to a page while reading",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 38,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 39,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "carrying groceries or other items by hand",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 40,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 41,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 42,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 43,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 44,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 45,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 46,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 47,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 48,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 49,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 50,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 51,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 52,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 53,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 54,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 0,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 1,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 2,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 3,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 4,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 5,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "pumping air into a bicycle tire",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 6,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 7,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 8,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "crushing garlic cloves",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 9,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 10,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "squeezing the last toothpaste out of a tube",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 11,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 12,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 13,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 14,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 15,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 16,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 17,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 18,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "tearing off a strip of adhesive tape",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 19,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 20,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 21,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 22,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 23,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 24,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 25,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 26,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 27,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 28,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 29,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 30,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 31,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 32,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 33,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 34,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 35,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 36,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "tearing off a strip of adhesive tape",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 37,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 38,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 39,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 40,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 41,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 42,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "straining solid particles out of a liquid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 43,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 44,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 45,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 46,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 47,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 48,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 49,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 50,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 51,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 52,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 53,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 54,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 0,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 1,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 2,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 3,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 4,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 5,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 6,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 7,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 8,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 9,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 10,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 11,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 12,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 13,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 14,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 15,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 16,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 17,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 18,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 19,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 20,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 21,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 22,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 23,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 24,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 25,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 26,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 27,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 28,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 29,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 30,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 31,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 32,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 33,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 34,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 35,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 36,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 37,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 38,
+   "object": "water_plant",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 39,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "straining solid particles out of a liquid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 40,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 41,
+   "object": "strip_wire",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 42,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 43,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 44,
+   "object": "peel_vegetable",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 45,
+   "object": "squeeze_juice",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 46,
+   "object": "dig_soil",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 47,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 48,
+   "object": "cut_food",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 49,
+   "object": "roll_dough",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 50,
+   "object": "scoop_stir_soup",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 51,
+   "object": "dig_soil",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 52,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 53,
+   "object": "roll_dough",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 54,
+   "object": "roll_dough",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "rolling out dough flat",
    "correct": true
   }
  ]
