@@ -1,0 +1,6945 @@
+{
+ "models": [
+  "gemini-3.8-flash",
+  "llama-4-maverick",
+  "glm-5v-turbo"
+ ],
+ "bank_size": 30,
+ "seed": 20261127,
+ "sequences": {
+  "comb_hair/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "comb_hair/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   }
+  },
+  "comb_hair/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   }
+  },
+  "comb_hair/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "cut_food/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   }
+  },
+  "cut_food/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   }
+  },
+  "cut_food/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "dig_soil/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   }
+  },
+  "dig_soil/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     true
+    ],
+    "last_recognised": 2
+   }
+  },
+  "hammer_nail/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "hammer_nail/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "hammer_nail/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   }
+  },
+  "hammer_nail/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "insert_screw/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     true
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "insert_screw/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     true
+    ],
+    "last_recognised": 2
+   }
+  },
+  "insert_screw/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   }
+  },
+  "insert_screw/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "peel_vegetable/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "peel_vegetable/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   }
+  },
+  "peel_vegetable/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   }
+  },
+  "peel_vegetable/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "roll_dough/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     true,
+     true
+    ],
+    "last_recognised": 1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 0
+   }
+  },
+  "roll_dough/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "scoop_stir_soup/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     false,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   }
+  },
+  "scoop_stir_soup/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 2
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     false,
+     false
+    ],
+    "last_recognised": 3
+   }
+  },
+  "scoop_stir_soup/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     true,
+     false
+    ],
+    "last_recognised": 2
+   }
+  },
+  "scoop_stir_soup/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "squeeze_juice/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "squeeze_juice/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "last_recognised": 0
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   }
+  },
+  "squeeze_juice/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "squeeze_juice/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "strip_wire/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     false,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": -1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     false,
+     false,
+     true
+    ],
+    "last_recognised": 2
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     true,
+     false
+    ],
+    "last_recognised": -1
+   }
+  },
+  "strip_wire/deform": {
+   "gemini-3.8-flash": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   }
+  },
+  "strip_wire/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     false,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   }
+  },
+  "strip_wire/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     false,
+     false,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": -1
+   }
+  },
+  "water_plant/add": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  },
+  "water_plant/remove": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     false,
+     false,
+     false,
+     false
+    ],
+    "last_recognised": 1
+   }
+  },
+  "water_plant/style": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     false,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 1
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     false
+    ],
+    "last_recognised": 4
+   }
+  },
+  "water_plant/texture": {
+   "gemini-3.8-flash": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "llama-4-maverick": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   },
+   "glm-5v-turbo": {
+    "correct": [
+     true,
+     true,
+     true,
+     true,
+     true,
+     true
+    ],
+    "last_recognised": 5
+   }
+  }
+ },
+ "left_out_changed_since_review": [
+  "comb_hair/add",
+  "cut_food/add",
+  "dig_soil/add"
+ ],
+ "trials": [
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 0,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 1,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 2,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 3,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 4,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 5,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 6,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 7,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 8,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 9,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 10,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 11,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 12,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 13,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 14,
+   "object": "dig_soil",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 15,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 16,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 17,
+   "object": "cut_food",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 18,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 19,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 20,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 21,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 22,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 23,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 24,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 25,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 26,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "propping a book open to a page while reading",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 27,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 28,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 29,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 30,
+   "object": "comb_hair",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 31,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 32,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 33,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "carrying groceries or other items by hand",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 34,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 35,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 36,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 37,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 38,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 39,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 40,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 41,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 42,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 43,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 44,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 45,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 46,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 47,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 48,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 49,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 50,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 51,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 52,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 53,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 54,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 55,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 56,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 57,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "propping a book open to a page while reading",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 58,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 59,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 60,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 61,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 62,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 63,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 64,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "carrying groceries or other items by hand",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 65,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "propping a book open to a page while reading",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 66,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 67,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 68,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 69,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 70,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 71,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 72,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 73,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 74,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 75,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 76,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 77,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "propping a book open to a page while reading",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 78,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 79,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 80,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 81,
+   "object": "insert_screw",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 82,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 83,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 84,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 85,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 86,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 87,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 88,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 89,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 90,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 91,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 92,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 93,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 94,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 95,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 96,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 97,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 98,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 99,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 100,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 101,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 102,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 103,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 104,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 105,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 106,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 107,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 108,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "carrying groceries or other items by hand",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 109,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 110,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 111,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 112,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 113,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 114,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 115,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 116,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 117,
+   "object": "peel_vegetable",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 118,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 119,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 120,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 121,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 122,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 123,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 124,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 125,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 126,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 127,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 128,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 129,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 130,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 131,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 132,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 133,
+   "object": "hammer_nail",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 134,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 135,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 136,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 137,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 138,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 139,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 140,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 141,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 142,
+   "object": "roll_dough",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 143,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 144,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 145,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 146,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 147,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 148,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 149,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 150,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 151,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 152,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 153,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 154,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 155,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 156,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 157,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 158,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 159,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 160,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 161,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 162,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 163,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 164,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 165,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 166,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 167,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 168,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 169,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 170,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 171,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 172,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 173,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 174,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 175,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 176,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 177,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 178,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 179,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 180,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 181,
+   "object": "scoop_stir_soup",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 182,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 183,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 184,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 185,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 186,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 187,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 188,
+   "object": "water_plant",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 189,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 190,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 191,
+   "object": "squeeze_juice",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 192,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 193,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 194,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 195,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "gripping and pulling a heavy door open",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 196,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 197,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 198,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 199,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 200,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 201,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 202,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 203,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 204,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "google/gemini-3.8-flash",
+   "position": 205,
+   "object": "strip_wire",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 0,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 1,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 2,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 3,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 4,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 5,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 6,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 7,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 8,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 9,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 10,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 11,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 12,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 13,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 14,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 15,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 16,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 17,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 18,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 19,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 20,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 21,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 22,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 23,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 24,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 25,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 26,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 27,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 28,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 29,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 30,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 31,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 32,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 33,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 34,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 35,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 36,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 37,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 38,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 39,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 40,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 41,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "straining solid particles out of a liquid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 42,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 43,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 44,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 45,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 46,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 47,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 48,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 49,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 50,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 51,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 52,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 53,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 54,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 55,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 56,
+   "object": "cut_food",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 57,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 58,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 59,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 60,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 61,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 62,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 63,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 64,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 65,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "crushing garlic cloves",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 66,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 67,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 68,
+   "object": "comb_hair",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 69,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 70,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 71,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 72,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 73,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 74,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 75,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 76,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 77,
+   "object": "peel_vegetable",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 78,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 79,
+   "object": "water_plant",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 80,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 81,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 82,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 83,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 84,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 85,
+   "object": "insert_screw",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 86,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 87,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 88,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 89,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "squeezing the last toothpaste out of a tube",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 90,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 91,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 92,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 93,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 94,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scraping ice off a car windshield",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 95,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 96,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 97,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 98,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 99,
+   "object": "scoop_stir_soup",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 100,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 101,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 102,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 103,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 104,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 105,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 106,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 107,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 108,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 109,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 110,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 111,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 112,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 113,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 114,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 115,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 116,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 117,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 118,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 119,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 120,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 121,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 122,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 123,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 124,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 125,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 126,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 127,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 128,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 129,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 130,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 131,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 132,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 133,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 134,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 135,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 136,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 137,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 138,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 139,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 140,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 141,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 142,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 143,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 144,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 145,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 146,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 147,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 148,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 149,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 150,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 151,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 152,
+   "object": "squeeze_juice",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 153,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 154,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 155,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 156,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 157,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 158,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 159,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 160,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "straining solid particles out of a liquid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 161,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 162,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 163,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 164,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 165,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 166,
+   "object": "strip_wire",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 167,
+   "object": "dig_soil",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 168,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 169,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 170,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 171,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 172,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 173,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 174,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 175,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 176,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 177,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 178,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 179,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 180,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 181,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 182,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 183,
+   "object": "roll_dough",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 184,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 185,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 186,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 187,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 188,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 189,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 190,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 191,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 192,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 193,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 194,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 195,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 196,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 197,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 198,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 199,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 200,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 201,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 202,
+   "object": "hammer_nail",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 203,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 204,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": false
+  },
+  {
+   "model": "meta-llama/llama-4-maverick",
+   "position": 205,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 0,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 1,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 2,
+   "object": "peel_vegetable",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 3,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 4,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 5,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 6,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 7,
+   "object": "dig_soil",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 8,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 9,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 10,
+   "object": "squeeze_juice",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 11,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 12,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 13,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 14,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 15,
+   "object": "cut_food",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 16,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 17,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 18,
+   "object": "insert_screw",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 19,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 20,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 21,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 22,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 23,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 24,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 25,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 26,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 27,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 28,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 29,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 30,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 31,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 32,
+   "object": "hammer_nail",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 33,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 34,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 35,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 36,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 37,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 38,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 39,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 40,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 41,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 42,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 43,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 44,
+   "object": "scoop_stir_soup",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 45,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 46,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 47,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 48,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 49,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 50,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 51,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 52,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 53,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 54,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 55,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 56,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 57,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 58,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 59,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 60,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 61,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 62,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 63,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 64,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 65,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 66,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 67,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 68,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 69,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 70,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 71,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 72,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 73,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 74,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 75,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 76,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 77,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 78,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 79,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 80,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 81,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 82,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 83,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 84,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "hanging and organizing a set of keys",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 85,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 86,
+   "object": "roll_dough",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 87,
+   "object": "strip_wire",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 88,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 89,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 90,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 91,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 92,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "picking up litter from the ground without bending down",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 93,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 94,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 95,
+   "object": "strip_wire",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 96,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 97,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 98,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 99,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 100,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 101,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 102,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 103,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 104,
+   "object": "water_plant",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 105,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 106,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 107,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 108,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 109,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 110,
+   "object": "comb_hair",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 111,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 112,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 113,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 114,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 115,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 116,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 117,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 118,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 119,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 120,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "crushing garlic cloves",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 121,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 122,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 123,
+   "object": "hammer_nail",
+   "perturbation": "deform",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 124,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 125,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 126,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 127,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 128,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "stripping the insulation off an electrical wire",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 129,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 130,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 131,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 132,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 133,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 134,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "crushing garlic cloves",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 135,
+   "object": "comb_hair",
+   "perturbation": "original",
+   "level": 0,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 136,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 2,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 137,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 138,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 139,
+   "object": "strip_wire",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "cracking open walnut shells",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 140,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 2,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 141,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 142,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 143,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 144,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 145,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 146,
+   "object": "strip_wire",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 147,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 148,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 149,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "pouring liquid into a narrow-necked bottle without spilling",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 150,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 151,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 152,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 153,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "scooping and stirring soup",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 154,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 155,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 156,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 157,
+   "object": "scoop_stir_soup",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 158,
+   "object": "water_plant",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 159,
+   "object": "water_plant",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 160,
+   "object": "squeeze_juice",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 161,
+   "object": "comb_hair",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 162,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 163,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 164,
+   "object": "dig_soil",
+   "perturbation": "remove",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 165,
+   "object": "dig_soil",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "digging a small hole in garden soil",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 166,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 167,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 168,
+   "object": "hammer_nail",
+   "perturbation": "remove",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 169,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 170,
+   "object": "roll_dough",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 171,
+   "object": "hammer_nail",
+   "perturbation": "texture",
+   "level": 3,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 172,
+   "object": "cut_food",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 173,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 174,
+   "object": "insert_screw",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 175,
+   "object": "peel_vegetable",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 176,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 177,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 178,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 179,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 180,
+   "object": "scoop_stir_soup",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 181,
+   "object": "scoop_stir_soup",
+   "perturbation": "add",
+   "level": 4,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 182,
+   "object": "squeeze_juice",
+   "perturbation": "texture",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 183,
+   "object": "roll_dough",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "rolling out dough flat",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 184,
+   "object": "cut_food",
+   "perturbation": "remove",
+   "level": 2,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 185,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 1,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 186,
+   "object": "squeeze_juice",
+   "perturbation": "deform",
+   "level": 5,
+   "choice": "supporting a human or item",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 187,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "measuring the length of an object",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 188,
+   "object": "comb_hair",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 189,
+   "object": "peel_vegetable",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 190,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 5,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 191,
+   "object": "scoop_stir_soup",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scooping and stirring soup",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 192,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 2,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 193,
+   "object": "strip_wire",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "opening a tightly sealed jar lid",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 194,
+   "object": "insert_screw",
+   "perturbation": "deform",
+   "level": 3,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 195,
+   "object": "insert_screw",
+   "perturbation": "texture",
+   "level": 1,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 196,
+   "object": "peel_vegetable",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "scratching an itch in the middle of one's own back",
+   "correct": false
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 197,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 198,
+   "object": "hammer_nail",
+   "perturbation": "add",
+   "level": 1,
+   "choice": "hammering a nail into a wooden board",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 199,
+   "object": "comb_hair",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "detangling and combing hair",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 200,
+   "object": "water_plant",
+   "perturbation": "style",
+   "level": 4,
+   "choice": "watering a plant",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 201,
+   "object": "peel_vegetable",
+   "perturbation": "remove",
+   "level": 3,
+   "choice": "peeling the skin off a potato",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 202,
+   "object": "squeeze_juice",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "squeezing juice out of a citrus fruit",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 203,
+   "object": "cut_food",
+   "perturbation": "texture",
+   "level": 4,
+   "choice": "cutting food",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 204,
+   "object": "insert_screw",
+   "perturbation": "style",
+   "level": 3,
+   "choice": "driving a screw into a piece of wood",
+   "correct": true
+  },
+  {
+   "model": "z-ai/glm-5v-turbo",
+   "position": 205,
+   "object": "water_plant",
+   "perturbation": "add",
+   "level": 5,
+   "choice": "watering a plant",
+   "correct": true
+  }
+ ]
+}
